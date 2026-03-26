@@ -22,11 +22,6 @@ export const Home = () => `
         </div>
       </div>
 
-      <!-- Central Brand Anchor -->
-      <div class="brand-anchor glass">
-        <img src="/images/dentosechamo-logo.png" alt="Dentos Chamo Anchor">
-        <div class="slogan-badge">Quality + TRUST + Delivery + Warranty</div>
-      </div>
     </div>
     
     <!-- Dynamic Product Slider -->
