@@ -24,16 +24,83 @@ export const Home = () => `
 
     </div>
     
-    <!-- Dynamic Product Slider -->
-    <section class="section slider-section">
+    <!-- Dynamic Product Slider (Impact Showcase) -->
+    <section class="section slider-section fade-in">
       <div class="container">
         <h2 class="text-center mb-20">Featured <span class="primary-text">Impact</span></h2>
         <div id="home-slider" class="premium-slider-container glass"></div>
       </div>
     </section>
 
+    <!-- Company Overview & Certifications -->
+    <section class="section bg-light text-center">
+      <div class="container">
+        <h2>About <span class="primary-text">Dentos Chamo</span></h2>
+        <p class="max-600 mb-20" style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 40px;">
+          Dentos Chamo Import & Export PLC bridges the gap between premium global healthcare innovation and 
+          high-yield organic agriculture. Operating in East Africa, we provide certified dental solutions and 
+          sustainably sourced agricultural commodities, adhering strictly to international B2B standards.
+        </p>
+
+        <div class="grid-4 mb-20">
+          <div class="value-card glass fade-in">
+            <i class="fas fa-file-medical-alt"></i>
+            <h3>ISO 13485</h3>
+            <p>Quality management systems for medical devices and traceability.</p>
+          </div>
+          <div class="value-card glass fade-in">
+            <i class="fas fa-tag"></i>
+            <h3>ISO 20417</h3>
+            <p>Information and labeling provided by medical manufacturers.</p>
+          </div>
+          <div class="value-card glass fade-in">
+            <i class="fas fa-microscope"></i>
+            <h3>Prevest Dental</h3>
+            <p>Authorized distributor of top-tier endodontic compounds.</p>
+          </div>
+          <div class="value-card glass fade-in">
+            <i class="fas fa-leaf"></i>
+            <h3>Organic Certified</h3>
+            <p>Sustainable, pure-grade agricultural exports.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leading Categories Grid -->
+    <section class="section" style="padding-top: 40px;">
+      <div class="container text-center">
+        <h2 class="mb-20">Browse Our <span class="primary-text">Catalog</span></h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
+          <div class="glass" style="padding: 20px; border-radius: 15px; background: white;">
+            <i class="fas fa-tooth text-primary" style="font-size: 2rem; margin-bottom: 10px;"></i>
+            <h3>Orthodontics</h3>
+            <p class="text-muted" style="font-size: 0.9rem;">Brackets, gauges, power chains, and wires.</p>
+          </div>
+          <div class="glass" style="padding: 20px; border-radius: 15px; background: white;">
+            <i class="fas fa-syringe text-primary" style="font-size: 2rem; margin-bottom: 10px;"></i>
+            <h3>Endodontics</h3>
+            <p class="text-muted" style="font-size: 0.9rem;">Sealers, pastes, and medicaments.</p>
+          </div>
+          <div class="glass" style="padding: 20px; border-radius: 15px; background: white;">
+            <i class="fas fa-fill-drip text-primary" style="font-size: 2rem; margin-bottom: 10px;"></i>
+            <h3>Composites</h3>
+            <p class="text-muted" style="font-size: 0.9rem;">Universal restoratives and bonding agents.</p>
+          </div>
+          <div class="glass" style="padding: 20px; border-radius: 15px; background: white;">
+            <i class="fas fa-seedling text-secondary" style="font-size: 2rem; margin-bottom: 10px;"></i>
+            <h3>Oil Seeds</h3>
+            <p class="text-muted" style="font-size: 0.9rem;">Premium grade sesame and soy seeds.</p>
+          </div>
+        </div>
+        <div style="margin-top: 40px;">
+          <a href="#/products" class="btn btn-primary" style="padding: 12px 30px; font-size: 1.1rem;">Explore Full Catalog <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
     <!-- Core Values Section -->
-    <section class="section values-section bg-light">
+    <section class="section values-section bg-light" style="padding-top: 0;">
       <div class="container grid-4">
         <div class="value-card glass fade-in">
           <i class="fas fa-award"></i>

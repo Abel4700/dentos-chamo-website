@@ -201,11 +201,13 @@ header.organic-accent .nav-links a::after {
 
 /* Slider Styles */
 .premium-slider-container {
-  height: 500px;
+  height: 320px;
+  max-width: 1000px;
+  margin: 0 auto;
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
 }
 
 .slider-wrapper {
