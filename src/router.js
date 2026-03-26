@@ -21,8 +21,10 @@ export function initRouter() {
   const app = document.getElementById('app');
 
   const render = () => {
-    const path = window.location.hash || '#/';
-    const component = routes[path] || Home;
+    // Strip out query parameters (split by '?') before routing
+    const fullPath = window.location.hash || '#/';
+    const basePath = fullPath.split('?')[0];
+    const component = routes[basePath] || Home;
     app.innerHTML = component();
     window.scrollTo(0, 0);
     
