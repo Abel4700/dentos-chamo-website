@@ -12,13 +12,13 @@ export const initChatbot = () => {
         <button id="close-chatbot">&times;</button>
       </div>
       <div id="chatbot-messages">
-        <div class="message bot-message">Hello! Welcome to Dentos Chamo. How can I assist you today?</div>
+        <div class="message bot-message">ሰላም! (Hello!) Welcome to Dentos Chamo. How can I assist you today?</div>
       </div>
       <div id="chatbot-options">
         <button class="chat-opt" data-next="services">Our Services</button>
         <button class="chat-opt" data-next="products">Product Inquiry</button>
+        <button class="chat-opt" data-next="faq">Common FAQs</button>
         <button class="chat-opt" data-next="location">Office Location</button>
-        <button class="chat-opt" data-next="hours">Office Hours</button>
       </div>
     </div>
 
@@ -45,6 +45,16 @@ export const initChatbot = () => {
         transform: scale(1.1);
         background: var(--secondary);
         color: var(--black);
+      }
+
+      #chatbot-trigger {
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 rgba(19, 70, 175, 0.4); }
+        70% { box-shadow: 0 0 0 15px rgba(19, 70, 175, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(19, 70, 175, 0); }
       }
 
       #chatbot-window {
@@ -142,7 +152,7 @@ export const initChatbot = () => {
 
   const decisionTree = {
     'services': {
-      msg: 'We provide specialized dental consultations, surgical solutions, and orthodontic treatments. Would you like to see our categories?',
+      msg: 'እኛ ልዩ የጥርስ ህክምና ምክክር፣ የቀዶ ጥገና መፍትሄዎች እና የኦርቶዶንቲክ ሕክምናዎችን እናቀርባለን። (We provide specialized dental consultations, surgical solutions, and orthodontic treatments.) Would you like to see our categories?',
       opts: [
         { text: 'View Categories', next: 'products' },
         { text: 'Book Appointment', next: 'contact' }
@@ -167,6 +177,23 @@ export const initChatbot = () => {
       opts: [
         { text: 'Back to Menu', next: 'start' }
       ]
+    },
+    'faq': {
+      msg: 'How can I help you today? Here are some common questions:',
+      opts: [
+        { text: 'Shipping Times', next: 'shipping' },
+        { text: 'Payment Methods', next: 'payment' },
+        { text: 'Warranty Policy', next: 'warranty' },
+        { text: 'Back to Start', next: 'start' }
+      ]
+    },
+    'payment': {
+      msg: 'We accept Bank Transfers, Letters of Credit (LC), and Cash Against Documents (CAD) for international export orders.',
+      opts: [{ text: 'Main Menu', next: 'start' }]
+    },
+    'warranty': {
+      msg: 'All our medical equipment comes with a standard 1-year warranty and localized technical support.',
+      opts: [{ text: 'Main Menu', next: 'start' }]
     },
     'shipping': {
       msg: 'We offer nationwide shipping within 3-5 business days. International shipping depends on location.',

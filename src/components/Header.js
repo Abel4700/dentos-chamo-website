@@ -2,7 +2,8 @@ export const Header = () => `
   <header class="glass">
     <div class="container nav-container">
       <a href="#/" class="logo">
-        <span class="logo-text">DENTOS <span class="accent">CHAMO</span></span>
+        <img src="/images/dentosechamo-logo.png" alt="Dentos Chamo Logo" class="brand-logo">
+        <span class="brand-text"> <span class="accent"></span></span>
       </a>
       <nav class="nav-links">
         <a href="#/">Home</a>
@@ -41,11 +42,16 @@ export const Header = () => `
     }
 
     .logo {
-      font-size: 1.5rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
       text-decoration: none;
+    }
+
+    .brand-logo {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
     }
 
     .accent {

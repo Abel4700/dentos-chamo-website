@@ -10,29 +10,57 @@ export const Products = () => `
     <section class="section">
       <div class="container">
         <div class="product-filters text-center">
-          <button class="btn btn-outline active">All</button>
-          <button class="btn btn-outline">Dental Chairs</button>
-          <button class="btn btn-outline">Imaging</button>
-          <button class="btn btn-outline">Tools</button>
+          <button class="btn btn-outline active" data-filter="all">All</button>
+          <button class="btn btn-outline" data-filter="medical">Medical Import</button>
+          <button class="btn btn-outline" data-filter="organic">Organic Export</button>
         </div>
 
         <div class="product-grid mt-40">
-          <div class="product-card glass">
+          <!-- Medical Products -->
+          <div class="product-card glass medical-item">
             <img src="/images/product1.png" alt="Dental Chair">
             <div class="p-info">
               <h3>D-Series Ergonomic Chair</h3>
-              <p>Category: Dental Chairs</p>
-              <div class="price">$5,400</div>
-              <a href="#/product-details" class="btn btn-primary mt-20">View Product</a>
+              <p>Segment: Medical Import</p>
+              <div class="price">Inquire for Price</div>
+              <a href="#/product-details" class="btn btn-primary mt-20">View Details</a>
             </div>
           </div>
-          <div class="product-card glass">
+          <div class="product-card glass medical-item">
             <img src="/images/product2.png" alt="X-Ray">
             <div class="p-info">
               <h3>X-Scan Panoramic</h3>
-              <p>Category: Imaging</p>
-              <div class="price">$12,000</div>
-              <a href="#/product-details" class="btn btn-primary mt-20">View Product</a>
+              <p>Segment: Medical Import</p>
+              <div class="price">Inquire for Price</div>
+              <a href="#/product-details" class="btn btn-primary mt-20">View Details</a>
+            </div>
+          </div>
+          <div class="product-card glass medical-item">
+            <div class="p-info">
+              <h3>Fusion Bond 5</h3>
+              <p>Category: Adhesives & Etchants</p>
+              <p>Segment: Medical Import</p>
+              <a href="#/product-details" class="btn btn-primary mt-20">View Details</a>
+            </div>
+          </div>
+
+          <!-- Organic Products -->
+          <div class="product-card glass organic-item">
+            <img src="/images/sesame.png" alt="Sesame Seeds">
+            <div class="p-info">
+              <h3>Premium White Sesame Seeds</h3>
+              <p>Segment: Organic Export</p>
+              <div class="price">Bulk Pricing Available</div>
+              <a href="#/product-details" class="btn btn-primary mt-20">View Details</a>
+            </div>
+          </div>
+          <div class="product-card glass organic-item">
+            <img src="/images/oil_seeds.png" alt="Oil Seeds">
+            <div class="p-info">
+              <h3>Organic Oil Seeds & Pulses</h3>
+              <p>Segment: Organic Export</p>
+              <div class="price">Bulk Pricing Available</div>
+              <a href="#/product-details" class="btn btn-primary mt-20">View Details</a>
             </div>
           </div>
         </div>
