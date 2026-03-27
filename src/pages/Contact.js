@@ -30,9 +30,22 @@ export const Contact = () => `
         <div class="contact-details">
           <div class="details-card glass">
             <h3>Office Info</h3>
-            <p><i class="fas fa-envelope"></i> info@dentoschamo.com</p>
-            <p><i class="fas fa-phone"></i> +1 234 567 890</p>
-            <p><i class="fas fa-map-marker-alt"></i> 123 Corporate Blvd, Medical District</p>
+            <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+            <p style="align-items: flex-start;">
+              <i class="fas fa-phone" style="margin-top: 5px;"></i> 
+              <span>
+                +251 930 007 289<br>
+                +251 930 003 019<br>
+                +251 923 474 777
+              </span>
+            </p>
+            <p style="align-items: flex-start;">
+              <i class="fab fa-telegram" style="margin-top: 5px;"></i> 
+              <span>
+                <a href="https://t.me/Merhawiberhanu" style="color: inherit; text-decoration: none;">@Merhawiberhanu</a><br>
+                <a href="https://t.me/Dentosechamo" style="color: inherit; text-decoration: none;">@Dentosechamo</a>
+              </span>
+            </p>
           </div>
           <div class="map-mock mt-30 glass">
             <div class="map-placeholder">

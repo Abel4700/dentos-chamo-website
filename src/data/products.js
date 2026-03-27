@@ -34,7 +34,8 @@ export const MEDICAL_CATEGORIES = [
 
 export const ORGANIC_CATEGORIES = [
   "Oil Seeds",
-  "Spice Crops"
+  "Spice Crops",
+  "Pulse Crops"
 ];
 
 export const products = [
@@ -385,7 +386,6 @@ export const products = [
     traceability: { lot_number: "FB-05", date_of_manufacture: "2023-11-15", expiry_date: "2026-11-15" }
   },
 
-  // --- ORGANIC EXPORT PRODUCTS ---
   {
     id: "sesame-seeds",
     commercial_name: "Ethiopian Sesame Seeds",
@@ -397,7 +397,7 @@ export const products = [
     category: "Oil Seeds",
     image: "/images/exportimg1.jpg",
     shortDesc: "Premium White Sesame.",
-    details: "Renowned globally for its sweet taste, whitish color, and high oil content.",
+    details: "Renowned globally for its sweet taste, whitish color, and high oil content. Also available: Soybean and Niger Seed.",
     manufacturer_details: defaultOrganicManufacturer,
     safety: { is_sterile: false, single_use: true, fragile: false, eIFU_url: "https://dentosechamo.com/agri/sesame" },
     traceability: { lot_number: "HARV-2023-A", date_of_manufacture: "2023-10-01", expiry_date: "2025-10-01" }
@@ -413,9 +413,25 @@ export const products = [
     category: "Spice Crops",
     image: "/images/exportimg2.jpg",
     shortDesc: "Endemic Ethiopian cardamom.",
-    details: "Sun-dried organic Korarima pods, a staple in Ethiopian spice blends.",
+    details: "Sun-dried organic Korarima pods, a staple in Ethiopian spice blends. Other spices available: Long red pepper, ginger, turmeric, cardamom, black pepper, black & white cumin, coriander, fenugreek, sage, and cinnamon.",
     manufacturer_details: defaultOrganicManufacturer,
     safety: { is_sterile: false, single_use: true, eIFU_url: "https://dentosechamo.com/agri/korarima" },
     traceability: { lot_number: "HARV-2023-B", date_of_manufacture: "2023-11-01", expiry_date: "2025-11-01" }
+  },
+  {
+    id: "pulse-crops-faba",
+    commercial_name: "Premium Ethiopian Pulses",
+    hs_code: "0713.50",
+    udi: "AGRI-PUL-001",
+    model_number: "ORG-PUL-01",
+    intended_use: "Edible organic pulse crops for culinary and commercial food production.",
+    segment: "organic",
+    category: "Pulse Crops",
+    image: "/images/exportimg4.jpg",
+    shortDesc: "Faba Beans, Red Kidney Beans & More.",
+    details: "High-yield, organically farmed pulses. Varieties include: Faba Beans, Red Kidney Beans, Field Peas, Chick Peas, Grass Peas, Lentils, and Pea Beans.",
+    manufacturer_details: defaultOrganicManufacturer,
+    safety: { is_sterile: false, single_use: true, eIFU_url: "https://dentosechamo.com/agri/pulses" },
+    traceability: { lot_number: "HARV-2023-C", date_of_manufacture: "2023-11-15", expiry_date: "2025-11-15" }
   }
 ];

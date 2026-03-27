@@ -31,9 +31,22 @@ export const Footer = () => `
       </div>
       <div class="footer-contact">
         <h4>Connect</h4>
-        <p><i class="fas fa-map-marker-alt"></i> 123 Corporate Blvd, Medical District</p>
-        <p><i class="fas fa-phone"></i> +1 234 567 890</p>
-        <p><i class="fas fa-envelope"></i> info@dentoschamo.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+        <p style="gap: 15px; align-items: flex-start;">
+          <i class="fas fa-phone" style="margin-top: 5px;"></i> 
+          <span>
+            +251 930 007 289<br>
+            +251 930 003 019<br>
+            +251 923 474 777
+          </span>
+        </p>
+        <p style="gap: 15px; align-items: flex-start;">
+          <i class="fab fa-telegram" style="margin-top: 5px;"></i>
+          <span>
+            <a href="https://t.me/Merhawiberhanu" style="color: #cbd5e1; text-decoration: none;">@Merhawiberhanu</a><br>
+            <a href="https://t.me/Dentosechamo" style="color: #cbd5e1; text-decoration: none;">@Dentosechamo</a>
+          </span>
+        </p>
       </div>
     </div>
     <div class="footer-bottom">
