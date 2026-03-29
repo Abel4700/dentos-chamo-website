@@ -3,13 +3,17 @@ import { products, MEDICAL_CATEGORIES, ORGANIC_CATEGORIES } from '../data/produc
 export const Products = () => {
   const generateCategoryList = () => {
     return MEDICAL_CATEGORIES.map(cat => `
-      <li class="cat-item" data-category="${cat}">${cat}</li>
+      <li class="cat-item nav-item" data-category="${cat}">${cat}</li>
     `).join('');
   };
 
   const generateProductCards = () => {
-    return products.map(product => `
-      <div class="product-card glass clean-card" data-segment="${product.segment}" data-category="${product.category}">
+    return products.map((product, index) => {
+      // Create a staggered delay for entrance animation
+      const delay = (index % 12) * 0.05;
+      
+      return `
+      <div class="product-card glass-premium fade-in-up" style="animation-delay: ${delay}s;" data-segment="${product.segment}" data-category="${product.category}">
         <div class="card-image-wrapper">
           ${product.image 
             ? `<img src="${product.image}" alt="${product.commercial_name}" class="contained-img" onerror="this.onerror=null; this.outerHTML='<div class=\\'missing-img-box\\'><i class=\\'img-icon\\'>&#128247;</i><span>Image Pending</span></div>';">` 
@@ -19,72 +23,100 @@ export const Products = () => {
           <div class="iso-badges">
             ${product.safety.hazard_warnings ? `<span class="badge badge-hazard" title="${product.safety.hazard_warnings}">HAZARD</span>` : ''}
             ${product.safety.is_sterile ? '<span class="badge badge-sterile" title="ISO 15223-1: Sterile">STERILE</span>' : ''}
-            ${product.safety.single_use ? '<span class="badge badge-single" title="ISO 15223-1: Single Use">SINGLE USE</span>' : ''}
+            ${product.safety.single_use ? '<span class="badge badge-single" title="ISO 15223-1: Single Use">SINGLE-USE</span>' : ''}
             ${product.safety.fragile ? '<span class="badge badge-fragile" title="ISO 15223-1: Fragile">FRAGILE</span>' : ''}
           </div>
         </div>
 
         <div class="card-info">
           <div class="card-header">
-            <span class="segment-tag ${product.segment}-tag">${product.segment === 'medical' ? 'Medical' : 'Organic'}</span>
+            <span class="segment-tag ${product.segment}-tag glow-tag">${product.segment === 'medical' ? 'Medical' : 'Organic'}</span>
             <span class="cat-tag">${product.category}</span>
           </div>
-          <h3 class="product-title">${product.commercial_name}</h3>
+          <h3 class="product-title" data-search-target="true">${product.commercial_name}</h3>
           <p class="product-desc">${product.shortDesc}</p>
           
           <div class="action-footer mt-20">
-            <span class="hs-tag">HS ${product.hs_code}</span>
-            <a href="#/product-details?id=${product.id}" class="btn btn-primary btn-sm">Details &rarr;</a>
+            <span class="hs-tag" data-search-target="true">HS ${product.hs_code}</span>
+            <a href="#/product-details?id=${product.id}" class="btn btn-primary btn-sm btn-hover-lift">View Details &rarr;</a>
           </div>
         </div>
       </div>
-    `).join('');
+      `;
+    }).join('');
   };
 
-  // Attach filtering logic in a script tag that acts when component renders
-  // (Note: in a real React/Vue app this is state, but for vanilla we use pure DOM manipulation)
+  // Attach filtering logic directly after render
   setTimeout(() => {
-    const segmentBtns = document.querySelectorAll('.segment-btn');
-    const catItems = document.querySelectorAll('.cat-item');
+    const segmentBtns = document.querySelectorAll('.seg-pill');
     const cards = document.querySelectorAll('.product-card');
     const sidebarList = document.querySelector('.sidebar-list');
+    const searchInput = document.getElementById('catalog-search');
 
     let activeSegment = 'medical';
     let activeCategory = 'all';
+    let searchQuery = '';
 
     function runFilters() {
+      let visibleCount = 0;
       cards.forEach(card => {
         const segMatch = (activeSegment === 'all' || card.getAttribute('data-segment') === activeSegment);
         const catMatch = (activeCategory === 'all' || card.getAttribute('data-category') === activeCategory);
         
-        if (segMatch && catMatch) {
+        let searchMatch = true;
+        if (searchQuery) {
+          const searchTargets = card.querySelectorAll('[data-search-target="true"]');
+          let text = Array.from(searchTargets).map(el => el.textContent.toLowerCase()).join(' ');
+          searchMatch = text.includes(searchQuery);
+        }
+        
+        if (segMatch && catMatch && searchMatch) {
           card.style.display = 'flex';
+          visibleCount++;
         } else {
           card.style.display = 'none';
         }
       });
+      
+      const emptyState = document.getElementById('empty-state');
+      if (visibleCount === 0) {
+        emptyState.style.display = 'block';
+      } else {
+        emptyState.style.display = 'none';
+      }
     }
 
+    // Search Listener
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        runFilters();
+      });
+    }
+
+    // Segment Toggle Listener (Medical vs Organic)
     segmentBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
         segmentBtns.forEach(b => b.classList.remove('active'));
         e.target.classList.add('active');
         activeSegment = e.target.getAttribute('data-segment');
         
-        // Update sidebar list based on segment
-        if (activeSegment === 'organic') {
-          sidebarList.innerHTML = '<li class="cat-item active" data-category="all">All Organic</li>' + 
-            ['Oil Seeds', 'Spice Crops'].map(c => '<li class="cat-item" data-category="' + c + '">' + c + '</li>').join('');
-        } else if (activeSegment === 'medical') {
-          sidebarList.innerHTML = '<li class="cat-item active" data-category="all">All Medical</li>' + 
-             MEDICAL_CATEGORIES.map(c => '<li class="cat-item" data-category="' + c + '">' + c + '</li>').join('');
-        } else {
-          sidebarList.innerHTML = '<li class="cat-item active" data-category="all">All Categories</li>';
-        }
-        
-        activeCategory = 'all';
-        attachCategoryListeners();
-        runFilters();
+        // Update sidebar categories smoothly
+        sidebarList.style.opacity = '0';
+        setTimeout(() => {
+          if (activeSegment === 'organic') {
+            sidebarList.innerHTML = '<li class="cat-item nav-item active" data-category="all">All Organic Commodities</li>' + 
+              ['Oil Seeds', 'Spice Crops'].map(c => '<li class="cat-item nav-item" data-category="' + c + '">' + c + '</li>').join('');
+          } else if (activeSegment === 'medical') {
+            sidebarList.innerHTML = '<li class="cat-item nav-item active" data-category="all">All Medical Categories</li>' + 
+               MEDICAL_CATEGORIES.map(c => '<li class="cat-item nav-item" data-category="' + c + '">' + c + '</li>').join('');
+          }
+          
+          attachCategoryListeners();
+          activeCategory = 'all';
+          sidebarList.style.opacity = '1';
+          runFilters();
+        }, 200);
       });
     });
 
@@ -99,42 +131,66 @@ export const Products = () => {
       });
     }
 
-    // Initialize
+    // Init
     attachCategoryListeners();
     runFilters();
   }, 100);
 
   return `
-    <div class="app-section bg-light">
-      <section class="section page-header" style="background-image: linear-gradient(rgba(19,70,175,0.85), rgba(19,70,175,0.9)), url('/images/hero1.png')">
-        <div class="container text-center">
-          <h1 class="text-white">Product Catalog</h1>
-          <p class="text-white" style="max-width: 600px; margin: 0 auto;">Explore our comprehensive Prevest Dental catalog and premium organic exports.</p>
+    <div class="app-section bg-light catalog-page">
+      <!-- Premium Hero section -->
+      <section class="section catalog-hero" style="background-image: linear-gradient(135deg, rgba(10,37,95,0.9) 0%, rgba(19,70,175,0.8) 100%), url('/images/hero1.png')">
+        <div class="container text-center hero-content fade-in">
+          <div class="badge-premium mb-20">Global Distribution</div>
+          <h1 class="text-white hero-title">Product <span class="text-secondary glow-text">Catalog</span></h1>
+          <p class="text-white hero-subtitle">Browse strictly compliant medical devices and premium organic exports.</p>
         </div>
       </section>
 
-      <section class="section py-40">
+      <section class="section catalog-main-section">
         <div class="container catalog-layout">
           
-          <!-- Sidebar Navigation -->
-          <aside class="catalog-sidebar">
-            <h3 class="sidebar-title">Segments</h3>
-            <div class="segment-toggles">
-              <button class="segment-btn active" data-segment="medical">Medical Import</button>
-              <button class="segment-btn" data-segment="organic">Organic Export</button>
+          <!-- Modern Sidebar Design -->
+          <aside class="catalog-sidebar glass-premium fade-in">
+            <div class="sidebar-sticky">
+              <h3 class="sidebar-title">Sector</h3>
+              
+              <!-- Segmented Controls Box -->
+              <div class="segment-pills-container">
+                <button class="seg-pill active" data-segment="medical">
+                  <i class="fas fa-stethoscope"></i> Medical
+                </button>
+                <button class="seg-pill" data-segment="organic">
+                  <i class="fas fa-seedling"></i> Organic
+                </button>
+              </div>
+              
+              <h3 class="sidebar-title mt-40">Categories</h3>
+              <ul class="sidebar-list transition-opacity">
+                <li class="cat-item nav-item active" data-category="all">All Medical Categories</li>
+                ${generateCategoryList()}
+              </ul>
             </div>
-            
-            <h3 class="sidebar-title mt-30">Categories</h3>
-            <ul class="sidebar-list">
-              <li class="cat-item active" data-category="all">All Medical Categories</li>
-              ${generateCategoryList()}
-            </ul>
           </aside>
 
-          <!-- Product Grid -->
-          <main class="catalog-main">
-            <div class="product-grid">
+          <!-- Core Grid & Search -->
+          <main class="catalog-core">
+            
+            <!-- Real-time Interactive Search Tool -->
+            <div class="catalog-search-bar glass-premium fade-in mb-30 shadow-sm">
+              <i class="fas fa-search search-icon text-primary"></i>
+              <input type="text" id="catalog-search" placeholder="Search products by name, HS code..." autocomplete="off">
+            </div>
+
+            <div class="product-grid" id="catalog-grid">
               ${generateProductCards()}
+            </div>
+            
+            <!-- Empty State for Search Results -->
+            <div id="empty-state" class="text-center mt-40" style="display: none;">
+              <div class="empty-icon"><i class="fas fa-box-open"></i></div>
+              <h3>No Products Found</h3>
+              <p class="text-muted">Adjust your search or category filters to find what you need.</p>
             </div>
           </main>
 
@@ -143,9 +199,38 @@ export const Products = () => {
     </div>
 
     <style>
-      .bg-light { background-color: #f8fafc; min-height: 100vh; }
-      .py-40 { padding-top: 40px; padding-bottom: 60px; }
-      
+      .bg-light { background-color: #f4f7fb; min-height: 100vh; }
+      .mb-20 { margin-bottom: 20px; }
+      .mb-30 { margin-bottom: 30px; }
+      .mt-20 { margin-top: 20px; }
+      .mt-40 { margin-top: 40px; }
+      .text-primary { color: var(--primary); }
+      .text-secondary { color: var(--secondary); }
+      .text-white { color: white; }
+      .text-muted { color: var(--text-muted); }
+      .shadow-sm { box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+
+      /* Hero Enhancements */
+      .catalog-page { margin-top: -80px; }
+      .catalog-hero {
+        padding: 160px 0 100px;
+        background-size: cover;
+        background-position: center;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      }
+      .badge-premium {
+        display: inline-block; padding: 4px 16px; border-radius: 20px;
+        background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;
+      }
+      .hero-title { font-size: 3.5rem; margin-bottom: 10px; font-weight: 800; }
+      .glow-text { text-shadow: 0 0 15px rgba(255,219,63,0.5); }
+      .hero-subtitle { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+      /* Layout */
+      .catalog-main-section { padding: 60px 0; }
       .catalog-layout {
         display: grid;
         grid-template-columns: 1fr;
@@ -156,214 +241,108 @@ export const Products = () => {
         .catalog-layout { grid-template-columns: 280px 1fr; gap: 40px; }
       }
 
-      /* Sidebar Styles */
-      .catalog-sidebar {
-        background: white;
-        padding: 24px;
+      /* Glass Premium Classes */
+      .glass-premium {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+        border-radius: 16px;
+      }
+
+      /* Sidebar Refinements */
+      .catalog-sidebar { padding: 25px; }
+      .sidebar-sticky { position: sticky; top: 100px; }
+      .sidebar-title { font-size: 1rem; color: #0a255f; margin-bottom: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+      
+      /* Segmented Toggles (Pills) */
+      .segment-pills-container {
+        display: flex;
+        background: #eef2f6;
+        padding: 5px;
         border-radius: 12px;
         border: 1px solid #e2e8f0;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        position: sticky;
-        top: 100px;
       }
-      .sidebar-title {
-        font-size: 1.1rem;
-        color: #0f172a;
-        margin-bottom: 15px;
-        padding-bottom: 5px;
-        border-bottom: 2px solid #f1f5f9;
+      .seg-pill {
+        flex: 1; text-align: center; padding: 10px 5px; border-radius: 8px; font-weight: 600; font-size: 0.9rem;
+        color: #64748b; border: none; background: transparent; cursor: pointer; transition: all 0.3s ease;
       }
-      .segment-toggles {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-      .segment-btn {
-        background: transparent;
-        border: 1px solid #cbd5e1;
-        padding: 10px 15px;
-        border-radius: 8px;
-        text-align: left;
-        font-weight: 600;
-        color: #475569;
-        cursor: pointer;
-        transition: all 0.2s;
-      }
-      .segment-btn:hover { background: #f8fafc; }
-      .segment-btn.active {
-        background: var(--primary);
-        color: white;
-        border-color: var(--primary);
-      }
-      
-      .sidebar-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        max-height: 400px;
-        overflow-y: auto;
-      }
+      .seg-pill i { margin-right: 5px; }
+      .seg-pill:hover { color: #334155; }
+      .seg-pill.active { background: white; color: var(--primary); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+      /* Category Nav List */
+      .transition-opacity { transition: opacity 0.2s ease; }
+      .sidebar-list { list-style: none; padding: 0; margin: 0; max-height: 400px; overflow-y: auto; }
       .sidebar-list::-webkit-scrollbar { width: 4px; }
       .sidebar-list::-webkit-scrollbar-thumb { background-color: #cbd5e1; border-radius: 4px; }
-      .cat-item {
-        padding: 8px 12px;
-        margin-bottom: 2px;
-        border-radius: 6px;
-        color: #64748b;
-        font-size: 0.9rem;
-        cursor: pointer;
-        transition: all 0.2s;
+      .nav-item {
+        padding: 10px 15px; margin-bottom: 4px; border-radius: 8px; color: #475569;
+        font-size: 0.95rem; cursor: pointer; transition: all 0.2s ease; border-left: 3px solid transparent;
       }
-      .cat-item:hover { background: #f1f5f9; color: var(--primary); }
-      .cat-item.active {
-        background: #e0e7ff;
-        color: var(--primary);
-        font-weight: 600;
-      }
+      .nav-item:hover { background: #f8fafc; color: var(--primary); border-left-color: rgba(19, 70, 175, 0.3); }
+      .nav-item.active { background: #eff6ff; color: var(--primary); font-weight: 700; border-left-color: var(--primary); }
 
-      /* Grid Styles */
-      .product-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 25px;
+      /* Search Bar */
+      .catalog-search-bar { display: flex; align-items: center; padding: 0 20px; height: 60px; overflow: hidden; }
+      .search-icon { font-size: 1.2rem; margin-right: 15px; opacity: 0.8; }
+      #catalog-search {
+        flex: 1; height: 100%; border: none; background: transparent; font-family: inherit;
+        font-size: 1.05rem; color: #334155; outline: none; box-shadow: none;
       }
+      #catalog-search::placeholder { color: #94a3b8; }
 
-      /* Card Redesign */
-      .clean-card {
-        background: white;
-        border-radius: 12px;
-        overflow: hidden;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        display: flex;
-        flex-direction: column;
+      /* Grid & Animation */
+      .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+      
+      @keyframes fadeInUp {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
       }
-      .clean-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-      }
+      .fade-in-up { animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
+      .btn-hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+      .btn-hover-lift:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(19, 70, 175, 0.2); }
+
+      /* Product Cards Refined */
+      .product-card { display: flex; flex-direction: column; overflow: hidden; transition: all 0.3s ease; }
+      .product-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); border-color: rgba(19, 70, 175, 0.2); }
+      
       .card-image-wrapper {
-        position: relative;
-        height: 200px;
-        background: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        border-bottom: 1px solid #f1f5f9;
+        position: relative; height: 220px; background: rgba(255,255,255,0.4); display: flex;
+        align-items: center; justify-content: center; padding: 20px; border-bottom: 1px solid rgba(0,0,0,0.03);
       }
-      .contained-img {
-        max-height: 100%;
-        max-width: 100%;
-        object-fit: contain;
-      }
+      .contained-img { max-height: 100%; max-width: 100%; object-fit: contain; transition: transform 0.4s ease; }
+      .product-card:hover .contained-img { transform: scale(1.05); }
       
-      /* Missing Image Placeholder Design */
-      .missing-img-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: #94a3b8;
-        background: #f8fafc;
-        width: 100%;
-        height: 100%;
-        border-radius: 8px;
-        border: 1px dashed #cbd5e1;
-      }
-      .missing-img-box .img-icon {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-        opacity: 0.5;
-        font-style: normal;
-      }
-      .missing-img-box span {
-        font-size: 0.85rem;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-      }
+      .missing-img-box { display: flex; flex-direction: column; align-items: center; justify-content: center; color: #94a3b8; width: 100%; height: 100%; opacity: 0.7; }
+      .img-icon { font-size: 2.5rem; margin-bottom: 5px; font-style: normal; }
       
-      .iso-badges {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        align-items: flex-end;
-      }
-      .badge {
-        padding: 4px 8px;
-        border-radius: 4px;
-        font-size: 0.65rem;
-        font-weight: 800;
-        color: white;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-      .badge-hazard { background-color: #dc2626; }
-      .badge-sterile { background-color: #16a34a; }
-      .badge-single { background-color: #2563eb; }
-      .badge-fragile { background-color: #ea580c; }
+      .iso-badges { position: absolute; top: 12px; right: 12px; display: flex; flex-direction: column; gap: 5px; align-items: flex-end; z-index: 2; }
+      .badge { padding: 4px 8px; border-radius: 4px; font-size: 0.65rem; font-weight: 800; color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.15); }
+      .badge-sterile { background-color: #10b981; }
+      .badge-fragile { background-color: #f59e0b; }
+      .badge-single { background-color: #3b82f6; }
+      .badge-hazard { background-color: #ef4444; }
 
-      .card-info {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-      }
-      .card-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 12px;
-      }
-      .segment-tag {
-        padding: 3px 8px;
-        border-radius: 4px;
-        font-size: 0.7rem;
-        font-weight: 700;
-        text-transform: uppercase;
-      }
+      .card-info { padding: 25px 20px 20px; display: flex; flex-direction: column; flex-grow: 1; }
+      .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+      .segment-tag { padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
       .medical-tag { background: #e0e7ff; color: #3730a3; }
       .organic-tag { background: #fef3c7; color: #b45309; }
-      .cat-tag {
-        color: #64748b;
-        font-size: 0.75rem;
-        font-weight: 600;
-      }
+      .glow-tag { padding: 4px 10px; border-radius: 4px; position: relative; overflow: hidden; }
       
-      .product-title {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: #0f172a;
-        margin: 0 0 8px 0;
-        line-height: 1.3;
-      }
-      .product-desc {
-        font-size: 0.85rem;
-        color: #64748b;
-        margin: 0;
-        flex-grow: 1;
-      }
+      .cat-tag { color: #64748b; font-size: 0.8rem; font-weight: 600; }
+      .product-title { font-size: 1.15rem; font-weight: 800; color: #0f172a; margin: 0 0 10px 0; line-height: 1.3; }
+      .product-desc { font-size: 0.9rem; color: #475569; margin: 0; flex-grow: 1; line-height: 1.5; }
       
-      .action-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-top: 1px solid #f1f5f9;
-        padding-top: 15px;
-      }
-      .hs-tag {
-        font-family: monospace;
-        color: #94a3b8;
-        font-size: 0.8rem;
-      }
-      .btn-sm { padding: 8px 16px; font-size: 0.85rem; border-radius: 6px; }
-      .mt-20 { margin-top: 20px; }
-      .mt-30 { margin-top: 30px; }
+      .action-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 15px; }
+      .hs-tag { font-family: 'Courier New', monospace; color: #94a3b8; font-size: 0.85rem; font-weight: 600; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; }
+      .btn-sm { padding: 8px 16px; font-size: 0.9rem; border-radius: 6px; }
+
+      /* Empty State */
+      .empty-icon { font-size: 4rem; color: #cbd5e1; margin-bottom: 15px; }
+      #empty-state h3 { color: #334155; margin-bottom: 10px; }
     </style>
   `;
 };
