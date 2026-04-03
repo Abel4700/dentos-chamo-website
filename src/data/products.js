@@ -38,7 +38,7 @@ export const ORGANIC_CATEGORIES = [
   "Pulse Crops"
 ];
 
-export const products = [
+const raw_products = [
   // --- MEDICAL IMPORT PRODUCTS ---
   {
     id: "orthodontic-materials",
@@ -394,7 +394,7 @@ export const products = [
     model_number: "ORG-SES-W",
     intended_use: "Edible organic seeds for oil extraction and culinary use.",
     segment: "organic",
-    category: "Oil Seeds",
+    category: "Agriculture",
     image: "/images/exportimg1.jpg",
     shortDesc: "Premium White Sesame.",
     details: "Renowned globally for its sweet taste, whitish color, and high oil content. Also available: Soybean and Niger Seed.",
@@ -410,7 +410,7 @@ export const products = [
     model_number: "ORG-SPC-KOR",
     intended_use: "Culinary spice.",
     segment: "organic",
-    category: "Spice Crops",
+    category: "Agriculture",
     image: "/images/exportimg2.jpg",
     shortDesc: "Endemic Ethiopian cardamom.",
     details: "Sun-dried organic Korarima pods, a staple in Ethiopian spice blends. Other spices available: Long red pepper, ginger, turmeric, cardamom, black pepper, black & white cumin, coriander, fenugreek, sage, and cinnamon.",
@@ -426,7 +426,7 @@ export const products = [
     model_number: "ORG-PUL-01",
     intended_use: "Edible organic pulse crops for culinary and commercial food production.",
     segment: "organic",
-    category: "Pulse Crops",
+    category: "Agriculture",
     image: "/images/exportimg4.jpg",
     shortDesc: "Faba Beans, Red Kidney Beans & More.",
     details: "High-yield, organically farmed pulses. Varieties include: Faba Beans, Red Kidney Beans, Field Peas, Chick Peas, Grass Peas, Lentils, and Pea Beans.",
@@ -435,3 +435,47 @@ export const products = [
     traceability: { lot_number: "HARV-2023-C", date_of_manufacture: "2023-11-15", expiry_date: "2025-11-15" }
   }
 ];
+
+// Map over raw products to inject V2 corporate hierarchy requirements dynamically
+export const products = raw_products.map(p => ({
+  ...p,
+  company: 'dentose',
+  division: p.segment === 'medical' ? 'imports' : 'exports'
+})).concat([
+  // Dummy Ora-Dent Product
+  { 
+    id: 'ora-dummy-1', 
+    commercial_name: 'Ora-Dent Premium Whitening Kit', 
+    hs_code: '3306.90',
+    udi: 'ORA-WHT-001',
+    model_number: 'OR-WK-01',
+    category: 'Cosmetics', 
+    company: 'oradent', 
+    division: 'cosmetics', 
+    segment: 'medical', 
+    image: '/images/slider_img3.png', 
+    shortDesc: 'Aesthetic laser-aligned whitening gel.', 
+    details: 'Pre-filled syringes for advanced cosmetic whitening treatment.',
+    safety: { is_sterile: false, single_use: true }, 
+    traceability: { lot_number: "O-203", date_of_manufacture: "2024-01-01" },
+    manufacturer_details: { name: "Ora-Dent Lab" }
+  },
+  // Dummy Akedent Product
+  { 
+    id: 'ake-dummy-1', 
+    commercial_name: 'Akedent Titan Bio-Freezer', 
+    hs_code: '8418.69',
+    udi: 'AKE-FZ-001',
+    model_number: 'AKE-TBF-MAX',
+    category: 'Pharma', 
+    company: 'akedent', 
+    division: 'pharma', 
+    segment: 'medical', 
+    image: '/images/slider_img2.jpg', 
+    shortDesc: 'Cold-chain storage for vaccines and pharma logistics.', 
+    details: 'Heavy medical equipment. Validated to -80°C.',
+    safety: { is_sterile: false, single_use: false }, 
+    traceability: { lot_number: "AK-999", date_of_manufacture: "2023-12-01" },
+    manufacturer_details: { name: "Akedent Tech Heavy" }
+  }
+]);

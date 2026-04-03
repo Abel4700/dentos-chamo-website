@@ -8,6 +8,7 @@ export const Header = () => `
       <nav class="nav-links">
         <a href="#/">Home</a>
         <a href="#/about">About Us</a>
+       
         
         <!-- Multi-Entity Dropdown -->
         <div class="dropdown">
@@ -25,8 +26,13 @@ export const Header = () => `
               <strong>Akedent Pharmaceutical & Medical Equipment</strong>
               <span class="sub-text">Pharma & Heavy Lab Machinery</span>
             </a>
+            <a href="https://diredawa.dentosechamo.com" target="_blank" rel="noopener noreferrer">
+              <strong>Dentose Dire Dawa <i class="fas fa-external-link-alt" style="font-size: 0.7rem; color: #94a3b8; margin-left: 5px;"></i></strong>
+              <span class="sub-text">Regional Eastern Division</span>
+            </a>
           </div>
         </div>
+         <a href="#/products">Products</a>
 
         <a href="#/partners">Partners</a>
         <a href="#/blog">News</a>

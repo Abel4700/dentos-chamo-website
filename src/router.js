@@ -1,46 +1,57 @@
 import { Home } from './pages/Home.js';
 import { About } from './pages/About.js';
-import { Products } from './pages/Products.js';
 import { ProductDetails } from './pages/ProductDetails.js';
 import { Blog } from './pages/Blog.js';
 import { Media } from './pages/Media.js';
 import { Contact } from './pages/Contact.js';
 
-// New Multi-Entity Components
+// Multi-Entity Components
+import { DentoseChamo } from './pages/DentoseChamo.js';
 import { OraDent } from './pages/OraDent.js';
 import { Akedent } from './pages/Akedent.js';
 import { Partners } from './pages/Partners.js';
+
+// Centralised Products Hub
+import { ProductsHub } from './pages/ProductsHub.js';
 
 const routes = {
   '/': Home,
   '#/': Home,
   '#/about': About,
-  '#/companies/dentos-chamo': Products, // Currently reusing the robust products catalog
+  '#/companies/dentos-chamo': DentoseChamo,
   '#/companies/ora-dent': OraDent,
   '#/companies/akedent': Akedent,
   '#/partners': Partners,
+  '#/products': ProductsHub, // Global Centralized Catalog
   '#/product-details': ProductDetails,
   '#/blog': Blog,
   '#/media': Media,
-  '#/contact': Contact,
-  
-  // Legacy short routes mapping to the new structure
-  '#/products': Products
+  '#/contact': Contact
 };
 
 export function initRouter() {
   const app = document.getElementById('app');
 
   const render = () => {
-    // Strip out query parameters (split by '?') before routing
     const fullPath = window.location.hash || '#/';
-    const basePath = fullPath.split('?')[0];
+    const [basePath, queryString] = fullPath.split('?');
+    
+    // Parse query parameters beautifully
+    const queryParams = {};
+    if (queryString) {
+      const urlParams = new URLSearchParams(queryString);
+      for (const [key, value] of urlParams.entries()) {
+        queryParams[key] = value;
+      }
+    }
+
     const component = routes[basePath] || Home;
     
-    app.innerHTML = component();
+    // Inject the parsed query params into the rendering component
+    app.innerHTML = component(queryParams);
     window.scrollTo(0, 0);
     
-    // Trigger entrance animations
+    // Trigger entrance animations globally after mount
     document.querySelectorAll('.app-section').forEach(sec => {
       sec.classList.add('fade-in');
     });
