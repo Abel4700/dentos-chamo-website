@@ -1,57 +1,114 @@
-export const Home = () => `
-  <div class="app-section home-portal">
-    <!-- Symmetrical Split Hero -->
-    <div class="portal-container">
-      <!-- Medical Import Segment -->
-      <div class="portal-segment medical-segment" style="background-image: linear-gradient(rgba(19, 70, 175, 0.7), rgba(19, 70, 175, 0.7)), url('/images/hero1.png')">
-        <div class="portal-content">
-          <div class="segment-icon"><i class="fas fa-microscope"></i></div>
-          <h2>Medical <span class="accent">Import</span></h2>
-          <p>Premium Dental Equipment, Orthodontic Materials & Laboratory Reagents.</p>
-          <a href="#/products?segment=medical" class="btn btn-secondary">Enter Medical Portal</a>
-        </div>
-      </div>
+export const Home = () => {
+  // Initialize Hero Slider
+  setTimeout(() => {
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    let current = 0;
 
-      <!-- Organic Export Segment -->
-      <div class="portal-segment organic-segment" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/about1.png')">
-        <div class="portal-content">
-          <div class="segment-icon"><i class="fas fa-seedling"></i></div>
-          <h2>Organic <span class="accent">Export</span></h2>
-          <p>High-Quality Sesame Seeds, Oil Crops & Organic Pulses.</p>
-          <a href="#/products?segment=organic" class="btn btn-secondary">Enter Organic Portal</a>
-        </div>
-      </div>
-    </div>
+    const showSlide = (index) => {
+      slides.forEach(s => s.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
+    };
+
+    const nextSlide = () => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    };
+
+    if (slides.length > 0) {
+      setInterval(nextSlide, 6000);
+      dots.forEach((dot, i) => {
+        dot.onclick = () => { current = i; showSlide(i); };
+      });
+    }
+  }, 100);
+
+  return `
+  <div class="app-section home-root">
     
-    <!-- Dynamic Product Slider (Impact Showcase) -->
-    <section class="section slider-section fade-in">
-      <div class="container">
-        <div class="text-center mb-40">
-          <div class="subtitle text-primary">Featured Impact</div>
-          <h2>Discover Our <span class="primary-text">Innovations</span></h2>
+    <!-- VISIONARY HERO SLIDER -->
+    <section class="hero-gateway">
+      <div class="hero-slider-v2">
+        
+        <!-- SLIDE 1: THE STRATEGIC GATEWAY -->
+        <div class="hero-slide active" style="background-image: linear-gradient(rgba(10, 25, 47, 0.4), rgba(10, 25, 47, 0.4)), url('/images/hero_medical_hub.png')">
+          <div class="container hero-content-v2" style="padding-top: 120px; display: flex; justify-content: center; text-align: center;">
+            <div class="glass-hero-card fade-in-up" style="max-width: 800px;">
+              <div class="hero-tag">African Logistical Hub</div>
+              <h1>Africa’s Strategic <span class="primary-text">Gateway</span> <br> to Global Medical Technology</h1>
+              <p>Leveraging the <strong>Dentos Dire Dawa Free Trade Zone</strong> to bridge world-class medical innovation with the African continent.</p>
+              <div class="hero-actions" style="display: flex; justify-content: center; gap: 15px;">
+                <a href="#/products?segment=medical" class="btn btn-primary">Explore Medical Solutions</a>
+                <a href="#/partners" class="btn btn-outline">Our Global Partners</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="home-slider" class="premium-slider-container glass"></div>
+
+        <!-- SLIDE 2: DISTRIBUTION HUB (Logistics & Tech) -->
+        <div class="hero-slide" style="background-image: linear-gradient(rgba(10, 25, 47, 0.4), rgba(10, 25, 47, 0.4)), url('/images/hero_africa_logistics.png')">
+          <div class="container hero-content-v2" style="padding-top: 120px; display: flex; justify-content: center; text-align: center;">
+            <div class="glass-hero-card" style="max-width: 800px;">
+              <div class="hero-tag">Continental Fulfillment</div>
+              <h1>Seamless Distribution <br> <span class="primary-text">Across Africa</span></h1>
+              <p>Merging global medical tech with world-class shipping and logistics in Dire Dawa to ensure healthcare accessibility for all.</p>
+              <div class="hero-actions" style="display: flex; justify-content: center;">
+                <a href="#/about" class="btn btn-primary">The Free Trade Zone Hub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="hero-nav-dots">
+        <span class="hero-dot active"></span>
+        <span class="hero-dot"></span>
       </div>
     </section>
 
-    <!-- Sophisticated Asymmetric About Section -->
+    <!-- Trust Ribbon (Certifications) -->
+    <section class="trust-ribbon pattern-bg">
+      <div class="container trust-flex">
+        <div class="trust-item">
+          <i class="fas fa-file-medical-alt glow-icon"></i>
+          <span>ISO 13485 Certified Hub</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-shipping-fast glow-icon"></i>
+          <span>Free Trade Zone Logistics</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-microscope glow-icon"></i>
+          <span>Medical-Grade Fulfillment</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-globe-africa glow-icon"></i>
+          <span>Pan-African Distribution</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core About Section (Pivoted) -->
     <section class="section about-premium fade-in bg-light">
       <div class="container about-grid">
         <div class="about-content">
-          <div class="subtitle text-primary">Our Genesis</div>
-          <h2 style="font-size: 2.8rem; line-height: 1.1; margin-bottom: 20px;">Bridging Healthcare & <span class="primary-text">Agriculture</span></h2>
+          <div class="subtitle text-primary">Strategic Vision</div>
+          <h2 style="font-size: 2.8rem; line-height: 1.1; margin-bottom: 20px;">The Future of African <span class="primary-text">Medical Logistics</span></h2>
           <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px;">
-            Dentos Chamo Import & Export PLC connects premium global healthcare innovation with high-yield organic agriculture in East Africa. We provide elite, certified dental solutions and sustainably sourced commodities under strict B2B compliance standards.
+            Dentose Chamo Trading PLC operates at the intersection of global medical manufacturing and African market accessibility. Through our <strong>Dentos Dire Dawa Free Trade Zone</strong>, we provide an streamlined logistical corridor for the continent's most critical healthcare supplies.
           </p>
-          <a href="#/about" class="btn btn-primary" style="padding: 15px 35px;">Discover Our Legacy <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+          <a href="#/about" class="btn btn-primary" style="padding: 15px 35px;">Learn About Our Hub <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
         </div>
         <div class="about-visuals">
           <div class="glass-orb orb-1"></div>
           <div class="glass-orb orb-2"></div>
           <div class="glass-card-accent glass-premium">
-             <div class="icon-ring"><i class="fas fa-globe-africa text-primary"></i></div>
+             <div class="icon-ring"><i class="fas fa-warehouse text-primary"></i></div>
              <div>
-               <h4 style="margin:0; font-size: 1.2rem;">East Africa</h4>
+               <h4 style="margin:0; font-size: 1.2rem;">Addis Ababa</h4>
                <p style="margin:0; font-size: 0.9rem; color: var(--text-muted);">Regional Operations HQ</p>
              </div>
           </div>
@@ -211,14 +268,54 @@ export const Home = () => `
     }
 
     /* Split Hero Layout (Original) */
-    .home-portal { margin-top: -80px; }
-    .portal-container { display: flex; height: 100vh; width: 100%; position: relative; overflow: hidden; }
-    .portal-segment { flex: 1; height: 100%; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); position: relative; }
-    .portal-segment:hover { flex: 1.2; }
-    .portal-content { text-align: center; color: var(--white); max-width: 400px; padding: 20px; z-index: 10; }
-    .segment-icon { font-size: 3rem; margin-bottom: 20px; color: var(--secondary); }
-    .portal-content h2 { font-size: 3rem; margin-bottom: 15px; }
-    @media (max-width: 992px) { .portal-container { flex-direction: column; height: 160vh; } }
+    /* VISIONARY HERO SLIDER FIX */
+    .hero-gateway { width: 100%; height: 100vh; position: relative; overflow: hidden; margin-top: -80px; }
+    .hero-slider-v2 { width: 100%; height: 100%; position: relative; }
+    
+    .hero-slide {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      background-size: cover; background-position: center;
+      display: none; align-items: center; justify-content: center;
+      transition: opacity 1.2s ease;
+    }
+    .hero-slide.active { display: flex; opacity: 1; z-index: 1; animation: fadeIn 1.2s ease; }
+    
+    .hero-content-v2 { z-index: 10; width: 100%; display: flex; justify-content: center; }
+    .glass-hero-card {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 60px;
+      border-radius: 40px;
+      max-width: 900px;
+      color: white;
+      text-align: center;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    }
+    
+    .hero-tag {
+      display: inline-block; padding: 6px 18px; background: var(--secondary);
+      color: black; font-weight: 800; border-radius: 50px; font-size: 0.75rem;
+      text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px;
+    }
+    .glass-hero-card h1 { font-size: 3.8rem; line-height: 1.15; font-weight: 800; margin-bottom: 25px; letter-spacing: -2px; }
+    .glass-hero-card p { font-size: 1.3rem; line-height: 1.6; opacity: 0.9; margin-bottom: 35px; max-width: 700px; margin-left: auto; margin-right: auto; font-weight: 500; }
+    
+    .hero-actions { display: flex; gap: 20px; justify-content: center; }
+    .hero-nav-dots { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; gap: 15px; z-index: 20; }
+    .hero-dot { width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.3); cursor: pointer; transition: 0.3s; }
+    .hero-dot.active { background: var(--secondary); width: 35px; border-radius: 10px; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    @media (max-width: 768px) {
+      .hero-gateway { height: 100vh; }
+      .glass-hero-card { padding: 40px 20px; border-radius: 0; background: rgba(10, 25, 47, 0.8); height: 100%; display: flex; flex-direction: column; justify-content: center; width: 100%; max-width: 100%; }
+      .glass-hero-card h1 { font-size: 2.2rem; }
+      .hero-actions { flex-direction: column; width: 100%; }
+      .hero-actions .btn { width: 100%; }
+    }
 
     /* Asymmetric About Section */
     .about-grid {
@@ -472,3 +569,4 @@ export const Home = () => `
 
   </style>
 `;
+};
