@@ -1,46 +1,109 @@
-export const Partners = () => `
-  <div class="app-section bg-light page-offset" style="margin-top:-80px; padding-top: 150px; min-height: 100vh;">
-    <div class="container text-center fade-in">
-      <h1 class="tech-title" style="font-size: 3.5rem; color: #0f172a; margin-bottom: 20px;">Our Partners & <span style="color: var(--primary);">Certifications</span></h1>
-      <p style="font-size: 1.2rem; color: #475569; max-width: 700px; margin: 0 auto;">Dentose Chamo operates on strict global compliance standards, fostering partnerships with industry-leading manufacturers worldwide.</p>
-    </div>
+export const Partners = () => {
+  return `
+    <div class="app-section bg-soft page-offset">
+      
+      <!-- 🏆 LUMINOUS HERO -->
+      <section class="partners-hero fade-in">
+        <div class="overlay-mesh"></div>
+        <div class="container text-center relative-z">
+          <div class="hero-label">GLOBAL COMPLIANCE & STANDARDS</div>
+          <h1 class="fluid-title">Partners & <span class="text-primary">Certifications</span></h1>
+          <p class="hero-subtitle">Operating with strict adherence to international safety protocols and manufacturing excellence.</p>
+        </div>
+      </section>
 
-    <!-- ISO Certifications -->
-    <section class="section" style="padding: 60px 0;">
-      <div class="container">
-        <h3 style="font-size: 1.5rem; color: #0f172a; margin-bottom: 30px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">Corporate Certifications</h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+      <!-- 🏛️ CORPORATE CERTIFICATIONS -->
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Corporate Certifications</h2>
+            <div class="title-line"></div>
+          </div>
+
+          <div class="cert-grid">
+            <div class="cert-card glass-premium fade-in-up">
+              <div class="cert-icon-box"><i class="fas fa-certificate"></i></div>
+              <div class="cert-body">
+                <h3>ISO 9001:2015</h3>
+                <p>International Quality Management System certification for operational excellence.</p>
+              </div>
+            </div>
+            
+            <div class="cert-card glass-premium fade-in-up" style="animation-delay: 0.1s;">
+              <div class="cert-icon-box cyan"><i class="fas fa-shield-virus"></i></div>
+              <div class="cert-body">
+                <h3>EFDA Approved</h3>
+                <p>Official registration with the Ethiopian Food & Drug Authority for medical supplies.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 🏭 STRATEGIC PARTNERS -->
+      <section class="section bg-white" style="border-radius: 50px 50px 0 0;">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Strategic Global Partners</h2>
+            <div class="title-line"></div>
+          </div>
           
-          <div class="glass-premium fade-in-up" style="display: flex; align-items: center; gap: 20px; padding: 30px;">
-            <i class="fas fa-certificate" style="font-size: 3rem; color: #16a34a;"></i>
-            <div>
-              <h4 style="margin: 0 0 5px 0; color: #0f172a; font-size: 1.1rem;">ISO 9001:2015</h4>
-              <p style="margin: 0; color: #64748b; font-size: 0.9rem;">Quality Management Systems</p>
-            </div>
+          <div class="roster-placeholder glass-premium">
+             <div class="shimmer-box">
+               <i class="fas fa-handshake"></i>
+               <h3>Global Network in Development</h3>
+               <p>We are currently finalizing distribution agreements with leading European and Asian manufacturers.</p>
+             </div>
           </div>
-
-          <div class="glass-premium fade-in-up" style="display: flex; align-items: center; gap: 20px; padding: 30px; animation-delay: 0.1s;">
-            <i class="fas fa-shield-alt" style="font-size: 3rem; color: #2563eb;"></i>
-            <div>
-              <h4 style="margin: 0 0 5px 0; color: #0f172a; font-size: 1.1rem;">EFDA Approved</h4>
-              <p style="margin: 0; color: #64748b; font-size: 0.9rem;">Ethiopian Food & Drug Authority</p>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Manufacturing Partners -->
-    <section class="section" style="padding: 40px 0 80px 0;">
-      <div class="container">
-         <h3 style="font-size: 1.5rem; color: #0f172a; margin-bottom: 30px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">Strategic Global Partners</h3>
-        
-        <div class="glass-premium" style="padding: 50px; text-align: center;">
-          <h2 style="color: #94a3b8; font-weight: 400; text-transform: uppercase; letter-spacing: 2px;">Partner Roster in Development</h2>
-          <p style="color: #64748b; margin-top: 15px;">Awaiting official partner logos and distribution agreements.</p>
-        </div>
-      </div>
-    </section>
-  </div>
-`;
+      <style>
+        .partners-hero { 
+          padding: 160px 0 120px; 
+          background: #0f172a; 
+          position: relative; 
+          color: white; 
+          overflow: hidden; 
+          border-radius: 0 0 50px 50px;
+        }
+        .overlay-mesh {
+          position: absolute; top:0; left:0; width:100%; height:100%;
+          background: url('/images/about1.png') center/cover no-repeat;
+          opacity: 0.3;
+          filter: grayscale(100%);
+        }
+        .partners-hero::after {
+          content: ''; position: absolute; top:0; left:0; width:100%; height:100%;
+          background: linear-gradient(to bottom, rgba(15,23,42,0.9), rgba(15,23,42,0.7));
+        }
+        .relative-z { position: relative; z-index: 10; }
+        .hero-label { font-size: 0.8rem; font-weight: 800; letter-spacing: 3px; color: var(--primary); margin-bottom: 20px; }
+        .hero-subtitle { font-size: 1.25rem; color: #94a3b8; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+        .section-header { margin-bottom: 50px; }
+        .section-title { font-size: 2rem; font-weight: 800; color: #1e293b; margin-bottom: 15px; }
+        .title-line { width: 60px; height: 4px; background: var(--primary); border-radius: 2px; }
+
+        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; }
+        .cert-card { padding: 40px; display: flex; gap: 30px; align-items: center; }
+        .cert-icon-box { width: 80px; height: 80px; border-radius: 20px; background: rgba(34, 197, 94, 0.1); color: #22c55e; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; flex-shrink: 0; }
+        .cert-icon-box.cyan { background: rgba(14, 165, 233, 0.1); color: #0ea5e3; }
+        .cert-body h3 { font-size: 1.4rem; font-weight: 800; color: #0f172a; margin-bottom: 8px; }
+        .cert-body p { color: #64748b; font-size: 0.95rem; line-height: 1.5; margin: 0; }
+
+        .roster-placeholder { padding: 80px 20px; text-align: center; background: #f8fafc; border: 2px dashed #e2e8f0; }
+        .shimmer-box i { font-size: 4rem; color: #cbd5e1; margin-bottom: 25px; }
+        .shimmer-box h3 { color: #475569; font-size: 1.8rem; font-weight: 800; margin-bottom: 15px; }
+        .shimmer-box p { color: #94a3b8; max-width: 500px; margin: 0 auto; line-height: 1.6; }
+
+        @media (max-width: 768px) {
+          .partners-hero { padding: 120px 0 80px; border-radius: 0 0 30px 30px; }
+          .cert-grid { grid-template-columns: 1fr; }
+          .cert-card { flex-direction: column; text-align: center; padding: 30px 20px; }
+          .fluid-title { font-size: 2.5rem !important; }
+        }
+      </style>
+    </div>
+  `;
+};

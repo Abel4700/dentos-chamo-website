@@ -5,7 +5,6 @@ export const About = () => `
     <section class="section hero-editorial" style="background-image: linear-gradient(135deg, rgba(10, 37, 95, 0.95) 0%, rgba(19, 70, 175, 0.8) 100%), url('/images/about1.png')">
       <div class="container hero-editorial-grid">
         <div class="hero-editorial-content fade-in">
-          <div class="glow-badge mb-20">Corporate Identity</div>
           <h1 class="text-white hero-title">A Legacy of <br/><span class="text-secondary glow-text">Trust & Vision</span></h1>
           <p class="hero-subtitle">
             Bridging the gap between global healthcare innovation and sustainable East African agriculture for over two decades.

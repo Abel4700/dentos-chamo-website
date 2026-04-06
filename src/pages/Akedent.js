@@ -1,79 +1,164 @@
-export const Akedent = () => `
-  <div class="app-section bg-light" style="padding-top: 100px; min-height: 100vh;">
-    <!-- Premium Hero -->
-    <section class="section" style="background-image: linear-gradient(135deg, #0e7490 0%, #083344 100%); padding: 120px 0; margin-top: -100px;">
-      <div class="container text-center fade-in">
-        <h1 style="font-size: 3.5rem; color: #ffffff; margin-bottom: 25px;">Akedent Pharmaceutical & Medical Equipment</h1>
-        <p style="font-size: 1.25rem; color: #cffafe; max-width: 900px; margin: 0 auto; line-height: 1.8;">
-          Akedent Pharmaceutical & Medical Equipment is an independent licensed entity specializing in the supply of pharmaceutical products and advanced medical equipment. The company is structured to support healthcare providers with reliable access to high-quality medical supplies and laboratory solutions.
-        </p>
-      </div>
-    </section>
+export const Akedent = () => {
+  return `
+    <div class="app-section bg-soft page-offset">
+      
+      <!-- 💊 CLINICAL HERO -->
+      <section class="company-hero akedent-theme fade-in">
+        <div class="container text-center">
+          <div class="hero-badge">INDEPENDENT PHARMACEUTICAL ENTITY</div>
+          <h1 class="fluid-title">Akedent <span class="text-accent">Pharmaceutical and Medical Equipment Whole Sale </span></h1>
+          <p class="hero-description">
+            A pillar of reliability in pharmaceutical distribution and advanced medical equipment. Akedent is dedicated to bridging the supply gap for healthcare providers with certified excellence.
+          </p>
+        </div>
+        <div class="hero-ambient-glow"></div>
+      </section>
 
-     <!-- Structural Matrix -->
-    <section class="section" style="padding: 80px 0; background: var(--bg-light);">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch;">
-          
-          <!-- Core Operations -->
-          <div class="glass-premium fade-in-up" style="padding: 50px; border-radius: 20px; background: white; border-top: 4px solid #06b6d4;">
-            <div style="display: flex; justify-content: center; margin-bottom: 30px;">
-              <i class="fas fa-network-wired" style="font-size: 3rem; color: #06b6d4;"></i>
+      <!-- 🍱 BENTO MATRIX -->
+      <section class="section">
+        <div class="container">
+          <div class="sophisticated-grid">
+            
+            <!-- Operations -->
+            <div class="bento-box glass-premium fade-in-up">
+              <div class="bento-header">
+                <div class="bento-icon"><i class="fas fa-microscope"></i></div>
+                <h2 class="bento-title">Core Operations</h2>
+              </div>
+              <ul class="bento-list">
+                <li><i class="fas fa-check-double"></i> Pharma Distribution Hub</li>
+                <li><i class="fas fa-check-double"></i> Medical Equipment Logistics</li>
+                <li><i class="fas fa-check-double"></i> Diagnostic Solution Support</li>
+              </ul>
             </div>
-            <h2 style="color: #083344; font-size: 2rem; margin-bottom: 30px; text-align: center;">Core Operations</h2>
-            <ul style="list-style: none; padding: 0;">
-              <li style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #f1f5f9; display: flex; align-items: center; font-size: 1.15rem; color: #334155;">
-                <i class="fas fa-angle-right" style="color: #06b6d4; margin-right: 15px; font-size: 1.5rem;"></i>
-                Pharmaceutical distribution
-              </li>
-              <li style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #f1f5f9; display: flex; align-items: center; font-size: 1.15rem; color: #334155;">
-                <i class="fas fa-angle-right" style="color: #06b6d4; margin-right: 15px; font-size: 1.5rem;"></i>
-                Medical equipment supply
-              </li>
-              <li style="display: flex; align-items: center; font-size: 1.15rem; color: #334155;">
-                <i class="fas fa-angle-right" style="color: #06b6d4; margin-right: 15px; font-size: 1.5rem;"></i>
-                Laboratory solutions provision
-              </li>
-            </ul>
+
+            <!-- Portfolio Shapes -->
+            <div class="bento-box glass-premium fade-in-up" style="animation-delay: 0.1s;">
+              <div class="bento-header">
+                <div class="bento-icon"><i class="fas fa-box-tissue"></i></div>
+                <h2 class="bento-title">Supply Spectrum</h2>
+              </div>
+              <div class="category-grid-modern">
+                <div class="modern-card-item">
+                   <i class="fas fa-pills"></i>
+                   <span>Pharma</span>
+                </div>
+                <div class="modern-card-item">
+                   <i class="fas fa-stethoscope"></i>
+                   <span>Supplies</span>
+                </div>
+                <div class="modern-card-item">
+                   <i class="fas fa-laptop-medical"></i>
+                   <span>Equipment</span>
+                </div>
+                <div class="modern-card-item">
+                   <i class="fas fa-vial"></i>
+                   <span>Lab Tech</span>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <!-- Product Categories -->
-          <div class="glass-premium fade-in-up" style="padding: 50px; border-radius: 20px; background: white; border-top: 4px solid #0891b2; animation-delay: 0.1s;">
-            <div style="display: flex; justify-content: center; margin-bottom: 30px;">
-              <i class="fas fa-boxes" style="font-size: 3rem; color: #0891b2;"></i>
-            </div>
-            <h2 style="color: #083344; font-size: 2rem; margin-bottom: 30px; text-align: center;">Product Categories</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-              <div style="padding: 20px; text-align: center; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; font-weight: 600; color: #0f172a;">
-                <i class="fas fa-pills" style="display: block; font-size: 1.8rem; color: #0891b2; margin-bottom: 10px;"></i>
-                Pharmaceuticals
-              </div>
-              <div style="padding: 20px; text-align: center; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; font-weight: 600; color: #0f172a;">
-                <i class="fas fa-stethoscope" style="display: block; font-size: 1.8rem; color: #0891b2; margin-bottom: 10px;"></i>
-                Medical Supplies
-              </div>
-              <div style="padding: 20px; text-align: center; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; font-weight: 600; color: #0f172a;">
-                <i class="fas fa-microscope" style="display: block; font-size: 1.8rem; color: #0891b2; margin-bottom: 10px;"></i>
-                Laboratory Equipment
-              </div>
-              <div style="padding: 20px; text-align: center; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0; font-weight: 600; color: #0f172a;">
-                <i class="fas fa-heartbeat" style="display: block; font-size: 1.8rem; color: #0891b2; margin-bottom: 10px;"></i>
-                Diagnostic Products
-              </div>
-            </div>
+          <!-- 🚀 ACTION FOOTER -->
+          <div class="cta-footer fade-in-up" style="animation-delay: 0.2s;">
+             <p>Access the specialized Akedent pharmaceutical and equipment registers.</p>
+             <a href="#/products?company=akedent" class="btn-premium-cyan">
+               View Akedent Catalogue <i class="fas fa-arrow-right"></i>
+             </a>
           </div>
-
         </div>
+      </section>
 
-        <!-- Global CTA -->
-        <div style="text-align: center; margin-top: 60px;" class="fade-in">
-           <p style="color: #64748b; font-size: 1.2rem; margin-bottom: 25px;">View the full Akedent catalogue in the Products & Services section.</p>
-           <a href="#/products?company=akedent" class="btn" style="padding: 18px 50px; font-size: 1.2rem; background: #0891b2; color: white;">
-            View Full Akedent Catalogue &rarr;
-          </a>
-        </div>
-      </div>
-    </section>
+      <style>
+        .akedent-theme { background: linear-gradient(135deg, #0e7490 0%, #083344 100%); }
+        .text-accent { color: #67e8f9; }
+        
+        .company-hero { 
+          padding: 120px 0 100px; 
+          position: relative; 
+          overflow: hidden; 
+          color: white;
+          border-radius: 0 0 50px 50px;
+        }
+        .hero-badge { 
+          display: inline-block; 
+          padding: 8px 20px; 
+          background: rgba(103, 232, 249, 0.15); 
+          border: 1px solid rgba(103, 232, 249, 0.3); 
+          border-radius: 50px; 
+          color: #67e8f9; 
+          font-weight: 800; 
+          font-size: 0.75rem; 
+          letter-spacing: 2px; 
+          margin-bottom: 30px; 
+        }
+        .fluid-title { 
+          font-size: clamp(2.2rem, 6vw, 4.2rem); 
+          font-weight: 800; 
+          letter-spacing: -2px; 
+          margin-bottom: 25px; 
+          line-height: 1.1; 
+        }
+        .hero-description { 
+          font-size: clamp(1.1rem, 2vw, 1.35rem); 
+          color: rgba(255,255,255,0.8); 
+          max-width: 800px; 
+          margin: 0 auto; 
+          line-height: 1.7; 
+        }
+        .hero-ambient-glow {
+          position: absolute;
+          top: -20%; right: -10%;
+          width: 500px; height: 500px;
+          background: radial-gradient(circle, rgba(103, 232, 249, 0.1) 0%, transparent 70%);
+          pointer-events: none;
+        }
 
-  </div>
-`;
+        .sophisticated-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          gap: 30px;
+          margin-top: -50px;
+          position: relative;
+          z-index: 10;
+        }
+        .bento-box { padding: 50px; background: white; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
+        .bento-header { display: flex; align-items: center; gap: 20px; margin-bottom: 40px; }
+        .bento-icon { width: 60px; height: 60px; border-radius: 16px; background: #ecfeff; color: #0891b2; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; }
+        .bento-title { font-size: 1.8rem; font-weight: 800; color: #0f172a; margin: 0; }
+        
+        .bento-list { list-style: none; padding: 0; margin: 0; }
+        .bento-list li { padding: 18px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: center; gap: 15px; color: #475569; font-weight: 500; }
+        .bento-list li i { color: #0891b2; }
+
+        .category-grid-modern { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .modern-card-item { 
+          padding: 25px; 
+          background: #f8fafc; 
+          border-radius: 20px; 
+          text-align: center; 
+          transition: all 0.3s;
+          border: 1px solid #f1f5f9;
+        }
+        .modern-card-item:hover { transform: translateY(-5px); background: white; border-color: #0891b2; }
+        .modern-card-item i { display: block; font-size: 2rem; color: #0891b2; margin-bottom: 15px; }
+        .modern-card-item span { font-weight: 800; color: #1e293b; font-size: 0.9rem; text-transform: uppercase; }
+
+        .cta-footer { text-align: center; margin-top: 80px; padding: 60px; background: white; border-radius: 30px; }
+        .cta-footer p { font-size: 1.15rem; color: #64748b; margin-bottom: 30px; }
+        .btn-premium-cyan { display: inline-flex; align-items: center; gap: 12px; padding: 20px 45px; background: #0891b2; color: white; border-radius: 15px; font-weight: 800; text-decoration: none; transition: all 0.3s; }
+        .btn-premium-cyan:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(8, 145, 178, 0.2); }
+
+        @media (max-width: 768px) {
+          .sophisticated-grid { grid-template-columns: 1fr; margin-top: 20px; }
+          .bento-box { padding: 35px 25px; }
+          .category-grid-modern { grid-template-columns: 1fr; }
+          .cta-footer { padding: 40px 20px; }
+          .btn-premium-cyan { width: 100%; justify-content: center; }
+          .company-hero { border-radius: 0 0 30px 30px; }
+        }
+      </style>
+    </div>
+  `;
+};

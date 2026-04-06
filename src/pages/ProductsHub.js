@@ -1,48 +1,117 @@
 import { products } from '../data/products.js';
 
 export const ProductsHub = (queryParams = {}) => {
-  const initialCompany = queryParams.company || 'all';
-  const initialCategory = queryParams.category || 'all';
+  const initialManufacturer = queryParams.manufacturer || 'all';
 
-  const generateProductCards = () => {
-    return products.map((product, index) => {
-      const delay = (index % 12) * 0.05;
-      
-      return `
-      <div class="product-card glass-premium fade-in-up" 
-           style="animation-delay: ${delay}s;" 
-           data-company="${product.company}" 
-           data-category="${product.category}"
-           data-segment="${product.segment}">
-        
-        <div class="card-image-wrapper">
-          ${product.image 
-            ? `<img src="${product.image}" alt="${product.commercial_name}" class="contained-img" onerror="this.onerror=null; this.outerHTML='<div class=\\'missing-img-box\\'><i class=\\'img-icon\\'>&#128247;</i><span>Image Pending</span></div>';">` 
-            : `<div class="missing-img-box"><i class="img-icon">&#128247;</i><span>Image Pending</span></div>`
-          }
-          
-          <div class="iso-badges">
-            ${product.safety.hazard_warnings ? `<span class="badge badge-hazard" title="${product.safety.hazard_warnings}">HAZARD</span>` : ''}
-            ${product.safety.is_sterile ? '<span class="badge badge-sterile" title="ISO 15223-1: Sterile">STERILE</span>' : ''}
-            ${product.safety.single_use ? '<span class="badge badge-single" title="ISO 15223-1: Single Use">SINGLE-USE</span>' : ''}
-            ${product.safety.fragile ? '<span class="badge badge-fragile" title="ISO 15223-1: Fragile">FRAGILE</span>' : ''}
-          </div>
+  const manufacturers = [
+    {
+      name: 'Accu-Med',
+      slug: 'accu-med',
+      desc: 'Expert surgical solutions and high-precision Maxillofacial instruments.',
+      count: products.filter(p => p.manufacturer === 'accu-med').length,
+      logo: '/src/assets/accu-med_logo.png',
+      color: '#0056b3',
+      bg: 'linear-gradient(135deg, rgba(0,86,179,0.05) 0%, rgba(0,86,179,0.1) 100%)',
+      pdf: '/catalogues/Accu_Med_Maxilo_Cataloguel.pdf'
+    },
+    {
+      name: 'Oradox',
+      slug: 'oradox',
+      desc: 'Sophisticated oral care solutions and advanced clinical hygiene.',
+      count: products.filter(p => p.manufacturer === 'oradox').length,
+      icon: 'fa-tooth',
+      color: '#0d9488',
+      bg: 'linear-gradient(135deg, rgba(13,148,136,0.05) 0%, rgba(13,148,136,0.1) 100%)',
+      pdf: '/catalogues/Oradox_Catalogue.pdf'
+    },
+    {
+      name: 'Prevest Denpro',
+      slug: 'prevest',
+      desc: 'Premium dental materials and reliable laboratory consumables.',
+      count: products.filter(p => p.manufacturer === 'prevest').length,
+      logo: '/src/assets/prevest_logo.webp',
+      color: '#4b66df',
+      bg: 'linear-gradient(135deg, rgba(75,102,223,0.05) 0%, rgba(75,102,223,0.1) 100%)',
+      pdf: '/catalogues/Prevest-Denpro-Catalog-2026.pdf'
+    },
+    {
+      name: 'TopZir',
+      slug: 'topzir',
+      desc: 'Cutting-edge CAD/CAM zirconia and aesthetic restoration blocks.',
+      count: products.filter(p => p.manufacturer === 'topzir').length,
+      logo: '/src/assets/tozier_logo.svg',
+      color: '#26bccd',
+      bg: 'linear-gradient(135deg, rgba(38,188,205,0.05) 0%, rgba(38,188,205,0.1) 100%)',
+      pdf: '/catalogues/Topzir_Products_Catalogue_2026.pdf'
+    }
+  ];
+
+  const generateBrandBanners = () => {
+    return manufacturers.map(mfr => `
+      <div class="brand-bento-card glass-premium fade-in-up" onclick="window.dispatchEvent(new CustomEvent('mfr-trigger', {detail: '${mfr.slug}'}))">
+        <div class="bento-bg" style="background: ${mfr.bg}"></div>
+        <div class="bento-header-media">
+          ${mfr.logo
+        ? `<img src="${mfr.logo}" alt="${mfr.name}" class="bento-logo" />`
+        : `<div class="bento-icon" style="color: ${mfr.color}; background: ${mfr.color}15"><i class="fas ${mfr.icon}"></i></div>`
+      }
         </div>
-
-        <div class="card-info">
-          <div class="card-header">
-             <span class="segment-tag glow-tag" style="background: var(--primary); color: white; border: none;">${product.company.toUpperCase()}</span>
-            <span class="cat-tag">${product.category}</span>
-          </div>
-          <h3 class="product-title" data-search-target="true">${product.commercial_name}</h3>
-          <p class="product-desc">${product.shortDesc}</p>
-          
-          <div class="action-footer mt-20">
-            <span class="hs-tag" data-search-target="true">HS ${product.hs_code || 'N/A'}</span>
-            <a href="#/product-details?id=${product.id}" class="btn btn-primary btn-sm btn-hover-lift">View Details &rarr;</a>
+        <div class="bento-body">
+          <h3 class="bento-name">${mfr.name}</h3>
+          <p class="bento-desc">${mfr.desc}</p>
+          <div class="bento-footer">
+            <span class="product-count"><strong>${mfr.count}</strong> PRODUCTS</span>
+            <a href="${mfr.pdf}" target="_blank" class="pdf-action-btn" onclick="event.stopPropagation()"><i class="fas fa-file-pdf"></i> PDF</a>
           </div>
         </div>
       </div>
+    `).join('');
+  };
+
+  const mfrColors = manufacturers.reduce((acc, current) => {
+    acc[current.slug] = current.color;
+    return acc;
+  }, {});
+
+  const generateProductCards = () => {
+    return products.map((product) => {
+      const isFeatured = product.featured ? 'true' : 'false';
+      return `
+      <a href="#/product-details?id=${product.id}" 
+         class="product-link-card product-card glass-premium fade-in-up" 
+         data-manufacturer="${product.manufacturer}" 
+         data-category="${product.category}"
+         data-featured="${isFeatured}"
+         style="display: none; text-decoration: none; color: inherit;">
+        
+        <div class="card-image-wrapper">
+          <div class="image-overlay"></div>
+          ${product.image
+          ? `<img src="${product.image}" alt="${product.commercial_name}" class="contained-img" loading="lazy">`
+          : `<div class="missing-img-box"><i class="fas fa-image"></i><span>Pending Visual</span></div>`
+        }
+          ${product.featured ? '<div class="featured-ribbon"><i class="fas fa-star"></i> FEATURED</div>' : ''}
+        </div>
+
+        <div class="card-info">
+          <div class="card-tags">
+             <span class="mfr-tag" style="background: ${mfrColors[product.manufacturer] || '#cbd5e1'}30; color: ${mfrColors[product.manufacturer] || '#64748b'}">
+               ${product.manufacturer.toUpperCase()}
+             </span>
+             <span class="cat-tag">${product.category}</span>
+          </div>
+          <h3 class="product-title" data-search-target="true">${product.commercial_name || 'N/A'}</h3>
+          
+          <div class="quick-highlights">
+             <span><i class="fas fa-check-circle"></i> ISO/CE</span>
+             <span><i class="fas fa-box"></i> Medical Grade</span>
+          </div>
+
+          <div class="card-action-bar">
+             <span>Technical Sheet &rarr;</span>
+          </div>
+        </div>
+      </a>
       `;
     }).join('');
   };
@@ -50,83 +119,46 @@ export const ProductsHub = (queryParams = {}) => {
   setTimeout(() => {
     const searchInput = document.getElementById('catalog-search');
     const cards = document.querySelectorAll('.product-card');
-    
-    // UI Toggles
-    const companyPills = document.querySelectorAll('.filter-pill');
-    const categoryPills = document.querySelectorAll('.cat-pill');
+    const mfrPills = document.querySelectorAll('.mfr-pill');
 
-    let activeCompany = initialCompany;
-    let activeCategory = initialCategory;
+    let activeMfr = initialManufacturer;
     let searchQuery = '';
 
-    // Initialize UI active states based on URL properties 
-    companyPills.forEach(btn => {
-      if(btn.dataset.value === activeCompany) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
-    });
-
-    categoryPills.forEach(btn => {
-      if(btn.dataset.value === activeCategory) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
+    window.addEventListener('mfr-trigger', (e) => {
+      activeMfr = e.detail;
+      runFilters();
+      window.scrollTo({ top: document.getElementById('visible-grid').offsetTop - 250, behavior: 'smooth' });
     });
 
     function runFilters() {
       let visibleCount = 0;
       cards.forEach(card => {
-        const companyMatch = (activeCompany === 'all' || card.getAttribute('data-company') === activeCompany);
-        
-        const _cardCat = (card.getAttribute('data-category') || 'none').toLowerCase();
-        const _cardSeg = (card.getAttribute('data-segment') || 'none').toLowerCase();
-        
-        let catMatch = false;
-        if (activeCategory === 'all') {
-            catMatch = true;
-        } else if (activeCategory === 'medical' && _cardSeg === 'medical') {
-            catMatch = true;
-        } else if (activeCategory === 'agriculture' && (_cardCat.includes('agriculture') || _cardSeg === 'organic')) {
-            catMatch = true;
-        } else if (_cardCat.includes(activeCategory.toLowerCase())) {
-            catMatch = true;
-        }
-        
+        const mfr = card.getAttribute('data-manufacturer');
+        const isFeatured = card.getAttribute('data-featured') === 'true';
+        const mfrMatch = (activeMfr === 'all' || mfr === activeMfr);
+
+        let priorityMatch = searchQuery ? true : isFeatured;
         let searchMatch = true;
+
         if (searchQuery) {
-          const searchTargets = card.querySelectorAll('[data-search-target="true"]');
-          let text = Array.from(searchTargets).map(el => el.textContent.toLowerCase()).join(' ');
+          const text = card.querySelector('.product-title').textContent.toLowerCase();
           searchMatch = text.includes(searchQuery);
         }
-        
-        if (companyMatch && catMatch && searchMatch) {
+
+        if (mfrMatch && priorityMatch && searchMatch) {
           card.style.display = 'flex';
           visibleCount++;
         } else {
           card.style.display = 'none';
         }
       });
-      
-      const emptyState = document.getElementById('empty-state');
-      if (visibleCount === 0) {
-        emptyState.style.display = 'block';
-      } else {
-        emptyState.style.display = 'none';
-      }
 
-      // Update URL parameters dynamically so sharing the URL saves exactly what the user filtered
-      const newUrl = new URL(window.location);
-      if(activeCompany !== 'all') newUrl.searchParams.set('company', activeCompany);
-      else newUrl.searchParams.delete('company');
-      
-      if(activeCategory !== 'all') newUrl.searchParams.set('category', activeCategory);
-      else newUrl.searchParams.delete('category');
-      
-      const hashSplit = window.location.hash.split('?');
-      window.history.replaceState(null, '', `${newUrl.pathname}${newUrl.search}${hashSplit[0]}?${newUrl.searchParams.toString()}`);
+      const emptyState = document.getElementById('empty-state');
+      emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+
+      mfrPills.forEach(pill => {
+        pill.classList.toggle('active', pill.dataset.value === activeMfr);
+      });
     }
 
     if (searchInput) {
@@ -136,120 +168,138 @@ export const ProductsHub = (queryParams = {}) => {
       });
     }
 
-    // Attach click handlers to Pills
-    companyPills.forEach(btn => {
+    mfrPills.forEach(btn => {
       btn.addEventListener('click', (e) => {
-        companyPills.forEach(b => b.classList.remove('active'));
-        e.target.classList.add('active');
-        activeCompany = e.target.dataset.value;
+        activeMfr = e.target.dataset.value;
         runFilters();
       });
     });
 
-    categoryPills.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          categoryPills.forEach(b => b.classList.remove('active'));
-          // In case they click an icon inside the button, grab closest button
-          const targetBtn = e.target.closest('button');
-          targetBtn.classList.add('active');
-          activeCategory = targetBtn.dataset.value;
-          runFilters();
-        });
-    });
-
-    // Fire immediately to govern starting load bounds
     runFilters();
-  }, 50);
+  }, 100);
 
   return `
     <style>
-      .filter-pill, .cat-pill {
-        padding: 10px 24px;
-        border: none;
-        border-radius: 8px;
-        background: transparent;
-        color: #64748b;
-        font-weight: 600;
-        font-size: 0.95rem;
+      .bg-soft { background: #f8fafc; min-height: 100vh; }
+      .glass-premium { background: white; border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
+      
+      /* TITLE SECTION */
+      .page-hero { padding: 100px 0 60px; text-align: center; }
+      .hub-title { font-size: 4.2rem; font-weight: 800; color: #0f172a; margin-bottom: 20px; letter-spacing: -2px; }
+      .hub-subtitle { font-size: 1.3rem; color: #64748b; max-width: 750px; margin: 0 auto; line-height: 1.6; }
+
+      /* BENTO MANUFACTURER CARDS */
+      .brand-bento-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-bottom: 80px;
+      }
+      .brand-bento-card {
+        position: relative;
+        padding: 40px;
         cursor: pointer;
-        transition: all 0.3s ease;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 240px;
       }
-      .filter-pill:hover, .cat-pill:hover {
-        color: var(--primary);
-        background: rgba(14, 165, 233, 0.1);
-      }
-      .filter-pill.active {
-        background: #0f172a;
-        color: #ffffff;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      }
-      .cat-pill.active {
-        background: var(--primary);
-        color: #ffffff;
-        box-shadow: 0 4px 10px rgba(14, 165, 233, 0.4);
-      }
-      #catalog-search:focus {
-        border-color: var(--primary) !important;
-        background: #ffffff !important;
-        box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+      .brand-bento-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+      .bento-bg { position: absolute; top:0; left:0; width:100%; height:100%; z-index: 1; transition: opacity 0.3s; }
+      .bento-header-media { height: 64px; display: flex; align-items: center; position: relative; z-index: 2; margin-bottom: 25px; }
+      .bento-logo { height: 100%; max-width: 160px; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.05)); }
+      .bento-icon { width: 64px; height: 64px; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; }
+      .bento-body { position: relative; z-index: 2; flex-grow: 1; }
+      .bento-name { font-size: 1.6rem; font-weight: 800; color: #0f172a; margin-bottom: 8px; }
+      .bento-desc { font-size: 0.95rem; color: #475569; line-height: 1.5; margin-bottom: 25px; max-width: 90%; }
+      .bento-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
+      .product-count { font-size: 0.8rem; font-weight: 800; color: #94a3b8; letter-spacing: 1px; }
+      .pdf-action-btn { padding: 8px 16px; background: white; border-radius: 10px; font-size: 0.85rem; font-weight: 700; color: #0f172a; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+
+      /* PRODUCT GRID */
+      .product-link-card { transition: all 0.3s; height: 100%; position: relative; overflow: hidden; }
+      .product-link-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+      
+      .card-image-wrapper { height: 260px; padding: 30px; display: flex; align-items: center; justify-content: center; background: #fff; position: relative; }
+      .contained-img { max-width: 100%; max-height: 100%; object-fit: contain; transition: transform 0.5s ease; }
+      .product-link-card:hover .contained-img { transform: scale(1.05); }
+      
+      .featured-ribbon { position: absolute; top: 15px; left: 15px; background: #fbbf24; color: #92400e; padding: 4px 12px; border-radius: 50px; font-size: 0.7rem; font-weight: 800; display: flex; align-items: center; gap: 5px; z-index: 10; }
+      
+      .card-info { padding: 30px; background: white; border-top: 1px solid #f1f5f9; }
+      .card-tags { display: flex; gap: 8px; margin-bottom: 15px; }
+      .mfr-tag { font-size: 0.7rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; }
+      .cat-tag { font-size: 0.7rem; color: #64748b; font-weight: 700; padding: 4px; }
+      .product-title { font-size: 1.25rem; font-weight: 800; color: #1e293b; margin-bottom: 12px; line-height: 1.3; }
+      
+      .quick-highlights { display: flex; gap: 15px; margin-bottom: 25px; }
+      .quick-highlights span { font-size: 0.75rem; color: #94a3b8; font-weight: 600; display: flex; align-items: center; gap: 5px; }
+      .quick-highlights i { color: #22c55e; }
+
+      .card-action-bar { font-size: 0.9rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 15px; }
+
+      /* FILTERS */
+      .mfr-pill { padding: 10px 25px; border-radius: 50px; background: white; border: 1px solid #e2e8f0; color: #64748b; font-weight: 700; cursor: pointer; transition: all 0.2s; }
+      .mfr-pill.active { background: #0f172a; color: white; border-color: #0f172a; box-shadow: 0 10px 20px rgba(15,23,42,0.15); }
+
+      /* MOBILE RESPONSIVENESS */
+      @media (max-width: 768px) {
+        .hub-title { font-size: 2.8rem; margin-bottom: 15px; }
+        .hub-subtitle { font-size: 1.1rem; padding: 0 15px; }
+        .brand-bento-grid { grid-template-columns: 1fr; gap: 20px; }
+        .brand-bento-card { min-height: 200px; padding: 25px; }
+        .bento-name { font-size: 1.4rem; }
+        .bento-desc { font-size: 0.9rem; }
+        
+        .page-hero { padding: 80px 0 40px; }
+        
+        .glass-premium { padding: 20px !important; flex-direction: column; align-items: stretch !important; gap: 15px !important; }
+        .mfr-pill { padding: 8px 16px; font-size: 0.8rem; flex: 1 1 auto; text-align: center; }
       }
     </style>
 
-    <div class="app-section bg-light" style="padding-top: 100px;">
+    <div class="app-section bg-soft page-offset">
       
-      <!-- Hero Intro -->
-      <div class="container text-center fade-in" style="margin-bottom: 50px;">
-        <h1 class="tech-title" style="font-size: 3.8rem; margin-bottom: 20px;">Global <span style="color: var(--primary);">Products Hub</span></h1>
-        <p style="font-size: 1.25rem; color: #475569; max-width: 900px; margin: 0 auto; line-height: 1.8;">
-          The Products & Services section provides a comprehensive catalogue of all products and solutions offered across Dentose Chamo Trading PLC and its associated business units. Users can explore offerings by category, business unit, or specific product needs.
-        </p>
+      <div class="page-hero container fade-in">
+        <h1 class="hub-title">Our <span style="color: var(--primary);">Products</span></h1>
+        <p class="hub-subtitle">Precision instruments and premium materials for dental and surgical specialists. Select a manufacturer or browse our featured collections below.</p>
       </div>
 
-      <!-- Advanced Redesigned Filter Matrix -->
       <div class="container">
-        <div class="glass-premium fade-in-up" style="position: sticky; top: 90px; z-index: 100; margin-bottom: 50px; padding: 25px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.8); display: flex; flex-direction: column; gap: 20px;">
-          
-          <!-- Top Row: Search & Company Parameters -->
-          <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap; justify-content: space-between;">
-            <div style="flex: 1; min-width: 300px; position: relative;">
-              <i class="fas fa-search" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: #94a3b8; font-size: 1.1rem;"></i>
-              <input type="text" id="catalog-search" placeholder="Search products, models, or HS codes..." style="width: 100%; padding: 15px 20px 15px 50px; border: 1px solid rgba(226, 232, 240, 1); border-radius: 12px; outline: none; background: rgba(255,255,255,0.7); backdrop-filter: blur(5px); font-size: 1.05rem; color: #0f172a; transition: all 0.3s ease;">
-            </div>
-            
-            <div class="filter-group" style="display: flex; gap: 5px; background: rgba(241, 245, 249, 0.8); padding: 5px; border-radius: 10px; border: 1px solid rgba(226, 232, 240, 0.8);">
-              <button class="filter-pill active" data-value="all">All Group</button>
-              <button class="filter-pill" data-value="dentose">Dentose Chamo</button>
-              <button class="filter-pill" data-value="oradent">Ora-Dent</button>
-              <button class="filter-pill" data-value="akedent">Akedent</button>
-            </div>
-          </div>
-
-          <hr style="border: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(226,232,240,1), transparent); margin: 5px 0;">
-
-          <!-- Bottom Row: Category Scope -->
-          <div style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;" id="category-filters">
-            <span style="font-size: 0.9rem; font-weight: 700; color: #64748b; letter-spacing: 0.08em; text-transform: uppercase;">Divisions:</span>
-            <button class="cat-pill active" data-value="all"><i class="fas fa-globe"></i> Global</button>
-            <button class="cat-pill" data-value="medical"><i class="fas fa-stethoscope"></i> Medical</button>
-            <button class="cat-pill" data-value="agriculture"><i class="fas fa-seedling"></i> Agriculture</button>
-            <button class="cat-pill" data-value="cosmetics"><i class="fas fa-magic"></i> Cosmetics</button>
-            <button class="cat-pill" data-value="pharma"><i class="fas fa-pills"></i> Pharma</button>
-          </div>
-
+        <div class="brand-bento-grid">
+          ${generateBrandBanners()}
         </div>
       </div>
 
-      <!-- Live Catalogue Grid -->
+      <div class="container" style="margin-bottom: 50px;">
+        <div class="glass-premium" style="padding:15px 30px; display: flex; flex-wrap: wrap; gap: 30px; align-items: center; justify-content: space-between;">
+           <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+             <button class="mfr-pill active" data-value="all">Show All</button>
+             <button class="mfr-pill" data-value="accu-med">Accu-Med</button>
+             <button class="mfr-pill" data-value="oradox">Oradox</button>
+             <button class="mfr-pill" data-value="prevest">Prevest Denpro</button>
+             <button class="mfr-pill" data-value="topzir">TopZir</button>
+           </div>
+           
+           <div style="flex: 1; min-width: 320px; position: relative;">
+             <i class="fas fa-search" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: #cbd5e1;"></i>
+             <input type="text" id="catalog-search" placeholder="Quick find in database..." style="width: 100%; border: none; background: #f8fafc; padding: 14px 20px 14px 50px; border-radius: 12px; font-weight: 600; outline: none;">
+           </div>
+        </div>
+      </div>
+
       <section class="section" style="padding-top: 0;">
         <div class="container">
           <div class="product-grid" id="visible-grid">
             ${generateProductCards()}
           </div>
           
-          <div id="empty-state" class="glass-premium" style="display: none; padding: 60px 20px; text-align: center; max-width: 600px; margin: 40px auto;">
-            <i class="fas fa-boxes" style="font-size: 3.5rem; color: #cbd5e1; margin-bottom: 20px;"></i>
-            <h3 style="color: #475569; margin-bottom: 10px; font-size: 1.8rem;">No exact matches found.</h3>
-            <p style="color: #94a3b8; font-size: 1.1rem;">Try adjusting the intelligent filters above or expanding your search term.</p>
+          <div id="empty-state" class="glass-premium" style="display: none; padding: 80px 20px; text-align: center; max-width: 600px; margin: 40px auto;">
+            <i class="fas fa-microscope" style="font-size: 4rem; color: #e2e8f0; margin-bottom: 25px;"></i>
+            <h3 style="color: #475569; font-weight: 800;">No Products Found</h3>
+            <p style="color: #94a3b8;">Try clearing your search or selecting a different brand.</p>
           </div>
         </div>
       </section>
@@ -257,3 +307,4 @@ export const ProductsHub = (queryParams = {}) => {
     </div>
   `;
 };
+

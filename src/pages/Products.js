@@ -7,13 +7,24 @@ export const Products = () => {
     `).join('');
   };
 
+  const MFR_COLORS = {
+    'accu-med': '#0056b3',
+    'oradox':   '#0d9488',
+    'prevest':  '#4b66df',
+    'topzir':   '#26bccd',
+    'default':  '#1e293b'
+  };
+
   const generateProductCards = () => {
     return products.map((product, index) => {
-      // Create a staggered delay for entrance animation
       const delay = (index % 12) * 0.05;
+      const mfrColor = MFR_COLORS[product.manufacturer] || MFR_COLORS.default;
       
       return `
-      <div class="product-card glass-premium fade-in-up" style="animation-delay: ${delay}s;" data-segment="${product.segment}" data-category="${product.category}">
+      <div class="product-card glass-premium fade-in-up" 
+           style="animation-delay: ${delay}s; border-top: 3px solid ${mfrColor};" 
+           data-segment="${product.segment}" 
+           data-category="${product.category}">
         <div class="card-image-wrapper">
           ${product.image 
             ? `<img src="${product.image}" alt="${product.commercial_name}" class="contained-img" onerror="this.onerror=null; this.outerHTML='<div class=\\'missing-img-box\\'><i class=\\'img-icon\\'>&#128247;</i><span>Image Pending</span></div>';">` 
@@ -29,16 +40,21 @@ export const Products = () => {
         </div>
 
         <div class="card-info">
-          <div class="card-header">
-            <span class="segment-tag ${product.segment}-tag glow-tag">${product.segment === 'medical' ? 'Medical' : 'Organic'}</span>
-            <span class="cat-tag">${product.category}</span>
+          <div class="card-header-main">
+            <span class="mfr-badge" style="background: ${mfrColor}15; color: ${mfrColor}; border: 1px solid ${mfrColor}30;">
+              ${product.manufacturer.toUpperCase()}
+            </span>
+            <span class="cat-pill">${product.category}</span>
           </div>
-          <h3 class="product-title" data-search-target="true">${product.commercial_name}</h3>
-          <p class="product-desc">${product.shortDesc}</p>
           
-          <div class="action-footer mt-20">
-            <span class="hs-tag" data-search-target="true">HS ${product.hs_code}</span>
-            <a href="#/product-details?id=${product.id}" class="btn btn-primary btn-sm btn-hover-lift">View Details &rarr;</a>
+          <h3 class="product-name-link" data-search-target="true">${product.commercial_name}</h3>
+          <p class="product-short-desc">${product.shortDesc}</p>
+          
+          <div class="card-utility-bar mt-20">
+            <span class="hs-code-label" data-search-target="true">HS ${product.hs_code}</span>
+            <a href="#/product-details?id=${product.id}" class="clean-action-link">
+              View Details <i class="fas fa-arrow-right"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -318,26 +334,24 @@ export const Products = () => {
       .missing-img-box { display: flex; flex-direction: column; align-items: center; justify-content: center; color: #94a3b8; width: 100%; height: 100%; opacity: 0.7; }
       .img-icon { font-size: 2.5rem; margin-bottom: 5px; font-style: normal; }
       
-      .iso-badges { position: absolute; top: 12px; right: 12px; display: flex; flex-direction: column; gap: 5px; align-items: flex-end; z-index: 2; }
-      .badge { padding: 4px 8px; border-radius: 4px; font-size: 0.65rem; font-weight: 800; color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.15); }
-      .badge-sterile { background-color: #10b981; }
-      .badge-fragile { background-color: #f59e0b; }
-      .badge-single { background-color: #3b82f6; }
-      .badge-hazard { background-color: #ef4444; }
 
-      .card-info { padding: 25px 20px 20px; display: flex; flex-direction: column; flex-grow: 1; }
-      .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-      .segment-tag { padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-      .medical-tag { background: #e0e7ff; color: #3730a3; }
-      .organic-tag { background: #fef3c7; color: #b45309; }
-      .glow-tag { padding: 4px 10px; border-radius: 4px; position: relative; overflow: hidden; }
+      .card-info { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; gap: 15px; }
+      .card-header-main { display: flex; justify-content: space-between; align-items: center; }
       
-      .cat-tag { color: #64748b; font-size: 0.8rem; font-weight: 600; }
-      .product-title { font-size: 1.15rem; font-weight: 800; color: #0f172a; margin: 0 0 10px 0; line-height: 1.3; }
-      .product-desc { font-size: 0.9rem; color: #475569; margin: 0; flex-grow: 1; line-height: 1.5; }
+      .mfr-badge { font-size: 0.65rem; font-weight: 800; padding: 4px 12px; border-radius: 50px; letter-spacing: 0.5px; }
+      .cat-pill { font-size: 0.75rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
       
-      .action-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 15px; }
-      .hs-tag { font-family: 'Courier New', monospace; color: #94a3b8; font-size: 0.85rem; font-weight: 600; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; }
+      .product-name-link { font-size: 1.3rem; font-weight: 800; color: #0f172a; margin: 0; line-height: 1.25; }
+      .product-short-desc { font-size: 0.95rem; color: #64748b; line-height: 1.6; margin: 0; }
+
+      .card-utility-bar { 
+        margin-top: auto; padding-top: 20px; border-top: 1px solid #f1f5f9;
+        display: flex; justify-content: space-between; align-items: center;
+      }
+      .hs-code-label { font-family: 'Courier New', monospace; font-size: 0.75rem; color: #cbd5e1; font-weight: 700; }
+      .clean-action-link { font-size: 0.9rem; font-weight: 800; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+      .clean-action-link i { font-size: 0.8rem; transition: transform 0.3s; }
+      .clean-action-link:hover i { transform: translateX(5px); }
       .btn-sm { padding: 8px 16px; font-size: 0.9rem; border-radius: 6px; }
 
       /* Empty State */
