@@ -3,7 +3,7 @@ export const DentoseChamo = () => `
     <!-- Premium Hero -->
     <section class="section" style="background-image: linear-gradient(135deg, rgba(19, 70, 175, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%); padding: 120px 0; margin-top: -100px;">
       <div class="container text-center fade-in">
-        <h1 style="font-size: 3.5rem; color: #ffffff; margin-bottom: 25px;">Dentose Chamo Import & Export</h1>
+        <h1 style="font-size: 3.5rem; color: #ffffff; margin-bottom: 25px;">Dentose Chamo Trading PLC</h1>
         <p style="font-size: 1.25rem; color: #cbd5e1; max-width: 900px; margin: 0 auto; line-height: 1.8;">
           A leading trading company engaged in the importation of high-quality medical, laboratory, and healthcare products, alongside the export of premium agricultural commodities. With a strong operational foundation and strategic global partnerships, we serve healthcare institutions, laboratories, and international markets with reliable, standards-driven solutions.
         </p>
@@ -63,4 +63,15 @@ export const DentoseChamo = () => `
     </section>
 
   </div>
+
+  <style>
+    @media (max-width: 640px) {
+      .section h1 { font-size: 2.2rem !important; line-height: 1.1; margin-bottom: 20px; }
+      .section h2 { font-size: 1.8rem !important; }
+      .product-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+      .glass-premium { padding: 30px !important; }
+      .app-section { padding-top: 80px !important; }
+      .btn-primary { width: 100%; border-radius: 12px; }
+    }
+  </style>
 `;

@@ -15,7 +15,7 @@ export const Header = () => `
           <button class="dropbtn">Our Companies <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></button>
           <div class="dropdown-content glass-premium">
             <a href="#/companies/dentos-chamo">
-              <strong>Dentose Chamo Import & Export</strong>
+              <strong>Dentose Chamo Trading PLC</strong>
               <span class="sub-text">Medical Devices & Agricultural Export</span>
             </a>
             <a href="#/companies/ora-dent">
@@ -23,7 +23,7 @@ export const Header = () => `
               <span class="sub-text">Aesthetic Dental & Cosmetics</span>
             </a>
             <a href="#/companies/akedent">
-              <strong>Akedent Pharmaceutical & Medical Equipment</strong>
+              <strong>Akedent Pharmaceutical and Medical Equipment Whole Sale</strong>
               <span class="sub-text">Pharma & Heavy Lab Machinery</span>
             </a>
             <a href="https://diredawa.dentosechamo.com" target="_blank" rel="noopener noreferrer">
@@ -228,7 +228,66 @@ export const Header = () => `
   </style>
 
   <script>
-    // Note: Due to SPA limits in vanilla injections, basic JS logic for mobile dropdown might require triggering externally or via global listeners.
-    // For this prototype, CSS handles Desktop hover fine.
+    // Unified Header & Dropdown UX Controller
+    document.addEventListener('click', (e) => {
+      const dropbtn = e.target.closest('.dropbtn');
+      const dropdownItem = e.target.closest('.dropdown-content a');
+      const dropdown = document.querySelector('.dropdown');
+      const dropdownContent = document.querySelector('.dropdown-content');
+
+      // --- MOBILE HAMBURGER TOGGLE ---
+      const menuBtn = e.target.closest('.mobile-menu-btn');
+      if (menuBtn) {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+        menuBtn.classList.toggle('active');
+        return; // Exit
+      }
+
+      // --- DROPDOWN TOGGLE (HEADER CLICK) ---
+      if (dropbtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        if (window.innerWidth <= 768) {
+          // MOBILE: Standard Accordion Toggle
+          dropdown.classList.toggle('active');
+        } else {
+          // DESKTOP: Hover Override (Retract on click)
+          if (dropdownContent && window.getComputedStyle(dropdownContent).display === 'block') {
+            dropdownContent.style.display = 'none';
+            setTimeout(() => { dropdownContent.style.display = ''; }, 100);
+          }
+        }
+        return;
+      }
+
+      // --- LINK CLICKED (NAVIGATE & CLOSE) ---
+      if (dropdownItem || e.target.closest('.nav-links > a')) {
+        closeAllMenus();
+        return;
+      }
+
+      // --- CLICK OUTSIDE TO CLOSE ---
+      if (!e.target.closest('.dropdown') && !e.target.closest('.nav-links')) {
+        closeAllMenus();
+      }
+    });
+
+    function closeAllMenus() {
+      // Close Sidebar
+      const navLinks = document.querySelector('.nav-links');
+      if (navLinks) navLinks.classList.remove('active');
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      if (menuBtn) menuBtn.classList.remove('active');
+      
+      // Close Dropdown
+      const dropdown = document.querySelector('.dropdown');
+      if (dropdown) dropdown.classList.remove('active');
+      
+      // Cleanup Desktop Styles
+      const dropdownContent = document.querySelector('.dropdown-content');
+      if (dropdownContent) dropdownContent.style.display = '';
+    }
   </script>
 `;
