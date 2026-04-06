@@ -310,11 +310,25 @@ export const Home = () => {
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
     @media (max-width: 768px) {
-      .hero-gateway { height: 100vh; }
-      .glass-hero-card { padding: 40px 20px; border-radius: 0; background: rgba(10, 25, 47, 0.8); height: 100%; display: flex; flex-direction: column; justify-content: center; width: 100%; max-width: 100%; }
-      .glass-hero-card h1 { font-size: 2.2rem; }
-      .hero-actions { flex-direction: column; width: 100%; }
-      .hero-actions .btn { width: 100%; }
+      .hero-gateway { height: 100vh; padding-top: 0; }
+      .glass-hero-card { 
+        padding: 40px 24px; 
+        border-radius: 32px; 
+        background: rgba(255, 255, 255, 0.08); 
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        height: auto; 
+        width: 92%; 
+        max-width: 92%; 
+        margin: 0 auto;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      }
+      .glass-hero-card h1 { font-size: 2.1rem; line-height: 1.2; letter-spacing: -1px; }
+      .glass-hero-card p { font-size: 1.05rem; margin-bottom: 25px; }
+      .hero-actions { flex-direction: column; width: 100%; gap: 12px; }
+      .hero-actions .btn { width: 100%; padding: 14px; font-size: 0.95rem; }
+      .hero-tag { margin-bottom: 15px; font-size: 0.7rem; }
     }
 
     /* Asymmetric About Section */
