@@ -9,6 +9,7 @@ import { Contact } from './pages/Contact.js';
 import { DentoseChamo } from './pages/DentoseChamo.js';
 import { OraDent } from './pages/OraDent.js';
 import { Akedent } from './pages/Akedent.js';
+import { DentosDireDawa } from './pages/DentosDireDawa.js';
 import { Partners } from './pages/Partners.js';
 
 // Centralised Products Hub
@@ -21,6 +22,7 @@ const routes = {
   '#/companies/dentos-chamo': DentoseChamo,
   '#/companies/ora-dent': OraDent,
   '#/companies/akedent': Akedent,
+  '#/companies/dentos-dire-dawa': DentosDireDawa,
   '#/partners': Partners,
   '#/products': ProductsHub, // Global Centralized Catalog
   '#/product-details': ProductDetails,
