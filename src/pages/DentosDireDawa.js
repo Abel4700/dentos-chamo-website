@@ -19,7 +19,7 @@ export const DentosDireDawa = () => {
             <a href="#/contact" class="btn-premium">Expert Consultation <i class="fas fa-chevron-right"></i></a>
             <div class="hero-badge">
                <i class="fas fa-certificate"></i>
-               <span>ISO 13485 Standards Ready</span>
+               <span></span>
             </div>
           </div>
         </div>
