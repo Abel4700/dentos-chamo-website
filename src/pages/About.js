@@ -1,384 +1,339 @@
-export const About = () => `
-  <div class="app-section about-premium-page">
+export const About = () => {
+  return `
+  <div class="app-section about-root dark-theme-page">
     
-    <!-- Immersive Editorial Hero -->
-    <section class="section hero-editorial" style="background-image: linear-gradient(135deg, rgba(10, 37, 95, 0.95) 0%, rgba(19, 70, 175, 0.8) 100%), url('/images/about1.png')">
-      <div class="container hero-editorial-grid">
-        <div class="hero-editorial-content fade-in">
-          <h1 class="text-white hero-title">A Legacy of <br/><span class="text-secondary glow-text">Trust & Vision</span></h1>
-          <p class="hero-subtitle">
-            Bridging the gap between global healthcare innovation and sustainable East African agriculture for over two decades.
+    <!-- BACKGROUND ANIMATED DECORATION -->
+    <div class="global-background-orbs">
+       <div class="glass-orb orb-primary"></div>
+       <div class="glass-orb orb-accent"></div>
+    </div>
+
+    <!-- 🏰 IMMERSIVE EDITORIAL HERO V3 -->
+    <section class="hero-editorial-v3">
+      <div class="container hero-editorial-grid-v3">
+        <div class="hero-editorial-content-v3 fade-in-up">
+          <div class="hero-badge-v3">WORLD-CLASS LEGACY</div>
+          <h1 class="section-title-visionary">A Legacy of <br/><span class="accent-text">Trust & Vision</span></h1>
+          <p class="hero-lead">
+            Bridging the gap between global healthcare innovation and sustainable East African agriculture for nearly a decade.
           </p>
-          <div class="hero-metrics flex gap-20 mt-40">
-            <div class="metric-item">
-              <h3 class="text-secondary">20+</h3>
-              <span>Years Legacy</span>
+          <div class="hero-metrics-v3">
+            <div class="metric-item-v3">
+              <div class="metric-number accent-text">9+</div>
+              <div class="metric-label">Years of Legacy</div>
             </div>
-            <div class="metric-item">
-              <h3 class="text-secondary">2</h3>
-              <span>Global Divisions</span>
+            <div class="metric-divider"></div>
+            <div class="metric-item-v3">
+              <div class="metric-number accent-text">4+</div>
+              <div class="metric-label">Specialized Divisions</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="hero-overlay-graphic"></div>
+      <div class="hero-editorial-overlay"></div>
     </section>
 
-    <!-- Overlapping Founder Narrative -->
-    <section class="section founder-section bg-light">
+    <!-- 🏛️ FOUNDER NARRATIVE: CINEMATIC DARK -->
+    <section class="section founder-cinematic">
       <div class="container">
-        <div class="founder-grid">
-          <div class="founder-image-wrapper fade-in">
-            <div class="image-accent-glow"></div>
-            <img src="/images/about1.png" alt="Dr. Aklilu Berhanu" class="founder-img" onerror="this.src='https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=800';">
+        <div class="founder-grid-v3">
+          <div class="founder-image-wrapper-v3 fade-in">
+            <div class="founder-glow"></div>
+            <img src="/src/assets/dr_aklilu_berhanu.png" alt="Dr. Aklilu Berhanu" class="img-visionary-founder">
             
-            <!-- Floating Floating Quote -->
-            <div class="floating-quote glass-premium hover-lift">
-              <i class="fas fa-quote-left text-primary"></i>
-              <p class="quote-text">"Our commitment has always been uncompromising quality—whether supplying advanced endodontic materials or exporting premium organic sesame."</p>
-              <div class="quote-author">
-                <span class="author-name">Dr. Aklilu Berhanu</span>
-                <span class="author-title">Founder & CEO</span>
+            <!-- Visionary Floating Quote -->
+            <div class="floating-quote-v3 glass-card-v3 bounce-anim">
+              <i class="fas fa-quote-left accent-text"></i>
+              <p>"Our commitment has always been uncompromising quality—whether supplying advanced endodontics or exporting premium organic sesame."</p>
+              <div class="quote-signature">
+                <span class="sig-name accent-text">Dr. Aklilu Berhanu</span>
+                <span class="sig-title">Founder & CEO</span>
               </div>
             </div>
           </div>
 
-          <div class="founder-content fade-in" style="animation-delay: 0.2s;">
-            <div class="subtitle text-primary">Our Genesis</div>
-            <h2 class="mb-20" style="font-size: 2.8rem;">Roots Built on <span class="primary-text">Integrity</span></h2>
-            <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;">
-              Dentos Chamo was established under visionary leadership, starting as a highly focused dental medical import center. 
-            </p>
-            <p class="text-muted" style="font-size: 1.1rem; line-height: 1.8;">
-              Driven by the unwavering mantra of <strong>Quality, Trust, Delivery, and Warranty</strong>, the company systematically expanded into a robust organic commodity export powerhouse, ensuring compliance with strict ISO and international trade standards across all divisions.
+          <div class="founder-text-v3 fade-in">
+            <div class="hero-badge-v3 no-margin">OUR GENESIS</div>
+            <h2 class="section-title-visionary">Roots Built on <span class="accent-text">Integrity</span></h2>
+            <p class="text-muted-standard">
+              Dentos Chamo was established under visionary leadership, starting as a highly focused dental medical import center. Driven by the unwavering mantra of <strong>Quality, Trust, Delivery, and Warranty</strong>, the company systematically expanded into a robust organic powerhouse.
             </p>
             
-            <ul class="founder-list mt-30">
-              <li><i class="fas fa-check-circle text-primary"></i> Unwavering focus on specialized endodontic supply.</li>
-              <li><i class="fas fa-check-circle text-primary"></i> Scaled agricultural exports to global markets.</li>
-              <li><i class="fas fa-check-circle text-primary"></i> ISO 13485 & 20417 regulatory alignment.</li>
+            <ul class="vision-list-v3">
+              <li><div class="v3-bullet"><i class="fas fa-check-circle accent-text"></i></div> Specialized endodontic supply excellence.</li>
+              <li><div class="v3-bullet"><i class="fas fa-check-circle accent-text"></i></div> Scaled agricultural fulfillment to global markets.</li>
+              <li><div class="v3-bullet"><i class="fas fa-check-circle accent-text"></i></div> ISO 13485 & 20417 regulatory leadership.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Mission & Vision (Luminescent Cards) -->
-    <section class="section dark-theme mission-vision-section" style="background-color: var(--primary-dark);">
+    <!-- 🍱 MISSION MATRIX: BENTO V3 -->
+    <section class="section mission-section-v3">
       <div class="container">
-        <div class="text-center mb-40 fade-in">
-          <div class="subtitle text-secondary">Corporate Objectives</div>
-          <h2 class="text-white" style="font-size: 2.5rem;">Dual <span class="text-secondary">Mission</span></h2>
+        <div class="section-header-centered mb-60 fade-in">
+          <div class="hero-badge-v3">CORPORATE OBJECTIVES</div>
+          <h2 class="section-title-visionary text-center">Dual <span class="accent-text">Mission Architecture</span></h2>
         </div>
 
-        <div class="grid-2 gap-40">
-          <!-- Medical Mission Luminescent -->
-          <div class="luminescent-card card-medical glass-premium hover-lift fade-in">
-            <div class="ambient-glow glow-blue"></div>
-            <div class="card-content">
-              <div class="icon-ring border-primary mb-20"><i class="fas fa-stethoscope text-primary"></i></div>
-              <h3 class="card-title text-primary">Medical Division</h3>
-              
-              <div class="objective-block">
-                <h5 class="obj-label">Our Mission</h5>
-                <p class="obj-text">To extend services beyond client expectations by supplying ISO-certified dental products at the right prices and the precise right time.</p>
+        <div class="mission-bento-grid">
+          <!-- Medical Mission -->
+          <div class="mission-v3-item bento-v3-large glass-card-v3 hover-lift group-medical">
+            <div class="bento-bg" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1200');"></div>
+            <div class="mission-v3-content">
+              <div class="mission-tag accent-text">Medical Hub</div>
+              <h3>East African Dental Hub</h3>
+              <div class="mission-block-v3">
+                 <h5 class="accent-text">MISSION</h5>
+                 <p>To extend services beyond client expectations by supplying ISO-certified dental products at the right price and precise time.</p>
               </div>
-              
-              <div class="objective-block">
-                <h5 class="obj-label">Our Vision</h5>
-                <p class="obj-text">To unequivocally become the most reputable dental materials manufacturer and distributor operating within East Africa.</p>
+              <div class="mission-block-v3">
+                 <h5 class="accent-text">VISION</h5>
+                 <p>To unequivocally become the most reputable dental materials manufacturer and distributor operating within East Africa.</p>
               </div>
+              <div class="mission-icon-v3"><i class="fas fa-stethoscope"></i></div>
             </div>
           </div>
 
-          <!-- Organic Mission Luminescent -->
-          <div class="luminescent-card card-organic glass-premium hover-lift fade-in" style="animation-delay: 0.2s;">
-            <div class="ambient-glow glow-gold"></div>
-            <div class="card-content">
-              <div class="icon-ring border-secondary mb-20"><i class="fas fa-seedling text-secondary"></i></div>
-              <h3 class="card-title text-secondary">Organic Exports</h3>
-              
-              <div class="objective-block">
-                <h5 class="obj-label text-secondary">Our Mission</h5>
-                <p class="obj-text">To introduce ultra-high-quality Ethiopian agricultural products to the global market while maintaining strict sustainable organic practices.</p>
+          <!-- Organic Mission -->
+          <div class="mission-v3-item bento-v3-large glass-card-v3 hover-lift group-organic">
+            <div class="bento-bg" style="background-image: url('https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&q=80&w=1200');"></div>
+            <div class="mission-v3-content">
+              <div class="mission-tag accent-text">Organic Hub</div>
+              <h3>Global Commodity Export</h3>
+              <div class="mission-block-v3">
+                 <h5 class="accent-text">MISSION</h5>
+                 <p>To introduce ultra-high-quality Ethiopian agricultural products to the global market while maintaining strict sustainable practices.</p>
               </div>
-              
-              <div class="objective-block">
-                <h5 class="obj-label text-secondary">Our Vision</h5>
-                <p class="obj-text">To be universally recognized as the leading global exporter of organic oil seeds, spices, and premium pulses.</p>
+              <div class="mission-block-v3">
+                 <h5 class="accent-text">VISION</h5>
+                 <p>To be universally recognized as the leading global exporter of organic oil seeds, spices, and premium pulses.</p>
               </div>
+              <div class="mission-icon-v3"><i class="fas fa-leaf"></i></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Corporate Milestones Timeline -->
-    <section class="section timeline-section bg-light">
+    <!-- 🧬 MASTER TIMELINE: THE JOURNEY -->
+    <section class="section timeline-cinematic">
       <div class="container">
-        <div class="text-center mb-40 fade-in">
-          <div class="subtitle text-primary">The Journey</div>
-          <h2 style="font-size: 2.5rem;">Corporate <span class="primary-text">Milestones</span></h2>
+        <div class="section-header-centered mb-80 fade-in">
+           <div class="hero-badge-v3">THE JOURNEY</div>
+           <h2 class="section-title-visionary text-center">Corporate <span class="accent-text">Milestones</span></h2>
         </div>
         
-        <div class="timeline">
-          <div class="timeline-item fade-in">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date text-primary font-700">The Beginning</div>
-            <div class="timeline-content glass-premium hover-lift">
-              <h3>Foundation Established</h3>
-              <p class="text-muted">Dentos Chamo begins as an exclusive importer of highly specialized dental and orthodontic materials for local practitioners.</p>
+        <div class="master-timeline-v3">
+          <div class="timeline-v3-item fade-in">
+            <div class="timeline-v3-dot-container">
+               <div class="timeline-v3-pulse"></div>
+               <div class="timeline-v3-dot"></div>
+            </div>
+            <div class="timeline-v3-content glass-card-v3 hover-lift">
+              <div class="timeline-v3-date accent-text">Foundation</div>
+              <h3>Strategic Establishment</h3>
+              <p>Dentos Chamo begins as an exclusive importer of highly specialized medical and dental materials for regional healthcare providers.</p>
             </div>
           </div>
-          <div class="timeline-item fade-in">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date text-primary font-700">Expansion</div>
-            <div class="timeline-content glass-premium hover-lift">
-              <h3>Agricultural Division Launched</h3>
-              <p class="text-muted">Recognizing global demand, the company establishes its organic export division focusing on premium sesame and oil crops.</p>
+          <div class="timeline-v3-item fade-in" style="animation-delay: 0.1s;">
+            <div class="timeline-v3-dot-container">
+               <div class="timeline-v3-pulse"></div>
+               <div class="timeline-v3-dot"></div>
+            </div>
+            <div class="timeline-v3-content glass-card-v3 hover-lift">
+              <div class="timeline-v3-date accent-text">Expansion</div>
+              <h3>Agricultural Hub Launch</h3>
+              <p>Establishing our organic export division focusing on premium sesame and oil crops for global fulfillment.</p>
             </div>
           </div>
-          <div class="timeline-item fade-in">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date text-primary font-700">Standards</div>
-            <div class="timeline-content glass-premium hover-lift">
-              <h3>ISO Compliance Integration</h3>
-              <p class="text-muted">Full adoption of strict B2B compliance standards including ISO 13485 (Medical Devices) and ISO 20417, elevating the catalog verification capabilities.</p>
+          <div class="timeline-v3-item fade-in" style="animation-delay: 0.2s;">
+            <div class="timeline-v3-dot-container">
+               <div class="timeline-v3-pulse"></div>
+               <div class="timeline-v3-dot"></div>
+            </div>
+            <div class="timeline-v3-content glass-card-v3 hover-lift">
+              <div class="timeline-v3-date accent-text">Integrated FTZ</div>
+              <h3>ISO & Logistics Mastery</h3>
+              <p>Full integration of ISO 13485 standards and the launching of operations within the Dentos Dire Dawa Free Trade Zone hub.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Premium Leadership Roster -->
-    <section class="section team-section">
+    <!-- 💎 EXECUTIVE LEADERSHIP: PRO MAX ROSTER -->
+    <section class="section team-master">
       <div class="container">
-        <div class="text-center mb-40 fade-in">
-          <div class="subtitle text-primary">The People Behind Our Success</div>
-          <h2 style="font-size: 2.8rem;">Executive <span class="primary-text">Leadership</span></h2>
-          <p class="max-600 text-muted mt-10" style="font-size: 1.1rem;">A multidisciplinary team of clinical experts, agronomists, and international trade specialists dedicated to operational excellence.</p>
+        <div class="section-header-centered mb-60">
+           <div class="hero-badge-v3">THE LEADERSHIP</div>
+           <h2 class="section-title-visionary text-center">Visionary <span class="accent-text">Executive Team</span></h2>
         </div>
-
-        <div class="team-grid mt-40">
-          <!-- Team Member 1 -->
-          <div class="team-glass-card hover-lift fade-in">
-            <div class="team-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80" alt="Dr. Aklilu Berhanu" class="team-avatar">
+        
+        <div class="team-grid-v3">
+          <!-- Leader 1: Dr. Aklilu Berhanu -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in">
+            <div class="team-portrait-wrapper-v3">
+               <img src="/src/assets/dr_aklilu_berhanu.png" alt="Dr. Aklilu Berhanu" class="img-portrait-v3">
             </div>
-            <div class="team-info">
-              <h3>Dr. Aklilu Berhanu</h3>
-              <div class="team-title text-secondary">Founder & CEO</div>
-              <p class="text-muted">Guiding the overall strategic vision of both the medical import and organic export divisions.</p>
-            </div>
-          </div>
-
-          <!-- Team Member 2 -->
-          <div class="team-glass-card hover-lift fade-in" style="animation-delay: 0.2s;">
-            <div class="team-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Jane Doe" class="team-avatar">
-            </div>
-            <div class="team-info">
-              <h3>Jane Doe</h3>
-              <div class="team-title text-primary">Chief Clinical Director</div>
-              <p class="text-muted">Overseeing ISO compliance and supply chain logistics for all incoming dental materials.</p>
+            <div class="team-content-v3">
+               <h3>Dr. Aklilu Berhanu</h3>
+               <p class="accent-text team-title-v3">Chief Executive Director</p>
+               <p class="text-muted-standard text-center">Doctor of Dental Medicine & MBA. Guiding the overarching strategic direction of the Group.</p>
             </div>
           </div>
-
-          <!-- Team Member 3 -->
-          <div class="team-glass-card hover-lift fade-in" style="animation-delay: 0.4s;">
-            <div class="team-img-wrapper">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80" alt="John Smith" class="team-avatar">
+          <!-- Leader 2: Kidest Berhanu -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.1s;">
+            <div class="team-portrait-wrapper-v3">
+               <img src="/src/assets/kidest_berhanu.png" alt="Kidest Berhanu" class="img-portrait-v3">
             </div>
-            <div class="team-info">
-              <h3>John Smith</h3>
-              <div class="team-title" style="color: #d4a000;">Head of Agronomy</div>
-              <p class="text-muted">Managing direct partnerships with organic farmers and ensuring rigorous export quality control.</p>
+            <div class="team-content-v3">
+               <h3>Kidest Berhanu</h3>
+               <p class="accent-text team-title-v3">Managing Director</p>
+               <p class="text-muted-standard text-center">Agro-Engineer & Civil Engineer. Overseeing operational execution and logistical infrastructure.</p>
+            </div>
+          </div>
+          <!-- Leader 3: Merhawi Berhanu -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.2s;">
+            <div class="team-portrait-wrapper-v3">
+               <img src="/src/assets/merhawi_berhanu.png" alt="Merhawi Berhanu" class="img-portrait-v3">
+            </div>
+            <div class="team-content-v3">
+               <h3>Merhawi Berhanu</h3>
+               <p class="accent-text team-title-v3">Export Manager</p>
+               <p class="text-muted-standard text-center">Construction Management Engineer. Driving international trade and organic fulfillment logistics.</p>
+            </div>
+          </div>
+          <!-- Leader 4: TSION BERIHANU -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.3s;">
+            <div class="team-portrait-wrapper-v3">
+               <img src="/src/assets/tsion_berhanu.png" alt="Tsion Berihanu" class="img-portrait-v3">
+            </div>
+            <div class="team-content-v3">
+               <h3>Tsion Berhanu</h3>
+               <p class="accent-text team-title-v3">OFFICE MANAGER</p>
+               <p class="text-muted-standard text-center">Bachelor in Mechanical Engineering & MBA. Orchestrating corporate administration and organizational efficiency.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <style>
+      :root {
+        --about-primary: #002F7F;
+        --about-navy: #001F7F;
+        --about-accent: #00FFEE;
+        --about-bg: #0C0C0C;
+        --about-border: #242424;
+      }
+
+      .dark-theme-page { background: var(--about-bg); color: white; overflow-x: hidden; }
+      .accent-text { color: var(--about-accent); }
+      
+      /* GLOBAL BACKGROUND */
+      .global-background-orbs { position: fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; }
+      .glass-orb { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.12; animation: orbMove 30s infinite alternate ease-in-out; }
+      .orb-primary { width: 600px; height: 600px; background: var(--about-primary); top: -100px; right: -150px; }
+      .orb-accent { width: 450px; height: 450px; background: var(--about-accent); bottom: 100px; left: -100px; animation-delay: -7s; }
+      @keyframes orbMove { from { transform: translate(0,0); } to { transform: translate(200px, 150px); } }
+
+      /* HERO EDITORIAL V3 */
+      .hero-editorial-v3 { height: 90vh; position: relative; display: flex; align-items: center; margin-top: -80px; 
+        background: linear-gradient(to right, rgba(12,12,12,0.95), rgba(12,12,12,0.4)), url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=1920');
+        background-size: cover; background-position: center; border-bottom: 1px solid var(--about-border);
+      }
+      .hero-editorial-content-v3 { max-width: 800px; z-index: 10; }
+      .hero-metrics-v3 { display: flex; align-items: center; gap: 40px; margin-top: 50px; }
+      .metric-item-v3 { display: flex; flex-direction: column; }
+      .metric-number { font-size: 3.2rem; font-weight: 900; line-height: 1; }
+      .metric-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; font-weight: 700; margin-top: 10px; }
+      .metric-divider { width: 1px; height: 60px; background: rgba(255,255,255,0.1); }
+
+      /* FOUNDER V3 */
+      .founder-grid-v3 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+      .founder-image-wrapper-v3 { position: relative; height: 650px; display: flex; align-items: center; justify-content: center; }
+      .img-visionary-founder { width: 100%; height: 600px; object-fit: cover; border-radius: 40px; border: 1px solid var(--about-border); box-shadow: 0 40px 100px rgba(0,0,0,0.6); position: relative; z-index: 5; }
+      .founder-glow { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0, 255, 238, 0.12) 0%, transparent 70%); top: -50px; right: -50px; z-index: 1; }
+      .floating-quote-v3 { position: absolute; bottom: -20px; left: -120px; z-index: 10; width: 360px; padding: 40px; }
+      .floating-quote-v3 i { font-size: 2.5rem; margin-bottom: 20px; }
+      .floating-quote-v3 p { font-style: italic; font-size: 1.15rem; line-height: 1.7; margin-bottom: 25px; color: rgba(255,255,255,0.8); }
+      .quote-signature { display: flex; flex-direction: column; }
+      .sig-name { font-weight: 800; font-size: 1.15rem; }
+      .sig-title { font-size: 0.85rem; color: #94a3b8; letter-spacing: 1px; margin-top: 5px; }
+
+      .vision-list-v3 { list-style: none; padding: 0; margin-top: 40px; }
+      .vision-list-v3 li { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; font-size: 1.15rem; color: #94a3b8; }
+      .v3-bullet { font-size: 1.4rem; }
+
+      /* MISSION MATRIX V3 */
+      .mission-bento-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+      .glass-card-v3 { background: rgba(29, 29, 29, 0.7); backdrop-filter: blur(30px); border: 1px solid var(--about-border); border-radius: 40px; }
+      .mission-v3-item { position: relative; overflow: hidden; display: flex; flex-direction: column; height: 480px; }
+      .mission-v3-content { position: relative; z-index: 10; padding: 50px; height: 100%; display: flex; flex-direction: column; box-sizing: border-box; }
+      .mission-tag { font-size: 0.8rem; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; }
+      .mission-v3-item h3 { font-size: 2.5rem; font-weight: 900; margin-bottom: 40px; letter-spacing: -1px; }
+      .mission-block-v3 { margin-bottom: 30px; }
+      .mission-block-v3 h5 { font-size: 0.75rem; letter-spacing: 2px; font-weight: 800; margin-bottom: 8px; }
+      .mission-block-v3 p { color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 1.05rem; margin: 0; }
+      .mission-icon-v3 { font-size: 3rem; color: var(--about-accent); position: absolute; top: 50px; right: 50px; text-shadow: 0 0 20px rgba(0, 255, 238, 0.4); opacity: 0.6; }
+      
+      .group-medical { border-color: var(--about-primary); }
+      .group-organic { border-color: var(--about-navy); }
+      .group-medical:hover { border-color: var(--about-accent); background: rgba(0, 255, 238, 0.05); }
+
+      /* MASTER TIMELINE V3 */
+      .master-timeline-v3 { position: relative; max-width: 900px; margin: 0 auto; padding-left: 80px; }
+      .master-timeline-v3::before { content: ''; position: absolute; left: 20px; top: 0; width: 1px; height: 100%; background: linear-gradient(to bottom, var(--about-accent), var(--about-border)); }
+      .timeline-v3-item { position: relative; margin-bottom: 60px; }
+      .timeline-v3-dot-container { position: absolute; left: -67px; top: 15px; }
+      .timeline-v3-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--about-accent); border: 4px solid var(--about-bg); position: relative; z-index: 10; box-shadow: 0 0 15px var(--about-accent); }
+      .timeline-v3-pulse { position: absolute; top: -14px; left: -14px; width: 42px; height: 42px; border: 2px solid var(--about-accent); border-radius: 50%; animation: pulseTimeline 3s infinite; opacity: 0; }
+      @keyframes pulseTimeline { 0% { transform: scale(0.4); opacity: 0.6; } 100% { transform: scale(1.4); opacity: 0; } }
+      .timeline-v3-content { padding: 45px; position: relative; }
+      .timeline-v3-date { font-size: 0.8rem; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; }
+      .timeline-v3-content h3 { font-size: 1.8rem; margin-bottom: 15px; font-weight: 800; }
+      .timeline-v3-content p { color: #94a3b8; line-height: 1.7; font-size: 1.1rem; margin: 0; }
+
+      /* TEAM V3 - RESTORED PORTRAITS */
+      .team-grid-v3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+      .team-card-v3 { overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center; }
+      .team-portrait-wrapper-v3 { width: 100%; height: 420px; overflow: hidden; position: relative; border-bottom: 1px solid var(--about-border); }
+      .img-portrait-v3 { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
+      .team-card-v3:hover .img-portrait-v3 { filter: grayscale(0); transform: scale(1.08); }
+      .team-content-v3 { padding: 40px 30px; }
+      .team-title-v3 { font-size: 0.85rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
+      .team-content-v3 h3 { font-size: 1.6rem; font-weight: 900; margin-bottom: 10px; }
+
+      /* BUTTONS */
+      .btn-visionary { padding: 18px 40px; font-weight: 800; border-radius: 18px; font-size: 1.05rem; display: inline-flex; align-items: center; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
+      .btn-primary { background: var(--about-primary); color: white; border: none; }
+      .btn-primary:hover { background: var(--about-navy); transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,47,127,0.4); }
+
+      /* RESPONSIVE */
+      @media (max-width: 1100px) {
+        .hero-editorial-v3 { height: auto; padding: 150px 0 100px; }
+        .hero-editorial-grid-v3 { min-height: auto; }
+        .founder-grid-v3 { grid-template-columns: 1fr; gap: 50px; }
+        .founder-image-wrapper-v3 { height: auto; }
+        .img-visionary-founder { height: auto; }
+        .floating-quote-v3 { position: relative; bottom: 0; left: 0; width: 90%; margin: -60px auto 0; }
+        .mission-bento-grid { grid-template-columns: 1fr; }
+        .mission-v3-item { height: auto; min-height: 450px; }
+      }
+      @media (max-width: 768px) {
+        .section-title-visionary { font-size: 2.8rem; line-height: 1.2; text-align: left; }
+        .section-header-centered .section-title-visionary { text-align: center; }
+        .hero-metrics-v3 { flex-direction: column; align-items: flex-start; gap: 20px; }
+        .metric-divider { display: none; }
+        .master-timeline-v3 { padding-left: 40px; }
+        .master-timeline-v3::before { left: 10px; }
+        .timeline-v3-dot-container { left: -37px; }
+        .timeline-v3-content { padding: 30px; }
+        .btn-visionary { width: 100%; justify-content: center; }
+      }
+    </style>
   </div>
-
-  <style>
-    .about-premium-page { margin-top: -80px; }
-    
-    /* Reused utilities */
-    .subtitle { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 10px; display: inline-block; padding: 5px 15px; background: rgba(19, 70, 175, 0.1); border-radius: 50px; }
-    .bg-light { background-color: var(--bg-light); }
-    .primary-text { color: var(--primary); }
-    .text-secondary { color: var(--secondary); }
-    .text-primary { color: var(--primary); }
-    .text-white { color: white; }
-    .text-muted { color: var(--text-muted); }
-    .mb-20 { margin-bottom: 20px; }
-    .mb-40 { margin-bottom: 40px; }
-    .mt-10 { margin-top: 10px; }
-    .mt-30 { margin-top: 30px; }
-    .mt-40 { margin-top: 40px; }
-    .gap-20 { gap: 20px; }
-    .gap-40 { gap: 40px; }
-    .flex { display: flex; }
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; }
-    .font-700 { font-weight: 700; }
-    
-    .glass-premium {
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
-      border-radius: 20px;
-    }
-    .hover-lift { transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease; }
-    .hover-lift:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-
-    /* Immersive Hero */
-    .hero-editorial {
-      position: relative;
-      padding: 180px 0 100px;
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      overflow: hidden;
-      border-bottom-right-radius: 80px;
-    }
-    .hero-editorial-grid { position: relative; z-index: 2; display: flex; align-items: center; min-height: 400px; }
-    .hero-editorial-content { max-width: 600px; }
-    .glow-badge {
-      display: inline-block; padding: 6px 18px; border-radius: 20px;
-      background: rgba(255, 219, 63, 0.15); color: var(--secondary);
-      border: 1px solid rgba(255, 219, 63, 0.3); font-weight: 700;
-      text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;
-    }
-    .hero-title { font-size: 4.5rem; line-height: 1.1; margin-bottom: 20px; font-weight: 800; }
-    .glow-text { text-shadow: 0 0 20px rgba(255, 219, 63, 0.4); }
-    .hero-subtitle { font-size: 1.25rem; opacity: 0.9; font-weight: 300; line-height: 1.6; color: white; }
-    .metric-item { display: flex; flex-direction: column; }
-    .metric-item h3 { font-size: 2.5rem; line-height: 1; margin-bottom: 5px; }
-    .metric-item span { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.7); font-weight: 600; }
-    
-    .hero-overlay-graphic {
-      position: absolute; right: -5%; bottom: -10%; width: 50%; height: 120%;
-      background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 70%);
-      transform: rotate(-15deg); z-index: 1; pointer-events: none;
-    }
-    
-    @media (max-width: 768px) {
-      .hero-title { font-size: 3rem; }
-      .hero-editorial { border-bottom-right-radius: 40px; padding: 140px 0 60px; }
-    }
-
-    /* Overlapping Founder Narrative */
-    .founder-section { padding: 100px 0; }
-    .founder-grid { display: grid; grid-template-columns: 5fr 6fr; gap: 80px; align-items: center; }
-    .founder-image-wrapper { position: relative; }
-    .founder-img {
-      width: 100%; border-radius: 30px; aspect-ratio: 3/4; object-fit: cover;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.15); position: relative; z-index: 2;
-    }
-    .image-accent-glow {
-      position: absolute; top: -20px; left: -20px; right: 20px; bottom: 20px;
-      border: 3px solid var(--primary); border-radius: 30px; opacity: 0.2; transform: translate(-10px, -10px); z-index: 1;
-    }
-    .floating-quote {
-      position: absolute; bottom: -30px; right: -40px; width: 320px; padding: 30px; z-index: 3;
-    }
-    .floating-quote i { font-size: 2rem; margin-bottom: 15px; opacity: 0.8; }
-    .quote-text { font-style: italic; font-weight: 500; line-height: 1.6; margin-bottom: 20px; color: var(--text-main); }
-    .quote-author { display: flex; flex-direction: column; }
-    .author-name { font-weight: 700; color: var(--primary); font-size: 1.1rem; }
-    .author-title { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
-    
-    .founder-list { list-style: none; padding: 0; }
-    .founder-list li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 15px; font-size: 1.05rem; color: var(--text-main); }
-    .founder-list i { margin-top: 4px; }
-    
-    @media (max-width: 992px) {
-      .founder-grid { grid-template-columns: 1fr; gap: 60px; }
-      .floating-quote { position: relative; bottom: 0; right: 0; width: 90%; margin: -40px auto 0; }
-    }
-
-    /* Luminescent Mission Cards */
-    .mission-vision-section { padding: 100px 0; }
-    .luminescent-card {
-      position: relative; overflow: hidden; padding: 40px;
-      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-    }
-    .card-content { position: relative; z-index: 2; }
-    .ambient-glow {
-      position: absolute; width: 300px; height: 300px; border-radius: 50%;
-      filter: blur(80px); opacity: 0.4; z-index: 1; transition: opacity 0.4s ease; top: -50px; right: -50px;
-    }
-    .glow-blue { background: var(--primary); }
-    .glow-gold { background: var(--secondary); }
-    .luminescent-card:hover .ambient-glow { opacity: 0.7; }
-    
-    .icon-ring {
-      width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; background: rgba(255,255,255,0.1); border: 2px solid transparent;
-    }
-    .border-primary { border-color: rgba(19, 70, 175, 0.4); }
-    .border-secondary { border-color: rgba(255, 219, 63, 0.4); }
-    .card-title { font-size: 2rem; margin-bottom: 30px; font-weight: 700; }
-    
-    .objective-block { margin-bottom: 25px; }
-    .obj-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; font-weight: 700; color: rgba(255,255,255,0.6); }
-    .card-medical .obj-label { color: var(--primary); }
-    .card-organic .obj-label { color: var(--secondary); }
-    .obj-text { color: rgba(255,255,255,0.85); line-height: 1.6; font-size: 1.05rem; }
-    
-    @media (max-width: 768px) {
-      .mission-vision-section .grid-2 { grid-template-columns: 1fr; }
-    }
-
-    /* Timeline */
-    .timeline-section { padding: 100px 0; overflow: hidden; }
-    .timeline { position: relative; max-width: 800px; margin: 0 auto; padding-left: 50px; }
-    .timeline::before {
-      content: ''; position: absolute; left: 14px; top: 0; height: 100%; width: 2px;
-      background: linear-gradient(to bottom, var(--primary) 0%, rgba(19,70,175,0.2) 100%);
-    }
-    .timeline-item { position: relative; margin-bottom: 50px; }
-    .timeline-item:last-child { margin-bottom: 0; }
-    .timeline-dot {
-      position: absolute; left: -42px; top: 5px; width: 14px; height: 14px; border-radius: 50%;
-      background: var(--white); border: 3px solid var(--primary);
-      box-shadow: 0 0 10px rgba(19,70,175,0.5); z-index: 2; transition: all 0.3s ease;
-    }
-    .timeline-item:hover .timeline-dot { transform: scale(1.3); background: var(--secondary); border-color: var(--secondary); box-shadow: 0 0 15px rgba(255,219,63,0.6); }
-    .timeline-date { margin-bottom: 10px; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 2px; }
-    .timeline-content { padding: 30px; position: relative; }
-    .timeline-content::before {
-      content: ''; position: absolute; left: -10px; top: 20px;
-      border-style: solid; border-width: 10px 10px 10px 0; border-color: transparent rgba(255,255,255,0.85) transparent transparent;
-    }
-    .timeline-content h3 { font-size: 1.4rem; margin-bottom: 10px; }
-
-    /* Premium Leadership Roster */
-    .team-section { padding: 100px 0; }
-    .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-    .team-glass-card {
-      background: var(--white); border-radius: 20px; overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.02);
-    }
-    .team-img-wrapper { overflow: hidden; height: 350px; position: relative; }
-    .team-avatar {
-      width: 100%; height: 100%; object-fit: cover;
-      filter: grayscale(100%); transition: filter 0.5s ease, transform 0.8s ease;
-    }
-    .team-glass-card:hover .team-avatar { filter: grayscale(0%); transform: scale(1.05); }
-    
-    /* Overlay gradient for text contrast */
-    .team-img-wrapper::after {
-      content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 50%;
-      background: linear-gradient(to top, rgba(0,0,0,0.1), transparent); pointer-events: none;
-    }
-    
-    .team-info { padding: 30px; text-align: center; }
-    .team-info h3 { font-size: 1.5rem; margin-bottom: 5px; }
-    .team-title { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
-    .team-info p { font-size: 0.95rem; line-height: 1.6; }
-
-  </style>
-`;
+  `;
+};
