@@ -110,7 +110,7 @@ export const Home = () => {
           <div class="hero-badge-v3 no-margin">STRATEGIC VISION</div>
           <h2 class="section-title-visionary">The Future of African <br><span class="accent-text">Medical Logistics</span></h2>
           <p class="text-muted-standard">
-            Dentose Chamo Trading PLC operates at the intersection of global medical manufacturing and African market accessibility. Through our <strong>Dentos Dire Dawa Free Trade Zone</strong>, we provide a streamlined logistical corridor for the continent's most critical healthcare supplies.
+            Dentose Chamo Trading PLC is actively engaged in the <strong>importing, marketing, and distribution</strong> of world-class medical clinical equipment, laboratory reagents, and healthcare machineries. As a leading corporate entity in Ethiopia, we bridge the gap between global innovations and regional medical market segments across East Africa.
           </p>
           <a href="#/about" class="btn btn-primary btn-visionary">Learn About Our Hub <i class="fas fa-arrow-right" style="margin-left: 12px;"></i></a>
         </div>
@@ -145,7 +145,7 @@ export const Home = () => {
             <div class="bento-v3-content">
               <div class="bento-tag">Parent Hub</div>
               <h3>Dentose Chamo Trading PLC</h3>
-              <p>The strategic engine driving global medical technology and commodities across the African continent.</p>
+              <p>A dedicated distributor of high-quality medical and laboratory supplies, partnering with trusted global manufacturers to lead the African healthcare market.</p>
               <div class="bento-icon-glow"><i class="fas fa-city"></i></div>
             </div>
           </a>
@@ -197,27 +197,27 @@ export const Home = () => {
         <div class="pillars-grid-v3">
           <div class="pillar-card-v3 glass-card-v3 hover-lift fade-in">
             <div class="pillar-glow"></div>
-            <div class="pillar-icon-v3"><i class="fas fa-certificate"></i></div>
-            <h3>Quality</h3>
-            <p>ISO-certified excellence in every clinical and logistical touchpoint.</p>
+            <div class="pillar-icon-v3"><i class="fas fa-handshake"></i></div>
+            <h3>Integrity</h3>
+            <p>Honest and transparent conduct in all strategic dealings and partnerships.</p>
           </div>
           <div class="pillar-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.1s;">
             <div class="pillar-glow"></div>
-            <div class="pillar-icon-v3"><i class="fas fa-handshake"></i></div>
-            <h3>Trust</h3>
-            <p>Reliable continental partnerships built on transparency and delivery.</p>
+            <div class="pillar-icon-v3"><i class="fas fa-award"></i></div>
+            <h3>Quality</h3>
+            <p>We provide only verified, top-grade clinical products from global manufacturers.</p>
           </div>
           <div class="pillar-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.2s;">
             <div class="pillar-glow"></div>
-            <div class="pillar-icon-v3"><i class="fas fa-shipping-fast"></i></div>
-            <h3>Velocity</h3>
-            <p>Rapid transit corridors through the Dire Dawa logistical hub.</p>
+            <div class="pillar-icon-v3"><i class="fas fa-users"></i></div>
+            <h3>Customer Focus</h3>
+            <p>To extend service beyond client expectations is our primary corporate mission.</p>
           </div>
           <div class="pillar-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.3s;">
             <div class="pillar-glow"></div>
-            <div class="pillar-icon-v3"><i class="fas fa-shield-alt"></i></div>
-            <h3>Reliability</h3>
-            <p>Verified organic and medical status on every unit delivered.</p>
+            <div class="pillar-icon-v3"><i class="fas fa-lightbulb"></i></div>
+            <h3>Innovation</h3>
+            <p>Embracing new healthcare technologies and trends to lead regional segments.</p>
           </div>
         </div>
       </div>
@@ -232,7 +232,7 @@ export const Home = () => {
         --home-border: #242424;
       }
 
-      .dark-theme-page { background: var(--home-bg); color: white; overflow-x: hidden; }
+      .dark-theme-page { background: var(--home-bg); color: white; }
       .accent-text { color: var(--home-accent); }
       .primary-text { color: var(--home-primary); }
 

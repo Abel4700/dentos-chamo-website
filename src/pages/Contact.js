@@ -29,21 +29,21 @@ export const Contact = () => `
         </div>
         <div class="contact-details">
           <div class="details-card glass">
-            <h3>Office Info</h3>
-            <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+            <h3>Corporate Office</h3>
+            <p><i class="fas fa-map-marker-alt"></i>Nifas Silk Lafto Woreda 01, Infront of Lebu Medhani-alem Church, Addis Ababa, Ethiopia</p>
             <p style="align-items: flex-start;">
               <i class="fas fa-phone" style="margin-top: 5px;"></i> 
               <span>
-                +251 930 007 289<br>
-                +251 930 003 019<br>
-                +251 923 474 777
+                +251 913 70 07 18<br>
+                +251 986 23 23 27<br>
+                +251 989 12 12 16
               </span>
             </p>
             <p style="align-items: flex-start;">
-              <i class="fab fa-telegram" style="margin-top: 5px;"></i> 
+              <i class="fas fa-envelope" style="margin-top: 5px;"></i> 
               <span>
-                <a href="https://t.me/Merhawiberhanu" style="color: inherit; text-decoration: none;">@Merhawiberhanu</a><br>
-                <a href="https://t.me/Dentosechamo" style="color: inherit; text-decoration: none;">@Dentosechamo</a>
+                <a href="mailto:dentosechamotradingplc88@gmail.com" style="color: inherit; text-decoration: none;">dentosechamotradingplc88@gmail.com</a><br>
+                <a href="mailto:dentose1@gmail.com" style="color: inherit; text-decoration: none;">dentose1@gmail.com</a>
               </span>
             </p>
           </div>

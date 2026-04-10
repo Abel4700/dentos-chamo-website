@@ -5,10 +5,10 @@ export const Footer = () => `
         <h3>DENTOS <span class="accent">CHAMO</span></h3>
         <p>Your professional corporate partner for high-end dental solutions and community health.</p>
         <div class="social-links">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://m.me/dentosechamo.tradingplc" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://t.me/Dentosechamo" target="_blank"><i class="fab fa-telegram"></i></a>
+          <a href="https://instagram.com/dentose_chamo" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com/@dentosedentalmaterial" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
       </div>
       <div class="footer-links">
@@ -31,20 +31,19 @@ export const Footer = () => `
       </div>
       <div class="footer-contact">
         <h4>Connect</h4>
-        <p><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</p>
+        <p><i class="fas fa-map-marker-alt"></i>Nifas Silk Lafto Woreda 01, Infront of Lebu Medhani-alem Church, Addis Ababa</p>
         <p style="gap: 15px; align-items: flex-start;">
           <i class="fas fa-phone" style="margin-top: 5px;"></i> 
           <span>
-            +251 930 007 289<br>
-            +251 930 003 019<br>
-            +251 923 474 777
+            +251 913 70 07 18<br>
+            +251 986 23 23 27<br>
+            +251 989 12 12 16
           </span>
         </p>
         <p style="gap: 15px; align-items: flex-start;">
-          <i class="fab fa-telegram" style="margin-top: 5px;"></i>
+          <i class="fas fa-envelope" style="margin-top: 5px;"></i>
           <span>
-            <a href="https://t.me/Merhawiberhanu" style="color: #cbd5e1; text-decoration: none;">@Merhawiberhanu</a><br>
-            <a href="https://t.me/Dentosechamo" style="color: #cbd5e1; text-decoration: none;">@Dentosechamo</a>
+            <a href="mailto:dentosechamotradingplc88@gmail.com" style="color: #cbd5e1; text-decoration: none;">dentosechamotradingplc88@gmail.com</a>
           </span>
         </p>
       </div>

@@ -5,7 +5,7 @@ export const DentoseChamo = () => `
       <div class="container text-center fade-in">
         <h1 style="font-size: 3.5rem; color: #ffffff; margin-bottom: 25px;">Dentose Chamo Trading PLC</h1>
         <p style="font-size: 1.25rem; color: #cbd5e1; max-width: 900px; margin: 0 auto; line-height: 1.8;">
-          A leading trading company engaged in the importation of high-quality medical, laboratory, and healthcare products, alongside the export of premium agricultural commodities. With a strong operational foundation and strategic global partnerships, we serve healthcare institutions, laboratories, and international markets with reliable, standards-driven solutions.
+          Dentose Chamo Trading PLC is actively engaged in the <strong>importing, marketing, and distribution</strong> of world-class medical clinical equipment, laboratory reagents, and healthcare machineries. As a leading medical center business in Ethiopia, we focus on expanding global healthcare innovation into the regional East African market.
         </p>
       </div>
     </section>

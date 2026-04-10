@@ -12,8 +12,7 @@ export const About = () => {
     <section class="hero-editorial-v3">
       <div class="container hero-editorial-grid-v3">
         <div class="hero-editorial-content-v3 fade-in-up">
-          <div class="hero-badge-v3">WORLD-CLASS LEGACY</div>
-          <h1 class="section-title-visionary">A Legacy of <br/><span class="accent-text">Trust & Vision</span></h1>
+          <h1 class="section-title-visionary" style="font-size: clamp(3.2rem, 8vw, 6.5rem);">A Legacy of <br/><span class="accent-text">Trust & Vision</span></h1>
           <p class="hero-lead">
             Bridging the gap between global healthcare innovation and sustainable East African agriculture for nearly a decade.
           </p>
@@ -54,9 +53,9 @@ export const About = () => {
 
           <div class="founder-text-v3 fade-in">
             <div class="hero-badge-v3 no-margin">OUR GENESIS</div>
-            <h2 class="section-title-visionary">Roots Built on <span class="accent-text">Integrity</span></h2>
-            <p class="text-muted-standard">
-              Dentos Chamo was established under visionary leadership, starting as a highly focused dental medical import center. Driven by the unwavering mantra of <strong>Quality, Trust, Delivery, and Warranty</strong>, the company systematically expanded into a robust organic powerhouse.
+            <h2 class="section-title-visionary" style="margin-bottom: 50px;">Roots Built on <span class="accent-text">Integrity</span></h2>
+            <p class="text-muted-standard" style="font-size: 1.35rem; line-height: 1.9;">
+              Dentose Chamo Trading PLC was established in 2017 G.C by <strong>Dr. Aklilu Berhanu</strong>, who obtained his D.D.S. degree in dental medicine from <strong>Atlas Health Science College</strong> and an MBA in International Business (MBA-IB) from <strong>Greenwich University</strong>. Driven by the mantra of <em>Quality, Trust, Delivery, and Warranty</em>, the company has systematically expanded from a focused dental medical import center into a robust regional powerhouse.
             </p>
             
             <ul class="vision-list-v3">
@@ -72,9 +71,9 @@ export const About = () => {
     <!-- 🍱 MISSION MATRIX: BENTO V3 -->
     <section class="section mission-section-v3">
       <div class="container">
-        <div class="section-header-centered mb-60 fade-in">
+        <div class="section-header-centered mb-100 fade-in">
           <div class="hero-badge-v3">CORPORATE OBJECTIVES</div>
-          <h2 class="section-title-visionary text-center">Dual <span class="accent-text">Mission Architecture</span></h2>
+          <h2 class="section-title-visionary text-center">Our <span class="accent-text">Mission and Vision</span></h2>
         </div>
 
         <div class="mission-bento-grid">
@@ -102,17 +101,82 @@ export const About = () => {
             <div class="mission-v3-content">
               <div class="mission-tag accent-text">Organic Hub</div>
               <h3>Global Commodity Export</h3>
-              <div class="mission-block-v3">
-                 <h5 class="accent-text">MISSION</h5>
-                 <p>To introduce ultra-high-quality Ethiopian agricultural products to the global market while maintaining strict sustainable practices.</p>
-              </div>
-              <div class="mission-block-v3">
-                 <h5 class="accent-text">VISION</h5>
-                 <p>To be universally recognized as the leading global exporter of organic oil seeds, spices, and premium pulses.</p>
-              </div>
+                <div class="mission-block-v3">
+                   <h5 class="accent-text">MISSION</h5>
+                   <p>To extend service beyond client expectations to ensure we supply the right products, at the right prices, at the right time.</p>
+                </div>
+                <div class="mission-block-v3">
+                   <h5 class="accent-text">VISION</h5>
+                   <p>To be the most reputable diversified medical center materials manufacturer in East Africa, leading the African market through regional segment expansion.</p>
+                </div>
               <div class="mission-icon-v3"><i class="fas fa-leaf"></i></div>
             </div>
           </div>
+        </div>
+
+        <!-- 💎 CORE VALUES SECTION -->
+        <div class="section-header-centered mt-120 mb-80 fade-in">
+           <div class="hero-badge-v3">CORPORATE ETHOS</div>
+           <h2 class="section-title-visionary text-center">Core <span class="accent-text">Trust Values</span></h2>
+        </div>
+        <div class="values-grid-v3 mb-120 fade-in">
+          <div class="value-item glass-card-v3">
+            <div class="value-icon-circle"><i class="fas fa-handshake accent-text"></i></div>
+            <h4>Integrity</h4>
+            <p>Honest and transparent in all dealings.</p>
+          </div>
+          <div class="value-item glass-card-v3">
+            <div class="value-icon-circle"><i class="fas fa-award accent-text"></i></div>
+            <h4>Quality</h4>
+            <p>We provide only verified, top-grade medical products.</p>
+          </div>
+          <div class="value-item glass-card-v3">
+            <div class="value-icon-circle"><i class="fas fa-users accent-text"></i></div>
+            <h4>Customer Focus</h4>
+            <p>Client satisfaction is our absolute primary mission.</p>
+          </div>
+          <div class="value-item glass-card-v3">
+            <div class="value-icon-circle"><i class="fas fa-lightbulb accent-text"></i></div>
+            <h4>Innovation</h4>
+            <p>Embracing new healthcare technologies and trends.</p>
+          </div>
+          <div class="value-item glass-card-v3">
+            <div class="value-icon-circle"><i class="fas fa-user-tie accent-text"></i></div>
+            <h4>Professionalism</h4>
+            <p>Ethical conduct by a highly qualified team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🤝 KEY CLIENTS SECTION -->
+    <section class="section clients-section-v3 mt-100">
+      <div class="container">
+        <div class="section-header-centered mb-80">
+           <div class="hero-badge-v3">OUR NETWORK</div>
+           <h2 class="section-title-visionary text-center">Key <span class="accent-text">Clients</span></h2>
+        </div>
+        <div class="clients-grid-v3">
+           <div class="client-card-v3 glass-card-v3 fade-in-up">
+              <div class="client-icon-glow"><i class="fas fa-hospital-alt accent-text"></i></div>
+              <h4>Specialized & General Hospitals</h4>
+           </div>
+           <div class="client-card-v3 glass-card-v3 fade-in-up" style="animation-delay: 0.1s;">
+              <div class="client-icon-glow"><i class="fas fa-hand-holding-medical accent-text"></i></div>
+              <h4>International NGOs & Institutions</h4>
+           </div>
+           <div class="client-card-v3 glass-card-v3 fade-in-up" style="animation-delay: 0.2s;">
+              <div class="client-icon-glow"><i class="fas fa-university accent-text"></i></div>
+              <h4>Leading Universities</h4>
+           </div>
+           <div class="client-card-v3 glass-card-v3 fade-in-up" style="animation-delay: 0.3s;">
+              <div class="client-icon-glow"><i class="fas fa-boxes accent-text"></i></div>
+              <h4>Medical Wholesalers & Retailers</h4>
+           </div>
+           <div class="client-card-v3 glass-card-v3 fade-in-up" style="animation-delay: 0.4s;">
+              <div class="client-icon-glow"><i class="fas fa-clinic-medical accent-text"></i></div>
+              <h4>Private & Public Clinics</h4>
+           </div>
         </div>
       </div>
     </section>
@@ -166,9 +230,9 @@ export const About = () => {
     <!-- 💎 EXECUTIVE LEADERSHIP: PRO MAX ROSTER -->
     <section class="section team-master">
       <div class="container">
-        <div class="section-header-centered mb-60">
+        <div class="section-header-centered mb-100">
            <div class="hero-badge-v3">THE LEADERSHIP</div>
-           <h2 class="section-title-visionary text-center">Visionary <span class="accent-text">Executive Team</span></h2>
+           <h2 class="section-title-visionary text-center">Visionary <span class="accent-text">Executive Board</span></h2>
         </div>
         
         <div class="team-grid-v3">
@@ -213,14 +277,62 @@ export const About = () => {
             <div class="team-content-v3">
                <h3>Tsion Berhanu</h3>
                <p class="accent-text team-title-v3">OFFICE MANAGER</p>
-               <p class="text-muted-standard text-center">Bachelor in Mechanical Engineering & MBA. Orchestrating corporate administration and organizational efficiency.</p>
+               <p class="text-muted-standard text-center">Bachelor in Mechanical Engineering & MBA. Orchestrating corporate administration.</p>
             </div>
           </div>
+        </div>
+
+        <!-- 🏢 OPERATIONAL LEADERSHIP & DEPARTMENTS -->
+        <div class="section-header-centered mt-120 mb-100 fade-in">
+           <div class="hero-badge-v3">SCALED MANPOWER</div>
+           <h2 class="section-title-visionary text-center">Operational <span class="accent-text">Units & Departments</span></h2>
+        </div>
+
+        <div class="dept-roster-v3">
+           <div class="dept-card-v3 glass-card-v3 fade-in-up">
+              <div class="dept-icon-box"><i class="fas fa-cogs"></i></div>
+              <h3>Technical Manager</h3>
+              <p>Specialized engineering and medical tech fulfillment.</p>
+           </div>
+           <div class="dept-card-v3 glass-card-v3 fade-in-up" style="animation-delay: 0.1s;">
+              <div class="dept-icon-box cyan"><i class="fas fa-balance-scale"></i></div>
+              <h3>CFO & Finance Dept.</h3>
+              <p>Managers, Accountants & Cashiers ensuring fiscal integrity.</p>
+           </div>
+           <div class="dept-card-v3 glass-card-v3 fade-in-up" style="animation-delay: 0.2s;">
+              <div class="dept-icon-box"><i class="fas fa-bullhorn"></i></div>
+              <h3>Marketing & Sales</h3>
+              <p>Promotion experts, Sales teams, and Delivery drivers.</p>
+           </div>
+        </div>
+
+        <div class="dept-bento-v3 mt-60 mb-100">
+           <div class="bento-dept glass-card-v3 fade-in" style="grid-column: span 2;">
+              <div class="bento-dept-content">
+                 <i class="fas fa-palette accent-text"></i>
+                 <h4>Graphics & Digital Design</h4>
+                 <p>In-house creative unit managing corporate visuals.</p>
+              </div>
+           </div>
+           <div class="bento-dept glass-card-v3 fade-in" style="animation-delay: 0.1s;">
+              <div class="bento-dept-content">
+                 <i class="fas fa-server accent-text"></i>
+                 <h4>IT Division</h4>
+                 <p>Technicians ensuring seamless digital connectivity.</p>
+              </div>
+           </div>
+           <div class="bento-dept glass-card-v3 fade-in" style="animation-delay: 0.2s; grid-column: span 3;">
+              <div class="bento-dept-content">
+                 <i class="fas fa-truck-loading accent-text"></i>
+                 <h4>Logistics & Store Units</h4>
+                 <p>Warehouse experts, Store Assistants, and Cleaners maintaining fulfillment excellence across Ethiopia.</p>
+              </div>
+           </div>
         </div>
       </div>
     </section>
 
-    <style>
+  <style>
       :root {
         --about-primary: #002F7F;
         --about-navy: #001F7F;
@@ -229,7 +341,7 @@ export const About = () => {
         --about-border: #242424;
       }
 
-      .dark-theme-page { background: var(--about-bg); color: white; overflow-x: hidden; }
+      .dark-theme-page { background: var(--about-bg); color: white; }
       .accent-text { color: var(--about-accent); }
       
       /* GLOBAL BACKGROUND */
@@ -240,16 +352,22 @@ export const About = () => {
       @keyframes orbMove { from { transform: translate(0,0); } to { transform: translate(200px, 150px); } }
 
       /* HERO EDITORIAL V3 */
-      .hero-editorial-v3 { height: 90vh; position: relative; display: flex; align-items: center; margin-top: -80px; 
+      .hero-editorial-v3 { height: 90vh; position: relative; display: flex; align-items: flex-end; padding-bottom: 100px; margin-top: -80px; 
         background: linear-gradient(to right, rgba(12,12,12,0.95), rgba(12,12,12,0.4)), url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=1920');
         background-size: cover; background-position: center; border-bottom: 1px solid var(--about-border);
       }
-      .hero-editorial-content-v3 { max-width: 800px; z-index: 10; }
-      .hero-metrics-v3 { display: flex; align-items: center; gap: 40px; margin-top: 50px; }
+      .hero-editorial-content-v3 { max-width: 1000px; z-index: 10; }
+      .hero-lead { font-size: clamp(1.2rem, 2.5vw, 1.6rem); color: rgba(255,255,255,0.7); max-width: 850px; margin-top: 30px; line-height: 1.7; }
+      .hero-metrics-v3 { display: flex; align-items: center; gap: 60px; margin-top: 70px; }
       .metric-item-v3 { display: flex; flex-direction: column; }
-      .metric-number { font-size: 3.2rem; font-weight: 900; line-height: 1; }
+      .metric-number { font-size: 4.2rem; font-weight: 900; line-height: 1; }
       .metric-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; font-weight: 700; margin-top: 10px; }
       .metric-divider { width: 1px; height: 60px; background: rgba(255,255,255,0.1); }
+      
+      .section-title-visionary { font-size: clamp(2.5rem, 5.5vw, 4.2rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; }
+      .mt-120 { margin-top: 120px; }
+      .mb-80 { margin-bottom: 80px; }
+      .mb-100 { margin-bottom: 100px; }
 
       /* FOUNDER V3 */
       .founder-grid-v3 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -306,6 +424,36 @@ export const About = () => {
       .team-title-v3 { font-size: 0.85rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
       .team-content-v3 h3 { font-size: 1.6rem; font-weight: 900; margin-bottom: 10px; }
 
+      /* VALUES GRID */
+      .values-grid-v3 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+      .value-item { padding: 30px 20px; text-align: center; transition: all 0.4s ease; }
+      .value-item i { font-size: 2rem; margin-bottom: 15px; }
+      .value-item h4 { font-size: 1.1rem; margin-bottom: 10px; font-weight: 800; }
+      .value-item p { font-size: 0.85rem; color: #94a3b8; line-height: 1.5; }
+      .value-item:hover { border-color: var(--about-accent); transform: translateY(-5px); }
+
+      /* CLIENTS GRID */
+      .clients-grid-v3 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
+      .client-card-v3 { padding: 45px 20px; text-align: center; transition: all 0.4s ease; border-radius: 35px; }
+      .client-icon-glow { font-size: 3rem; color: var(--about-accent); margin-bottom: 25px; text-shadow: 0 0 20px rgba(0, 255, 238, 0.4); }
+      .client-card-v3 h4 { font-size: 1.05rem; font-weight: 800; color: rgba(255,255,255,0.9); line-height: 1.4; }
+      .client-card-v3:hover { transform: translateY(-10px); border-color: var(--about-accent); background: rgba(0, 255, 238, 0.05); }
+
+      /* TEAM EXPANSION */
+      .dept-roster-v3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+      .dept-card-v3 { padding: 45px 30px; text-align: center; }
+      .dept-icon-box { font-size: 2.5rem; color: var(--about-accent); margin-bottom: 25px; }
+      .dept-icon-box.cyan { color: #0ea5e9; }
+      .dept-card-v3 h3 { font-size: 1.5rem; margin-bottom: 15px; font-weight: 800; }
+
+      .dept-bento-v3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .bento-dept { padding: 45px; display: flex; flex-direction: column; justify-content: flex-end; }
+      .bento-dept h4 { font-size: 1.5rem; margin: 15px 0 10px; font-weight: 800; }
+      .bento-dept i { font-size: 2.5rem; }
+      
+      /* VALUES ICON CIRCLE */
+      .value-icon-circle { width: 80px; height: 80px; margin: 0 auto 25px; background: rgba(0, 255, 238, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; }
+
       /* BUTTONS */
       .btn-visionary { padding: 18px 40px; font-weight: 800; border-radius: 18px; font-size: 1.05rem; display: inline-flex; align-items: center; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
       .btn-primary { background: var(--about-primary); color: white; border: none; }
@@ -313,12 +461,12 @@ export const About = () => {
 
       /* RESPONSIVE */
       @media (max-width: 1100px) {
-        .hero-editorial-v3 { height: auto; padding: 150px 0 100px; }
+        .hero-editorial-v3 { height: 85vh; padding: 150px 0 60px; display: flex; align-items: flex-end; }
         .hero-editorial-grid-v3 { min-height: auto; }
         .founder-grid-v3 { grid-template-columns: 1fr; gap: 50px; }
-        .founder-image-wrapper-v3 { height: auto; }
-        .img-visionary-founder { height: auto; }
-        .floating-quote-v3 { position: relative; bottom: 0; left: 0; width: 90%; margin: -60px auto 0; }
+        .founder-image-wrapper-v3 { height: auto; flex-direction: column; }
+        .img-visionary-founder { height: auto; max-height: 500px; width: 100%; object-fit: cover; }
+        .floating-quote-v3 { position: relative; bottom: 0; left: 0; width: calc(100% - 40px); margin: -80px auto 30px; padding: 35px; box-sizing: border-box; text-align: left; }
         .mission-bento-grid { grid-template-columns: 1fr; }
         .mission-v3-item { height: auto; min-height: 450px; }
       }
@@ -327,6 +475,8 @@ export const About = () => {
         .section-header-centered .section-title-visionary { text-align: center; }
         .hero-metrics-v3 { flex-direction: column; align-items: flex-start; gap: 20px; }
         .metric-divider { display: none; }
+        .floating-quote-v3 { padding: 30px 20px; width: calc(100% - 20px); }
+        .floating-quote-v3 p { font-size: 1.05rem; line-height: 1.6; }
         .master-timeline-v3 { padding-left: 40px; }
         .master-timeline-v3::before { left: 10px; }
         .timeline-v3-dot-container { left: -37px; }
