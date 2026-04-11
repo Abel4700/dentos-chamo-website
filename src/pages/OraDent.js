@@ -14,7 +14,7 @@ export const OraDent = () => {
         <div class="container hero-container-v3">
           <div class="oradent-hero-content fade-in-up">
             <div class="oradent-logo-hero-container">
-               <img src="/src/assets/ORA-DENT ORAL-WHITE Logo  01.png" alt="Ora-Dent Logo" class="oradent-hero-logo">
+               <img src="/assets/ORA-DENT ORAL-WHITE Logo  01.png" alt="Ora-Dent Logo" class="oradent-hero-logo">
             </div>
             <h1>The New Frontier of <span class="accent-text">Clinical Aesthetics</span></h1>
             <p class="hero-lead">Ora-Dent specializes in the precision of oral hygiene and the science of aesthetic wellness, delivering expert solutions that bridge healthcare and confidence.</p>

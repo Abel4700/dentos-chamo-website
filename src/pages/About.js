@@ -38,7 +38,7 @@ export const About = () => {
         <div class="founder-grid-v3">
           <div class="founder-image-wrapper-v3 fade-in">
             <div class="founder-glow"></div>
-            <img src="/src/assets/dr_aklilu_berhanu.png" alt="Dr. Aklilu Berhanu" class="img-visionary-founder">
+            <img src="/assets/dr_aklilu_berhanu.png" alt="Dr. Aklilu Berhanu" class="img-visionary-founder">
             
             <!-- Visionary Floating Quote -->
             <div class="floating-quote-v3 glass-card-v3 bounce-anim">
@@ -239,7 +239,7 @@ export const About = () => {
           <!-- Leader 1: Dr. Aklilu Berhanu -->
           <div class="team-card-v3 glass-card-v3 hover-lift fade-in">
             <div class="team-portrait-wrapper-v3">
-               <img src="/src/assets/dr_aklilu_berhanu.jpg" alt="Dr. Aklilu Berhanu" class="img-portrait-v3">
+               <img src="/assets/dr_aklilu_berhanu.jpg" alt="Dr. Aklilu Berhanu" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
                <h3>Dr. Aklilu Berhanu</h3>
@@ -250,7 +250,7 @@ export const About = () => {
           <!-- Leader 2: Kidest Berhanu -->
           <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.1s;">
             <div class="team-portrait-wrapper-v3">
-               <img src="/src/assets/kidest_berhanu.png" alt="Kidest Berhanu" class="img-portrait-v3">
+               <img src="/assets/kidest_berhanu.png" alt="Kidest Berhanu" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
                <h3>Kidest Berhanu</h3>
@@ -261,7 +261,7 @@ export const About = () => {
           <!-- Leader 3: Merhawi Berhanu -->
           <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.2s;">
             <div class="team-portrait-wrapper-v3">
-               <img src="/src/assets/merhawi_berhanu.png" alt="Merhawi Berhanu" class="img-portrait-v3">
+               <img src="/assets/merhawi_berhanu.png" alt="Merhawi Berhanu" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
                <h3>Merhawi Berhanu</h3>
@@ -272,7 +272,7 @@ export const About = () => {
           <!-- Leader 4: Tsion Berhanu -->
           <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.3s;">
             <div class="team-portrait-wrapper-v3">
-               <img src="/src/assets/tsion_berhanu.png" alt="Tsion Berihanu" class="img-portrait-v3">
+               <img src="/assets/tsion_berhanu.png" alt="Tsion Berihanu" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
                <h3>Tsion Berhanu</h3>
@@ -283,7 +283,7 @@ export const About = () => {
           <!-- Leader 5: Yohannes Nega -->
           <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.3s;">
             <div class="team-portrait-wrapper-v3">
-               <img src="/src/assets/yohannes_nega.jpg" alt="Yohannes Nega" class="img-portrait-v3">
+               <img src="/assets/yohannes_nega.jpg" alt="Yohannes Nega" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
                <h3>Yohannes Nega</h3>

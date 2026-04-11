@@ -108,7 +108,7 @@ export const Partners = () => {
              
              <div class="partners-bento">
                 <div class="partner-item glass-card-v3 bento-wide">
-                   <div class="p-logo-wrap"><img src="/src/assets/prevest_logo.webp" alt="Prevest" class="p-logo"></div>
+                   <div class="p-logo-wrap"><img src="/assets/prevest_logo.webp" alt="Prevest" class="p-logo"></div>
                    <div class="p-info">
                       <h4>Prevest Denpro Limited</h4>
                       <p>International leader in dental materials and endodontic research.</p>
@@ -123,7 +123,7 @@ export const Partners = () => {
                    </div>
                 </div>
                 <div class="partner-item glass-card-v3">
-                   <div class="p-logo-wrap"><img src="/src/assets/tozier_logo.svg" alt="TopZir" class="p-logo"></div>
+                   <div class="p-logo-wrap"><img src="/assets/tozier_logo.svg" alt="TopZir" class="p-logo"></div>
                    <div class="p-info">
                       <h4>TopZir Crown Chain</h4>
                       <p>Elite aesthetic zirconia solutions.</p>
@@ -149,7 +149,7 @@ export const Partners = () => {
              
              <div class="partners-bento">
                 <div class="partner-item glass-card-v3 bento-wide">
-                   <div class="p-logo-wrap"><img src="/src/assets/acc-med_logo.webp" alt="Accu-Med" class="p-logo"></div>
+                   <div class="p-logo-wrap"><img src="/assets/acc-med_logo.webp" alt="Accu-Med" class="p-logo"></div>
                    <div class="p-info">
                       <h4>Accu-Med Instrument Co.</h4>
                       <p>Pakistan's premier surgical and clinical instrument manufacturer.</p>

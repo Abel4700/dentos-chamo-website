@@ -9,7 +9,7 @@ export const ProductsHub = (queryParams = {}) => {
       slug: 'accu-med',
       desc: 'Expert surgical solutions and high-precision Maxillofacial instruments.',
       count: products.filter(p => p.manufacturer === 'accu-med').length,
-      logo: '/src/assets/accu-med_logo.png',
+      logo: '/assets/accu-med_logo.png',
       color: '#0056b3',
       bg: 'linear-gradient(135deg, rgba(0,86,179,0.05) 0%, rgba(0,86,179,0.1) 100%)',
       pdf: '/catalogues/Accu_Med_Maxilo_Cataloguel.pdf'
@@ -29,7 +29,7 @@ export const ProductsHub = (queryParams = {}) => {
       slug: 'prevest',
       desc: 'Premium dental materials and reliable laboratory consumables.',
       count: products.filter(p => p.manufacturer === 'prevest').length,
-      logo: '/src/assets/prevest_logo.webp',
+      logo: '/assets/prevest_logo.webp',
       color: '#4b66df',
       bg: 'linear-gradient(135deg, rgba(75,102,223,0.05) 0%, rgba(75,102,223,0.1) 100%)',
       pdf: '/catalogues/Prevest-Denpro-Catalog-2026.pdf'
@@ -39,7 +39,7 @@ export const ProductsHub = (queryParams = {}) => {
       slug: 'topzir',
       desc: 'Cutting-edge CAD/CAM zirconia and aesthetic restoration blocks.',
       count: products.filter(p => p.manufacturer === 'topzir').length,
-      logo: '/src/assets/tozier_logo.svg',
+      logo: '/assets/tozier_logo.svg',
       color: '#26bccd',
       bg: 'linear-gradient(135deg, rgba(38,188,205,0.05) 0%, rgba(38,188,205,0.1) 100%)',
       pdf: '/catalogues/Topzir_Products_Catalogue_2026.pdf'
