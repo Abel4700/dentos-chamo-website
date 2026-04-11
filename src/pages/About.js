@@ -239,7 +239,7 @@ export const About = () => {
           <!-- Leader 1: Dr. Aklilu Berhanu -->
           <div class="team-card-v3 glass-card-v3 hover-lift fade-in">
             <div class="team-portrait-wrapper-v3">
-               <img src="/src/assets/dr_aklilu_berhanu.png" alt="Dr. Aklilu Berhanu" class="img-portrait-v3">
+               <img src="/src/assets/dr_aklilu_berhanu.jpg" alt="Dr. Aklilu Berhanu" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
                <h3>Dr. Aklilu Berhanu</h3>
@@ -269,7 +269,7 @@ export const About = () => {
                <p class="text-muted-standard text-center">Construction Management Engineer. Driving international trade and organic fulfillment logistics.</p>
             </div>
           </div>
-          <!-- Leader 4: TSION BERIHANU -->
+          <!-- Leader 4: Tsion Berhanu -->
           <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.3s;">
             <div class="team-portrait-wrapper-v3">
                <img src="/src/assets/tsion_berhanu.png" alt="Tsion Berihanu" class="img-portrait-v3">
@@ -278,6 +278,17 @@ export const About = () => {
                <h3>Tsion Berhanu</h3>
                <p class="accent-text team-title-v3">OFFICE MANAGER</p>
                <p class="text-muted-standard text-center">Bachelor in Mechanical Engineering & MBA. Orchestrating corporate administration.</p>
+            </div>
+            </div>
+            <!-- Leader 5: Yohannes Nega -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.3s;">
+            <div class="team-portrait-wrapper-v3">
+               <img src="/src/assets/yohannes_nega.jpg" alt="Yohannes Nega" class="img-portrait-v3">
+            </div>
+            <div class="team-content-v3">
+               <h3>Yohannes Nega</h3>
+               <p class="accent-text team-title-v3">Legal Adviser</p>
+               <p class="text-muted-standard text-center"></p>
             </div>
           </div>
         </div>
