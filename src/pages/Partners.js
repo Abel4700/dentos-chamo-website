@@ -184,7 +184,7 @@ export const Partners = () => {
            --partners-border: #242424;
         }
 
-        .partners-root { background: var(--partners-bg); color: white; }
+        .partners-root { background: var(--partners-bg); color: white; overflow-x: hidden; width: 100%; position: relative; }
         .accent-text { color: var(--partners-accent); }
 
         /* HERO V3 */

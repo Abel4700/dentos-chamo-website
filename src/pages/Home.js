@@ -232,7 +232,7 @@ export const Home = () => {
         --home-border: #242424;
       }
 
-      .dark-theme-page { background: var(--home-bg); color: white; }
+      .dark-theme-page { background: var(--home-bg); color: white; overflow-x: hidden; width: 100%; position: relative; }
       .accent-text { color: var(--home-accent); }
       .primary-text { color: var(--home-primary); }
 

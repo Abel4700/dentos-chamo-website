@@ -279,8 +279,8 @@ export const About = () => {
                <p class="accent-text team-title-v3">OFFICE MANAGER</p>
                <p class="text-muted-standard text-center">Bachelor in Mechanical Engineering & MBA. Orchestrating corporate administration.</p>
             </div>
-            </div>
-            <!-- Leader 5: Yohannes Nega -->
+          </div>
+          <!-- Leader 5: Yohannes Nega -->
           <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.3s;">
             <div class="team-portrait-wrapper-v3">
                <img src="/src/assets/yohannes_nega.jpg" alt="Yohannes Nega" class="img-portrait-v3">
@@ -291,55 +291,97 @@ export const About = () => {
                <p class="text-muted-standard text-center"></p>
             </div>
           </div>
+          <!-- Role: Technical Manager -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in">
+            <div class="team-portrait-wrapper-v3">
+               <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400" alt="Technical Manager" class="img-portrait-v3">
+            </div>
+            <div class="team-content-v3">
+               <h3>Technical Manager</h3>
+               <p class="accent-text team-title-v3">Operations & Tech</p>
+               <p class="text-muted-standard text-center">Specialized engineering and medical tech fulfillment.</p>
+            </div>
+          </div>
+          <!-- Role: CFO -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.1s;">
+            <div class="team-portrait-wrapper-v3">
+               <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400" alt="CFO" class="img-portrait-v3">
+            </div>
+            <div class="team-content-v3">
+               <h3>Chief Finance Officer</h3>
+               <p class="accent-text team-title-v3">Finance Operations</p>
+               <p class="text-muted-standard text-center">Executive management of fiscal compliance and strategic growth.</p>
+            </div>
+          </div>
+          <!-- Role: Finance Dept -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.2s;">
+            <div class="team-portrait-wrapper-v3">
+               <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=400" alt="Finance Dept" class="img-portrait-v3">
+            </div>
+            <div class="team-content-v3">
+               <h3>Finance Department</h3>
+               <p class="accent-text team-title-v3">Accounts & Administration</p>
+               <p class="text-muted-standard text-center">Managers, Accountants, and Cashiers ensuring daily financial integrity.</p>
+            </div>
+          </div>
+          <!-- Role: Marketing Manager -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in">
+            <div class="team-portrait-wrapper-v3">
+               <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" alt="Marketing Manager" class="img-portrait-v3">
+            </div>
+            <div class="team-content-v3">
+               <h3>Marketing Manager</h3>
+               <p class="accent-text team-title-v3">Strategy & Brand</p>
+               <p class="text-muted-standard text-center">Leading regional brand awareness and medical product promotion.</p>
+            </div>
+          </div>
+          <!-- Role: Graphics Designer -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.1s;">
+            <div class="team-portrait-wrapper-v3">
+               <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400" alt="Graphics Designer" class="img-portrait-v3">
+            </div>
+            <div class="team-content-v3">
+               <h3>Graphics Designer</h3>
+               <p class="accent-text team-title-v3">Creative Division</p>
+               <p class="text-muted-standard text-center">In-house creative unit managing corporate visuals and digital assets.</p>
+            </div>
+          </div>
+          <!-- Role: Sales Department -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.2s;">
+            <div class="team-portrait-wrapper-v3">
+               <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=400" alt="Sales Department" class="img-portrait-v3">
+            </div>
+            <div class="team-content-v3">
+               <h3>Sales Department</h3>
+               <p class="accent-text team-title-v3">Client Fulfillment</p>
+               <p class="text-muted-standard text-center">Promotion teams, sales experts, and dedicated delivery coordinators.</p>
+            </div>
+          </div>
+          <!-- Role: Store Department -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in">
+            <div class="team-portrait-wrapper-v3">
+               <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=400" alt="Store Department" class="img-portrait-v3">
+            </div>
+            <div class="team-content-v3">
+               <h3>Store Department</h3>
+               <p class="accent-text team-title-v3">Inventory Logistics</p>
+               <p class="text-muted-standard text-center">Warehouse managers and assistants securing world-class facility standards.</p>
+            </div>
+          </div>
+          <!-- Role: IT Technician -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.1s;">
+            <div class="team-portrait-wrapper-v3">
+               <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400" alt="IT Technician" class="img-portrait-v3">
+            </div>
+            <div class="team-content-v3">
+               <h3>IT Technician</h3>
+               <p class="accent-text team-title-v3">Systems operations</p>
+               <p class="text-muted-standard text-center">Ensuring seamless digital connectivity across all regional departments.</p>
+            </div>
+          </div>
         </div>
 
-        <!-- 🏢 OPERATIONAL LEADERSHIP & DEPARTMENTS -->
-        <div class="section-header-centered mt-120 mb-100 fade-in">
-           <div class="hero-badge-v3">SCALED MANPOWER</div>
-           <h2 class="section-title-visionary text-center">Operational <span class="accent-text">Units & Departments</span></h2>
-        </div>
 
-        <div class="dept-roster-v3">
-           <div class="dept-card-v3 glass-card-v3 fade-in-up">
-              <div class="dept-icon-box"><i class="fas fa-cogs"></i></div>
-              <h3>Technical Manager</h3>
-              <p>Specialized engineering and medical tech fulfillment.</p>
-           </div>
-           <div class="dept-card-v3 glass-card-v3 fade-in-up" style="animation-delay: 0.1s;">
-              <div class="dept-icon-box cyan"><i class="fas fa-balance-scale"></i></div>
-              <h3>CFO & Finance Dept.</h3>
-              <p>Managers, Accountants & Cashiers ensuring fiscal integrity.</p>
-           </div>
-           <div class="dept-card-v3 glass-card-v3 fade-in-up" style="animation-delay: 0.2s;">
-              <div class="dept-icon-box"><i class="fas fa-bullhorn"></i></div>
-              <h3>Marketing & Sales</h3>
-              <p>Promotion experts, Sales teams, and Delivery drivers.</p>
-           </div>
-        </div>
-
-        <div class="dept-bento-v3 mt-60 mb-100">
-           <div class="bento-dept glass-card-v3 fade-in" style="grid-column: span 2;">
-              <div class="bento-dept-content">
-                 <i class="fas fa-palette accent-text"></i>
-                 <h4>Graphics & Digital Design</h4>
-                 <p>In-house creative unit managing corporate visuals.</p>
-              </div>
-           </div>
-           <div class="bento-dept glass-card-v3 fade-in" style="animation-delay: 0.1s;">
-              <div class="bento-dept-content">
-                 <i class="fas fa-server accent-text"></i>
-                 <h4>IT Division</h4>
-                 <p>Technicians ensuring seamless digital connectivity.</p>
-              </div>
-           </div>
-           <div class="bento-dept glass-card-v3 fade-in" style="animation-delay: 0.2s; grid-column: span 3;">
-              <div class="bento-dept-content">
-                 <i class="fas fa-truck-loading accent-text"></i>
-                 <h4>Logistics & Store Units</h4>
-                 <p>Warehouse experts, Store Assistants, and Cleaners maintaining fulfillment excellence across Ethiopia.</p>
-              </div>
-           </div>
-        </div>
       </div>
     </section>
 
@@ -352,7 +394,7 @@ export const About = () => {
         --about-border: #242424;
       }
 
-      .dark-theme-page { background: var(--about-bg); color: white; }
+      .dark-theme-page { background: var(--about-bg); color: white; overflow-x: hidden; width: 100%; position: relative; }
       .accent-text { color: var(--about-accent); }
       
       /* GLOBAL BACKGROUND */
@@ -480,6 +522,8 @@ export const About = () => {
         .floating-quote-v3 { position: relative; bottom: 0; left: 0; width: calc(100% - 40px); margin: -80px auto 30px; padding: 35px; box-sizing: border-box; text-align: left; }
         .mission-bento-grid { grid-template-columns: 1fr; }
         .mission-v3-item { height: auto; min-height: 450px; }
+        .values-grid-v3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+        .clients-grid-v3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
       }
       @media (max-width: 768px) {
         .section-title-visionary { font-size: 2.8rem; line-height: 1.2; text-align: left; }
@@ -493,6 +537,21 @@ export const About = () => {
         .timeline-v3-dot-container { left: -37px; }
         .timeline-v3-content { padding: 30px; }
         .btn-visionary { width: 100%; justify-content: center; }
+        /* Mobile Horizontal Carousel for Grids */
+        .values-grid-v3, .clients-grid-v3 {
+           display: flex;
+           overflow-x: auto;
+           scroll-snap-type: x mandatory;
+           padding-bottom: 20px;
+           gap: 15px;
+           scrollbar-width: none;
+        }
+        .values-grid-v3::-webkit-scrollbar, .clients-grid-v3::-webkit-scrollbar { display: none; }
+        .value-item, .client-card-v3 {
+           min-width: 260px;
+           scroll-snap-align: center;
+           flex: 0 0 auto;
+        }
       }
     </style>
   </div>
