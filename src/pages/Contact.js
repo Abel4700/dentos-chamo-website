@@ -187,8 +187,10 @@ export const Contact = () => `
        .hero-badge-v3 { margin: 0 0 20px 0; align-self: flex-start; }
        
        .form-row { flex-direction: column; gap: 20px; }
-       .modern-bento-card { padding: 30px; }
-       .map-bento { min-height: 350px; }
+       .modern-bento-card { padding: 30px; text-align: center; }
+       .c-item { flex-direction: column; align-items: center; text-align: center; gap: 15px; }
+       .c-text { align-items: center; text-align: center; }
+       .map-bento { min-height: 350px; width: 95%; margin: 0 auto; }
     }
   </style>
 `;
