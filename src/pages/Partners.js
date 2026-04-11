@@ -39,6 +39,11 @@ export const Partners = () => {
            </div>
            
            <div class="world-connectivity-box glass-card-v3">
+              <div class="radar-scan">
+                 <div class="radar-ring ring-1"></div>
+                 <div class="radar-ring ring-2"></div>
+                 <div class="radar-ring ring-3"></div>
+              </div>
               <div class="world-map-svg-placeholder">
                  <!-- Stylized Dot Map -->
                  <div class="map-dot hub-india" data-label="India: Specialist Manufacturing"></div>
@@ -49,11 +54,12 @@ export const Partners = () => {
                  <div class="map-dot hub-ethiopia primary-hub" data-label="Ethiopia: Dentos Dire Dawa FTZ"></div>
                  
                  <!-- Animated Flow Lines -->
-                 <svg class="connection-lines" viewBox="0 0 1200 600">
-                    <path d="M800 200 Q 600 300 450 450" class="flow-line"></path> <!-- India to Eth -->
-                    <path d="M500 150 Q 480 300 450 450" class="flow-line"></path> <!-- Swiss to Eth -->
-                    <path d="M1000 250 Q 700 350 450 450" class="flow-line"></path> <!-- China to Eth -->
-                    <path d="M200 200 Q 300 350 450 450" class="flow-line"></path> <!-- USA to Eth -->
+                 <svg class="connection-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path d="M70 45 Q 60 40 55 55" class="flow-line" vector-effect="non-scaling-stroke"></path>
+                    <path d="M48 30 Q 55 40 55 55" class="flow-line" vector-effect="non-scaling-stroke"></path>
+                    <path d="M80 35 Q 65 35 55 55" class="flow-line" vector-effect="non-scaling-stroke"></path>
+                    <path d="M20 35 Q 35 30 55 55" class="flow-line" vector-effect="non-scaling-stroke"></path>
+                    <path d="M65 40 Q 60 45 55 55" class="flow-line" vector-effect="non-scaling-stroke"></path>
                  </svg>
               </div>
               <div class="map-legend">
@@ -207,15 +213,27 @@ export const Partners = () => {
         .p-divider { width: 1px; height: 50px; background: rgba(255,255,255,0.1); }
 
         /* WORLD MAP VISUAL */
-        .world-connectivity-box { padding: 60px; min-height: 500px; position: relative; overflow: hidden; }
-        .world-map-svg-placeholder { width: 100%; height: 450px; background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); position: relative; }
+        .world-connectivity-box { 
+          padding: 60px; min-height: 500px; position: relative; overflow: hidden; 
+          background: radial-gradient(circle at 55% 55%, rgba(0,255,238,0.06) 0%, transparent 60%),
+                      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+          background-size: 100% 100%, 40px 40px, 40px 40px;
+        }
+        .radar-ring { position: absolute; top: 55%; left: 55%; transform: translate(-50%, -50%); border: 1px solid rgba(0, 255, 238, 0.3); border-radius: 50%; pointer-events: none; }
+        .ring-1 { width: 150px; height: 150px; animation: expand 3s linear infinite; }
+        .ring-2 { width: 300px; height: 300px; animation: expand 3s linear infinite 1s; }
+        .ring-3 { width: 450px; height: 450px; animation: expand 3s linear infinite 2s; }
+        @keyframes expand { 0% { width: 0; height: 0; opacity: 1; } 100% { width: 800px; height: 800px; opacity: 0; } }
+
+        .world-map-svg-placeholder { width: 100%; height: 450px; position: relative; z-index: 2; }
         
-        .map-dot { position: absolute; width: 12px; height: 12px; background: var(--partners-accent); border-radius: 50%; box-shadow: 0 0 20px var(--partners-accent); transition: all 0.3s ease; cursor: pointer; }
-        .map-dot::after { content: attr(data-label); position: absolute; top: 20px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.8); padding: 5px 15px; border-radius: 5px; font-size: 0.7rem; white-space: nowrap; opacity: 0; transition: 0.3s; pointer-events: none; border: 1px solid var(--partners-accent); }
-        .map-dot:hover { transform: scale(1.5); }
-        .map-dot:hover::after { opacity: 1; transform: translateX(-50%) translateY(-5px); }
+        .map-dot { position: absolute; width: 12px; height: 12px; background: var(--partners-accent); border-radius: 50%; box-shadow: 0 0 20px var(--partners-accent); transition: all 0.3s ease; cursor: pointer; transform: translate(-50%, -50%); }
+        .map-dot::after { content: attr(data-label); position: absolute; top: 25px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.9); padding: 8px 15px; border-radius: 6px; font-size: 0.75rem; white-space: nowrap; opacity: 0; transition: 0.3s; pointer-events: none; border: 1px solid var(--partners-border); z-index: 10; color: white; }
+        .map-dot:hover { transform: translate(-50%, -50%) scale(1.5); }
+        .map-dot:hover::after { opacity: 1; transform: translateX(-50%) translateY(0); }
         
-        .primary-hub { background: #fff; width: 20px; height: 20px; box-shadow: 0 0 30px #fff; }
+        .primary-hub { background: #fff; width: 22px; height: 22px; box-shadow: 0 0 30px #fff; z-index: 5; }
         
         .hub-india { top: 45%; left: 70%; }
         .hub-swiss { top: 30%; left: 48%; }
@@ -224,9 +242,9 @@ export const Partners = () => {
         .hub-pakistan { top: 40%; left: 65%; }
         .hub-ethiopia { top: 55%; left: 55%; }
         
-        .connection-lines { position: absolute; top:0; left:0; width:100%; height:100%; pointer-events: none; }
-        .flow-line { fill: none; stroke: var(--partners-accent); stroke-width: 1; stroke-dasharray: 5; animation: dash 20s linear infinite; opacity: 0.3; }
-        @keyframes dash { to { stroke-dashoffset: -1000; } }
+        .connection-lines { position: absolute; top:0; left:0; width:100%; height:100%; pointer-events: none; z-index: 1; }
+        .flow-line { fill: none; stroke: var(--partners-accent); stroke-width: 1.5px; stroke-dasharray: 6; animation: dash 1s linear infinite; opacity: 0.7; }
+        @keyframes dash { to { stroke-dashoffset: -20; } }
         
         .map-legend { display: flex; gap: 30px; margin-top: 40px; justify-content: center; }
         .legend-item { display: flex; align-items: center; gap: 10px; font-size: 0.8rem; color: #94a3b8; }
@@ -274,6 +292,9 @@ export const Partners = () => {
            .world-connectivity-box { padding: 30px 15px; }
            .hero-partners-stats { flex-direction: column; align-items: flex-start; gap: 20px; }
            .p-divider { display: none; }
+           .compliance-card { flex-direction: column; text-align: center; padding: 30px 20px; gap: 20px; }
+           .comp-icon-box { width: 70px; height: 70px; font-size: 1.8rem; margin: 0 auto; }
+           .verified-badge { justify-content: center; }
         }
       </style>
     </div>
