@@ -209,7 +209,8 @@ export const OraDent = () => {
            .oradent-bento-grid { grid-template-columns: repeat(2, 1fr); }
            .hero-actions-v3 { flex-direction: column; align-items: center; gap: 15px; }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 768px), (max-height: 600px) {
+           .oradent-hero { align-items: flex-start !important; padding-top: 130px !important; height: auto !important; min-height: 100vh; padding-bottom: 50px; }
            .oradent-bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
            .bento-v3-item { min-height: 280px; }
            .bento-v3-large, .bento-v3-wide { grid-column: span 1; grid-row: span 1; }

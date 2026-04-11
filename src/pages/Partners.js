@@ -286,7 +286,8 @@ export const Partners = () => {
            .bento-wide { grid-column: span 2; }
            .compliance-row { grid-template-columns: 1fr; }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 768px), (max-height: 600px) {
+           .partners-hero-v3 { align-items: flex-start !important; padding-top: 210px !important; height: auto !important; min-height: 100vh; padding-bottom: 60px; }
            .partners-bento { grid-template-columns: 1fr; }
            .bento-wide { grid-column: span 1; flex-direction: column; align-items: flex-start; }
            .world-connectivity-box { padding: 30px 15px; }

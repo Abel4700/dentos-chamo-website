@@ -327,7 +327,9 @@ export const Home = () => {
         .about-visuals-v3 { height: 450px; }
         .floating-stat-card { left: 20px; bottom: 20px; }
       }
-      @media (max-width: 768px) {
+      @media (max-width: 768px), (max-height: 600px) {
+        .hero-slide { align-items: flex-start !important; padding-top: 210px; }
+        .hero-gateway { height: 100vh; min-height: 450px; }
         .bento-grid-master { grid-template-columns: 1fr; grid-auto-rows: auto; }
         .bento-v3-large, .bento-v3-wide { grid-column: span 1; grid-row: span 1; }
         .bento-v3-item { min-height: 300px; }

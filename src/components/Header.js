@@ -7,7 +7,7 @@ export const Header = () => `
       
       <nav class="nav-links">
         <a href="#/">Home</a>
-        <a href="#/about">About Us</a>
+        <a href="#/about">About</a>
        
         
         <!-- Multi-Entity Dropdown -->
@@ -186,12 +186,7 @@ export const Header = () => `
       border-radius: 3px;
     }
 
-    @media (max-width: 900px) {
-      .nav-links { gap: 15px; }
-      .dropdown-content { min-width: 250px; }
-    }
-
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       .mobile-menu-btn { display: flex; }
       .nav-links {
         position: fixed;
@@ -249,7 +244,7 @@ export const Header = () => `
         e.preventDefault();
         e.stopPropagation();
         
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 1024) {
           // MOBILE: Standard Accordion Toggle
           dropdown.classList.toggle('active');
         } else {

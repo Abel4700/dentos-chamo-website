@@ -2,7 +2,7 @@ export const Footer = () => `
   <footer class="section">
     <div class="container footer-grid">
       <div class="footer-info">
-        <h3>DENTOS <span class="accent">CHAMO</span></h3>
+        <h3>DENTOSE <span class="accent">CHAMO TRADING PLC.</span></h3>
         <p>Your professional corporate partner for high-end dental solutions and community health.</p>
         <div class="social-links">
           <a href="https://m.me/dentosechamo.tradingplc" target="_blank"><i class="fab fa-facebook"></i></a>

@@ -525,7 +525,8 @@ export const About = () => {
         .values-grid-v3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
         .clients-grid-v3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
       }
-      @media (max-width: 768px) {
+      @media (max-width: 768px), (max-height: 600px) {
+        .hero-editorial-v3 { align-items: flex-start !important; padding-top: 210px !important; height: auto !important; min-height: 100vh; padding-bottom: 50px; }
         .section-title-visionary { font-size: 2.8rem; line-height: 1.2; text-align: left; }
         .section-header-centered .section-title-visionary { text-align: center; }
         .hero-metrics-v3 { flex-direction: column; align-items: flex-start; gap: 20px; }

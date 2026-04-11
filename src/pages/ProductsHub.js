@@ -253,7 +253,7 @@ export const ProductsHub = (queryParams = {}) => {
         .bento-name { font-size: 1.4rem; }
         .bento-desc { font-size: 0.9rem; }
         
-        .page-hero { padding: 80px 0 40px; }
+        .page-hero { padding: 140px 0 40px; }
         
         .glass-premium { padding: 20px !important; flex-direction: column; align-items: stretch !important; gap: 15px !important; }
         .mfr-pill { padding: 8px 16px; font-size: 0.8rem; flex: 1 1 auto; text-align: center; }

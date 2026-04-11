@@ -278,7 +278,8 @@ export const Akedent = () => {
            .compliance-badge-v3 { border-left: none; border-top: 1px solid var(--dd-border); padding-top: 60px; }
            .hero-actions-v3 { flex-direction: column; align-items: center; gap: 15px; }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 768px), (max-height: 600px) {
+           .akedent-hero { align-items: flex-start !important; padding-top: 210px !important; height: auto !important; min-height: 100vh; padding-bottom: 50px; }
            .akedent-bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
            .bento-v3-item { min-height: 280px; }
            .bento-v3-large { grid-column: span 1; grid-row: span 1; }

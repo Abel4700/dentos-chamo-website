@@ -423,7 +423,8 @@ export const DentosDireDawa = () => {
       .cta-btns-centered { flex-direction: column; gap: 20px; }
       .cta-btns-centered .btn { margin-left: 0 !important; width: 100%; max-width: 350px; }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 768px), (max-height: 600px) {
+      .dd-hero { align-items: flex-start !important; padding-top: 210px !important; height: auto !important; min-height: 100vh; padding-bottom: 50px; }
       .bento-grid-v3 { grid-template-columns: 1fr; grid-auto-rows: auto; }
       .bento-v3-large, .bento-v3-wide { grid-column: span 1; grid-row: span 1; }
       .bento-v3-content { padding: 30px; min-height: 250px; }
