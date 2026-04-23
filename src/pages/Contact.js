@@ -3,9 +3,8 @@ export const Contact = () => `
     
     <!-- MODERNIZED HERO -->
     <section class="contact-hero-v3 fade-in">
-      <div class="container text-center">
-        <div class="hero-badge-v3">CORPORATE HQ</div>
-        <h1 class="contact-title">Let's Connect with <span class="primary-text">Dentos Chamo</span></h1>
+      <div class="container text-center" style="padding-top: 30px;">
+        <h1 class="contact-title">Let's Connect with<br><span class="primary-text">Dentose Chamo Trading PLC.</span></h1>
         <p class="hero-lead">Reach out to our global logistics, dental supply, or pharmaceutical teams for any specialized inquiries.</p>
       </div>
     </section>
