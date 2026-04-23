@@ -389,12 +389,12 @@ export const About = () => {
       :root {
         --about-primary: #002F7F;
         --about-navy: #001F7F;
-        --about-accent: #00FFEE;
-        --about-bg: #0C0C0C;
+        --about-accent: #38bdf8;
+        --about-bg: #050b14;
         --about-border: #242424;
       }
 
-      .dark-theme-page { background: var(--about-bg); color: white; overflow-x: hidden; width: 100%; position: relative; }
+      .dark-theme-page { background: radial-gradient(circle at center, rgba(14, 38, 75, 0.4) 0%, var(--about-bg) 70%), url('https://www.transparenttextures.com/patterns/cubes.png'); color: white; overflow-x: hidden; width: 100%; position: relative; }
       .accent-text { color: var(--about-accent); }
       
       /* GLOBAL BACKGROUND */
@@ -426,7 +426,7 @@ export const About = () => {
       .founder-grid-v3 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
       .founder-image-wrapper-v3 { position: relative; height: 650px; display: flex; align-items: center; justify-content: center; }
       .img-visionary-founder { width: 100%; height: 600px; object-fit: cover; border-radius: 40px; border: 1px solid var(--about-border); box-shadow: 0 40px 100px rgba(0,0,0,0.6); position: relative; z-index: 5; }
-      .founder-glow { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0, 255, 238, 0.12) 0%, transparent 70%); top: -50px; right: -50px; z-index: 1; }
+      .founder-glow { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%); top: -50px; right: -50px; z-index: 1; }
       .floating-quote-v3 { position: absolute; bottom: -20px; left: -120px; z-index: 10; width: 360px; padding: 40px; }
       .floating-quote-v3 i { font-size: 2.5rem; margin-bottom: 20px; }
       .floating-quote-v3 p { font-style: italic; font-size: 1.15rem; line-height: 1.7; margin-bottom: 25px; color: rgba(255,255,255,0.8); }
@@ -448,11 +448,11 @@ export const About = () => {
       .mission-block-v3 { margin-bottom: 30px; }
       .mission-block-v3 h5 { font-size: 0.75rem; letter-spacing: 2px; font-weight: 800; margin-bottom: 8px; }
       .mission-block-v3 p { color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 1.05rem; margin: 0; }
-      .mission-icon-v3 { font-size: 3rem; color: var(--about-accent); position: absolute; top: 50px; right: 50px; text-shadow: 0 0 20px rgba(0, 255, 238, 0.4); opacity: 0.6; }
+      .mission-icon-v3 { font-size: 3rem; color: var(--about-accent); position: absolute; top: 50px; right: 50px; text-shadow: 0 0 20px rgba(56, 189, 248, 0.4); opacity: 0.6; }
       
       .group-medical { border-color: var(--about-primary); }
       .group-organic { border-color: var(--about-navy); }
-      .group-medical:hover { border-color: var(--about-accent); background: rgba(0, 255, 238, 0.05); }
+      .group-medical:hover { border-color: var(--about-accent); background: rgba(56, 189, 248, 0.05); }
 
       /* MASTER TIMELINE V3 */
       .master-timeline-v3 { position: relative; max-width: 900px; margin: 0 auto; padding-left: 80px; }
@@ -488,9 +488,9 @@ export const About = () => {
       /* CLIENTS GRID */
       .clients-grid-v3 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
       .client-card-v3 { padding: 45px 20px; text-align: center; transition: all 0.4s ease; border-radius: 35px; }
-      .client-icon-glow { font-size: 3rem; color: var(--about-accent); margin-bottom: 25px; text-shadow: 0 0 20px rgba(0, 255, 238, 0.4); }
+      .client-icon-glow { font-size: 3rem; color: var(--about-accent); margin-bottom: 25px; text-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
       .client-card-v3 h4 { font-size: 1.05rem; font-weight: 800; color: rgba(255,255,255,0.9); line-height: 1.4; }
-      .client-card-v3:hover { transform: translateY(-10px); border-color: var(--about-accent); background: rgba(0, 255, 238, 0.05); }
+      .client-card-v3:hover { transform: translateY(-10px); border-color: var(--about-accent); background: rgba(56, 189, 248, 0.05); }
 
       /* TEAM EXPANSION */
       .dept-roster-v3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
@@ -505,7 +505,7 @@ export const About = () => {
       .bento-dept i { font-size: 2.5rem; }
       
       /* VALUES ICON CIRCLE */
-      .value-icon-circle { width: 80px; height: 80px; margin: 0 auto 25px; background: rgba(0, 255, 238, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; }
+      .value-icon-circle { width: 80px; height: 80px; margin: 0 auto 25px; background: rgba(56, 189, 248, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; }
 
       /* BUTTONS */
       .btn-visionary { padding: 18px 40px; font-weight: 800; border-radius: 18px; font-size: 1.05rem; display: inline-flex; align-items: center; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }

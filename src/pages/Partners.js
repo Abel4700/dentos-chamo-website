@@ -1,5 +1,5 @@
 export const Partners = () => {
-  return `
+   return `
     <div class="app-section partners-root dark-theme-page">
       
       <!-- 🌏 VISIONARY PARTNERS HERO -->
@@ -105,7 +105,7 @@ export const Partners = () => {
         <div class="container">
           
           <!-- Category 1: Dental & Specialist Hub -->
-          <div class="category-block mt-120">
+          <div class="category-block mt-80">
              <div class="category-header mb-60">
                 <i class="fas fa-tooth accent-text"></i>
                 <h3 class="section-title-visionary">Dental <span class="accent-text">Innovation Hub</span></h3>
@@ -113,40 +113,56 @@ export const Partners = () => {
              </div>
              
              <div class="partners-bento">
-                <div class="partner-item glass-card-v3 bento-wide">
-                   <div class="p-logo-wrap"><img src="/assets/prevest_logo.webp" alt="Prevest" class="p-logo"></div>
+                <a href="https://www.prevestdenpro.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3 bento-wide">
+                   <div class="p-logo-wrap"><img src="/assets/prevest_logo-01.webp" alt="Prevest" class="p-logo"></div>
                    <div class="p-info">
                       <h4>Prevest Denpro Limited</h4>
-                      <p>International leader in dental materials and endodontic research.</p>
+                      <p>International leader in dental materials and endodontic research. Known for their world-class composites and clinical cements used globally.</p>
                       <span class="p-flag">🇮🇳 INDIA</span>
                    </div>
-                </div>
-                <div class="partner-item glass-card-v3">
-                   <div class="p-flag-float">🇨🇭</div>
+                </a>
+                <a href="https://www.en.ires.dental/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
+                   <div class="p-logo-wrap"><img src="/assets/ires_logo.svg" alt="I-RES Sagl" class="p-logo"></div>
                    <div class="p-info">
                       <h4>I-RES Sagl</h4>
-                      <p>Swiss precision engineering for dental implants.</p>
+                      <p>Swiss precision engineering for dental implants. Provides advanced implantology and regenerative solutions.</p>
                    </div>
-                </div>
-                <div class="partner-item glass-card-v3">
+                </a>
+                <a href="https://www.topzir.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
                    <div class="p-logo-wrap"><img src="/assets/tozier_logo.svg" alt="TopZir" class="p-logo"></div>
                    <div class="p-info">
                       <h4>TopZir Crown Chain</h4>
-                      <p>Elite aesthetic zirconia solutions.</p>
+                      <p>Elite aesthetic zirconia solutions. Providing highly durable zirconia blocks for modern dental laboratories.</p>
                    </div>
-                </div>
-                <div class="partner-item glass-card-v3">
-                   <div class="p-flag-float">🇮🇳</div>
+                </a>
+                <a href="https://pyraxpolymars.in/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
+                   <div class="p-logo-wrap"><img src="/assets/pyrax-logo.webp" alt="PYRAX" class="p-logo"></div>
                    <div class="p-info">
                       <h4>PYRAX Polymars</h4>
-                      <p>Polymere expertise for prosthetic dentistry.</p>
+                      <p>Polymere expertise for prosthetic dentistry. Specializes in high-quality dental waxes and impression materials.</p>
+                   </div>
+                </a>
+                <a href="https://www.precident.in/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
+                   <div class="p-logo-wrap"><img src="/assets/precident-logo-01.webp" alt="PreciDent" class="p-logo"></div>
+                   <div class="p-info">
+                      <h4>PreciDent</h4>
+                      <p>Specialized in manufacturing premium dental rotary instruments and high-precision clinical burs for advanced operations.</p>
+                      <span class="p-flag">🇮🇳 INDIA</span>
+                   </div>
+                </a>
+                <div class="partner-item glass-card-v3">
+                   <div class="p-flag-float">🌐</div>
+                   <div class="p-info">
+                      <h4>Muller India Pvt. Ltd</h4>
+                      <p>Innovative dental and medical instrument manufacturer focused on delivering high-reliability clinical tools for practitioners.</p>
+                      <span class="p-flag">🇮🇳 INDIA</span>
                    </div>
                 </div>
              </div>
           </div>
 
           <!-- Category 2: Life Science & General Medical -->
-          <div class="category-block mt-120 mb-120">
+          <div class="category-block mt-80 mb-80">
              <div class="category-header mb-60">
                 <i class="fas fa-hospital-user accent-text"></i>
                 <h3 class="section-title-visionary">Life Science <span class="accent-text">& Diagnostics</span></h3>
@@ -154,28 +170,37 @@ export const Partners = () => {
              </div>
              
              <div class="partners-bento">
-                <div class="partner-item glass-card-v3 bento-wide">
-                   <div class="p-logo-wrap"><img src="/assets/acc-med_logo.webp" alt="Accu-Med" class="p-logo"></div>
+                <a href="https://accumedinstrument.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3 bento-wide">
+                   <div class="p-logo-wrap"><img src="/assets/accu-med_logo.png" alt="Accu-Med" class="p-logo"></div>
                    <div class="p-info">
                       <h4>Accu-Med Instrument Co.</h4>
-                      <p>Pakistan's premier surgical and clinical instrument manufacturer.</p>
+                      <p>Pakistan's premier surgical and clinical instrument manufacturer. They provide meticulously crafted instruments for major global hospitals.</p>
                       <span class="p-flag">🇵🇰 PAKISTAN</span>
                    </div>
-                </div>
-                <div class="partner-item glass-card-v3">
-                   <div class="p-flag-float">🇨🇳</div>
+                </a>
+                <a href="https://www.ramomedical.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
+                   <div class="p-logo-wrap"><img src="/assets/ramo_medical_logo.webp" alt="Suzhou RAMO" class="p-logo"></div>
                    <div class="p-info">
-                      <h4>Suzhou RAMO</h4>
-                      <p>Diagnostic laboratory equipment specialists.</p>
+                      <h4>Suzhou Ramo Medical Instrument Co., Ltd.</h4>
+                      <p>Diagnostic laboratory equipment specialists. Developing cutting-edge pathological testing instruments.</p>
+                      <span class="p-flag">🇨🇳 CHINA</span>
                    </div>
-                </div>
-                <div class="partner-item glass-card-v3">
-                   <div class="p-flag-float">🇵🇰</div>
+                </a>
+                <a href="http://www.durablehs.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
+                   <div class="p-logo-wrap"><img src="/assets/durable-hospital-supplies-logo.webp" alt="Durable HS" class="p-logo"></div>
                    <div class="p-info">
                       <h4>Durable Hospital Supplies</h4>
-                      <p>Standard-setting clinical fulfillment solutions.</p>
+                      <p>Standard-setting clinical fulfillment solutions. Dedicated to outfitting modern healthcare facilities with robust equipment.</p>
+                      <span class="p-flag">🇵🇰 PAKISTAN</span>
                    </div>
-                </div>
+                </a>
+                <a href="https://sincereinstruments.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3" style="grid-column: 3;">
+                   <div class="p-logo-wrap"><img src="/assets/sincere-people-instruments.png" alt="Sincere Instruments" class="p-logo" style="transform: scale(1.4);"></div>
+                   <div class="p-info">
+                      <h4>Sincere People Instrument</h4>
+                      <p>A leading producer of highly reliable medical and surgical instruments, ensuring top-tier performance for healthcare professionals.</p>
+                   </div>
+                </a>
              </div>
           </div>
 
@@ -185,12 +210,12 @@ export const Partners = () => {
       <style>
         :root {
            --partners-primary: #002F7F;
-           --partners-accent: #00FFEE;
-           --partners-bg: #0C0C0C;
+           --partners-accent: #38bdf8;
+           --partners-bg: #050b14;
            --partners-border: #242424;
         }
 
-        .partners-root { background: var(--partners-bg); color: white; overflow-x: hidden; width: 100%; position: relative; }
+        .partners-root { background: linear-gradient(180deg, rgba(5,11,20,0.95) 0%, rgba(5,11,20,1) 100%), url('https://www.transparenttextures.com/patterns/cubes.png'); color: white; overflow-x: hidden; width: 100%; position: relative; }
         .accent-text { color: var(--partners-accent); }
 
         /* HERO V3 */
@@ -215,12 +240,12 @@ export const Partners = () => {
         /* WORLD MAP VISUAL */
         .world-connectivity-box { 
           padding: 60px; min-height: 500px; position: relative; overflow: hidden; 
-          background: radial-gradient(circle at 55% 55%, rgba(0,255,238,0.06) 0%, transparent 60%),
+          background: radial-gradient(circle at 55% 55%, rgba(56, 189, 248, 0.06) 0%, transparent 60%),
                       linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
                       linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
           background-size: 100% 100%, 40px 40px, 40px 40px;
         }
-        .radar-ring { position: absolute; top: 55%; left: 55%; transform: translate(-50%, -50%); border: 1px solid rgba(0, 255, 238, 0.3); border-radius: 50%; pointer-events: none; }
+        .radar-ring { position: absolute; top: 55%; left: 55%; transform: translate(-50%, -50%); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 50%; pointer-events: none; }
         .ring-1 { width: 150px; height: 150px; animation: expand 3s linear infinite; }
         .ring-2 { width: 300px; height: 300px; animation: expand 3s linear infinite 1s; }
         .ring-3 { width: 450px; height: 450px; animation: expand 3s linear infinite 2s; }
@@ -255,7 +280,7 @@ export const Partners = () => {
         /* COMPLIANCE */
         .compliance-row { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
         .compliance-card { padding: 50px; display: flex; gap: 40px; align-items: center; }
-        .comp-icon-box { width: 100px; height: 100px; border-radius: 30px; background: rgba(0, 255, 238, 0.05); color: var(--partners-accent); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; flex-shrink: 0; }
+        .comp-icon-box { width: 100px; height: 100px; border-radius: 30px; background: rgba(56, 189, 248, 0.05); color: var(--partners-accent); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; flex-shrink: 0; }
         .comp-icon-box.cyan { color: #0ea5e9; }
         .comp-content h3 { font-size: 1.8rem; font-weight: 900; margin-bottom: 12px; }
         .comp-content p { color: #94a3b8; font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px; }
@@ -263,20 +288,20 @@ export const Partners = () => {
 
         /* PARTNER BENTOS */
         .partners-bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .partner-item { padding: 40px; position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 280px; transition: all 0.4s ease; }
+        .partner-item { padding: 40px; position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 280px; transition: all 0.4s ease; text-decoration: none; color: inherit; }
         .bento-wide { grid-column: span 2; flex-direction: row; align-items: center; justify-content: flex-start; gap: 40px; }
-        .p-logo-wrap { width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); border-radius: 15px; padding: 15px; }
-        .p-logo { max-width: 100%; max-height: 100%; object-fit: contain; filter: brightness(0) invert(1) opacity(0.8); }
-        .partner-item:hover .p-logo { filter: brightness(1) invert(0) opacity(1); }
+        .p-logo-wrap { height: 60px; margin-bottom: 25px; display: flex; align-items: center; justify-content: flex-start; }
+        .p-logo { max-width: 180px; max-height: 100%; object-fit: contain; filter: brightness(0) invert(1) opacity(0.85); transform-origin: left center; transition: all 0.3s ease; }
+        .partner-item:hover .p-logo { filter: brightness(1) invert(0) opacity(1); transform: scale(1.05); }
         .partner-item:hover { border-color: var(--partners-accent); transform: translateY(-10px); }
         
         .p-flag-float { font-size: 2.5rem; margin-bottom: 40px; }
-        .p-info h4 { font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; }
-        .p-info p { color: #94a3b8; font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px; }
+        .p-info h4 { font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; color: white; }
+        .p-info p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px; }
         .p-flag { font-size: 0.7rem; font-weight: 900; letter-spacing: 2px; color: var(--partners-accent); }
 
-        .mt-120 { margin-top: 120px; }
-        .mb-120 { margin-bottom: 120px; }
+        .mt-80 { margin-top: 80px; }
+        .mb-80 { margin-bottom: 80px; }
         .category-header { max-width: 600px; }
         .category-header i { font-size: 2rem; margin-bottom: 20px; display: block; }
         .category-header p { font-size: 1.2rem; color: #94a3b8; margin-top: 15px; }

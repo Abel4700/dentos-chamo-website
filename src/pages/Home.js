@@ -227,12 +227,12 @@ export const Home = () => {
       :root {
         --home-primary: #002F7F;
         --home-navy: #001F7F;
-        --home-accent: #00FFEE;
-        --home-bg: #0C0C0C;
+        --home-accent: #38bdf8;
+        --home-bg: #050b14;
         --home-border: #242424;
       }
 
-      .dark-theme-page { background: var(--home-bg); color: white; overflow-x: hidden; width: 100%; position: relative; }
+      .dark-theme-page { background: radial-gradient(circle at center, rgba(14, 38, 75, 0.4) 0%, var(--home-bg) 70%), url('https://www.transparenttextures.com/patterns/cubes.png'); color: white; overflow-x: hidden; width: 100%; position: relative; }
       .accent-text { color: var(--home-accent); }
       .primary-text { color: var(--home-primary); }
 
@@ -252,7 +252,7 @@ export const Home = () => {
       .oradent-hero-content { max-width: 900px; text-align: left; }
       .hero-slide.active .oradent-hero-content { animation: fadeInUp 0.8s forwards; }
       
-      .hero-badge-v3 { display: inline-block; padding: 10px 22px; background: rgba(0, 255, 238, 0.1); border: 1px solid rgba(0, 255, 238, 0.3); border-radius: 50px; color: var(--home-accent); font-weight: 800; font-size: 0.75rem; letter-spacing: 2.5px; margin-bottom: 30px; text-transform: uppercase; }
+      .hero-badge-v3 { display: inline-block; padding: 10px 22px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 50px; color: var(--home-accent); font-weight: 800; font-size: 0.75rem; letter-spacing: 2.5px; margin-bottom: 30px; text-transform: uppercase; }
       .hero-badge-v3.no-margin { margin-bottom: 20px; }
       
       .section-title-visionary { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; }
@@ -266,7 +266,7 @@ export const Home = () => {
       .trust-ribbon-v2 { background: rgba(255,255,255,0.03); border-top: 1px solid var(--home-border); border-bottom: 1px solid var(--home-border); padding: 40px 0; position: relative; z-index: 5; backdrop-filter: blur(10px); }
       .trust-flex-v2 { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px; }
       .trust-item-v2 { display: flex; align-items: center; gap: 15px; font-weight: 700; font-size: 1.1rem; }
-      .trust-icon-v3 { font-size: 2rem; color: var(--home-accent); text-shadow: 0 0 15px rgba(0, 255, 238, 0.4); }
+      .trust-icon-v3 { font-size: 2rem; color: var(--home-accent); text-shadow: 0 0 15px rgba(56, 189, 248, 0.4); }
 
       /* ABOUT CINEMATIC */
       .about-grid-v3 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
@@ -275,7 +275,7 @@ export const Home = () => {
       .about-main-img-container { width: 100%; height: 500px; border-radius: 40px; overflow: hidden; border: 1px solid var(--home-border); box-shadow: 0 40px 100px rgba(0,0,0,0.6); }
       .img-visionary { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
       .about-main-img-container:hover .img-visionary { transform: scale(1.05); }
-      .glass-orb-glow { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(0, 255, 238, 0.15) 0%, transparent 70%); top: -50px; right: -50px; z-index: 1; }
+      .glass-orb-glow { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%); top: -50px; right: -50px; z-index: 1; }
       .floating-stat-card { position: absolute; bottom: 40px; left: -40px; z-index: 10; padding: 25px 35px; display: flex; align-items: center; gap: 20px; }
       .bounce-anim { animation: floatBounce 4s infinite ease-in-out; }
       @keyframes floatBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
@@ -290,7 +290,7 @@ export const Home = () => {
       .group-parent { background: linear-gradient(135deg, #001F7F 0%, #002F7F 100%); border: none; }
       .dark-bento-card { background: linear-gradient(135deg, #000F48 0%, #001F7F 100%); border: none; }
       .group-oradent-card { border-color: #273EBE; }
-      .group-oradent-card:hover { border-color: var(--home-accent); background: rgba(0, 255, 238, 0.05); }
+      .group-oradent-card:hover { border-color: var(--home-accent); background: rgba(56, 189, 248, 0.05); }
       .group-akedent-card { border-color: var(--home-navy); }
       
       .bento-v3-content { position: relative; z-index: 10; padding: 45px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; box-sizing: border-box; }
@@ -298,7 +298,7 @@ export const Home = () => {
       .bento-v3-item:hover .bento-bg { transform: scale(1.1); opacity: 0.3; }
       .bento-v3-item:hover { transform: translateY(-15px); box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
       
-      .bento-icon-glow { font-size: 3.2rem; color: var(--home-accent); margin-bottom: auto; text-shadow: 0 0 25px rgba(0, 255, 238, 0.5); }
+      .bento-icon-glow { font-size: 3.2rem; color: var(--home-accent); margin-bottom: auto; text-shadow: 0 0 25px rgba(56, 189, 248, 0.5); }
       .bento-v3-item h3 { font-size: 1.7rem; font-weight: 800; margin-bottom: 12px; }
       .bento-v3-large h3 { font-size: 3rem; margin-bottom: 20px; }
       .bento-v3-item p { color: #94a3b8; line-height: 1.6; font-size: 1.05rem; }
@@ -307,10 +307,10 @@ export const Home = () => {
       /* PILLARS CINEMATIC */
       .pillars-grid-v3 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
       .pillar-card-v3 { padding: 50px 30px; text-align: center; position: relative; }
-      .pillar-icon-v3 { font-size: 3.5rem; color: var(--home-accent); margin-bottom: 30px; text-shadow: 0 0 20px rgba(0, 255, 238, 0.3); }
+      .pillar-icon-v3 { font-size: 3.5rem; color: var(--home-accent); margin-bottom: 30px; text-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
       .pillar-card-v3 h3 { font-size: 1.6rem; font-weight: 800; margin-bottom: 15px; }
       .pillar-card-v3 p { color: #94a3b8; font-size: 1rem; line-height: 1.5; }
-      .pillar-glow { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 10%, rgba(0, 255, 238, 0.05) 0%, transparent 70%); opacity: 0; transition: opacity 0.5s ease; }
+      .pillar-glow { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.05) 0%, transparent 70%); opacity: 0; transition: opacity 0.5s ease; }
       .pillar-card-v3:hover .pillar-glow { opacity: 1; }
 
       /* BUTTON VISIONARY */
