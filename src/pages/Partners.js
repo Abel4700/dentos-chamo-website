@@ -150,14 +150,7 @@ export const Partners = () => {
                       <span class="p-flag">🇮🇳 INDIA</span>
                    </div>
                 </a>
-                <div class="partner-item glass-card-v3">
-                   <div class="p-flag-float">🌐</div>
-                   <div class="p-info">
-                      <h4>Muller India Pvt. Ltd</h4>
-                      <p>Innovative dental and medical instrument manufacturer focused on delivering high-reliability clinical tools for practitioners.</p>
-                      <span class="p-flag">🇮🇳 INDIA</span>
-                   </div>
-                </div>
+
              </div>
           </div>
 
