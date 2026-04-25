@@ -187,7 +187,7 @@ export const Partners = () => {
                       <span class="p-flag">🇵🇰 PAKISTAN</span>
                    </div>
                 </a>
-                <a href="https://sincereinstruments.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3" style="grid-column: 3;">
+                <a href="https://sincereinstruments.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
                    <div class="p-logo-wrap"><img src="/assets/sincere-people-instruments.png" alt="Sincere Instruments" class="p-logo" style="transform: scale(1.4);"></div>
                    <div class="p-info">
                       <h4>Sincere People Instrument</h4>
