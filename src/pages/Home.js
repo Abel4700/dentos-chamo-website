@@ -293,14 +293,15 @@ export const Home = () => {
       .group-oradent-card:hover { border-color: var(--home-accent); background: rgba(56, 189, 248, 0.05); }
       .group-akedent-card { border-color: var(--home-navy); }
       
-      .bento-v3-content { position: relative; z-index: 10; padding: 45px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; box-sizing: border-box; }
+      .bento-v3-content { position: relative; z-index: 10; padding: 30px; height: 100%; display: flex; flex-direction: column; justify-content: flex-start; box-sizing: border-box; }
+      .bento-v3-large .bento-v3-content { padding: 45px; }
       .bento-bg { position: absolute; top:0; left:0; width:100%; height:100%; background-size:cover; background-position:center; opacity: 0.15; z-index:1; transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
       .bento-v3-item:hover .bento-bg { transform: scale(1.1); opacity: 0.3; }
       .bento-v3-item:hover { transform: translateY(-15px); box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
       
-      .bento-icon-glow { font-size: 3.2rem; color: var(--home-accent); margin-bottom: auto; text-shadow: 0 0 25px rgba(56, 189, 248, 0.5); }
-      .bento-v3-item h3 { font-size: 1.7rem; font-weight: 800; margin-bottom: 12px; }
-      .bento-v3-large h3 { font-size: 3rem; margin-bottom: 20px; }
+      .bento-icon-glow { font-size: 3.2rem; color: var(--home-accent); margin-top: auto; text-shadow: 0 0 25px rgba(56, 189, 248, 0.5); }
+      .bento-v3-item h3 { font-size: 1.65rem; font-weight: 800; margin-bottom: 12px; line-height: 1.2; }
+      .bento-v3-large h3 { font-size: 3.2rem; margin-bottom: 20px; }
       .bento-v3-item p { color: #94a3b8; line-height: 1.6; font-size: 1.05rem; }
       .group-parent p, .dark-bento-card p { color: rgba(255,255,255,0.7); }
 
