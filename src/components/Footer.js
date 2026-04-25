@@ -37,7 +37,8 @@ export const Footer = () => `
         <h4 class="accent-text" style="font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 25px;">Headquarters</h4>
         <p><i class="fas fa-map-marker-alt accent-text"></i> Nifas Silk Lafto Woreda 01, Addis Ababa</p>
         <p><i class="fas fa-phone accent-text"></i> +251 913 70 07 18</p>
-        <p><i class="fas fa-envelope accent-text"></i> <a href="mailto:dentosechamotradingplc88@gmail.com">dentosechamotradingplc88@gmail.com</a></p>
+        <p style="margin-bottom: 10px;"><i class="fas fa-envelope accent-text"></i> <a href="mailto:info@dentosechamo.com">info@dentosechamo.com</a></p>
+        <p><i class="fas fa-envelope accent-text" style="opacity:0;"></i> <a href="mailto:sales@dentosechamo.com">sales@dentosechamo.com</a></p>
       </div>
     </div>
 
