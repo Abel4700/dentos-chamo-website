@@ -108,9 +108,10 @@ export const Contact = () => `
 
     /* HERO STYLING */
     .contact-hero-v3 {
-      padding: 180px 20px 60px;
+      padding: 180px 20px 100px;
+      background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(135deg, var(--bg-light), #e2e8f0);
+      border-bottom: 1px solid #cbd5e1;
       position: relative;
-      background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -180,7 +181,7 @@ export const Contact = () => `
     }
     
     @media (max-width: 768px), (max-height: 600px) {
-       .contact-hero-v3 { padding-top: 160px; padding-bottom: 40px; }
+       .contact-hero-v3 { padding: 150px 20px 80px; }
        .contact-title { font-size: 2.8rem; text-align: left; }
        .hero-lead { text-align: left; font-size: 1.05rem; }
        .hero-badge-v3 { margin: 0 0 20px 0; align-self: flex-start; }

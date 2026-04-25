@@ -197,7 +197,7 @@ export const Akedent = () => {
 
         /* HERO SECTION */
         .akedent-hero {
-          height: 90vh; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden;
+          padding: 180px 20px 100px; position: relative; display: flex; flex-direction: column; justify-content: center; overflow: hidden;
           background: linear-gradient(to right, rgba(12, 12, 12, 0.9), rgba(12, 12, 12, 0.4)), url('https://images.unsplash.com/photo-1579154235602-3c2cfa99e1bc?auto=format&fit=crop&q=80&w=1920');
           background-size: cover; background-position: center; border-bottom: 1px solid var(--dd-border);
         }
@@ -279,7 +279,7 @@ export const Akedent = () => {
            .hero-actions-v3 { flex-direction: column; align-items: center; gap: 15px; }
         }
         @media (max-width: 768px), (max-height: 600px) {
-           .akedent-hero { align-items: flex-start !important; padding-top: 210px !important; height: auto !important; min-height: 100vh; padding-bottom: 50px; }
+           .akedent-hero { padding: 150px 20px 80px !important; align-items: flex-start !important; justify-content: flex-start !important; height: auto !important; min-height: auto !important; }
            .akedent-bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
            .bento-v3-item { min-height: 280px; }
            .bento-v3-large { grid-column: span 1; grid-row: span 1; }

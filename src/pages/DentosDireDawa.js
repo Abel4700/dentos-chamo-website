@@ -315,8 +315,8 @@ export const DentosDireDawa = () => {
 
     /* DD HERO (CINEMATIC) */
     .dd-hero {
-      height: 95vh; margin-top: -80px; position: relative;
-      display: flex; align-items: center; overflow: hidden;
+      padding: 180px 20px 100px; position: relative;
+      display: flex; flex-direction: column; justify-content: center; overflow: hidden;
       background: linear-gradient(to right, var(--dd-main-bg) 40%, transparent 100%),
                   url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1600');
       background-size: cover; background-position: right center;
@@ -424,7 +424,7 @@ export const DentosDireDawa = () => {
       .cta-btns-centered .btn { margin-left: 0 !important; width: 100%; max-width: 350px; }
     }
     @media (max-width: 768px), (max-height: 600px) {
-      .dd-hero { align-items: flex-start !important; padding-top: 210px !important; height: auto !important; min-height: 100vh; padding-bottom: 50px; }
+      .dd-hero { padding: 150px 20px 80px !important; align-items: flex-start !important; justify-content: flex-start !important; height: auto !important; min-height: auto !important; }
       .bento-grid-v3 { grid-template-columns: 1fr; grid-auto-rows: auto; }
       .bento-v3-large, .bento-v3-wide { grid-column: span 1; grid-row: span 1; }
       .bento-v3-content { padding: 30px; min-height: 250px; }

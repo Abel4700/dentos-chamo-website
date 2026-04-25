@@ -405,7 +405,7 @@ export const About = () => {
       @keyframes orbMove { from { transform: translate(0,0); } to { transform: translate(200px, 150px); } }
 
       /* HERO EDITORIAL V3 */
-      .hero-editorial-v3 { height: 90vh; position: relative; display: flex; align-items: flex-end; padding-bottom: 100px; margin-top: -80px; 
+      .hero-editorial-v3 { padding: 180px 20px 100px; position: relative; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; 
         background: linear-gradient(to right, rgba(12,12,12,0.95), rgba(12,12,12,0.4)), url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=1920');
         background-size: cover; background-position: center; border-bottom: 1px solid var(--about-border);
       }
@@ -514,7 +514,7 @@ export const About = () => {
 
       /* RESPONSIVE */
       @media (max-width: 1100px) {
-        .hero-editorial-v3 { height: 85vh; padding: 150px 0 60px; display: flex; align-items: flex-end; }
+        .hero-editorial-v3 { padding: 150px 20px 80px; height: auto; min-height: auto; max-height: none; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; }
         .hero-editorial-grid-v3 { min-height: auto; }
         .founder-grid-v3 { grid-template-columns: 1fr; gap: 50px; }
         .founder-image-wrapper-v3 { height: auto; flex-direction: column; }
@@ -526,10 +526,10 @@ export const About = () => {
         .clients-grid-v3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
       }
       @media (max-width: 768px), (max-height: 600px) {
-        .hero-editorial-v3 { align-items: flex-start !important; padding-top: 210px !important; height: auto !important; min-height: 100vh; padding-bottom: 50px; }
+        .hero-editorial-v3 { padding: 150px 20px 80px !important; justify-content: flex-start !important; align-items: flex-start !important; height: auto !important; min-height: auto !important; }
         .section-title-visionary { font-size: 2.8rem; line-height: 1.2; text-align: left; }
         .section-header-centered .section-title-visionary { text-align: center; }
-        .hero-metrics-v3 { flex-direction: column; align-items: flex-start; gap: 20px; }
+        .hero-metrics-v3 { flex-direction: row; align-items: center; justify-content: flex-start; flex-wrap: wrap; gap: 30px; margin-top: 40px; }
         .metric-divider { display: none; }
         .floating-quote-v3 { padding: 30px 20px; width: calc(100% - 20px); }
         .floating-quote-v3 p { font-size: 1.05rem; line-height: 1.6; }

@@ -1,6 +1,6 @@
 export const Blog = () => `
   <div class="app-section">
-    <section class="section page-header" style="background-image: linear-gradient(rgba(19,70,175,0.8), rgba(19,70,175,0.8)), url('/images/about1.png')">
+    <section class="section blog-hero" style="background-image: linear-gradient(rgba(19,70,175,0.8), rgba(19,70,175,0.8)), url('/images/about1.png')">
       <div class="container text-center text-white">
         <h1>Blog & News</h1>
         <p>Insights into the dental industry and corporate updates.</p>
@@ -28,6 +28,15 @@ export const Blog = () => `
   </div>
 
   <style>
+    .blog-hero {
+      padding: 180px 20px 100px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -41,6 +50,10 @@ export const Blog = () => `
       color: var(--text-muted);
       font-size: 0.85rem;
       margin-bottom: 10px;
+    }
+    @media (max-width: 768px) {
+      .blog-hero { padding: 150px 20px 80px; }
+      .blog-grid { grid-template-columns: 1fr; }
     }
   </style>
 `;

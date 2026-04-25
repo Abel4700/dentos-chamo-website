@@ -213,14 +213,14 @@ export const Partners = () => {
 
         /* HERO V3 */
         .partners-hero-v3 { 
-          height: 85vh; 
+          padding: 180px 20px 100px; 
           position: relative; 
           display: flex; 
-          align-items: center; 
+          flex-direction: column;
+          justify-content: center; 
           background: linear-gradient(rgba(12, 12, 12, 0.9), rgba(12, 12, 12, 0.5)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1920');
           background-size: cover;
           background-position: center;
-          margin-top: -80px;
           border-bottom: 1px solid var(--partners-border);
         }
         .hero-v3-overlay { position: absolute; bottom: 0; left: 0; width: 100%; height: 200px; background: linear-gradient(to top, var(--partners-bg), transparent); }
@@ -305,7 +305,7 @@ export const Partners = () => {
            .compliance-row { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px), (max-height: 600px) {
-           .partners-hero-v3 { align-items: flex-start !important; padding-top: 210px !important; height: auto !important; min-height: 100vh; padding-bottom: 60px; }
+           .partners-hero-v3 { align-items: flex-start !important; padding-top: 150px !important; height: auto !important; min-height: auto !important; padding-bottom: 100px !important; }
            .partners-bento { grid-template-columns: 1fr; }
            .bento-wide { grid-column: span 1; flex-direction: column; align-items: flex-start; }
            .world-connectivity-box { padding: 30px 15px; }

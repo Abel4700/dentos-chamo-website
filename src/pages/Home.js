@@ -38,12 +38,12 @@ export const Home = () => {
        <div class="glass-orb orb-accent"></div>
     </div>
 
-    <!-- 🚀 VISIONARY HERO SLIDER V3 -->
-    <section class="hero-gateway">
+    <!-- 🚀 VISIONARY HERO SLIDER V3 (CLINICAL WHITE) -->
+    <section class="hero-gateway clinical-white-theme">
       <div class="hero-slider-v3">
         
         <!-- SLIDE 1: THE STRATEGIC GATEWAY -->
-        <div class="hero-slide active" style="background-image: linear-gradient(rgba(12, 12, 12, 0.8), rgba(12, 12, 12, 0.6)), url('/images/hero_medical_hub.png')">
+        <div class="hero-slide active" style="background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(240, 244, 248, 0.85)), url('/images/hero_medical_hub.png')">
           <div class="container hero-container-v3">
             <div class="oradent-hero-content fade-in-up">
               <div class="hero-badge-v3">AFRICAN LOGISTICAL HUB</div>
@@ -51,14 +51,14 @@ export const Home = () => {
               <p class="hero-lead">Leveraging the Dentos Dire Dawa Free Trade Zone to bridge world-class medical innovation with the African continent.</p>
               <div class="hero-actions-v3">
                  <a href="#/products?segment=medical" class="btn btn-primary btn-visionary">Explore Medical Solutions</a>
-                 <a href="#/partners" class="btn btn-outline text-white btn-visionary">Our Global Partners</a>
+                 <a href="#/partners" class="btn btn-outline btn-visionary">Our Global Partners</a>
               </div>
             </div>
           </div>
         </div>
 
         <!-- SLIDE 2: DISTRIBUTION HUB -->
-        <div class="hero-slide" style="background-image: linear-gradient(rgba(12, 12, 12, 0.8), rgba(12, 12, 12, 0.6)), url('/images/hero_africa_logistics.png')">
+        <div class="hero-slide" style="background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(240, 244, 248, 0.85)), url('/images/hero_africa_logistics.png')">
            <div class="container hero-container-v3">
             <div class="oradent-hero-content">
               <div class="hero-badge-v3">CONTINENTAL FULFILLMENT</div>
@@ -79,8 +79,8 @@ export const Home = () => {
       </div>
     </section>
 
-    <!-- 💎 TRUST RIBBON: DARK GLASS EDITION -->
-    <section class="trust-ribbon-v2">
+    <!-- 💎 TRUST RIBBON: WHITE CLINICAL EDITION -->
+    <section class="trust-ribbon-v2 clinical-white-theme">
       <div class="container">
         <div class="trust-flex-v2">
           <div class="trust-item-v2">
@@ -244,10 +244,10 @@ export const Home = () => {
       @keyframes orbMove { from { transform: translate(0,0); } to { transform: translate(150px, 150px); } }
 
       /* HERO SLIDER V3 */
-      .hero-gateway { height: 95vh; position: relative; margin-top: -80px; }
-      .hero-slider-v3 { height: 100%; position: relative; }
-      .hero-slide { position: absolute; top:0; left:0; width:100%; height:100%; background-size: cover; background-position: center; display: none; align-items: center; transition: opacity 1.2s ease; }
-      .hero-slide.active { display: flex; opacity: 1; z-index: 5; }
+      .hero-gateway { position: relative; }
+      .hero-slider-v3 { display: grid; }
+      .hero-slide { grid-area: 1 / 1; width:100%; padding: 180px 20px 100px; background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 1.2s ease; }
+      .hero-slide.active { opacity: 1; pointer-events: auto; z-index: 5; }
       .hero-container-v3 { z-index: 10; width: 100%; }
       .oradent-hero-content { max-width: 900px; text-align: left; }
       .hero-slide.active .oradent-hero-content { animation: fadeInUp 0.8s forwards; }
@@ -261,6 +261,20 @@ export const Home = () => {
       .hero-nav-dots-v3 { position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); display: flex; gap: 15px; z-index: 20; }
       .hero-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2); cursor: pointer; transition: 0.4s; }
       .hero-dot.active { width: 35px; border-radius: 10px; background: var(--home-accent); box-shadow: 0 0 15px var(--home-accent); }
+
+      /* CLINICAL WHITE OVERRIDES */
+      .clinical-white-theme { color: #0f172a; }
+      .clinical-white-theme .hero-badge-v3 { background: rgba(14, 165, 233, 0.1); border-color: rgba(14, 165, 233, 0.3); color: #0ea5e9; }
+      .clinical-white-theme .hero-lead { color: #475569; }
+      .clinical-white-theme .section-title-visionary { color: #0f172a; }
+      .clinical-white-theme .hero-dot { background: rgba(0,0,0,0.15); }
+      .clinical-white-theme .hero-dot.active { background: #0ea5e9; box-shadow: 0 0 15px rgba(14, 165, 233, 0.5); }
+      .clinical-white-theme.trust-ribbon-v2 { background: #ffffff; border-color: #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.03); backdrop-filter: none; }
+      .clinical-white-theme .trust-icon-v3 { color: #0ea5e9; text-shadow: none; }
+      .clinical-white-theme .btn-outline { border-color: #cbd5e1; color: #0f172a !important; }
+      .clinical-white-theme .btn-outline:hover { background: #f1f5f9; border-color: #0ea5e9; color: #0ea5e9 !important; }
+      .clinical-white-theme .btn-primary { background: #0ea5e9; border-color: #0ea5e9; color: #ffffff; }
+      .clinical-white-theme .btn-primary:hover { background: #0284c7; box-shadow: 0 15px 30px rgba(14, 165, 233, 0.3); }
 
       /* TRUST RIBBON V2 */
       .trust-ribbon-v2 { background: rgba(255,255,255,0.03); border-top: 1px solid var(--home-border); border-bottom: 1px solid var(--home-border); padding: 40px 0; position: relative; z-index: 5; backdrop-filter: blur(10px); }
@@ -329,8 +343,8 @@ export const Home = () => {
         .floating-stat-card { left: 20px; bottom: 20px; }
       }
       @media (max-width: 768px), (max-height: 600px) {
-        .hero-slide { align-items: flex-start !important; padding-top: 210px; }
-        .hero-gateway { height: 100vh; min-height: 450px; }
+        .hero-slide { padding: 150px 20px 80px; align-items: flex-start !important; justify-content: flex-start; }
+        .hero-gateway { height: auto; min-height: auto; }
         .bento-grid-master { grid-template-columns: 1fr; grid-auto-rows: auto; }
         .bento-v3-large, .bento-v3-wide { grid-column: span 1; grid-row: span 1; }
         .bento-v3-item { min-height: 300px; }
