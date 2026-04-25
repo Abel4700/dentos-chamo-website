@@ -6,7 +6,7 @@ export const initChatbot = () => {
     <div id="chatbot-trigger" class="glass">
       <i class="fas fa-comment-dots"></i>
     </div>
-    <div id="chatbot-window" class="glass hidden">
+    <div id="chatbot-window" class="hidden">
       <div class="chatbot-header">
         <h4>Dentos Assistant</h4>
         <button id="close-chatbot">&times;</button>
@@ -81,6 +81,7 @@ export const initChatbot = () => {
         z-index: 2000;
         box-shadow: 0 15px-35px rgba(0,0,0,0.2);
         overflow: hidden;
+        background: #ffffff;
       }
 
       .hidden { display: none !important; }
