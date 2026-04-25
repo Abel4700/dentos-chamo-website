@@ -208,7 +208,7 @@ export const Partners = () => {
            --partners-border: #242424;
         }
 
-        .partners-root { background: linear-gradient(180deg, rgba(5,11,20,0.95) 0%, rgba(5,11,20,1) 100%), url('https://www.transparenttextures.com/patterns/cubes.png'); color: white; overflow-x: hidden; width: 100%; position: relative; }
+        .partners-root { background: linear-gradient(180deg, rgba(5,11,20,0.95) 0%, rgba(5,11,20,1) 100%), url('https://www.transparenttextures.com/patterns/cubes.png'); color: white; width: 100%; position: relative; overflow-x: clip; }
         .accent-text { color: var(--partners-accent); }
 
         /* HERO V3 */

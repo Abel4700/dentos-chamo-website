@@ -126,7 +126,7 @@ export const OraDent = () => {
           --od-text-muted: #94a3b8;
         }
 
-        .dark-theme-page { background-color: var(--od-bg-dark); color: white; overflow-x: hidden; }
+        .dark-theme-page { background-color: var(--od-bg-dark); color: white; overflow-x: clip; }
         .accent-text { color: var(--od-accent); }
         .primary-text { color: var(--od-primary); }
 

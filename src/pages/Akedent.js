@@ -190,7 +190,7 @@ export const Akedent = () => {
           --secondary: #FFDB3F;
         }
 
-        .akedent-page { background-color: var(--dd-bg-dark); color: white; min-height: 100vh; overflow-x: hidden; }
+        .akedent-page { background-color: var(--dd-bg-dark); color: white; min-height: 100vh; overflow-x: clip; }
         .primary-text { color: var(--dd-accent); }
         .section { padding: 120px 0; position: relative; }
         .bg-darker { background-color: #080808; }

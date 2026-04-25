@@ -106,7 +106,7 @@ export const DentoseChamo = () => `
       background-color: #050b14;
       color: #f8fafc;
       min-height: 100vh;
-      overflow-x: hidden;
+      overflow-x: clip;
     }
     .bg-dark-deep { background-color: #03070c; }
     .accent-text { color: #38bdf8; text-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }

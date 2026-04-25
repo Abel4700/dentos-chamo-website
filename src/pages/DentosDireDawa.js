@@ -277,10 +277,10 @@ export const DentosDireDawa = () => {
       --dd-text-muted: #94a3b8;
     }
 
-    .dark-theme-page {
+    .dd-page {
       background-color: var(--dd-main-bg);
       color: white;
-      overflow-x: hidden;
+      overflow-x: clip;
     }
     
     .bg-darker { background-color: #080808; }

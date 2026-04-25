@@ -232,7 +232,7 @@ export const Home = () => {
         --home-border: #242424;
       }
 
-      .dark-theme-page { background: radial-gradient(circle at center, rgba(14, 38, 75, 0.4) 0%, var(--home-bg) 70%), url('https://www.transparenttextures.com/patterns/cubes.png'); color: white; overflow-x: hidden; width: 100%; position: relative; }
+      .dark-theme-page { background: radial-gradient(circle at center, rgba(14, 38, 75, 0.4) 0%, var(--home-bg) 70%), url('https://www.transparenttextures.com/patterns/cubes.png'); color: white; width: 100%; position: relative; overflow-x: clip; }
       .accent-text { color: var(--home-accent); }
       .primary-text { color: var(--home-primary); }
 
