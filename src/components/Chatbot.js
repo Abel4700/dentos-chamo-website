@@ -14,11 +14,23 @@ export const initChatbot = () => {
       <div id="chatbot-messages">
         <div class="message bot-message">ሰላም! (Hello!) Welcome to Dentos Chamo. How can I assist you today?</div>
       </div>
-      <div id="chatbot-options">
-        <button class="chat-opt" data-next="services">Our Services</button>
-        <button class="chat-opt" data-next="products">Product Inquiry</button>
-        <button class="chat-opt" data-next="faq">Common FAQs</button>
-        <button class="chat-opt" data-next="location">Office Location</button>
+      <div id="chatbot-options" class="chat-scroll-area">
+        <button class="chat-opt" data-next="q1">What products do you sell?</button>
+        <button class="chat-opt" data-next="q2">How much does a product cost?</button>
+        <button class="chat-opt" data-next="q3">Do you have products in stock?</button>
+        <button class="chat-opt" data-next="q4">Do you offer delivery?</button>
+        <button class="chat-opt" data-next="q5">Do you provide receipts or invoices?</button>
+        <button class="chat-opt" data-next="q6">Do you offer discounts?</button>
+        <button class="chat-opt" data-next="q7">Do you provide product usage guidance?</button>
+        <button class="chat-opt" data-next="q8">Can I return or exchange a product?</button>
+        <button class="chat-opt" data-next="q9">Where are you located?</button>
+        <button class="chat-opt" data-next="q10">How can I contact you?</button>
+        <button class="chat-opt" data-next="q11">Do you supply clinics and hospitals?</button>
+        <button class="chat-opt" data-next="q12">Do you import products?</button>
+        <button class="chat-opt" data-next="q13">How long does delivery take?</button>
+        <button class="chat-opt" data-next="q14">Do you have new or trending products?</button>
+        <button class="chat-opt" data-next="q15">Can I send a picture of a product I need?</button>
+        <button class="chat-opt" data-next="q16">Do you support partnerships or resellers?</button>
       </div>
     </div>
 
@@ -141,6 +153,10 @@ export const initChatbot = () => {
         color: var(--white);
         font-size: 1.5rem;
       }
+      .chat-scroll-area {
+        max-height: 200px;
+        overflow-y: auto;
+      }
     </style>
   `;
 
@@ -151,65 +167,89 @@ export const initChatbot = () => {
   const options = document.getElementById('chatbot-options');
 
   const decisionTree = {
-    'services': {
-      msg: 'እኛ ልዩ የጥርስ ህክምና ምክክር፣ የቀዶ ጥገና መፍትሄዎች እና የኦርቶዶንቲክ ሕክምናዎችን እናቀርባለን። (We provide specialized dental consultations, surgical solutions, and orthodontic treatments.) Would you like to see our categories?',
-      opts: [
-        { text: 'View Categories', next: 'products' },
-        { text: 'Book Appointment', next: 'contact' }
-      ]
+    'q1': {
+      msg: 'We supply a wide range of high-quality dental and medical products, including:<br><br>• Composite filling materials<br>• Impression materials<br>• Endodontic (root canal) products<br>• Orthodontic materials<br>• Dental instruments and accessories<br>• Preventive care products (oral rinses, fluoride, etc.)<br><br>📌 Tip: You can request a full catalog with images and prices anytime:<br>📧 Email: <a href="mailto:sales@dentosechamo.com">sales@dentosechamo.com</a><br>📞 Phone/WhatsApp: <a href="https://wa.me/251913700718" target="_blank">+251 913 70 07 18</a>',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
     },
-    'products': {
-      msg: 'Our products range from professional dental chairs to high-precision medical tools. You can find them in the Products section.',
-      opts: [
-        { text: 'Go to Products', next: 'product_section' },
-        { text: 'Ask about Shipping', next: 'shipping' }
-      ]
+    'q2': {
+      msg: 'Prices vary depending on:<br>• Product type<br>• Brand<br>• Quantity<br><br>👉 Please send us the product name or a photo, and we’ll provide:<br>• Latest price<br>• Available brands<br>• Alternative options<br><br>📧 Email: <a href="mailto:sales@dentosechamo.com">sales@dentosechamo.com</a><br>📞 WhatsApp: <a href="https://wa.me/251913700718" target="_blank">+251 913 70 07 18</a>',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
     },
-    'location': {
-      msg: 'Our main office is located at 123 Corporate Blvd, Medical District. We also have regional centers.',
-      opts: [
-        { text: 'Get Directions', next: 'directions' },
-        { text: 'Main Office Ph', next: 'contact' }
-      ]
+    'q3': {
+      msg: 'Most popular products are available in stock, but availability changes quickly.<br><br>👉 For confirmation, contact us with the product name or photo:<br>📧 <a href="mailto:sales@dentosechamo.com">sales@dentosechamo.com</a><br>📞 <a href="tel:+251913700718">+251 913 70 07 18</a>',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
     },
-    'hours': {
-      msg: 'Our office hours are: \nMon-Fri: 8:00 AM - 6:00 PM \nSat: 9:00 AM - 1:00 PM \nSun: Closed',
-      opts: [
-        { text: 'Back to Menu', next: 'start' }
-      ]
+    'q4': {
+      msg: 'Yes ✅<br><br>Addis Ababa: Fast delivery available<br>Outside Addis Ababa: Delivery arranged via trusted services like Ethiopian Postal Service or local logistics providers such as Ahununu.<br><br>📌 Delivery cost depends on location and order size.<br><br>👉 To arrange delivery:<br>📧 <a href="mailto:sales@dentosechamo.com">sales@dentosechamo.com</a><br>📞 <a href="tel:+251913700718">+251 913 70 07 18</a>',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
     },
-    'faq': {
-      msg: 'How can I help you today? Here are some common questions:',
-      opts: [
-        { text: 'Shipping Times', next: 'shipping' },
-        { text: 'Payment Methods', next: 'payment' },
-        { text: 'Warranty Policy', next: 'warranty' },
-        { text: 'Back to Start', next: 'start' }
-      ]
+    'q5': {
+      msg: 'Yes ✅<br><br>We provide:<br>• Official receipts<br>• Company invoices<br><br>For invoice requests:<br>📧 <a href="mailto:accounts@dentosechamo.com">accounts@dentosechamo.com</a><br>📞 <a href="tel:+251913700718">+251 913 70 07 18</a>',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
     },
-    'payment': {
-      msg: 'We accept Bank Transfers, Letters of Credit (LC), and Cash Against Documents (CAD) for international export orders.',
-      opts: [{ text: 'Main Menu', next: 'start' }]
+    'q6': {
+      msg: 'Yes ✅<br><br>We offer:<br>• Bulk purchase discounts<br>• Special pricing for clinics and regular customers<br>• Promotional offers<br><br>👉 Request a custom quote:<br>📧 <a href="mailto:sales@dentosechamo.com">sales@dentosechamo.com</a><br>📞 <a href="tel:+251913700718">+251 913 70 07 18</a>',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
     },
-    'warranty': {
-      msg: 'All our medical equipment comes with a standard 1-year warranty and localized technical support.',
-      opts: [{ text: 'Main Menu', next: 'start' }]
+    'q7': {
+      msg: 'Yes ✅<br><br>We support you with:<br>• Product usage instructions<br>• Best practices<br>• Clinical tips<br><br>🎥 Video demonstrations are available on our social media.<br><br>👉 For direct support:<br>📧 <a href="mailto:support@dentosechamo.com">support@dentosechamo.com</a><br>📞 <a href="tel:+251913700718">+251 913 70 07 18</a>',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
     },
-    'shipping': {
-      msg: 'We offer nationwide shipping within 3-5 business days. International shipping depends on location.',
-      opts: [{ text: 'Main Menu', next: 'start' }]
+    'q8': {
+      msg: 'Yes (conditions apply):<br><br>• Product must be unused and in original condition<br>• Must be reported shortly after purchase<br><br>👉 Contact us immediately:<br>📧 <a href="mailto:support@dentosechamo.com">support@dentosechamo.com</a><br>📞 <a href="tel:+251913700718">+251 913 70 07 18</a>',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
     },
-    'contact': {
-      msg: 'You can reach us at +1 234 567 890 or email info@dentoschamo.com. Or visit our Contact page.',
-      opts: [{ text: 'Main Menu', next: 'start' }]
+    'q9': {
+      msg: '📍 Addis Ababa, Ethiopia<br>Nefas Silk Lafto Woreda 01<br>(In front of Lebu Medhani-Alem Church)<br><br>👉 Request location pin:<br>📞 <a href="tel:+251913700718">+251 913 70 07 18</a>',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
+    },
+    'q10': {
+      msg: 'You can reach us via:<br><br>📞 Phone / WhatsApp: <a href="https://wa.me/251913700718" target="_blank">+251 913 70 07 18</a><br>📧 Email: <a href="mailto:info@dentosechamo.com">info@dentosechamo.com</a><br><br>🛒 Also available on Zemen Gebeya',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
+    },
+    'q11': {
+      msg: 'Yes ✅<br><br>We work with:<br>• Dental clinics<br>• Hospitals<br>• Laboratories<br>• Universities<br><br>👉 For partnerships:<br>📧 <a href="mailto:business@dentosechamo.com">business@dentosechamo.com</a><br>📞 <a href="tel:+251913700718">+251 913 70 07 18</a>',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
+    },
+    'q12': {
+      msg: 'Yes ✅<br><br>We import high-quality international brands ensuring:<br>• Authenticity<br>• Quality assurance<br>• Competitive pricing<br><br>👉 For product sourcing inquiries:<br>📧 <a href="mailto:sales@dentosechamo.com">sales@dentosechamo.com</a>',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
+    },
+    'q13': {
+      msg: '⏱️ Addis Ababa: Same day or next day<br>⏱️ Outside Addis Ababa: 1–3 days<br><br>👉 To confirm delivery time:<br>📞 <a href="tel:+251913700718">+251 913 70 07 18</a>',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
+    },
+    'q14': {
+      msg: 'Yes ✅<br><br>We regularly introduce:<br>• New dental technologies<br>• Advanced materials<br><br>👉 Ask for latest updates:<br>📧 <a href="mailto:sales@dentosechamo.com">sales@dentosechamo.com</a><br>📞 <a href="tel:+251913700718">+251 913 70 07 18</a>',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
+    },
+    'q15': {
+      msg: 'Absolutely ✅ (Recommended)<br><br>We will:<br>• Identify the product<br>• Share price<br>• Suggest alternatives<br><br>👉 Send via:<br>📧 <a href="mailto:sales@dentosechamo.com">sales@dentosechamo.com</a><br>📞 WhatsApp: <a href="https://wa.me/251913700718" target="_blank">+251 913 70 07 18</a>',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
+    },
+    'q16': {
+      msg: 'Yes ✅<br><br>We welcome:<br>• Distributors<br>• Resellers<br>• Clinic partnerships<br><br>👉 Contact us:<br>📧 <a href="mailto:business@dentosechamo.com">business@dentosechamo.com</a><br>📞 <a href="tel:+251913700718">+251 913 70 07 18</a>',
+      opts: [{ text: 'Back to FAQs', next: 'start' }]
     },
     'start': {
-      msg: 'How else can I help you?',
+      msg: 'How else can I help you today?',
       opts: [
-        { text: 'Our Services', next: 'services' },
-        { text: 'Product Inquiry', next: 'products' },
-        { text: 'Office Location', next: 'location' },
-        { text: 'Office Hours', next: 'hours' }
+        { text: 'What products do you sell?', next: 'q1' },
+        { text: 'How much does a product cost?', next: 'q2' },
+        { text: 'Do you have products in stock?', next: 'q3' },
+        { text: 'Do you offer delivery?', next: 'q4' },
+        { text: 'Do you provide receipts or invoices?', next: 'q5' },
+        { text: 'Do you offer discounts?', next: 'q6' },
+        { text: 'Do you provide product usage guidance?', next: 'q7' },
+        { text: 'Can I return or exchange a product?', next: 'q8' },
+        { text: 'Where are you located?', next: 'q9' },
+        { text: 'How can I contact you?', next: 'q10' },
+        { text: 'Do you supply clinics and hospitals?', next: 'q11' },
+        { text: 'Do you import products?', next: 'q12' },
+        { text: 'How long does delivery take?', next: 'q13' },
+        { text: 'Do you have new or trending products?', next: 'q14' },
+        { text: 'Can I send a picture of a product I need?', next: 'q15' },
+        { text: 'Do you support partnerships or resellers?', next: 'q16' }
       ]
     }
   };
@@ -220,7 +260,7 @@ export const initChatbot = () => {
   const addMessage = (text, type) => {
     const div = document.createElement('div');
     div.className = `message ${type}-message`;
-    div.innerText = text;
+    div.innerHTML = text;
     messages.appendChild(div);
     messages.scrollTop = messages.scrollHeight;
   };
@@ -253,6 +293,23 @@ export const initChatbot = () => {
       renderOptions(node.opts);
     }
   };
+
+  // Initialize static options
+  const initStaticOptions = () => {
+    document.querySelectorAll('#chatbot-options .chat-opt').forEach(btn => {
+      btn.onclick = () => {
+        addMessage(btn.innerText, 'user');
+        const nextKey = btn.getAttribute('data-next');
+        if (nextKey === 'product_section') {
+          window.location.hash = '#/products';
+          window_element.classList.add('hidden');
+        } else {
+          setTimeout(() => handleNext(nextKey), 500);
+        }
+      };
+    });
+  };
+  initStaticOptions();
 
   // Initial greeting logic for landing
   setTimeout(() => {
