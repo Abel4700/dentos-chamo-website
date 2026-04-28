@@ -20,10 +20,10 @@ export const Home = () => {
     if (slides.length > 0) {
       const interval = setInterval(nextSlide, 7000);
       dots.forEach((dot, i) => {
-        dot.onclick = () => { 
+        dot.onclick = () => {
           clearInterval(interval);
-          current = i; 
-          showSlide(i); 
+          current = i;
+          showSlide(i);
         };
       });
     }
@@ -48,7 +48,7 @@ export const Home = () => {
             <div class="oradent-hero-content fade-in-up">
               <div class="hero-badge-v3">AFRICAN LOGISTICAL HUB</div>
               <h1 class="section-title-visionary">Africa’s Strategic <span class="accent-text">Gateway</span> to Global Medical Tech</h1>
-              <p class="hero-lead">Leveraging the Dentos Dire Dawa Free Trade Zone to bridge world-class medical innovation with the African continent.</p>
+              <p class="hero-lead">Leveraging the Dentose Dire Dawa Free Trade Zone to bridge world-class medical innovation with the African continent.</p>
               <div class="hero-actions-v3">
                  <a href="#/products?segment=medical" class="btn btn-primary btn-visionary">Explore Medical Solutions</a>
                  <a href="#/partners" class="btn btn-outline btn-visionary">Our Global Partners</a>
@@ -150,12 +150,12 @@ export const Home = () => {
             </div>
           </a>
           
-          <!-- Dentos Dire Dawa -->
+          <!-- Dentose Dire Dawa -->
           <a href="#/companies/dentos-dire-dawa" class="bento-v3-item glass-card-v3 hover-lift dark-bento-card">
             <div class="bento-bg" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800');"></div>
             <div class="bento-v3-content">
               <div class="bento-tag">Logistics & FTZ</div>
-              <h3>Dentos Dire Dawa</h3>
+              <h3>Dentose Dire Dawa</h3>
               <p>Specialized logistics facilitator for global medical and pharmaceutical giants within the FTZ.</p>
               <div class="bento-icon-glow"><i class="fas fa-truck-container"></i></div>
             </div>
