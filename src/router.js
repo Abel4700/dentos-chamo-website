@@ -2,6 +2,7 @@ import { Home } from './pages/Home.js';
 import { About } from './pages/About.js';
 import { ProductDetails } from './pages/ProductDetails.js';
 import { Blog } from './pages/Blog.js';
+import { BlogPost } from './pages/BlogPost.js';
 import { Media } from './pages/Media.js';
 import { Contact } from './pages/Contact.js';
 
@@ -47,11 +48,23 @@ export function initRouter() {
       }
     }
 
-    const component = routes[basePath] || Home;
+    let component = routes[basePath] || Home;
+    
+    // Dynamic Route Handling: Catch #/blog/:slug
+    if (basePath.startsWith('#/blog/') && basePath !== '#/blog') {
+      const slug = basePath.replace('#/blog/', '');
+      queryParams.slug = slug;
+      component = BlogPost;
+    }
     
     // Inject the parsed query params into the rendering component
     app.innerHTML = component(queryParams);
     window.scrollTo(0, 0);
+    
+    // Lifecycle Hook: Execute mount function if component exposes it (Best Practice for Async Data)
+    if (typeof component.mount === 'function') {
+      component.mount(queryParams);
+    }
     
     // Trigger entrance animations globally after mount
     document.querySelectorAll('.app-section').forEach(sec => {

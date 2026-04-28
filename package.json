@@ -12,6 +12,8 @@
     "vite": "^8.0.1"
   },
   "dependencies": {
+    "@portabletext/to-html": "^5.0.2",
+    "@sanity/client": "^7.22.0",
     "xlsx": "^0.18.5"
   }
 }

@@ -135,14 +135,8 @@ export const Partners = () => {
                       <p>Elite aesthetic zirconia solutions. Providing highly durable zirconia blocks for modern dental laboratories.</p>
                    </div>
                 </a>
-                <a href="https://pyraxpolymars.in/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
-                   <div class="p-logo-wrap"><img src="/assets/pyrax-logo.webp" alt="PYRAX" class="p-logo"></div>
-                   <div class="p-info">
-                      <h4>PYRAX Polymars</h4>
-                      <p>Polymere expertise for prosthetic dentistry. Specializes in high-quality dental waxes and impression materials.</p>
-                   </div>
-                </a>
-                <a href="https://www.precident.in/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
+
+                <a href="https://www.precident.in/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3" style="grid-column: 3;">
                    <div class="p-logo-wrap"><img src="/assets/precident-logo-01.webp" alt="PreciDent" class="p-logo"></div>
                    <div class="p-info">
                       <h4>PreciDent</h4>

@@ -18,6 +18,10 @@ export const Header = () => `
               <strong>Dentose Chamo Trading PLC</strong>
               <span class="sub-text">Medical Devices & Agricultural Export</span>
             </a>
+            <a href="#/companies/dentos-dire-dawa">
+              <strong>Dentose Dire Dawa Logistics PLC</strong>
+              <span class="sub-text">Regional Logistics & FTZ Division</span>
+            </a>
             <a href="#/companies/ora-dent">
               <strong>Ora-Dent Oral Cosmetics</strong>
               <span class="sub-text">Aesthetic Dental & Cosmetics</span>
@@ -25,10 +29,6 @@ export const Header = () => `
             <a href="#/companies/akedent">
               <strong>Akedent Pharmaceutical and Medical Equipment Whole Sale</strong>
               <span class="sub-text">Pharma & Heavy Lab Machinery</span>
-            </a>
-            <a href="#/companies/dentos-dire-dawa">
-              <strong>Dentose Dire Dawa Logistics PLC</strong>
-              <span class="sub-text">Regional Logistics & FTZ Division</span>
             </a>
           </div>
         </div>
