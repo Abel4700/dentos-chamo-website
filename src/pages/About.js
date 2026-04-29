@@ -38,7 +38,7 @@ export const About = () => {
         <div class="founder-grid-v3">
           <div class="founder-image-wrapper-v3 fade-in">
             <div class="founder-glow"></div>
-            <img src="/assets/dr_aklilu_berhanu.png" alt="Dr. Aklilu Berhanu" class="img-visionary-founder">
+            <img src="/assets/dr_aklilu_berhanu.jpg" alt="Dr. Aklilu Berhanu" class="img-visionary-founder">
             
             <!-- Visionary Floating Quote -->
             <div class="floating-quote-v3 glass-card-v3 bounce-anim">
@@ -244,7 +244,7 @@ export const About = () => {
             <div class="team-content-v3">
                <h3>Dr. Aklilu Berhanu</h3>
                <p class="accent-text team-title-v3">Chief Executive Director</p>
-               <p class="text-muted-standard text-center">Doctor of Dental Medicine & MBA. Guiding the overarching strategic direction of the Group.</p>
+               <p class="text-muted-standard text-center">Doctor of Dental Medicine (D.D.M) & MBA. Provides strategic leadership and direction, driving the Group’s growth and expansion across medical and commercial sectors.</p>
             </div>
           </div>
           <!-- Leader 2: Kidest Berhanu -->
@@ -255,7 +255,7 @@ export const About = () => {
             <div class="team-content-v3">
                <h3>Kidest Berhanu</h3>
                <p class="accent-text team-title-v3">Managing Director</p>
-               <p class="text-muted-standard text-center">Agro-Engineer & Civil Engineer. Overseeing operational execution and logistical infrastructure.</p>
+               <p class="text-muted-standard text-center">Agro-Engineer & Civil Engineer. Oversees operational execution and infrastructure, ensuring efficient project delivery and strong logistical performance.</p>
             </div>
           </div>
           <!-- Leader 3: Merhawi Berhanu -->
@@ -266,117 +266,51 @@ export const About = () => {
             <div class="team-content-v3">
                <h3>Merhawi Berhanu</h3>
                <p class="accent-text team-title-v3">Export Manager</p>
-               <p class="text-muted-standard text-center">Construction Management Engineer. Driving international trade and organic fulfillment logistics.</p>
+               <p class="text-muted-standard text-center">Construction Management. Leads export operations, driving international trade growth and managing efficient logistics and supply chain processes.</p>
             </div>
           </div>
           <!-- Leader 4: Tsion Berhanu -->
           <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.3s;">
             <div class="team-portrait-wrapper-v3">
-               <img src="/assets/tsion_berhanu.png" alt="Tsion Berihanu" class="img-portrait-v3">
+               <img src="/assets/tsion_berhanu.png" alt="Tsion Berhanu" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
                <h3>Tsion Berhanu</h3>
-               <p class="accent-text team-title-v3">OFFICE MANAGER</p>
-               <p class="text-muted-standard text-center">Bachelor in Mechanical Engineering & MBA. Orchestrating corporate administration.</p>
+               <p class="accent-text team-title-v3">Office Manager</p>
+               <p class="text-muted-standard text-center">BSc in Mechanical Engineering & MBA. Coordinates corporate administration and internal operations, ensuring efficiency and structured organizational workflows.</p>
             </div>
           </div>
           <!-- Leader 5: Yohannes Nega -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.3s;">
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.4s;">
             <div class="team-portrait-wrapper-v3">
-               <img src="/assets/yohannes_nega.jpg" alt="Yohannes Nega" class="img-portrait-v3">
+               <img src="/assets/yohannes_nega.jpeg" alt="Yohannes Nega" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
                <h3>Yohannes Nega</h3>
                <p class="accent-text team-title-v3">Legal Adviser</p>
-               <p class="text-muted-standard text-center"></p>
+               <p class="text-muted-standard text-center">LL.B | Licensed Federal Court Attorney. Provides legal counsel and regulatory oversight, with extensive experience in corporate law, compliance, and capital market advisory.</p>
             </div>
           </div>
-          <!-- Role: Technical Manager -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in">
+          <!-- Leader 6: Elleni Zergaw -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.5s;">
             <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400" alt="Technical Manager" class="img-portrait-v3">
+               <img src="/assets/elleni_zergaw.JPG" alt="Elleni Zergaw" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
-               <h3>Technical Manager</h3>
-               <p class="accent-text team-title-v3">Operations & Tech</p>
-               <p class="text-muted-standard text-center">Specialized engineering and medical tech fulfillment.</p>
+               <h3>Elleni Zergaw</h3>
+               <p class="accent-text team-title-v3">Finance Manager</p>
+               <p class="text-muted-standard text-center">BA in Accounting & Finance | MBA Candidate. Leads financial operations, ensuring accurate reporting, regulatory compliance, and alignment with organizational goals.</p>
             </div>
           </div>
-          <!-- Role: CFO -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.1s;">
+          <!-- Leader 7: Siham Ahmed -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.6s;">
             <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400" alt="CFO" class="img-portrait-v3">
+               <img src="/assets/siham_ahmed.JPG" alt="Siham Ahmed" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
-               <h3>Chief Finance Officer</h3>
-               <p class="accent-text team-title-v3">Finance Operations</p>
-               <p class="text-muted-standard text-center">Executive management of fiscal compliance and strategic growth.</p>
-            </div>
-          </div>
-          <!-- Role: Finance Dept -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.2s;">
-            <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=400" alt="Finance Dept" class="img-portrait-v3">
-            </div>
-            <div class="team-content-v3">
-               <h3>Finance Department</h3>
-               <p class="accent-text team-title-v3">Accounts & Administration</p>
-               <p class="text-muted-standard text-center">Managers, Accountants, and Cashiers ensuring daily financial integrity.</p>
-            </div>
-          </div>
-          <!-- Role: Marketing Manager -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in">
-            <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" alt="Marketing Manager" class="img-portrait-v3">
-            </div>
-            <div class="team-content-v3">
-               <h3>Marketing Manager</h3>
-               <p class="accent-text team-title-v3">Strategy & Brand</p>
-               <p class="text-muted-standard text-center">Leading regional brand awareness and medical product promotion.</p>
-            </div>
-          </div>
-          <!-- Role: Graphics Designer -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.1s;">
-            <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400" alt="Graphics Designer" class="img-portrait-v3">
-            </div>
-            <div class="team-content-v3">
-               <h3>Graphics Designer</h3>
-               <p class="accent-text team-title-v3">Creative Division</p>
-               <p class="text-muted-standard text-center">In-house creative unit managing corporate visuals and digital assets.</p>
-            </div>
-          </div>
-          <!-- Role: Sales Department -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.2s;">
-            <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=400" alt="Sales Department" class="img-portrait-v3">
-            </div>
-            <div class="team-content-v3">
-               <h3>Sales Department</h3>
-               <p class="accent-text team-title-v3">Client Fulfillment</p>
-               <p class="text-muted-standard text-center">Promotion teams, sales experts, and dedicated delivery coordinators.</p>
-            </div>
-          </div>
-          <!-- Role: Store Department -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in">
-            <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=400" alt="Store Department" class="img-portrait-v3">
-            </div>
-            <div class="team-content-v3">
-               <h3>Store Department</h3>
-               <p class="accent-text team-title-v3">Inventory Logistics</p>
-               <p class="text-muted-standard text-center">Warehouse managers and assistants securing world-class facility standards.</p>
-            </div>
-          </div>
-          <!-- Role: IT Technician -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.1s;">
-            <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400" alt="IT Technician" class="img-portrait-v3">
-            </div>
-            <div class="team-content-v3">
-               <h3>IT Technician</h3>
-               <p class="accent-text team-title-v3">Systems operations</p>
-               <p class="text-muted-standard text-center">Ensuring seamless digital connectivity across all regional departments.</p>
+               <h3>Siham Ahmed</h3>
+               <p class="accent-text team-title-v3">Sales & Promotion Specialist | Social Media Manager</p>
+               <p class="text-muted-standard text-center">BSc in Clinical Pharmacy. Drives product promotion and digital engagement, combining clinical expertise with strategic marketing to expand market reach.</p>
             </div>
           </div>
         </div>

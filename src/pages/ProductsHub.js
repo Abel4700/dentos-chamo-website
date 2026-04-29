@@ -1,4 +1,4 @@
-import { products } from '../data/products.js';
+import { products } from './Products.js';
 
 export const ProductsHub = (queryParams = {}) => {
   const initialManufacturer = queryParams.manufacturer || 'all';
@@ -12,7 +12,7 @@ export const ProductsHub = (queryParams = {}) => {
       logo: '/assets/prevest_logo.webp',
       color: '#4b66df',
       bg: 'linear-gradient(135deg, rgba(75,102,223,0.05) 0%, rgba(75,102,223,0.1) 100%)',
-      pdf: '/catalogues/prevest_denpro_catalogue.pdf'
+      pdf: '/catalogues/Prevest-Denpro-Catalog-2026.pdf'
     },
     {
       name: 'IRES',
@@ -22,7 +22,7 @@ export const ProductsHub = (queryParams = {}) => {
       logo: '/assets/ires_logo.svg',
       color: '#2c3e50',
       bg: 'linear-gradient(135deg, rgba(44,62,80,0.05) 0%, rgba(44,62,80,0.1) 100%)',
-      pdf: '/catalogues/ires_catalogue.pdf'
+      pdf: '/catalogues/Ires_Catalogue.pdf'
     },
     {
       name: 'PreciDent',
@@ -32,7 +32,7 @@ export const ProductsHub = (queryParams = {}) => {
       logo: '/assets/precident-logo-01.webp',
       color: '#e67e22',
       bg: 'linear-gradient(135deg, rgba(230,126,34,0.05) 0%, rgba(230,126,34,0.1) 100%)',
-      pdf: '/catalogues/precident_catalogue.pdf'
+      pdf: '/catalogues/Precident_Product Catalogue.pdf'
     },
     {
       name: 'Durable',
@@ -42,7 +42,7 @@ export const ProductsHub = (queryParams = {}) => {
       logo: '/assets/durable-hospital-supplies-logo.webp',
       color: '#27ae60',
       bg: 'linear-gradient(135deg, rgba(39,174,96,0.05) 0%, rgba(39,174,96,0.1) 100%)',
-      pdf: '/catalogues/durable_catalogue.pdf'
+      pdf: '/catalogues/Durable_Product_Catalogue.pdf'
     },
     {
       name: 'Ramo',
@@ -52,7 +52,7 @@ export const ProductsHub = (queryParams = {}) => {
       logo: '/assets/ramo_medical_logo.webp',
       color: '#8e44ad',
       bg: 'linear-gradient(135deg, rgba(142,68,173,0.05) 0%, rgba(142,68,173,0.1) 100%)',
-      pdf: '/catalogues/ramo_catalogue.pdf'
+      pdf: '/catalogues/Ramo_Endodontic Catalogue.pdf'
     },
     {
       name: 'TopZir',
@@ -62,7 +62,7 @@ export const ProductsHub = (queryParams = {}) => {
       logo: '/assets/tozier_logo.svg',
       color: '#26bccd',
       bg: 'linear-gradient(135deg, rgba(38,188,205,0.05) 0%, rgba(38,188,205,0.1) 100%)',
-      pdf: '/catalogues/topzir_catalogue.pdf'
+      pdf: '/catalogues/Topzir_Products_Catalogue_2026.pdf'
     },
     {
       name: 'Sincere',
@@ -72,7 +72,7 @@ export const ProductsHub = (queryParams = {}) => {
       logo: '/assets/sincere-people-instruments.webp',
       color: '#c0392b',
       bg: 'linear-gradient(135deg, rgba(192,57,43,0.05) 0%, rgba(192,57,43,0.1) 100%)',
-      pdf: '/catalogues/sincere_catalogue.pdf'
+      pdf: '#'
     },
     {
       name: 'Accu-Med',
@@ -82,7 +82,7 @@ export const ProductsHub = (queryParams = {}) => {
       logo: '/assets/accu-med_logo.png',
       color: '#0056b3',
       bg: 'linear-gradient(135deg, rgba(0,86,179,0.05) 0%, rgba(0,86,179,0.1) 100%)',
-      pdf: '/catalogues/accu-med_catalogue.pdf'
+      pdf: '/catalogues/Accu_Med_Maxilo_Cataloguel.pdf'
     },
     {
       name: 'ERGO KIT',
@@ -99,10 +99,10 @@ export const ProductsHub = (queryParams = {}) => {
       slug: 'truedent',
       desc: 'Essential dental consumables and export-quality supplies.',
       count: products.filter(p => p.manufacturer === 'truedent').length,
-      icon: 'fa-box-open',
+      logo: '/assets/truedendco-logo.webp',
       color: '#2980b9',
       bg: 'linear-gradient(135deg, rgba(41,128,185,0.05) 0%, rgba(41,128,185,0.1) 100%)',
-      pdf: '#'
+      pdf: '/catalogues/True-Dent_Catalogue.pdf'
     },
     {
       name: 'Oradox',
@@ -112,7 +112,7 @@ export const ProductsHub = (queryParams = {}) => {
       icon: 'fa-tooth',
       color: '#0d9488',
       bg: 'linear-gradient(135deg, rgba(13,148,136,0.05) 0%, rgba(13,148,136,0.1) 100%)',
-      pdf: '/catalogues/oradox_catalogue.pdf'
+      pdf: '/catalogues/Oradox_Catalogue.pdf'
     },
     {
       name: 'Pyrax',
@@ -122,7 +122,7 @@ export const ProductsHub = (queryParams = {}) => {
       logo: '/assets/pyrax-logo.webp',
       color: '#f39c12',
       bg: 'linear-gradient(135deg, rgba(243,156,18,0.05) 0%, rgba(243,156,18,0.1) 100%)',
-      pdf: '/catalogues/pyrax_catalogue.pdf'
+      pdf: '/catalogues/Pyrax_Catalouge.pdf'
     }
   ];
 
@@ -226,7 +226,7 @@ export const ProductsHub = (queryParams = {}) => {
         // If a specific manufacturer is selected, show all their products.
         // If 'all' is selected, only show featured products to keep the page clean.
         let visibilityMatch = (activeMfr !== 'all') ? true : isFeatured;
-        
+
         let searchMatch = true;
         if (searchQuery) {
           const text = card.querySelector('.product-title').textContent.toLowerCase();

@@ -277,10 +277,18 @@ export const DentosDireDawa = () => {
       --dd-text-muted: #94a3b8;
     }
 
+    .diredawa-root {
+      background-color: var(--dd-main-bg);
+      color: white;
+      overflow-x: hidden; /* Prevent horizontal scroll */
+      width: 100%;
+      position: relative;
+    }
+    
     .dd-page {
       background-color: var(--dd-main-bg);
       color: white;
-      overflow-x: clip;
+      overflow-x: hidden;
     }
     
     .bg-darker { background-color: #080808; }

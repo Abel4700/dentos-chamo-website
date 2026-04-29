@@ -1,18 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* User Palette */
-  --primary: #1346af;    /* Blue */
-  --secondary: #ffdb3f;  /* Yellow/Gold */
+  /* Corporate Brand Palette (New Schema) */
+  --primary: #1b1ec5;    /* Royal Blue */
+  --secondary: #00bcc5;  /* Cyan/Turquoise */
   --white: #ffffff;
-  --black: #000000;
+  --black: #0f172a;      /* Slate Black */
   
   /* Derived Colors */
-  --primary-light: #255bc4;
-  --primary-dark: #0d317a;
+  --primary-light: #3949d2; /* Medium Blue */
+  --primary-dark: #1d0fa4;  /* Deep Blue */
   --accent: var(--secondary);
-  --text-main: #2d3436;
-  --text-muted: #636e72;
+  --accent-light: #3fddcf;  /* Light Cyan */
+  --text-main: #0f172a;
+  --text-muted: #64748b;
   --bg-light: #f9f9f9;
   --glass: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(255, 255, 255, 0.3);
@@ -23,6 +24,35 @@
   
   /* Transitions */
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Brand Patterns */
+  --pattern-1: url('./assets/oradent_pattern_1.png');
+  --pattern-2: url('./assets/oradent_pattern_2.png');
+}
+
+.bg-pattern-light {
+  background-image: var(--pattern-1);
+  background-repeat: repeat;
+  opacity: 0.05;
+}
+
+.bg-pattern-dark {
+  background-image: var(--pattern-2);
+  background-repeat: repeat;
+  opacity: 0.1;
+}
+
+.brand-texture-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--pattern-1);
+  background-repeat: repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 1;
 }
 
 * {
@@ -105,9 +135,9 @@ button {
 }
 
 .btn-secondary:hover {
-  background-color: #fbd115;
+  background-color: var(--accent-light);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(255, 219, 63, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 188, 197, 0.2);
 }
 
 .btn-outline {
