@@ -291,92 +291,26 @@ export const About = () => {
                <p class="text-muted-standard text-center"></p>
             </div>
           </div>
-          <!-- Role: Technical Manager -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in">
+          <!-- Leader 6: Eleni Zergaw -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.4s;">
             <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400" alt="Technical Manager" class="img-portrait-v3">
+               <img src="/assets/eleni_zergaw.JPG" alt="Eleni Zergaw" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
-               <h3>Technical Manager</h3>
-               <p class="accent-text team-title-v3">Operations & Tech</p>
-               <p class="text-muted-standard text-center">Specialized engineering and medical tech fulfillment.</p>
+               <h3>Eleni Zergaw</h3>
+               <p class="accent-text team-title-v3">Finance Manager</p>
+               <p class="text-muted-standard text-center">Accounting & Finance graduate currently pursuing an MBA. Expert in financial reporting, compliance, and government coordination.</p>
             </div>
           </div>
-          <!-- Role: CFO -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.1s;">
+          <!-- Leader 7: Siham Ahmed -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.5s;">
             <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400" alt="CFO" class="img-portrait-v3">
+               <img src="/assets/siham_ahmed.JPG" alt="Siham Ahmed" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
-               <h3>Chief Finance Officer</h3>
-               <p class="accent-text team-title-v3">Finance Operations</p>
-               <p class="text-muted-standard text-center">Executive management of fiscal compliance and strategic growth.</p>
-            </div>
-          </div>
-          <!-- Role: Finance Dept -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.2s;">
-            <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=400" alt="Finance Dept" class="img-portrait-v3">
-            </div>
-            <div class="team-content-v3">
-               <h3>Finance Department</h3>
-               <p class="accent-text team-title-v3">Accounts & Administration</p>
-               <p class="text-muted-standard text-center">Managers, Accountants, and Cashiers ensuring daily financial integrity.</p>
-            </div>
-          </div>
-          <!-- Role: Marketing Manager -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in">
-            <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" alt="Marketing Manager" class="img-portrait-v3">
-            </div>
-            <div class="team-content-v3">
-               <h3>Marketing Manager</h3>
-               <p class="accent-text team-title-v3">Strategy & Brand</p>
-               <p class="text-muted-standard text-center">Leading regional brand awareness and medical product promotion.</p>
-            </div>
-          </div>
-          <!-- Role: Graphics Designer -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.1s;">
-            <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400" alt="Graphics Designer" class="img-portrait-v3">
-            </div>
-            <div class="team-content-v3">
-               <h3>Graphics Designer</h3>
-               <p class="accent-text team-title-v3">Creative Division</p>
-               <p class="text-muted-standard text-center">In-house creative unit managing corporate visuals and digital assets.</p>
-            </div>
-          </div>
-          <!-- Role: Sales Department -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.2s;">
-            <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=400" alt="Sales Department" class="img-portrait-v3">
-            </div>
-            <div class="team-content-v3">
-               <h3>Sales Department</h3>
-               <p class="accent-text team-title-v3">Client Fulfillment</p>
-               <p class="text-muted-standard text-center">Promotion teams, sales experts, and dedicated delivery coordinators.</p>
-            </div>
-          </div>
-          <!-- Role: Store Department -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in">
-            <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=400" alt="Store Department" class="img-portrait-v3">
-            </div>
-            <div class="team-content-v3">
-               <h3>Store Department</h3>
-               <p class="accent-text team-title-v3">Inventory Logistics</p>
-               <p class="text-muted-standard text-center">Warehouse managers and assistants securing world-class facility standards.</p>
-            </div>
-          </div>
-          <!-- Role: IT Technician -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.1s;">
-            <div class="team-portrait-wrapper-v3">
-               <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400" alt="IT Technician" class="img-portrait-v3">
-            </div>
-            <div class="team-content-v3">
-               <h3>IT Technician</h3>
-               <p class="accent-text team-title-v3">Systems operations</p>
-               <p class="text-muted-standard text-center">Ensuring seamless digital connectivity across all regional departments.</p>
+               <h3>Siham Ahmed</h3>
+               <p class="accent-text team-title-v3">Clinical Pharmacy Specialist</p>
+               <p class="text-muted-standard text-center">Clinical Pharmacy Professional, Sales & Promotion Specialist, and Social Media Manager.</p>
             </div>
           </div>
         </div>
