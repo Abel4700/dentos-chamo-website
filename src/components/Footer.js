@@ -3,8 +3,8 @@ export const Footer = () => `
     <div class="footer-geometric-texture"></div>
     <div class="container footer-grid-v3">
       <div class="footer-brand-v3">
-        <h3 class="section-title-visionary" style="font-size: 1.8rem; margin-bottom: 20px;">DENTOSE <span class="accent-text">CHAMO</span></h3>
-        <p class="text-muted-standard" style="font-size: 1rem; margin-bottom: 30px;">Africa’s Strategic Gateway to Global Medical Technology. Bridging world-class innovation with continental accessibility.</p>
+        <h3 class="section-title-visionary" style="font-size: 1.8rem; margin-bottom: 20px;">ORA <span class="accent-text">DENT</span></h3>
+        <p class="text-muted-standard" style="font-size: 1rem; margin-bottom: 30px;">Elevating African healthcare through precision clinical aesthetics and world-class medical distribution.</p>
         <div class="social-links-v3">
           <a href="https://m.me/dentosechamo.tradingplc" target="_blank" class="social-orb"><i class="fab fa-facebook"></i></a>
           <a href="https://t.me/Dentosechamo" target="_blank" class="social-orb"><i class="fab fa-telegram"></i></a>
@@ -14,22 +14,22 @@ export const Footer = () => `
       </div>
 
       <div class="footer-links-v3">
-        <h4 class="accent-text" style="font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 25px;">Strategic Hub</h4>
+        <h4 class="accent-text" style="font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 25px;">Company</h4>
         <ul>
-          <li><a href="#/">Home Gateway</a></li>
-          <li><a href="#/about">About the Hub</a></li>
+          <li><a href="#/">Home</a></li>
+          <li><a href="#/about">About Us</a></li>
           <li><a href="#/partners">Partner Network</a></li>
-          <li><a href="#/products">Medical Solutions</a></li>
+          <li><a href="#/products">Product Catalog</a></li>
         </ul>
       </div>
 
       <div class="footer-links-v3">
-        <h4 class="accent-text" style="font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 25px;">Support & Policy</h4>
+        <h4 class="accent-text" style="font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 25px;">Divisions</h4>
         <ul>
-          <li><a href="#/contact">Contact Command</a></li>
-          <li><a href="#">F.A.Q</a></li>
-          <li><a href="#">Privacy Protocol</a></li>
-          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#/companies/ora-dent">Ora-Dent Medical</a></li>
+          <li><a href="#/companies/dentos-chamo">Dentose Chamo Trading</a></li>
+          <li><a href="#/companies/dentos-dire-dawa">Dire Dawa Logistics</a></li>
+          <li><a href="#/companies/akedent">Akedent Wholesale</a></li>
         </ul>
       </div>
 
@@ -37,19 +37,18 @@ export const Footer = () => `
         <h4 class="accent-text" style="font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 25px;">Headquarters</h4>
         <p><i class="fas fa-map-marker-alt accent-text"></i> Nifas Silk Lafto Woreda 01, Addis Ababa</p>
         <p><i class="fas fa-phone accent-text"></i> +251 913 70 07 18</p>
-        <p style="margin-bottom: 10px;"><i class="fas fa-envelope accent-text"></i> <a href="mailto:info@dentosechamo.com">info@dentosechamo.com</a></p>
-        <p><i class="fas fa-envelope accent-text" style="opacity:0;"></i> <a href="mailto:sales@dentosechamo.com">sales@dentosechamo.com</a></p>
+        <p style="margin-bottom: 10px;"><i class="fas fa-envelope accent-text"></i> <a href="mailto:info@oradent.com">info@oradent.com</a></p>
       </div>
     </div>
 
     <div class="footer-bottom-v3">
       <div class="container">
         <div class="bottom-flex-v3">
-          <p>&copy; 2026 DENTOSE CHAMO. STRATEGIC MEDICAL HUB.</p>
+          <p>&copy; 2026 ORA-DENT MEDICAL. ALL RIGHTS RESERVED.</p>
           <div class="footer-legal-v3">
              <span>ISO 13485 CERTIFIED</span>
              <span class="dot-separator"></span>
-             <span>FTZ COMPLIANT</span>
+             <span>CLINICAL EXCELLENCE</span>
           </div>
         </div>
       </div>
@@ -57,12 +56,12 @@ export const Footer = () => `
 
     <style>
       .partners-footer-v3 {
-        background: #050b14;
+        background: #0f172a;
         color: white;
         padding: 100px 0 40px;
         position: relative;
         overflow: hidden;
-        border-top: 1px solid rgba(56, 189, 248, 0.1);
+        border-top: 1px solid rgba(0, 209, 193, 0.1);
       }
 
       .footer-geometric-texture {
@@ -96,14 +95,14 @@ export const Footer = () => `
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        transition: all 0.4s ease;
+        transition: var(--transition);
       }
       .social-orb:hover {
-        background: rgba(56, 189, 248, 0.1);
-        border-color: #38bdf8;
-        color: #38bdf8;
+        background: rgba(0, 209, 193, 0.1);
+        border-color: #00d1c1;
+        color: #00d1c1;
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+        box-shadow: 0 10px 20px rgba(0, 209, 193, 0.2);
       }
 
       .footer-links-v3 ul li { margin-bottom: 12px; }
@@ -113,7 +112,7 @@ export const Footer = () => `
         font-size: 0.95rem;
       }
       .footer-links-v3 a:hover {
-        color: white;
+        color: #00d1c1;
         padding-left: 8px;
       }
 
@@ -142,7 +141,7 @@ export const Footer = () => `
       }
 
       .footer-legal-v3 { display: flex; align-items: center; gap: 20px; }
-      .dot-separator { width: 4px; height: 4px; background: rgba(56, 189, 248, 0.3); border-radius: 50%; }
+      .dot-separator { width: 4px; height: 4px; background: rgba(0, 209, 193, 0.3); border-radius: 50%; }
 
       @media (max-width: 992px) {
         .footer-grid-v3 { grid-template-columns: 1fr 1fr; gap: 40px; }

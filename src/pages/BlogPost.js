@@ -20,10 +20,11 @@ export const BlogPost = () => `
 
   <style>
     .post-hero {
-      height: 450px;
+      height: 550px;
       background-size: cover;
       background-position: center;
       position: relative;
+      border-bottom: 1px solid var(--glass-border);
     }
     .post-hero::after {
       content: '';
@@ -31,29 +32,35 @@ export const BlogPost = () => `
       bottom: 0;
       left: 0;
       right: 0;
-      height: 200px;
-      background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+      height: 250px;
+      background: linear-gradient(to top, var(--bg-light), transparent);
     }
     .post-body {
-      color: #334155;
+      color: var(--text-main);
       line-height: 1.8;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
+      font-weight: 500;
     }
-    .post-body h2 { margin-top: 40px; margin-bottom: 20px; color: #0f172a; }
-    .post-body h3 { margin-top: 30px; margin-bottom: 15px; color: #0f172a; }
-    .post-body p { margin-bottom: 20px; }
-    .post-body ul { margin-bottom: 20px; padding-left: 20px; }
-    .post-body li { margin-bottom: 10px; }
+    .post-body h2 { margin-top: 50px; margin-bottom: 25px; color: var(--text-main); font-weight: 900; font-size: 2rem; }
+    .post-body h3 { margin-top: 40px; margin-bottom: 20px; color: var(--text-main); font-weight: 800; font-size: 1.5rem; }
+    .post-body p { margin-bottom: 25px; }
+    .post-body ul { margin-bottom: 25px; padding-left: 25px; }
+    .post-body li { margin-bottom: 12px; }
     
     .back-btn {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       color: var(--primary);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.85rem;
+      transition: var(--transition);
     }
+    .back-btn:hover { transform: translateX(-5px); }
   </style>
 `;
 
@@ -65,10 +72,10 @@ BlogPost.mount = async (params) => {
 
   if (!post) {
     container.innerHTML = `
-      <div class="container text-center" style="padding: 100px 20px;">
-        <h1>Article Not Found</h1>
-        <p>The story you are looking for has been moved or deleted.</p>
-        <a href="#/blog" class="back-btn"><i class="fas fa-arrow-left"></i> Back to News</a>
+      <div class="container text-center" style="padding: 150px 20px;">
+        <h1 class="section-title-visionary">Article Not Found</h1>
+        <p class="text-muted-standard">The clinical insights you are looking for have been moved or archived.</p>
+        <a href="#/blog" class="btn btn-primary btn-visionary mt-20">Back to News</a>
       </div>
     `;
     return;
@@ -82,27 +89,27 @@ BlogPost.mount = async (params) => {
   const bodyHtml = post.body ? toHTML(post.body) : '<p>No content available for this post.</p>';
 
   container.innerHTML = `
-    <section class="section post-hero" style="background-image: url('${post.imageUrl || '/images/about1.png'}')"></section>
+    <section class="section post-hero" style="background-image: url('${post.imageUrl || 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1920'}')"></section>
     
-    <div class="container" style="max-width: 900px; margin-top: -80px; position: relative; z-index: 10;">
-      <article class="glass" style="padding: 60px; border-radius: 20px; background: white; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
-        <a href="#/blog" class="back-btn"><i class="fas fa-arrow-left"></i> Back to News</a>
+    <div class="container" style="max-width: 900px; margin-top: -120px; position: relative; z-index: 10; padding-bottom: 120px;">
+      <article class="glass-card-v3" style="padding: 80px; background: white; box-shadow: var(--shadow-lg); border: 1px solid var(--glass-border);">
+        <a href="#/blog" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Insights</a>
         
-        <div class="blog-date" style="margin-bottom: 15px;">${date}</div>
-        <h1 style="font-size: 3rem; margin-bottom: 30px; color: #0f172a; line-height: 1.2;">${post.title}</h1>
+        <div class="blog-date" style="color: var(--secondary); font-weight: 800; letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase; font-size: 0.85rem;">${date}</div>
+        <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 40px; color: var(--text-main); line-height: 1.1; font-weight: 900; letter-spacing: -2px;">${post.title}</h1>
         
         <div class="post-body">
           ${bodyHtml}
         </div>
         
-        <hr style="margin: 50px 0; border: 0; border-top: 1px solid #e2e8f0;">
+        <div style="margin: 60px 0; border: 0; border-top: 1px solid var(--glass-border);"></div>
         
         <div class="share-box text-center">
-          <p class="text-muted">Thanks for reading! Share this update:</p>
-          <div style="display: flex; justify-content: center; gap: 20px; margin-top: 15px; font-size: 1.5rem;">
-            <a href="#" class="primary-text"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="primary-text"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="primary-text"><i class="fab fa-linkedin"></i></a>
+          <p style="color: var(--text-muted); font-weight: 600;">Share this clinical update:</p>
+          <div style="display: flex; justify-content: center; gap: 30px; margin-top: 25px; font-size: 1.8rem;">
+            <a href="#" style="color: var(--primary); transition: var(--transition);"><i class="fab fa-facebook"></i></a>
+            <a href="#" style="color: var(--primary); transition: var(--transition);"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="color: var(--primary); transition: var(--transition);"><i class="fab fa-linkedin"></i></a>
           </div>
         </div>
       </article>

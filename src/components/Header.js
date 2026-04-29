@@ -155,7 +155,7 @@ export const Header = () => `
     }
     .dropdown-content strong {
       font-size: 0.95rem;
-      color: var(--primary);
+      color: var(--secondary);
       margin-bottom: 3px;
     }
     .sub-text {
@@ -166,6 +166,10 @@ export const Header = () => `
     .contact-btn {
       color: var(--white) !important;
       padding: 10px 25px !important;
+      background-color: var(--primary) !important;
+    }
+    .contact-btn:hover {
+      background-color: var(--primary-dark) !important;
     }
     .contact-btn::after { display: none !important; }
 
@@ -182,7 +186,7 @@ export const Header = () => `
       display: block;
       width: 25px;
       height: 3px;
-      background: var(--primary);
+      background: var(--secondary);
       border-radius: 3px;
     }
 

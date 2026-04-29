@@ -4,10 +4,9 @@ export const Media = () => {
       
       <!-- 📡 MODERN MEDIA HERO -->
       <section class="media-hero fade-in">
-        <div class="overlay-mesh"></div>
         <div class="container text-center relative-z">
           <div class="hero-label">NEWSROOM & RELEASES</div>
-          <h1 class="fluid-title">Media & <span class="text-primary">Press</span></h1>
+          <h1 class="fluid-title">Media & <span>Press</span></h1>
           <p class="hero-subtitle">Official announcements, industry insights, and media coverage for Dentos Chamo.</p>
         </div>
       </section>
@@ -43,26 +42,19 @@ export const Media = () => {
 
       <style>
         .media-hero { 
-          padding: 160px 0 120px; 
-          background: #0f172a; 
+          padding: 220px 0 120px; 
+          background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.5)), url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=1920');
+          background-size: cover;
+          background-position: center;
           position: relative; 
           color: white; 
           overflow: hidden; 
-          border-radius: 0 0 50px 50px;
-        }
-        .overlay-mesh {
-          position: absolute; top:0; left:0; width:100%; height:100%;
-          background: url('/images/about1.png') center/cover no-repeat;
-          opacity: 0.2;
-          filter: grayscale(100%) brightness(0.5);
-        }
-        .media-hero::after {
-          content: ''; position: absolute; top:0; left:0; width:100%; height:100%;
-          background: linear-gradient(135deg, rgba(15,23,42,0.95), rgba(30,58,138,0.8));
+          border-bottom: 1px solid var(--glass-border);
         }
         .relative-z { position: relative; z-index: 10; }
-        .hero-label { font-size: 0.8rem; font-weight: 800; letter-spacing: 3px; color: var(--primary); margin-bottom: 20px; }
-        .hero-subtitle { font-size: 1.25rem; color: #94a3b8; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+        .hero-label { font-size: 0.8rem; font-weight: 800; letter-spacing: 3px; color: var(--secondary); margin-bottom: 20px; }
+        .fluid-title { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: -2px; margin-bottom: 25px; color: white; }
+        .hero-subtitle { font-size: 1.25rem; color: rgba(255, 255, 255, 0.8); max-width: 600px; margin: 0 auto; line-height: 1.6; }
 
         .media-grid { display: grid; grid-template-columns: 1fr; gap: 30px; max-width: 900px; margin: 0 auto; }
         .media-card { padding: 40px; border-radius: 30px; position: relative; }

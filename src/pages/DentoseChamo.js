@@ -1,5 +1,5 @@
 export const DentoseChamo = () => `
-  <div class="app-section dark-theme-page dentose-parent-hub">
+  <div class="app-section dentose-parent-hub">
     
     <!-- 🏆 PREMIUM HERO V3 -->
     <section class="hero-v3-dark fade-in">
@@ -111,11 +111,13 @@ export const DentoseChamo = () => `
     .bg-dark-deep { background-color: #03070c; }
     .accent-text { color: #38bdf8; text-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
 
-    /* 🚀 V3 HERO */
+    /* 🚀 V3 HERO (CINEMATIC DARK) */
     .hero-v3-dark {
       padding: 180px 20px 100px;
       position: relative;
-      background: radial-gradient(circle at center, rgba(14, 38, 75, 0.4) 0%, #050b14 70%), url('https://www.transparenttextures.com/patterns/cubes.png');
+      background: linear-gradient(rgba(5, 11, 20, 0.8), rgba(5, 11, 20, 0.6)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920');
+      background-size: cover;
+      background-position: center;
       display: flex;
       flex-direction: column;
       align-items: center;

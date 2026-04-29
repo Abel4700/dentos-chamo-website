@@ -1,6 +1,6 @@
 export const Partners = () => {
    return `
-    <div class="app-section partners-root dark-theme-page">
+    <div class="app-section partners-root">
       
       <!-- 🌏 VISIONARY PARTNERS HERO -->
       <section class="partners-hero-v3 fade-in">
@@ -196,43 +196,47 @@ export const Partners = () => {
 
       <style>
         :root {
-           --partners-primary: #002F7F;
-           --partners-accent: #38bdf8;
-           --partners-bg: #050b14;
-           --partners-border: #242424;
+           --partners-primary: var(--primary);
+           --partners-accent: var(--secondary);
+           --partners-bg: var(--bg-light);
+           --partners-border: var(--glass-border);
         }
 
-        .partners-root { background: linear-gradient(180deg, rgba(5,11,20,0.95) 0%, rgba(5,11,20,1) 100%), url('https://www.transparenttextures.com/patterns/cubes.png'); color: white; width: 100%; position: relative; overflow-x: clip; }
+        .partners-root { background: var(--partners-bg); color: var(--text-main); width: 100%; position: relative; overflow-x: clip; }
         .accent-text { color: var(--partners-accent); }
 
-        /* HERO V3 */
+        /* HERO V3 (CINEMATIC DARK OVERLAY) */
         .partners-hero-v3 { 
-          padding: 180px 20px 100px; 
+          padding: 220px 20px 120px; 
           position: relative; 
           display: flex; 
           flex-direction: column;
           justify-content: center; 
-          background: linear-gradient(rgba(12, 12, 12, 0.9), rgba(12, 12, 12, 0.5)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1920');
+          background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.5)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1920');
           background-size: cover;
           background-position: center;
           border-bottom: 1px solid var(--partners-border);
         }
+        .hero-content-v3 { color: white; }
+        .hero-content-v3 h1 { color: white !important; }
+        .hero-lead { color: rgba(255, 255, 255, 0.8) !important; }
+        .p-stat label { color: rgba(255, 255, 255, 0.6) !important; }
         .hero-v3-overlay { position: absolute; bottom: 0; left: 0; width: 100%; height: 200px; background: linear-gradient(to top, var(--partners-bg), transparent); }
         .hero-partners-stats { display: flex; gap: 40px; align-items: center; }
         .p-stat { display: flex; flex-direction: column; }
-        .p-stat span { font-size: 3rem; font-weight: 900; line-height: 1; }
-        .p-stat label { font-size: 0.75rem; letter-spacing: 2px; font-weight: 700; color: #94a3b8; margin-top: 10px; }
-        .p-divider { width: 1px; height: 50px; background: rgba(255,255,255,0.1); }
+        .p-stat span { font-size: 3rem; font-weight: 900; line-height: 1; color: var(--primary); }
+        .p-stat label { font-size: 0.75rem; letter-spacing: 2px; font-weight: 800; color: var(--text-muted); margin-top: 10px; }
+        .p-divider { width: 1px; height: 50px; background: var(--glass-border); }
 
         /* WORLD MAP VISUAL */
         .world-connectivity-box { 
           padding: 60px; min-height: 500px; position: relative; overflow: hidden; 
-          background: radial-gradient(circle at 55% 55%, rgba(56, 189, 248, 0.06) 0%, transparent 60%),
-                      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-          background-size: 100% 100%, 40px 40px, 40px 40px;
+          background: white;
+          border-radius: 40px;
+          box-shadow: var(--shadow-md);
+          border: 1px solid var(--glass-border);
         }
-        .radar-ring { position: absolute; top: 55%; left: 55%; transform: translate(-50%, -50%); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 50%; pointer-events: none; }
+        .radar-ring { position: absolute; top: 55%; left: 55%; transform: translate(-50%, -50%); border: 1px solid rgba(0, 209, 193, 0.2); border-radius: 50%; pointer-events: none; }
         .ring-1 { width: 150px; height: 150px; animation: expand 3s linear infinite; }
         .ring-2 { width: 300px; height: 300px; animation: expand 3s linear infinite 1s; }
         .ring-3 { width: 450px; height: 450px; animation: expand 3s linear infinite 2s; }
@@ -240,12 +244,12 @@ export const Partners = () => {
 
         .world-map-svg-placeholder { width: 100%; height: 450px; position: relative; z-index: 2; }
         
-        .map-dot { position: absolute; width: 12px; height: 12px; background: var(--partners-accent); border-radius: 50%; box-shadow: 0 0 20px var(--partners-accent); transition: all 0.3s ease; cursor: pointer; transform: translate(-50%, -50%); }
-        .map-dot::after { content: attr(data-label); position: absolute; top: 25px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.9); padding: 8px 15px; border-radius: 6px; font-size: 0.75rem; white-space: nowrap; opacity: 0; transition: 0.3s; pointer-events: none; border: 1px solid var(--partners-border); z-index: 10; color: white; }
+        .map-dot { position: absolute; width: 12px; height: 12px; background: var(--partners-accent); border-radius: 50%; box-shadow: 0 0 15px rgba(0, 209, 193, 0.4); transition: all 0.3s ease; cursor: pointer; transform: translate(-50%, -50%); }
+        .map-dot::after { content: attr(data-label); position: absolute; top: 25px; left: 50%; transform: translateX(-50%); background: white; padding: 8px 15px; border-radius: 8px; font-size: 0.75rem; white-space: nowrap; opacity: 0; transition: 0.3s; pointer-events: none; border: 1px solid var(--glass-border); z-index: 10; color: var(--text-main); box-shadow: var(--shadow-sm); }
         .map-dot:hover { transform: translate(-50%, -50%) scale(1.5); }
         .map-dot:hover::after { opacity: 1; transform: translateX(-50%) translateY(0); }
         
-        .primary-hub { background: #fff; width: 22px; height: 22px; box-shadow: 0 0 30px #fff; z-index: 5; }
+        .primary-hub { background: var(--primary); width: 22px; height: 22px; box-shadow: 0 0 20px rgba(15, 23, 42, 0.2); }
         
         .hub-india { top: 45%; left: 70%; }
         .hub-swiss { top: 30%; left: 48%; }
@@ -255,43 +259,42 @@ export const Partners = () => {
         .hub-ethiopia { top: 55%; left: 55%; }
         
         .connection-lines { position: absolute; top:0; left:0; width:100%; height:100%; pointer-events: none; z-index: 1; }
-        .flow-line { fill: none; stroke: var(--partners-accent); stroke-width: 1.5px; stroke-dasharray: 6; animation: dash 1s linear infinite; opacity: 0.7; }
+        .flow-line { fill: none; stroke: var(--partners-accent); stroke-width: 1.5px; stroke-dasharray: 6; animation: dash 1s linear infinite; opacity: 0.4; }
         @keyframes dash { to { stroke-dashoffset: -20; } }
         
         .map-legend { display: flex; gap: 30px; margin-top: 40px; justify-content: center; }
-        .legend-item { display: flex; align-items: center; gap: 10px; font-size: 0.8rem; color: #94a3b8; }
+        .legend-item { display: flex; align-items: center; gap: 10px; font-size: 0.8rem; color: var(--text-muted); font-weight: 700; }
         .legend-item .dot { width: 8px; height: 8px; border-radius: 50%; }
-        .legend-item .dot.primary { background: #fff; box-shadow: 0 0 10px #fff; }
-        .legend-item .dot.accent { background: var(--partners-accent); box-shadow: 0 0 10px var(--partners-accent); }
+        .legend-item .dot.primary { background: var(--primary); box-shadow: 0 0 10px rgba(15, 23, 42, 0.2); }
+        .legend-item .dot.accent { background: var(--partners-accent); box-shadow: 0 0 10px rgba(0, 209, 193, 0.2); }
 
         /* COMPLIANCE */
         .compliance-row { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
         .compliance-card { padding: 50px; display: flex; gap: 40px; align-items: center; }
-        .comp-icon-box { width: 100px; height: 100px; border-radius: 30px; background: rgba(56, 189, 248, 0.05); color: var(--partners-accent); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; flex-shrink: 0; }
-        .comp-icon-box.cyan { color: #0ea5e9; }
-        .comp-content h3 { font-size: 1.8rem; font-weight: 900; margin-bottom: 12px; }
-        .comp-content p { color: #94a3b8; font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px; }
-        .verified-badge { font-size: 0.7rem; font-weight: 900; letter-spacing: 2px; color: var(--partners-accent); display: flex; align-items: center; gap: 8px; }
+        .comp-icon-box { width: 100px; height: 100px; border-radius: 30px; background: rgba(0, 209, 193, 0.05); color: var(--partners-accent); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; flex-shrink: 0; border: 1px solid rgba(0, 209, 193, 0.1); }
+        .comp-icon-box.cyan { color: var(--secondary); }
+        .comp-content h3 { font-size: 1.8rem; font-weight: 900; margin-bottom: 12px; color: var(--text-main); }
+        .comp-content p { color: var(--text-muted); font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px; }
+        .verified-badge { font-size: 0.75rem; font-weight: 900; letter-spacing: 2px; color: var(--partners-accent); display: flex; align-items: center; gap: 8px; }
 
         /* PARTNER BENTOS */
         .partners-bento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .partner-item { padding: 40px; position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 280px; transition: all 0.4s ease; text-decoration: none; color: inherit; }
         .bento-wide { grid-column: span 2; flex-direction: row; align-items: center; justify-content: flex-start; gap: 40px; }
         .p-logo-wrap { height: 60px; margin-bottom: 25px; display: flex; align-items: center; justify-content: flex-start; }
-        .p-logo { max-width: 180px; max-height: 100%; object-fit: contain; filter: brightness(0) invert(1) opacity(0.85); transform-origin: left center; transition: all 0.3s ease; }
-        .partner-item:hover .p-logo { filter: brightness(1) invert(0) opacity(1); transform: scale(1.05); }
-        .partner-item:hover { border-color: var(--partners-accent); transform: translateY(-10px); }
+        .p-logo { max-width: 180px; max-height: 100%; object-fit: contain; filter: grayscale(1) opacity(0.6); transform-origin: left center; transition: all 0.3s ease; }
+        .partner-item:hover .p-logo { filter: grayscale(0) opacity(1); transform: scale(1.05); }
+        .partner-item:hover { border-color: var(--partners-accent); transform: translateY(-10px); box-shadow: var(--shadow-md); }
         
-        .p-flag-float { font-size: 2.5rem; margin-bottom: 40px; }
-        .p-info h4 { font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; color: white; }
-        .p-info p { color: #cbd5e1; font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px; }
-        .p-flag { font-size: 0.7rem; font-weight: 900; letter-spacing: 2px; color: var(--partners-accent); }
+        .p-info h4 { font-size: 1.4rem; font-weight: 900; margin-bottom: 10px; color: var(--text-main); }
+        .p-info p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px; }
+        .p-flag { font-size: 0.7rem; font-weight: 900; letter-spacing: 2px; color: var(--partners-accent); text-transform: uppercase; }
 
         .mt-80 { margin-top: 80px; }
         .mb-80 { margin-bottom: 80px; }
         .category-header { max-width: 600px; }
         .category-header i { font-size: 2rem; margin-bottom: 20px; display: block; }
-        .category-header p { font-size: 1.2rem; color: #94a3b8; margin-top: 15px; }
+        .category-header p { font-size: 1.2rem; color: var(--text-muted); margin-top: 15px; }
 
         @media (max-width: 1100px) {
            .partners-bento { grid-template-columns: 1fr 1fr; }
@@ -299,7 +302,7 @@ export const Partners = () => {
            .compliance-row { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px), (max-height: 600px) {
-           .partners-hero-v3 { align-items: flex-start !important; padding-top: 150px !important; height: auto !important; min-height: auto !important; padding-bottom: 100px !important; }
+           .partners-hero-v3 { padding-top: 150px !important; }
            .partners-bento { grid-template-columns: 1fr; }
            .bento-wide { grid-column: span 1; flex-direction: column; align-items: flex-start; }
            .world-connectivity-box { padding: 30px 15px; }

@@ -1,28 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* User Palette */
-  --primary: #1346af;    /* Blue */
-  --secondary: #ffdb3f;  /* Yellow/Gold */
+  /* Ora-Dent Brand Palette */
+  --primary: #2563eb;    /* Royal Blue (Action) */
+  --secondary: #00d1c1;  /* Cyan/Turquoise (Brand Accent) */
   --white: #ffffff;
-  --black: #000000;
+  --black: #0f172a;      /* Slate Black */
   
   /* Derived Colors */
-  --primary-light: #255bc4;
-  --primary-dark: #0d317a;
+  --primary-light: #3b82f6;
+  --primary-dark: #1d4ed8;
   --accent: var(--secondary);
-  --text-main: #2d3436;
-  --text-muted: #636e72;
-  --bg-light: #f9f9f9;
-  --glass: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.3);
+  --accent-light: #00f2ea;
+  
+  /* Clinical Palette */
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --bg-light: #f8fafc;
+  --glass: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(226, 232, 240, 0.5);
   
   /* Spacing */
-  --section-padding: 80px 5%;
+  --section-padding: 100px 5%;
   --container-width: 1200px;
   
-  /* Transitions */
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Transitions & Shadows */
+  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 * {
