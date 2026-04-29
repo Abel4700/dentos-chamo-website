@@ -109,7 +109,7 @@ export const DentoseChamo = () => `
       overflow-x: clip;
     }
     .bg-dark-deep { background-color: #03070c; }
-    .accent-text { color: #38bdf8; text-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
+    .accent-text { color: var(--secondary); text-shadow: 0 0 20px rgba(0, 188, 197, 0.3); }
 
     /* 🚀 V3 HERO (CINEMATIC DARK) */
     .hero-v3-dark {
@@ -125,7 +125,7 @@ export const DentoseChamo = () => `
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
     .hero-badge-v3 {
-      display: inline-block; padding: 8px 24px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 50px; color: #38bdf8; font-weight: 800; font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 25px; box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+      display: inline-block; padding: 8px 24px; background: rgba(0, 188, 197, 0.1); border: 1px solid rgba(0, 188, 197, 0.2); border-radius: 50px; color: var(--secondary); font-weight: 800; font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 25px; box-shadow: 0 0 20px rgba(0, 188, 197, 0.1);
     }
     .hero-title-visionary { font-size: clamp(3rem, 6vw, 5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; color: #ffffff; }
     .hero-lead { font-size: clamp(1.1rem, 2vw, 1.3rem); color: #94a3b8; max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; }
@@ -169,7 +169,7 @@ export const DentoseChamo = () => `
     .eco-card h3 { font-size: 1.6rem; font-weight: 800; color: #ffffff; margin-bottom: 15px; }
     .eco-card p { color: #94a3b8; line-height: 1.6; font-size: 1rem; flex-grow: 1; margin-bottom: 30px; }
     .eco-arrow { align-self: flex-end; width: 45px; height: 45px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 1.2rem; transition: all 0.3s; }
-    .eco-card:hover .eco-arrow { background: #38bdf8; color: #050b14; transform: scale(1.1); }
+    .eco-card:hover .eco-arrow { background: var(--secondary); color: #050b14; transform: scale(1.1); }
 
     /* 🏗️ DIVISIONS GRID */
     .divisions-bento-grid {
@@ -179,7 +179,7 @@ export const DentoseChamo = () => `
     }
     .division-card { align-items: center; text-align: center; padding: 60px 40px; }
     .div-icon-wrapper { width: 90px; height: 90px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin-bottom: 30px; }
-    .div-blue { background: rgba(56, 189, 248, 0.1); color: #38bdf8; box-shadow: 0 0 30px rgba(56, 189, 248, 0.2); }
+    .div-blue { background: rgba(0, 188, 197, 0.1); color: var(--secondary); box-shadow: 0 0 30px rgba(0, 188, 197, 0.2); }
     .div-green { background: rgba(34, 197, 94, 0.1); color: #22c55e; box-shadow: 0 0 30px rgba(34, 197, 94, 0.2); }
     .division-card h3 { font-size: 2rem; color: #ffffff; margin-bottom: 20px; font-weight: 800; }
     .division-card p { color: #94a3b8; font-size: 1.1rem; line-height: 1.7; margin-bottom: 0; }
@@ -212,8 +212,8 @@ export const DentoseChamo = () => `
 
     /* BUTTONS */
     .btn-visionary { padding: 18px 40px; font-weight: 800; border-radius: 12px; font-size: 1.1rem; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); cursor: pointer; text-decoration: none; display: inline-block; }
-    .btn-outline-visionary { background: transparent; border: 2px solid #38bdf8; color: #38bdf8; padding: 16px 35px; border-radius: 12px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-block; }
-    .btn-outline-visionary:hover { background: #38bdf8; color: #050b14; box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3); transform: translateY(-2px); }
+    .btn-outline-visionary { background: transparent; border: 2px solid var(--secondary); color: var(--secondary); padding: 16px 35px; border-radius: 12px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-block; }
+    .btn-outline-visionary:hover { background: var(--secondary); color: #050b14; box-shadow: 0 10px 20px rgba(0, 188, 197, 0.3); transform: translateY(-2px); }
     .btn-green { border-color: #22c55e; color: #22c55e; }
     .btn-green:hover { background: #22c55e; color: #050b14; box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3); }
 

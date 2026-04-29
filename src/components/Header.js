@@ -105,7 +105,7 @@ export const Header = () => `
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--secondary);
+      background: var(--primary);
       transition: var(--transition);
     }
 
@@ -155,7 +155,7 @@ export const Header = () => `
     }
     .dropdown-content strong {
       font-size: 0.95rem;
-      color: var(--secondary);
+      color: var(--primary);
       margin-bottom: 3px;
     }
     .sub-text {
@@ -186,7 +186,7 @@ export const Header = () => `
       display: block;
       width: 25px;
       height: 3px;
-      background: var(--secondary);
+      background: var(--primary);
       border-radius: 3px;
     }
 

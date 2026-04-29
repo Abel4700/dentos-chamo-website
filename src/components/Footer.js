@@ -99,11 +99,11 @@ export const Footer = () => `
         transition: all 0.4s ease;
       }
       .social-orb:hover {
-        background: rgba(56, 189, 248, 0.1);
-        border-color: #38bdf8;
-        color: #38bdf8;
+        background: rgba(27, 30, 197, 0.1);
+        border-color: var(--primary);
+        color: var(--primary);
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+        box-shadow: 0 10px 20px rgba(27, 30, 197, 0.2);
       }
 
       .footer-links-v3 ul li { margin-bottom: 12px; }
@@ -142,7 +142,7 @@ export const Footer = () => `
       }
 
       .footer-legal-v3 { display: flex; align-items: center; gap: 20px; }
-      .dot-separator { width: 4px; height: 4px; background: rgba(56, 189, 248, 0.3); border-radius: 50%; }
+      .dot-separator { width: 4px; height: 4px; background: rgba(27, 30, 197, 0.3); border-radius: 50%; }
 
       @media (max-width: 992px) {
         .footer-grid-v3 { grid-template-columns: 1fr 1fr; gap: 40px; }

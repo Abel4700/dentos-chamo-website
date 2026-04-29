@@ -42,8 +42,8 @@ export const Contact = () => `
                 <div class="c-icon"><i class="fas fa-envelope"></i></div>
                 <div class="c-text">
                   <strong>Digital Comm</strong>
-                  <a href="mailto:dentosechamotradingplc88@gmail.com">dentosechamotradingplc88@gmail.com</a>
-                  <a href="mailto:dentose1@gmail.com">dentose1@gmail.com</a>
+                  <a href="mailto:info@dentosechamo.com">dinfo@dentosechamo.com</a>
+                  <a href="mailto:sales@dentosechamo.com">sales@dentosechamo.com</a>
                 </div>
               </div>
             </div>
