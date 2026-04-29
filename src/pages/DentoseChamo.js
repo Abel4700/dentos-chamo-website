@@ -1,4 +1,5 @@
 export const DentoseChamo = () => `
+<<<<<<< HEAD
   <div class="app-section bg-light" style="padding-top: 100px; min-height: 100vh;">
     <!-- Premium Hero -->
     <section class="section" style="background-image: linear-gradient(135deg, rgba(19, 70, 175, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%); padding: 120px 0; margin-top: -100px;">
@@ -40,31 +41,111 @@ export const DentoseChamo = () => `
 
     <!-- Product Categories Matrix -->
     <section class="section" style="padding: 60px 0; background: white;">
+=======
+  <div class="app-section dark-theme-page dentose-parent-hub">
+    
+    <!-- 🏆 PREMIUM HERO V3 -->
+    <section class="hero-v3-dark fade-in">
+>>>>>>> 63cc4de30d4d3a76c73990b0e27448ef7e24d276
       <div class="container text-center">
-        <h2 style="font-size: 2.5rem; color: #0f172a; margin-bottom: 40px;">Core Product Categories</h2>
+        <div class="hero-badge-v3">GLOBAL PARENT ENTERPRISE</div>
+        <h1 class="hero-title-visionary">Dentose Chamo <span class="accent-text">Trading PLC</span></h1>
+        <p class="hero-lead">The root enterprise driving global healthcare innovation, clinical medical supply, and premier agricultural exports across the East African market.</p>
+        <div class="hero-action-group">
+           <a href="#/products?company=dentose" class="btn btn-primary btn-visionary">Explore Medical Infrastructure</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🌐 GLOBAL ECOSYSTEM GRID (SUBSIDIARIES) -->
+    <section class="section strategic-spacing">
+      <div class="container">
+        <div class="section-header-centered mb-60 fade-in-up">
+           <h2 class="section-title-visionary">The <span class="accent-text">Enterprise Ecosystem</span></h2>
+           <p class="text-muted">Explore the specialized subsidiaries that operate under the Dentose Chamo umbrella.</p>
+        </div>
         
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 50px;">
-          <span style="padding: 15px 30px; background: rgba(19, 70, 175, 0.05); color: var(--primary); font-weight: 600; border-radius: 50px; border: 1px solid rgba(19, 70, 175, 0.2);"><i class="fas fa-tooth" style="margin-right: 8px;"></i> Orthodontic Products</span>
-          <span style="padding: 15px 30px; background: rgba(19, 70, 175, 0.05); color: var(--primary); font-weight: 600; border-radius: 50px; border: 1px solid rgba(19, 70, 175, 0.2);"><i class="fas fa-syringe" style="margin-right: 8px;"></i> Surgical Instruments</span>
-          <span style="padding: 15px 30px; background: rgba(19, 70, 175, 0.05); color: var(--primary); font-weight: 600; border-radius: 50px; border: 1px solid rgba(19, 70, 175, 0.2);"><i class="fas fa-microscope" style="margin-right: 8px;"></i> Laboratory Equipment</span>
-          <span style="padding: 15px 30px; background: rgba(19, 70, 175, 0.05); color: var(--primary); font-weight: 600; border-radius: 50px; border: 1px solid rgba(19, 70, 175, 0.2);"><i class="fas fa-heartbeat" style="margin-right: 8px;"></i> Diagnostic Devices</span>
-          <span style="padding: 15px 30px; background: rgba(19, 70, 175, 0.05); color: var(--primary); font-weight: 600; border-radius: 50px; border: 1px solid rgba(19, 70, 175, 0.2);"><i class="fas fa-box" style="margin-right: 8px;"></i> Medical Consumables</span>
-          <span style="padding: 15px 30px; background: rgba(22, 163, 74, 0.05); color: #16a34a; font-weight: 600; border-radius: 50px; border: 1px solid rgba(22, 163, 74, 0.2);"><i class="fas fa-leaf" style="margin-right: 8px;"></i> Agricultural Seeds & Products</span>
+        <div class="ecosystem-bento-grid">
+           <!-- Akedent -->
+           <a href="#/companies/akedent" class="eco-card dc-glass-card fade-in-up">
+              <div class="eco-glow eco-akedent"></div>
+              <div class="eco-icon"><i class="fas fa-microscope"></i></div>
+              <h3>AkeDent Pharmaceutical</h3>
+              <p>Specialized clinical diagnostics, laboratory reagents, and mission-critical medical machinery.</p>
+              <div class="eco-arrow">&rarr;</div>
+           </a>
+
+           <!-- Ora-Dent -->
+           <a href="#/companies/oradent" class="eco-card dc-glass-card fade-in-up" style="animation-delay: 0.1s;">
+              <div class="eco-glow eco-oradent"></div>
+              <div class="eco-icon"><i class="fas fa-magic"></i></div>
+              <h3>Ora-Dent Cosmetics</h3>
+              <p>Premium derma-cosmetics and aesthetic clinical supplies for high-end dermatology centers.</p>
+              <div class="eco-arrow">&rarr;</div>
+           </a>
+
+           <!-- Dire Dawa -->
+           <a href="#/companies/dentos-dire-dawa" class="eco-card dc-glass-card fade-in-up" style="animation-delay: 0.2s;">
+              <div class="eco-glow eco-diredawa"></div>
+              <div class="eco-icon"><i class="fas fa-shipping-fast"></i></div>
+              <h3>Dentos Dire Dawa</h3>
+              <p>The primary global logistics and supply chain hub bridging international manufacturers to local markets.</p>
+              <div class="eco-arrow">&rarr;</div>
+           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🏗️ STRATEGIC DIVISIONS (BENTO) -->
+    <section class="section strategic-spacing bg-dark-deep">
+      <div class="container">
+        <h2 class="section-title-visionary text-center mb-60">Strategic <span class="accent-text">Divisions</span></h2>
+        
+        <div class="divisions-bento-grid">
+          
+          <div class="division-card dc-glass-card fade-in-up">
+            <div class="div-icon-wrapper div-blue">
+               <i class="fas fa-stethoscope"></i>
+            </div>
+            <h3>Medical Imports Division</h3>
+            <p>Focused on sourcing and distributing certified medical equipment, laboratory instruments, and healthcare supplies to hospitals, clinics, and diagnostic centers.</p>
+            <a href="#/products?company=dentose&category=medical" class="btn btn-outline-visionary mt-30">Medical Catalogue</a>
+          </div>
+
+          <div class="division-card dc-glass-card fade-in-up" style="animation-delay: 0.1s;">
+            <div class="div-icon-wrapper div-green">
+               <i class="fas fa-seedling"></i>
+            </div>
+            <h3>Agricultural Exports Division</h3>
+            <p>Dedicated to the export of high-quality agricultural products, supporting global supply chains with trusted sourcing, rigorous quality control, and superior logistics capabilities.</p>
+            <a href="#/products?company=dentose&category=agriculture" class="btn btn-outline-visionary btn-green mt-30">Explore Exports</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 📊 CORE CATEGORIES MATRIX -->
+    <section class="section strategic-spacing">
+      <div class="container text-center">
+        <h2 class="section-title-visionary mb-50">Core Infrastructure <span class="accent-text">Focus</span></h2>
+        
+        <div class="category-matrix fade-in-up">
+          <a href="#/products?company=dentose" class="matrix-pill"><i class="fas fa-tooth"></i> Orthodontic Products</a>
+          <a href="#/products?company=dentose" class="matrix-pill"><i class="fas fa-syringe"></i> Surgical Instruments</a>
+          <a href="#/products?company=dentose" class="matrix-pill"><i class="fas fa-microscope"></i> Laboratory Equipment</a>
+          <a href="#/products?company=dentose" class="matrix-pill"><i class="fas fa-heartbeat"></i> Diagnostic Devices</a>
+          <a href="#/products?company=dentose" class="matrix-pill"><i class="fas fa-box"></i> Medical Consumables</a>
+          <a href="#/products?company=dentose&category=agriculture" class="matrix-pill pill-green"><i class="fas fa-leaf"></i> Agricultural Seeds</a>
         </div>
 
-        <div style="padding: 60px; background: var(--bg-light); border-radius: 20px;">
-          <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Ready to Explore?</h3>
-          <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 30px;">Browse the full catalogue in the Products & Services section.</p>
-          <a href="#/products?company=dentose" class="btn btn-primary" style="padding: 18px 50px; font-size: 1.2rem;">
-            View Full Catalogue &rarr;
-          </a>
-        </div>
       </div>
     </section>
 
   </div>
 
   <style>
+<<<<<<< HEAD
     @media (max-width: 640px) {
       .section h1 { font-size: 2.2rem !important; line-height: 1.1; margin-bottom: 20px; }
       .section h2 { font-size: 1.8rem !important; }
@@ -72,6 +153,135 @@ export const DentoseChamo = () => `
       .glass-premium { padding: 30px !important; }
       .app-section { padding-top: 80px !important; }
       .btn-primary { width: 100%; border-radius: 12px; }
+=======
+    /* 🌑 DARK THEME VARIABLES */
+    .dentose-parent-hub {
+      background-color: #050b14;
+      color: #f8fafc;
+      min-height: 100vh;
+      overflow-x: clip;
+    }
+    .bg-dark-deep { background-color: #03070c; }
+    .accent-text { color: #38bdf8; text-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
+
+    /* 🚀 V3 HERO */
+    .hero-v3-dark {
+      padding: 180px 20px 100px;
+      position: relative;
+      background: radial-gradient(circle at center, rgba(14, 38, 75, 0.4) 0%, #050b14 70%), url('https://www.transparenttextures.com/patterns/cubes.png');
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .hero-badge-v3 {
+      display: inline-block; padding: 8px 24px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 50px; color: #38bdf8; font-weight: 800; font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 25px; box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+    }
+    .hero-title-visionary { font-size: clamp(3rem, 6vw, 5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; color: #ffffff; }
+    .hero-lead { font-size: clamp(1.1rem, 2vw, 1.3rem); color: #94a3b8; max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; }
+    
+    /* 🌐 ECOSYSTEM GRID */
+    .strategic-spacing { padding: 100px 0; }
+    .section-title-visionary { font-size: 2.8rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 15px; }
+    .mb-60 { margin-bottom: 60px; }
+    .mb-50 { margin-bottom: 50px; }
+    .mt-30 { margin-top: 30px; }
+    
+    .ecosystem-bento-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .dc-glass-card {
+      background: rgba(15, 23, 42, 0.4);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 24px;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .eco-card:hover { transform: translateY(-10px); border-color: rgba(56, 189, 248, 0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+    .eco-glow { position: absolute; width: 150px; height: 150px; border-radius: 50%; filter: blur(60px); top: -50px; right: -50px; opacity: 0.4; transition: opacity 0.4s; }
+    .eco-card:hover .eco-glow { opacity: 0.8; }
+    .eco-akedent { background: #3b82f6; }
+    .eco-oradent { background: #ec4899; }
+    .eco-diredawa { background: #eab308; }
+    
+    .eco-icon { font-size: 2.5rem; margin-bottom: 25px; color: #ffffff; }
+    .eco-card h3 { font-size: 1.6rem; font-weight: 800; color: #ffffff; margin-bottom: 15px; }
+    .eco-card p { color: #94a3b8; line-height: 1.6; font-size: 1rem; flex-grow: 1; margin-bottom: 30px; }
+    .eco-arrow { align-self: flex-end; width: 45px; height: 45px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 1.2rem; transition: all 0.3s; }
+    .eco-card:hover .eco-arrow { background: #38bdf8; color: #050b14; transform: scale(1.1); }
+
+    /* 🏗️ DIVISIONS GRID */
+    .divisions-bento-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .division-card { align-items: center; text-align: center; padding: 60px 40px; }
+    .div-icon-wrapper { width: 90px; height: 90px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin-bottom: 30px; }
+    .div-blue { background: rgba(56, 189, 248, 0.1); color: #38bdf8; box-shadow: 0 0 30px rgba(56, 189, 248, 0.2); }
+    .div-green { background: rgba(34, 197, 94, 0.1); color: #22c55e; box-shadow: 0 0 30px rgba(34, 197, 94, 0.2); }
+    .division-card h3 { font-size: 2rem; color: #ffffff; margin-bottom: 20px; font-weight: 800; }
+    .division-card p { color: #94a3b8; font-size: 1.1rem; line-height: 1.7; margin-bottom: 0; }
+
+    /* 📊 CATEGORY MATRIX */
+    .category-matrix {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .matrix-pill {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 16px 32px;
+      border-radius: 50px;
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .matrix-pill:hover { background: rgba(56, 189, 248, 0.15); border-color: #38bdf8; color: #38bdf8; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    .pill-green:hover { background: rgba(34, 197, 94, 0.15); border-color: #22c55e; color: #22c55e; }
+
+    /* BUTTONS */
+    .btn-visionary { padding: 18px 40px; font-weight: 800; border-radius: 12px; font-size: 1.1rem; transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); cursor: pointer; text-decoration: none; display: inline-block; }
+    .btn-outline-visionary { background: transparent; border: 2px solid #38bdf8; color: #38bdf8; padding: 16px 35px; border-radius: 12px; font-weight: 700; text-decoration: none; transition: all 0.3s; display: inline-block; }
+    .btn-outline-visionary:hover { background: #38bdf8; color: #050b14; box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3); transform: translateY(-2px); }
+    .btn-green { border-color: #22c55e; color: #22c55e; }
+    .btn-green:hover { background: #22c55e; color: #050b14; box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3); }
+
+    /* RESPONSIVE PADDING & ALIGNMENT */
+    @media (max-width: 1024px) {
+       .divisions-bento-grid { grid-template-columns: 1fr; }
+    }
+    
+    @media (max-width: 768px), (max-height: 600px) {
+       .hero-v3-dark { padding-top: 210px !important; padding-bottom: 60px; }
+       .hero-title-visionary { font-size: 2.5rem; }
+       .section-title-visionary { font-size: 2.2rem; }
+       .hero-badge-v3 { margin-bottom: 15px; }
+       .strategic-spacing { padding: 60px 0; }
+       .matrix-pill { padding: 12px 20px; font-size: 0.95rem; width: 100%; justify-content: center; }
+       .division-card { padding: 40px 20px; }
+>>>>>>> 63cc4de30d4d3a76c73990b0e27448ef7e24d276
     }
   </style>
 `;

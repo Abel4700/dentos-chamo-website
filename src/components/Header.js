@@ -7,7 +7,7 @@ export const Header = () => `
       
       <nav class="nav-links">
         <a href="#/">Home</a>
-        <a href="#/about">About Us</a>
+        <a href="#/about">About</a>
        
         
         <!-- Multi-Entity Dropdown -->
@@ -18,6 +18,10 @@ export const Header = () => `
               <strong>Dentose Chamo Trading PLC</strong>
               <span class="sub-text">Medical Devices & Agricultural Export</span>
             </a>
+            <a href="#/companies/dentos-dire-dawa">
+              <strong>Dentose Dire Dawa Logistics PLC</strong>
+              <span class="sub-text">Regional Logistics & FTZ Division</span>
+            </a>
             <a href="#/companies/ora-dent">
               <strong>Ora-Dent Oral Cosmetics</strong>
               <span class="sub-text">Aesthetic Dental & Cosmetics</span>
@@ -25,10 +29,6 @@ export const Header = () => `
             <a href="#/companies/akedent">
               <strong>Akedent Pharmaceutical and Medical Equipment Whole Sale</strong>
               <span class="sub-text">Pharma & Heavy Lab Machinery</span>
-            </a>
-            <a href="https://diredawa.dentosechamo.com" target="_blank" rel="noopener noreferrer">
-              <strong>Dentose Dire Dawa <i class="fas fa-external-link-alt" style="font-size: 0.7rem; color: #94a3b8; margin-left: 5px;"></i></strong>
-              <span class="sub-text">Regional Eastern Division</span>
             </a>
           </div>
         </div>
@@ -186,12 +186,7 @@ export const Header = () => `
       border-radius: 3px;
     }
 
-    @media (max-width: 900px) {
-      .nav-links { gap: 15px; }
-      .dropdown-content { min-width: 250px; }
-    }
-
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       .mobile-menu-btn { display: flex; }
       .nav-links {
         position: fixed;
@@ -249,7 +244,11 @@ export const Header = () => `
         e.preventDefault();
         e.stopPropagation();
         
+<<<<<<< HEAD
         if (window.innerWidth <= 768) {
+=======
+        if (window.innerWidth <= 1024) {
+>>>>>>> 63cc4de30d4d3a76c73990b0e27448ef7e24d276
           // MOBILE: Standard Accordion Toggle
           dropdown.classList.toggle('active');
         } else {
