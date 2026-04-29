@@ -1,74 +1,6 @@
 export const Akedent = () => {
   return `
-<<<<<<< HEAD
-    <div class="app-section bg-soft page-offset">
-      
-      <!-- 💊 CLINICAL HERO -->
-      <section class="company-hero akedent-theme fade-in">
-        <div class="container text-center">
-          <div class="hero-badge">INDEPENDENT PHARMACEUTICAL ENTITY</div>
-          <h1 class="fluid-title">Akedent <span class="text-accent">Pharmaceutical and Medical Equipment Whole Sale </span></h1>
-          <p class="hero-description">
-            A pillar of reliability in pharmaceutical distribution and advanced medical equipment. Akedent is dedicated to bridging the supply gap for healthcare providers with certified excellence.
-          </p>
-        </div>
-        <div class="hero-ambient-glow"></div>
-      </section>
-
-      <!-- 🍱 BENTO MATRIX -->
-      <section class="section">
-        <div class="container">
-          <div class="sophisticated-grid">
-            
-            <!-- Operations -->
-            <div class="bento-box glass-premium fade-in-up">
-              <div class="bento-header">
-                <div class="bento-icon"><i class="fas fa-microscope"></i></div>
-                <h2 class="bento-title">Core Operations</h2>
-              </div>
-              <ul class="bento-list">
-                <li><i class="fas fa-check-double"></i> Pharma Distribution Hub</li>
-                <li><i class="fas fa-check-double"></i> Medical Equipment Logistics</li>
-                <li><i class="fas fa-check-double"></i> Diagnostic Solution Support</li>
-              </ul>
-            </div>
-
-            <!-- Portfolio Shapes -->
-            <div class="bento-box glass-premium fade-in-up" style="animation-delay: 0.1s;">
-              <div class="bento-header">
-                <div class="bento-icon"><i class="fas fa-box-tissue"></i></div>
-                <h2 class="bento-title">Supply Spectrum</h2>
-              </div>
-              <div class="category-grid-modern">
-                <div class="modern-card-item">
-                   <i class="fas fa-pills"></i>
-                   <span>Pharma</span>
-                </div>
-                <div class="modern-card-item">
-                   <i class="fas fa-stethoscope"></i>
-                   <span>Supplies</span>
-                </div>
-                <div class="modern-card-item">
-                   <i class="fas fa-laptop-medical"></i>
-                   <span>Equipment</span>
-                </div>
-                <div class="modern-card-item">
-                   <i class="fas fa-vial"></i>
-                   <span>Lab Tech</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- 🚀 ACTION FOOTER -->
-          <div class="cta-footer fade-in-up" style="animation-delay: 0.2s;">
-             <p>Access the specialized Akedent pharmaceutical and equipment registers.</p>
-             <a href="#/products?company=akedent" class="btn-premium-cyan">
-               View Akedent Catalogue <i class="fas fa-arrow-right"></i>
-             </a>
-=======
-    <div class="akedent-page dark-theme-page">
+    <div class="akedent-page">
       
       <!-- 💊 CINEMATIC PHARMA HERO -->
       <section class="akedent-hero">
@@ -158,100 +90,10 @@ export const Akedent = () => {
                 <p>Global procurement of quality-assured products through trusted international partnerships.</p>
               </div>
             </div>
->>>>>>> 63cc4de30d4d3a76c73990b0e27448ef7e24d276
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      <style>
-        .akedent-theme { background: linear-gradient(135deg, #0e7490 0%, #083344 100%); }
-        .text-accent { color: #67e8f9; }
-        
-        .company-hero { 
-          padding: 120px 0 100px; 
-          position: relative; 
-          overflow: hidden; 
-          color: white;
-          border-radius: 0 0 50px 50px;
-        }
-        .hero-badge { 
-          display: inline-block; 
-          padding: 8px 20px; 
-          background: rgba(103, 232, 249, 0.15); 
-          border: 1px solid rgba(103, 232, 249, 0.3); 
-          border-radius: 50px; 
-          color: #67e8f9; 
-          font-weight: 800; 
-          font-size: 0.75rem; 
-          letter-spacing: 2px; 
-          margin-bottom: 30px; 
-        }
-        .fluid-title { 
-          font-size: clamp(2.2rem, 6vw, 4.2rem); 
-          font-weight: 800; 
-          letter-spacing: -2px; 
-          margin-bottom: 25px; 
-          line-height: 1.1; 
-        }
-        .hero-description { 
-          font-size: clamp(1.1rem, 2vw, 1.35rem); 
-          color: rgba(255,255,255,0.8); 
-          max-width: 800px; 
-          margin: 0 auto; 
-          line-height: 1.7; 
-        }
-        .hero-ambient-glow {
-          position: absolute;
-          top: -20%; right: -10%;
-          width: 500px; height: 500px;
-          background: radial-gradient(circle, rgba(103, 232, 249, 0.1) 0%, transparent 70%);
-          pointer-events: none;
-        }
-
-        .sophisticated-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-          gap: 30px;
-          margin-top: -50px;
-          position: relative;
-          z-index: 10;
-        }
-        .bento-box { padding: 50px; background: white; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
-        .bento-header { display: flex; align-items: center; gap: 20px; margin-bottom: 40px; }
-        .bento-icon { width: 60px; height: 60px; border-radius: 16px; background: #ecfeff; color: #0891b2; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; }
-        .bento-title { font-size: 1.8rem; font-weight: 800; color: #0f172a; margin: 0; }
-        
-        .bento-list { list-style: none; padding: 0; margin: 0; }
-        .bento-list li { padding: 18px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: center; gap: 15px; color: #475569; font-weight: 500; }
-        .bento-list li i { color: #0891b2; }
-
-        .category-grid-modern { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .modern-card-item { 
-          padding: 25px; 
-          background: #f8fafc; 
-          border-radius: 20px; 
-          text-align: center; 
-          transition: all 0.3s;
-          border: 1px solid #f1f5f9;
-        }
-        .modern-card-item:hover { transform: translateY(-5px); background: white; border-color: #0891b2; }
-        .modern-card-item i { display: block; font-size: 2rem; color: #0891b2; margin-bottom: 15px; }
-        .modern-card-item span { font-weight: 800; color: #1e293b; font-size: 0.9rem; text-transform: uppercase; }
-
-        .cta-footer { text-align: center; margin-top: 80px; padding: 60px; background: white; border-radius: 30px; }
-        .cta-footer p { font-size: 1.15rem; color: #64748b; margin-bottom: 30px; }
-        .btn-premium-cyan { display: inline-flex; align-items: center; gap: 12px; padding: 20px 45px; background: #0891b2; color: white; border-radius: 15px; font-weight: 800; text-decoration: none; transition: all 0.3s; }
-        .btn-premium-cyan:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(8, 145, 178, 0.2); }
-
-        @media (max-width: 768px) {
-          .sophisticated-grid { grid-template-columns: 1fr; margin-top: 20px; }
-          .bento-box { padding: 35px 25px; }
-          .category-grid-modern { grid-template-columns: 1fr; }
-          .cta-footer { padding: 40px 20px; }
-          .btn-premium-cyan { width: 100%; justify-content: center; }
-          .company-hero { border-radius: 0 0 30px 30px; }
-=======
       <!-- 🔬 PRODUCT CATEGORY HIGHLIGHTS -->
       <section class="section akedent-highlights bg-darker">
         <div class="container">
@@ -336,91 +178,92 @@ export const Akedent = () => {
       </section>
 
       <style>
-        /* PAGE THEME & TOKENS */
+        /* PAGE THEME & TOKENS (ORA-DENT CLINICAL LIGHT) */
         :root {
-          --dd-primary: #002F7F;
-          --dd-primary-dark: #000F48;
-          --dd-accent: #00A3C4; /* Medical Cyan */
-          --dd-bg-dark: #0C0C0C;
-          --dd-bg-header: #000F48;
-          --dd-border: #242424;
-          --dd-text-muted: #94A3B8;
-          --secondary: #FFDB3F;
+          --ak-primary: var(--primary);
+          --ak-accent: var(--secondary);
+          --ak-bg: var(--bg-light);
+          --ak-text: var(--text-main);
+          --ak-text-muted: var(--text-muted);
         }
 
-        .akedent-page { background-color: var(--dd-bg-dark); color: white; min-height: 100vh; overflow-x: clip; }
-        .primary-text { color: var(--dd-accent); }
+        .akedent-page { background-color: var(--ak-bg); color: var(--ak-text); min-height: 100vh; overflow-x: clip; }
+        .primary-text { color: var(--ak-accent); }
         .section { padding: 120px 0; position: relative; }
-        .bg-darker { background-color: #080808; }
+        .bg-soft-blue { background-color: #f0f4f8; }
 
-        /* HERO SECTION */
+        /* HERO SECTION (CINEMATIC DARK OVERLAY) */
         .akedent-hero {
-          padding: 180px 20px 100px; position: relative; display: flex; flex-direction: column; justify-content: center; overflow: hidden;
-          background: linear-gradient(to right, rgba(12, 12, 12, 0.9), rgba(12, 12, 12, 0.4)), url('https://images.unsplash.com/photo-1579154235602-3c2cfa99e1bc?auto=format&fit=crop&q=80&w=1920');
-          background-size: cover; background-position: center; border-bottom: 1px solid var(--dd-border);
+          padding: 220px 20px 120px; position: relative; display: flex; flex-direction: column; justify-content: center; overflow: hidden;
+          background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.5)), url('https://images.unsplash.com/photo-1579154235602-3c2cfa99e1bc?auto=format&fit=crop&q=80&w=1920');
+          background-size: cover; background-position: center; border-bottom: 1px solid var(--glass-border);
         }
-        .akedent-hero-content { max-width: 900px; text-align: center; color: white; z-index: 10; padding: 0 20px; }
-        .akedent-hero-content h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; }
-        .hero-lead { font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--dd-text-muted); max-width: 750px; margin: 0 auto 40px; line-height: 1.6; }
-        .hero-badge-v3 { display: inline-block; padding: 8px 20px; background: rgba(0, 163, 196, 0.15); border: 1px solid rgba(0, 163, 196, 0.3); border-radius: 50px; color: var(--dd-accent); font-weight: 800; font-size: 0.75rem; letter-spacing: 2.5px; margin-bottom: 30px; text-transform: uppercase; }
+        .akedent-hero-content { max-width: 900px; text-align: center; color: white; z-index: 10; padding: 0 20px; margin: 0 auto; }
+        .akedent-hero-content h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; color: white; }
+        .hero-lead { font-size: clamp(1.1rem, 2vw, 1.4rem); color: rgba(255, 255, 255, 0.8); max-width: 750px; margin: 0 auto 40px; line-height: 1.6; }
+        .hero-badge-v3 { display: inline-block; padding: 8px 20px; background: rgba(0, 209, 193, 0.05); border: 1px solid rgba(0, 209, 193, 0.2); border-radius: 50px; color: var(--ak-accent); font-weight: 800; font-size: 0.75rem; letter-spacing: 2.5px; margin-bottom: 30px; text-transform: uppercase; }
         .hero-actions-v3 { display: flex; gap: 20px; justify-content: center; }
 
         /* OVERVIEW & GLASS CARDS */
         .glass-card-v3 {
-          background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
-          border: 1px solid var(--dd-border); border-radius: 40px; box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+          background: white; border: 1px solid var(--glass-border); border-radius: 40px; box-shadow: var(--shadow-md);
         }
         .overview-grid { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 80px; padding: 80px; align-items: center; }
         .brand-subtitle { color: var(--secondary); font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; margin-bottom: 20px; }
-        .overview-text h2 { font-size: clamp(2rem, 4vw, 3.8rem); margin-bottom: 30px; font-weight: 800; letter-spacing: -1.5px; }
-        .overview-text p { color: var(--dd-text-muted); font-size: 1.25rem; line-height: 1.8; margin-bottom: 25px; }
+        .overview-text h2 { font-size: clamp(2rem, 4vw, 3.8rem); margin-bottom: 30px; font-weight: 800; letter-spacing: -1.5px; color: var(--text-main); }
+        .overview-text p { color: var(--text-muted); font-size: 1.25rem; line-height: 1.8; margin-bottom: 25px; }
         
-        .stat-item { text-align: center; padding: 30px; border-radius: 20px; background: rgba(255,255,255,0.02); border: 1px solid var(--dd-border); margin-bottom: 25px; }
-        .stat-num { display: block; font-size: 3rem; font-weight: 900; color: var(--dd-accent); }
-        .stat-label { color: var(--dd-text-muted); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1.5px; }
+        .stat-item { text-align: center; padding: 30px; border-radius: 20px; background: #f8fafc; border: 1px solid var(--glass-border); margin-bottom: 25px; }
+        .stat-num { display: block; font-size: 3rem; font-weight: 900; color: var(--primary); }
+        .stat-label { color: var(--text-muted); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1.5px; }
 
-        .section-title-visionary { font-size: clamp(2.5rem, 4.5vw, 4.2rem); font-weight: 800; letter-spacing: -2px; margin-bottom: 30px; }
+        .section-title-visionary { font-size: clamp(2.5rem, 4.5vw, 4.2rem); font-weight: 900; letter-spacing: -2px; margin-bottom: 30px; color: var(--text-main); }
 
         /* BENTO FOCUS GRID */
         .akedent-bento-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 340px; gap: 25px; }
         .bento-v3-item { position: relative; border-radius: 30px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
         .bento-v3-large { grid-column: span 2; grid-row: span 2; }
         
-        .dark-bento { background: linear-gradient(135deg, var(--dd-primary-dark) 0%, var(--dd-primary) 100%); color: white; border: none; }
-        .bento-v3-content { position: relative; z-index: 5; padding: 40px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%); width: 100%; box-sizing: border-box; }
-        .bento-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--dd-accent); font-weight: 800; margin-bottom: 12px; }
-        .bento-icon-glow { font-size: 3rem; color: var(--dd-accent); margin-bottom: auto; transition: all 0.4s ease; text-shadow: 0 0 30px rgba(0, 163, 196, 0.5); display: flex; align-items: center; justify-content: flex-start; }
-        .bento-v3-item h3 { font-size: 1.6rem; margin-bottom: 12px; font-weight: 800; }
+        .dark-bento { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%); color: white; border: none; }
+        .bento-v3-content { position: relative; z-index: 5; padding: 40px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; width: 100%; box-sizing: border-box; }
+        .bento-v3-item:not(.dark-bento) .bento-v3-content { background: linear-gradient(to top, rgba(255,255,255,0.95) 0%, transparent 100%); }
+        .dark-bento .bento-v3-content { background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 100%); }
+        
+        .bento-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--secondary); font-weight: 800; margin-bottom: 12px; }
+        .bento-icon-glow { font-size: 3rem; color: var(--secondary); margin-bottom: auto; transition: all 0.4s ease; text-shadow: 0 0 30px rgba(0, 209, 193, 0.3); display: flex; align-items: center; justify-content: flex-start; }
+        .bento-v3-item h3 { font-size: 1.6rem; margin-bottom: 12px; font-weight: 800; color: var(--text-main); }
+        .dark-bento h3 { color: white; }
         .bento-v3-large h3 { font-size: 2.8rem; }
-        .bento-v3-item p { color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 1rem; }
-        .bento-bg { position: absolute; top:0; left:0; width:100%; height:100%; background-size: cover; background-position: center; opacity: 0.15; z-index: 1; transition: transform 0.8s ease; }
-        .bento-v3-item:hover { transform: translateY(-12px); box-shadow: 0 40px 80px rgba(0,0,0,0.4); }
-        .bento-v3-item:hover .bento-bg { transform: scale(1.08); opacity: 0.3; }
+        .bento-v3-item p { color: var(--text-muted); line-height: 1.6; font-size: 1rem; }
+        .dark-bento p { color: rgba(255,255,255,0.8); }
+        
+        .bento-bg { position: absolute; top:0; left:0; width:100%; height:100%; background-size: cover; background-position: center; opacity: 0.1; z-index: 1; transition: transform 0.8s ease; }
+        .bento-v3-item:hover { transform: translateY(-12px); box-shadow: var(--shadow-lg); }
+        .bento-v3-item:hover .bento-bg { transform: scale(1.08); opacity: 0.2; }
 
         /* HIGHLIGHTS GRID */
-        .highlights-grid-v3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .highlight-card { padding: 45px 30px; background: rgba(255,255,255,0.02); border: 1px solid var(--dd-border); border-radius: 30px; transition: all 0.4s ease; text-align: center; }
-        .highlight-card:hover { border-color: var(--dd-accent); background: rgba(0, 163, 196, 0.05); transform: translateY(-10px); }
-        .highlight-icon { font-size: 3.2rem; color: var(--dd-accent); margin-bottom: 25px; text-shadow: 0 0 20px rgba(0, 163, 196, 0.3); }
-        .highlight-card h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 15px; }
-        .highlight-card p { color: var(--dd-text-muted); line-height: 1.5; font-size: 0.95rem; }
+        .highlight-card { padding: 45px 30px; background: white; border: 1px solid var(--glass-border); border-radius: 30px; transition: all 0.4s ease; text-align: center; }
+        .highlight-card:hover { border-color: var(--secondary); background: rgba(0, 209, 193, 0.02); transform: translateY(-10px); box-shadow: var(--shadow-md); }
+        .highlight-icon { font-size: 3.2rem; color: var(--secondary); margin-bottom: 25px; text-shadow: 0 0 20px rgba(0, 209, 193, 0.2); }
+        .highlight-card h3 { font-size: 1.4rem; font-weight: 800; margin-bottom: 15px; color: var(--text-main); }
+        .highlight-card p { color: var(--text-muted); line-height: 1.5; font-size: 0.95rem; }
 
         /* VALUE MATRIX & COMPLIANCE */
         .value-matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding: 80px; align-items: center; }
         .value-pillars { display: grid; gap: 25px; margin-top: 40px; }
-        .pillar { display: flex; align-items: center; gap: 20px; font-size: 1.1rem; color: var(--dd-text-muted); }
-        .pillar i { width: 30px; color: var(--dd-accent); font-size: 1.4rem; }
+        .pillar { display: flex; align-items: center; gap: 20px; font-size: 1.1rem; color: var(--text-muted); }
+        .pillar i { width: 30px; color: var(--secondary); font-size: 1.4rem; }
         
-        .compliance-badge-v3 { text-align: center; position: relative; padding: 60px; border-left: 1px solid var(--dd-border); }
+        .compliance-badge-v3 { text-align: center; position: relative; padding: 60px; border-left: 1px solid var(--glass-border); }
         .compliance-badge-v3 i { font-size: 5rem; color: var(--secondary); margin-bottom: 30px; }
-        .compliance-badge-v3 h3 { font-size: 2rem; font-weight: 900; margin-bottom: 10px; }
+        .compliance-badge-v3 h3 { font-size: 2rem; font-weight: 900; margin-bottom: 10px; color: var(--text-main); }
         .compliance-badge-v3 p { color: var(--secondary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
 
         /* DECORATION */
         .bento-decoration { position: absolute; top:0; left:0; width:100%; height:100%; z-index: 1; pointer-events: none; overflow: hidden; }
-        .glass-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.2; animation: float 20s infinite alternate ease-in-out; }
-        .orb-1 { width: 600px; height: 600px; background: var(--dd-primary); top: -200px; left: -100px; }
-        .orb-2 { width: 500px; height: 500px; background: var(--dd-accent); bottom: -100px; right: 10%; animation-delay: -5s; }
+        .glass-orb { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.1; animation: float 20s infinite alternate ease-in-out; }
+        .orb-1 { width: 600px; height: 600px; background: var(--primary); top: -200px; left: -100px; }
+        .orb-2 { width: 500px; height: 500px; background: var(--secondary); bottom: -100px; right: 10%; animation-delay: -5s; }
 
         @keyframes float {
           0% { transform: translate(0, 0) scale(1); }
@@ -429,22 +272,23 @@ export const Akedent = () => {
 
         .cta-btns-centered { display: flex; justify-content: center; gap: 20px; align-items: center; flex-wrap: wrap; }
         .btn-visionary { padding: 16px 35px; font-weight: 800; border-radius: 15px; font-size: 1rem; transition: all 0.3s; }
+        .btn-primary { background: var(--ak-primary); border-color: var(--ak-primary); color: white; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-3px); box-shadow: var(--shadow-md); }
         
         @media (max-width: 1100px) {
            .overview-grid, .value-matrix { grid-template-columns: 1fr; padding: 40px; gap: 40px; }
            .akedent-bento-grid { grid-template-columns: repeat(2, 1fr); }
-           .compliance-badge-v3 { border-left: none; border-top: 1px solid var(--dd-border); padding-top: 60px; }
+           .compliance-badge-v3 { border-left: none; border-top: 1px solid var(--glass-border); padding-top: 60px; }
            .hero-actions-v3 { flex-direction: column; align-items: center; gap: 15px; }
         }
         @media (max-width: 768px), (max-height: 600px) {
-           .akedent-hero { padding: 150px 20px 80px !important; align-items: flex-start !important; justify-content: flex-start !important; height: auto !important; min-height: auto !important; }
+           .akedent-hero { padding: 150px 20px 80px !important; }
            .akedent-bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
            .bento-v3-item { min-height: 280px; }
            .bento-v3-large { grid-column: span 1; grid-row: span 1; }
            .section { padding: 70px 0; }
            .btn-visionary { padding: 12px 25px; font-size: 0.9rem; width: 100%; text-align: center; }
            .cta-btns-centered { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; gap: 15px; }
->>>>>>> 63cc4de30d4d3a76c73990b0e27448ef7e24d276
         }
       </style>
     </div>

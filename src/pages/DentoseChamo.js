@@ -1,52 +1,8 @@
 export const DentoseChamo = () => `
-<<<<<<< HEAD
-  <div class="app-section bg-light" style="padding-top: 100px; min-height: 100vh;">
-    <!-- Premium Hero -->
-    <section class="section" style="background-image: linear-gradient(135deg, rgba(19, 70, 175, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%); padding: 120px 0; margin-top: -100px;">
-      <div class="container text-center fade-in">
-        <h1 style="font-size: 3.5rem; color: #ffffff; margin-bottom: 25px;">Dentose Chamo Trading PLC</h1>
-        <p style="font-size: 1.25rem; color: #cbd5e1; max-width: 900px; margin: 0 auto; line-height: 1.8;">
-          A leading trading company engaged in the importation of high-quality medical, laboratory, and healthcare products, alongside the export of premium agricultural commodities. With a strong operational foundation and strategic global partnerships, we serve healthcare institutions, laboratories, and international markets with reliable, standards-driven solutions.
-        </p>
-      </div>
-    </section>
-
-    <!-- Business Divisions -->
-    <section class="section" style="padding: 80px 0; background: var(--bg-light);">
-      <div class="container">
-        <h2 style="text-align: center; font-size: 2.5rem; color: #0f172a; margin-bottom: 50px;">Business Divisions</h2>
-        <div class="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
-          
-          <div class="glass-premium fade-in-up" style="padding: 50px; display: flex; flex-direction: column; align-items: center; border-top: 5px solid var(--primary); text-align: center;">
-            <div style="width: 80px; height: 80px; border-radius: 50%; background: rgba(19, 70, 175, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
-              <i class="fas fa-stethoscope" style="font-size: 2.5rem; color: var(--primary);"></i>
-            </div>
-            <h3 style="color: #0f172a; margin-bottom: 15px; font-size: 1.8rem;">Medical Imports Division</h3>
-            <p style="color: #64748b; line-height: 1.6;">Focused on sourcing and distributing certified medical equipment, laboratory instruments, and healthcare supplies to hospitals, clinics, and diagnostic centers.</p>
-            <a href="#/products?company=dentose&category=medical" class="btn btn-outline" style="margin-top:30px;">Explore Medical &rarr;</a>
-          </div>
-
-          <div class="glass-premium fade-in-up" style="padding: 50px; display: flex; flex-direction: column; align-items: center; border-top: 5px solid #16a34a; animation-delay: 0.1s; text-align: center;">
-            <div style="width: 80px; height: 80px; border-radius: 50%; background: rgba(22, 163, 74, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
-              <i class="fas fa-seedling" style="font-size: 2.5rem; color: #16a34a;"></i>
-            </div>
-            <h3 style="color: #0f172a; margin-bottom: 15px; font-size: 1.8rem;">Agricultural Exports Division</h3>
-            <p style="color: #64748b; line-height: 1.6;">Dedicated to the export of high-quality agricultural products, supporting global supply chains with trusted sourcing and logistics capabilities.</p>
-             <a href="#/products?company=dentose&category=agriculture" class="btn btn-outline" style="margin-top:30px; border-color: #16a34a; color: #16a34a;">Explore Exports &rarr;</a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Product Categories Matrix -->
-    <section class="section" style="padding: 60px 0; background: white;">
-=======
-  <div class="app-section dark-theme-page dentose-parent-hub">
+  <div class="app-section dentose-parent-hub">
     
     <!-- 🏆 PREMIUM HERO V3 -->
     <section class="hero-v3-dark fade-in">
->>>>>>> 63cc4de30d4d3a76c73990b0e27448ef7e24d276
       <div class="container text-center">
         <div class="hero-badge-v3">GLOBAL PARENT ENTERPRISE</div>
         <h1 class="hero-title-visionary">Dentose Chamo <span class="accent-text">Trading PLC</span></h1>
@@ -145,15 +101,6 @@ export const DentoseChamo = () => `
   </div>
 
   <style>
-<<<<<<< HEAD
-    @media (max-width: 640px) {
-      .section h1 { font-size: 2.2rem !important; line-height: 1.1; margin-bottom: 20px; }
-      .section h2 { font-size: 1.8rem !important; }
-      .product-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
-      .glass-premium { padding: 30px !important; }
-      .app-section { padding-top: 80px !important; }
-      .btn-primary { width: 100%; border-radius: 12px; }
-=======
     /* 🌑 DARK THEME VARIABLES */
     .dentose-parent-hub {
       background-color: #050b14;
@@ -164,11 +111,13 @@ export const DentoseChamo = () => `
     .bg-dark-deep { background-color: #03070c; }
     .accent-text { color: #38bdf8; text-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
 
-    /* 🚀 V3 HERO */
+    /* 🚀 V3 HERO (CINEMATIC DARK) */
     .hero-v3-dark {
       padding: 180px 20px 100px;
       position: relative;
-      background: radial-gradient(circle at center, rgba(14, 38, 75, 0.4) 0%, #050b14 70%), url('https://www.transparenttextures.com/patterns/cubes.png');
+      background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.5)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920');
+      background-size: cover;
+      background-position: center;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -281,7 +230,6 @@ export const DentoseChamo = () => `
        .strategic-spacing { padding: 60px 0; }
        .matrix-pill { padding: 12px 20px; font-size: 0.95rem; width: 100%; justify-content: center; }
        .division-card { padding: 40px 20px; }
->>>>>>> 63cc4de30d4d3a76c73990b0e27448ef7e24d276
     }
   </style>
 `;
