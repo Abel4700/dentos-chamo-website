@@ -40,7 +40,7 @@ export const Contact = () => {
     <section class="contact-hero-v3 fade-in">
       <div class="container text-center" style="padding-top: 30px;">
         <h1 class="contact-title">Let's Connect with<br><span class="primary-text">Dentose Chamo Trading PLC.</span></h1>
-        <p class="hero-lead">Reach out to our global logistics, dental supply, or pharmaceutical teams for any specialized inquiries.</p>
+        <p class="hero-lead">Reach out to our global logistics, medical supply, or pharmaceutical teams for any specialized inquiries.</p>
       </div>
     </section>
 
@@ -106,7 +106,7 @@ export const Contact = () => {
                 <label>Department / Inquiry</label>
                 <select class="modern-select">
                    <option>General Corporate Inquiry</option>
-                   <option>Dentos Chamo Dental Supply</option>
+                   <option>Dentos Chamo Medical Supply</option>
                    <option>AkeDent Pharmaceuticals</option>
                    <option>Ora-Dent Cosmetics</option>
                    <option>Dire Dawa Logistics Hub</option>

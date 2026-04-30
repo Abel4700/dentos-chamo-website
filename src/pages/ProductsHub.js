@@ -1,4 +1,5 @@
 import { products } from './Products.js';
+import { createSlug } from '../lib/seo.js';
 
 export const ProductsHub = (queryParams = {}) => {
   const initialManufacturer = queryParams.manufacturer || 'all';
@@ -7,7 +8,7 @@ export const ProductsHub = (queryParams = {}) => {
     {
       name: 'Prevest Denpro',
       slug: 'prevest',
-      desc: 'Premium dental materials and reliable laboratory consumables.',
+      desc: 'Premium medical materials and reliable laboratory consumables.',
       count: products.filter(p => p.manufacturer === 'prevest').length,
       logo: '/assets/prevest_logo.webp',
       color: '#4b66df',
@@ -18,7 +19,7 @@ export const ProductsHub = (queryParams = {}) => {
     {
       name: 'IRES',
       slug: 'ires',
-      desc: 'Advanced dental implant systems and oral surgery solutions.',
+      desc: 'Advanced medical implant systems and oral surgery solutions.',
       count: products.filter(p => p.manufacturer === 'ires').length,
       logo: '/assets/ires_logo.svg',
       color: '#2c3e50',
@@ -29,7 +30,7 @@ export const ProductsHub = (queryParams = {}) => {
     {
       name: 'PreciDent',
       slug: 'precident',
-      desc: 'High-performance rotary instruments and precision dental burs.',
+      desc: 'High-performance rotary instruments and precision clinical burs.',
       count: products.filter(p => p.manufacturer === 'precident').length,
       logo: '/assets/precident-logo-01.webp',
       color: '#e67e22',
@@ -40,7 +41,7 @@ export const ProductsHub = (queryParams = {}) => {
     {
       name: 'Durable',
       slug: 'durable',
-      desc: 'Reliable dental hospital supplies and clinical consumables.',
+      desc: 'Reliable medical hospital supplies and clinical consumables.',
       count: products.filter(p => p.manufacturer === 'durable').length,
       logo: '/assets/durable-hospital-supplies-logo.webp',
       color: '#27ae60',
@@ -84,7 +85,7 @@ export const ProductsHub = (queryParams = {}) => {
     {
       name: 'Truedent',
       slug: 'truedent',
-      desc: 'Essential dental consumables and export-quality supplies.',
+      desc: 'Essential medical consumables and export-quality supplies.',
       count: products.filter(p => p.manufacturer === 'truedent').length,
       logo: '/assets/truedendco-logo.webp',
       color: '#2980b9',
@@ -95,7 +96,7 @@ export const ProductsHub = (queryParams = {}) => {
     {
       name: 'Pyrax',
       slug: 'pyrax',
-      desc: 'Specialized dental waxes and high-quality laboratory materials.',
+      desc: 'Specialized medical waxes and high-quality laboratory materials.',
       count: products.filter(p => p.manufacturer === 'pyrax').length,
       logo: '/assets/pyrax-logo.webp',
       color: '#f39c12',
@@ -152,7 +153,7 @@ export const ProductsHub = (queryParams = {}) => {
     return products.map((product) => {
       const isFeatured = product.featured ? 'true' : 'false';
       return `
-      <a href="#/product-details?id=${product.id}" 
+      <a href="#/product-details?name=${createSlug(product.commercial_name)}" 
          class="product-link-card product-card glass-premium fade-in-up" 
          data-manufacturer="${product.manufacturer}" 
          data-category="${product.category}"

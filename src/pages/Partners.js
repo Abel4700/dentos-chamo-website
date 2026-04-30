@@ -92,7 +92,7 @@ export const Partners = () => {
               <div class="comp-icon-box cyan"><i class="fas fa-shield-virus"></i></div>
               <div class="comp-content">
                 <h3>EFDA REGISTRATION</h3>
-                <p>Full licensing by the Ethiopian Food & Drug Authority for all specialized medical & dental materials.</p>
+                <p>Full licensing by the Ethiopian Food & Drug Authority for all specialized healthcare & medical materials.</p>
                 <div class="verified-badge"><i class="fas fa-check-circle"></i> LICENSED</div>
               </div>
             </div>
@@ -108,7 +108,7 @@ export const Partners = () => {
           <div class="category-block mt-80">
              <div class="category-header mb-60">
                 <i class="fas fa-tooth accent-text"></i>
-                <h3 class="section-title-visionary">Dental <span class="accent-text">Innovation Hub</span></h3>
+                <h3 class="section-title-visionary">Medical <span class="accent-text">Innovation Hub</span></h3>
                 <p>Our network of specialist laboratories and endodontic manufacturers.</p>
              </div>
              
@@ -117,7 +117,7 @@ export const Partners = () => {
                    <div class="p-logo-wrap"><img src="/assets/prevest_logo-01.webp" alt="Prevest" class="p-logo"></div>
                    <div class="p-info">
                       <h4>Prevest Denpro Limited</h4>
-                      <p>International leader in dental materials and endodontic research. Known for their world-class composites and clinical cements used globally.</p>
+                      <p>International leader in clinical materials and medical research. Known for their world-class composites and clinical cements used globally.</p>
                       <span class="p-flag">🇮🇳 INDIA</span>
                    </div>
                 </a>
@@ -125,14 +125,14 @@ export const Partners = () => {
                    <div class="p-logo-wrap"><img src="/assets/ires_logo.svg" alt="I-RES Sagl" class="p-logo"></div>
                    <div class="p-info">
                       <h4>I-RES Sagl</h4>
-                      <p>Swiss precision engineering for dental implants. Provides advanced implantology and regenerative solutions.</p>
+                      <p>Swiss precision engineering for medical implants. Provides advanced implantology and regenerative solutions.</p>
                    </div>
                 </a>
                 <a href="https://www.topzir.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
                    <div class="p-logo-wrap"><img src="/assets/tozier_logo.svg" alt="TopZir" class="p-logo"></div>
                    <div class="p-info">
                       <h4>TopZir Crown Chain</h4>
-                      <p>Elite aesthetic zirconia solutions. Providing highly durable zirconia blocks for modern dental laboratories.</p>
+                      <p>Elite aesthetic restoration solutions. Providing highly durable zirconia blocks for modern medical laboratories.</p>
                    </div>
                 </a>
 
@@ -140,7 +140,7 @@ export const Partners = () => {
                    <div class="p-logo-wrap"><img src="/assets/precident-logo-01.webp" alt="PreciDent" class="p-logo"></div>
                    <div class="p-info">
                       <h4>PreciDent</h4>
-                      <p>Specialized in manufacturing premium dental rotary instruments and high-precision clinical burs for advanced operations.</p>
+                      <p>Specialized in manufacturing premium clinical rotary instruments and high-precision burs for advanced medical operations.</p>
                       <span class="p-flag">🇮🇳 INDIA</span>
                    </div>
                 </a>

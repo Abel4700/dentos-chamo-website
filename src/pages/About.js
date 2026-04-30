@@ -55,11 +55,11 @@ export const About = () => {
             <div class="hero-badge-v3 no-margin">OUR GENESIS</div>
             <h2 class="section-title-visionary" style="margin-bottom: 50px;">Roots Built on <span class="accent-text">Integrity</span></h2>
             <p class="text-muted-standard" style="font-size: 1.35rem; line-height: 1.9;">
-              Dentose Chamo Trading PLC was established in 2017 G.C by <strong>Dr. Aklilu Berhanu</strong>, who obtained his D.D.S. degree in dental medicine from <strong>Atlas Health Science College</strong> and an MBA in International Business (MBA-IB) from <strong>Greenwich University</strong>. Driven by the mantra of <em>Quality, Trust, Delivery, and Warranty</em>, the company has systematically expanded from a focused dental medical import center into a robust regional powerhouse.
+              Dentose Chamo Trading PLC was established in 2017 G.C by <strong>Dr. Aklilu Berhanu</strong>, who obtained his D.D.S. degree in dental medicine from <strong>Atlas Health Science College</strong> and an MBA in International Business (MBA-IB) from <strong>Greenwich University</strong>. Driven by the mantra of <em>Quality, Trust, Delivery, and Warranty</em>, the company has systematically expanded from a focused medical import center into a robust regional powerhouse.
             </p>
             
             <ul class="vision-list-v3">
-              <li><div class="v3-bullet"><i class="fas fa-check-circle accent-text"></i></div> Specialized endodontic supply excellence.</li>
+              <li><div class="v3-bullet"><i class="fas fa-check-circle accent-text"></i></div> Specialized healthcare supply excellence.</li>
               <li><div class="v3-bullet"><i class="fas fa-check-circle accent-text"></i></div> Scaled agricultural fulfillment to global markets.</li>
               <li><div class="v3-bullet"><i class="fas fa-check-circle accent-text"></i></div> ISO 13485 & 20417 regulatory leadership.</li>
             </ul>
@@ -82,14 +82,14 @@ export const About = () => {
             <div class="bento-bg" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1200');"></div>
             <div class="mission-v3-content">
               <div class="mission-tag accent-text">Medical Hub</div>
-              <h3>East African Dental Hub</h3>
+              <h3>East African Medical Hub</h3>
               <div class="mission-block-v3">
                  <h5 class="accent-text">MISSION</h5>
-                 <p>To extend services beyond client expectations by supplying ISO-certified dental products at the right price and precise time.</p>
+                 <p>To extend services beyond client expectations by supplying ISO-certified medical products at the right price and precise time.</p>
               </div>
               <div class="mission-block-v3">
                  <h5 class="accent-text">VISION</h5>
-                 <p>To unequivocally become the most reputable dental materials manufacturer and distributor operating within East Africa.</p>
+                 <p>To unequivocally become the most reputable medical materials manufacturer and distributor operating within East Africa.</p>
               </div>
               <div class="mission-icon-v3"><i class="fas fa-stethoscope"></i></div>
             </div>
@@ -198,7 +198,7 @@ export const About = () => {
             <div class="timeline-v3-content glass-card-v3 hover-lift">
               <div class="timeline-v3-date accent-text">Foundation</div>
               <h3>Strategic Establishment</h3>
-              <p>Dentos Chamo begins as an exclusive importer of highly specialized medical and dental materials for regional healthcare providers.</p>
+              <p>Dentos Chamo begins as an exclusive importer of highly specialized medical materials for regional healthcare providers.</p>
             </div>
           </div>
           <div class="timeline-v3-item fade-in" style="animation-delay: 0.1s;">

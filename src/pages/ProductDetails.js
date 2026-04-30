@@ -1,11 +1,12 @@
 import { products } from './Products.js';
+import { updateSEO, injectProductSchema, createSlug } from '../lib/seo.js';
 
 export const ProductDetails = () => {
   const hash = window.location.hash;
-  const idMatch = hash.match(/\?id=([^&]*)/);
-  const productId = idMatch ? idMatch[1] : null;
+  const nameMatch = hash.match(/\?name=([^&]*)/);
+  const productNameSlug = nameMatch ? nameMatch[1] : null;
 
-  const product = products.find(p => p.id === productId);
+  const product = products.find(p => createSlug(p.commercial_name) === productNameSlug);
 
   if (!product) {
     return `
@@ -294,5 +295,21 @@ export const ProductDetails = () => {
       }
     </style>
   `;
+};
+
+ProductDetails.mount = () => {
+  const hash = window.location.hash;
+  const nameMatch = hash.match(/\?name=([^&]*)/);
+  const productNameSlug = nameMatch ? nameMatch[1] : null;
+  const product = products.find(p => createSlug(p.commercial_name) === productNameSlug);
+
+  if (product) {
+    updateSEO({
+      title: product.commercial_name,
+      description: product.shortDesc || `Professional medical solution: ${product.commercial_name}.`,
+      image: product.image
+    });
+    injectProductSchema(product);
+  }
 };
 

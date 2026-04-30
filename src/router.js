@@ -13,6 +13,8 @@ import { Akedent } from './pages/Akedent.js';
 import { DentosDireDawa } from './pages/DentosDireDawa.js';
 import { Partners } from './pages/Partners.js';
 
+import { updateSEO, injectProductSchema } from './lib/seo.js';
+
 // Centralised Products Hub
 import { ProductsHub } from './pages/ProductsHub.js';
 
@@ -30,6 +32,15 @@ const routes = {
   '#/blog': Blog,
   '#/media': Media,
   '#/contact': Contact
+};
+
+const routeSEO = {
+  '#/': { title: 'Home', description: 'Premium Medical Solutions & Agricultural Innovation in East Africa.' },
+  '#/about': { title: 'About Us', description: 'A legacy of medical excellence and strategic healthcare distribution.' },
+  '#/products': { title: 'Medical Portfolio', description: 'Comprehensive catalog of premium medical, clinical, and surgical supplies.' },
+  '#/partners': { title: 'Our Partners', description: 'Collaborating with global leaders in medical manufacturing.' },
+  '#/blog': { title: 'Healthcare News', description: 'Insights and updates from the Dentos Chamo Group.' },
+  '#/contact': { title: 'Contact Support', description: 'Get in touch with our medical distribution and procurement experts.' }
 };
 
 export function initRouter() {
@@ -57,6 +68,19 @@ export function initRouter() {
       component = BlogPost;
     }
     
+    // Update SEO Metadata
+    const meta = routeSEO[basePath] || routeSEO['#/'];
+    updateSEO(meta);
+
+    // Track Page View for Google Analytics
+    if (typeof gtag === 'function') {
+      gtag('event', 'page_view', {
+        page_title: meta.title,
+        page_location: window.location.href,
+        page_path: window.location.hash
+      });
+    }
+
     // Inject the parsed query params into the rendering component
     app.innerHTML = component(queryParams);
     window.scrollTo(0, 0);
