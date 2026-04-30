@@ -1,112 +1,127 @@
 import { fetchNewsPosts } from '../lib/sanity.js';
 
 export const Blog = () => `
-  <div class="app-section">
-    <section class="section blog-hero" style="background-image: linear-gradient(rgba(19,70,175,0.8), rgba(19,70,175,0.8)), url('/images/about1.png')">
-      <div class="container text-center text-white">
-        <h1>Blog & News</h1>
-        <p>Insights into the dental industry and corporate updates.</p>
+  <div class="app-section dark-theme-page">
+    
+    <!-- BACKGROUND ANIMATED ORBS -->
+    <div class="global-background-orbs">
+      <div class="glass-orb orb-primary"></div>
+      <div class="glass-orb orb-accent"></div>
+    </div>
+
+    <!-- PREMIUM HERO: EDITORIAL V3 -->
+    <section class="hero-editorial-v3">
+      <div class="hero-editorial-content-v3 fade-in">
+        <div class="hero-badge-v3">INSIGHTS & UPDATES</div>
+        <h1 class="section-title-visionary">Dentos Chamo <span class="accent-text">Journal</span></h1>
+        <p class="hero-lead">Exploring the convergence of medical technology, clinical excellence, and the future of healthcare across the horn of Africa.</p>
+        
+        <div class="hero-metrics-v3">
+          <div class="metric-item-v3">
+             <span class="metric-number">News</span>
+             <span class="metric-label">Corporate Announcements</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item-v3">
+             <span class="metric-number">Case</span>
+             <span class="metric-label">Clinical Breakthroughs</span>
+          </div>
+        </div>
       </div>
+      <div class="hero-editorial-overlay"></div>
     </section>
 
-    <section class="section">
+    <!-- CONTENT SECTION: BENTO GRID JOURNAL -->
+    <section class="section pt-100 pb-120">
       <div class="container">
-        <div class="blog-grid" id="sanity-blog-grid">
+        <div class="blog-grid-v3" id="sanity-blog-grid">
           <!-- Skeletons while fetching -->
-          <div class="blog-card glass skeleton-wrapper">
-             <div class="skeleton skeleton-img"></div>
-             <div class="skeleton skeleton-text" style="width: 40%; margin-top: 20px;"></div>
-             <div class="skeleton skeleton-text" style="width: 80%; height: 25px; margin-top: 10px;"></div>
-             <div class="skeleton skeleton-text" style="width: 100%; margin-top: 10px;"></div>
-             <div class="skeleton skeleton-text" style="width: 90%;"></div>
+          <div class="blog-card-v3 glass-card-v3 skeleton-wrapper-v3">
+             <div class="skeleton-v3 skeleton-img-v3"></div>
+             <div class="skeleton-v3 skeleton-text-v3" style="width: 40%; margin-top: 25px;"></div>
+             <div class="skeleton-v3 skeleton-text-v3" style="width: 80%; height: 35px; margin-top: 15px;"></div>
+             <div class="skeleton-v3 skeleton-text-v3" style="width: 100%; margin-top: 20px;"></div>
+             <div class="skeleton-v3 skeleton-text-v3" style="width: 90%;"></div>
           </div>
-          <div class="blog-card glass skeleton-wrapper">
-             <div class="skeleton skeleton-img"></div>
-             <div class="skeleton skeleton-text" style="width: 40%; margin-top: 20px;"></div>
-             <div class="skeleton skeleton-text" style="width: 80%; height: 25px; margin-top: 10px;"></div>
-             <div class="skeleton skeleton-text" style="width: 100%; margin-top: 10px;"></div>
-             <div class="skeleton skeleton-text" style="width: 90%;"></div>
+          <div class="blog-card-v3 glass-card-v3 skeleton-wrapper-v3">
+             <div class="skeleton-v3 skeleton-img-v3"></div>
+             <div class="skeleton-v3 skeleton-text-v3" style="width: 40%; margin-top: 25px;"></div>
+             <div class="skeleton-v3 skeleton-text-v3" style="width: 80%; height: 35px; margin-top: 15px;"></div>
+             <div class="skeleton-v3 skeleton-text-v3" style="width: 100%; margin-top: 20px;"></div>
+             <div class="skeleton-v3 skeleton-text-v3" style="width: 90%;"></div>
           </div>
         </div>
       </div>
     </section>
-  </div>
 
   <style>
-    .blog-hero {
-      padding: 180px 20px 100px;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-    }
-    .blog-card {
-      padding: 30px;
-      border-radius: 20px;
-      display: flex;
-      flex-direction: column;
-      background: white;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      border: 1px solid rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-    }
-    .blog-card:hover {
-      transform: translateY(-5px);
-    }
-    .blog-card-image {
-      margin: -30px -30px 20px -30px;
-      border-radius: 20px 20px 0 0;
-      background-size: cover;
-      background-position: center;
-      background-color: #f1f5f9;
-    }
-    .blog-date {
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 600;
-    }
-    .blog-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-      color: #0f172a;
-    }
-    .blog-card p {
-      color: #64748b;
-      margin-bottom: 25px;
-      line-height: 1.6;
-      flex-grow: 1;
-    }
-    
-    /* Skeletons */
-    .skeleton {
-      background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
-      background-size: 200% 100%;
-      animation: skeleton-loading 1.5s infinite;
-      border-radius: 4px;
-    }
-    .skeleton-img { height: 200px; margin: -30px -30px 0 -30px; border-radius: 20px 20px 0 0; }
-    .skeleton-text { height: 15px; margin-bottom: 10px; }
-    
-    @keyframes skeleton-loading {
-      0% { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
-    }
-    
-    @media (max-width: 768px) {
-      .blog-hero { padding: 150px 20px 80px; }
-      .blog-grid { grid-template-columns: 1fr; }
-    }
+      :root {
+        --blog-primary: #002F7F;
+        --blog-accent: #38bdf8;
+        --blog-bg: #050b14;
+        --blog-border: rgba(255, 255, 255, 0.08);
+      }
+
+      .dark-theme-page { 
+        background: radial-gradient(circle at center, rgba(14, 38, 75, 0.4) 0%, var(--blog-bg) 70%), url('https://www.transparenttextures.com/patterns/cubes.png'); 
+        color: white; width: 100%; position: relative; overflow-x: clip; min-height: 100vh;
+      }
+      .accent-text { color: var(--blog-accent); }
+      
+      /* GLOBAL BACKGROUND ORBS */
+      .global-background-orbs { position: fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; }
+      .glass-orb { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.12; animation: orbMove 30s infinite alternate ease-in-out; }
+      .orb-primary { width: 600px; height: 600px; background: var(--blog-primary); top: -100px; right: -150px; }
+      .orb-accent { width: 450px; height: 450px; background: var(--blog-accent); bottom: 100px; left: -100px; animation-delay: -7s; }
+      @keyframes orbMove { from { transform: translate(0,0); } to { transform: translate(200px, 150px); } }
+
+      /* HERO EDITORIAL V3 */
+      .hero-editorial-v3 { padding: 220px 20px 120px; position: relative; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; 
+        background: linear-gradient(to right, rgba(12,12,12,0.95), rgba(12,12,12,0.4)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1920');
+        background-size: cover; background-position: center; border-bottom: 1px solid var(--blog-border);
+      }
+      .hero-editorial-content-v3 { max-width: 1000px; z-index: 10; margin-left: 5%; }
+      .hero-badge-v3 { display: inline-block; padding: 6px 14px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); color: var(--blog-accent); border-radius: 100px; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; }
+      .section-title-visionary { font-size: clamp(2.5rem, 5.5vw, 4.5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; }
+      .hero-lead { font-size: clamp(1.1rem, 2vw, 1.4rem); color: rgba(255,255,255,0.7); max-width: 750px; margin-top: 30px; line-height: 1.7; }
+      
+      .hero-metrics-v3 { display: flex; align-items: center; gap: 60px; margin-top: 60px; }
+      .metric-item-v3 { display: flex; flex-direction: column; }
+      .metric-number { font-size: 3.5rem; font-weight: 900; line-height: 1; color: white; }
+      .metric-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; font-weight: 700; margin-top: 10px; }
+      .metric-divider { width: 1px; height: 50px; background: rgba(255,255,255,0.1); }
+
+      /* BLOG GRID V3 */
+      .blog-grid-v3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 40px; position: relative; z-index: 10; }
+      @media (max-width: 768px) { .blog-grid-v3 { grid-template-columns: 1fr; } }
+
+      .glass-card-v3 { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid var(--blog-border); border-radius: 24px; padding: 0; overflow: hidden; transition: var(--transition); }
+      .hover-lift:hover { transform: translateY(-10px) scale(1.01); border-color: rgba(56, 189, 248, 0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+
+      .blog-card-v3 { display: flex; flex-direction: column; height: 100%; }
+      .blog-image-wrapper-v3 { position: relative; height: 280px; overflow: hidden; }
+      .blog-img-v3 { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+      .blog-card-v3:hover .blog-img-v3 { transform: scale(1.1); }
+      
+      .blog-content-v3 { padding: 35px; flex-grow: 1; display: flex; flex-direction: column; }
+      .blog-date-v3 { font-size: 0.8rem; color: var(--blog-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; }
+      .blog-card-v3 h3 { font-size: 1.8rem; font-weight: 800; line-height: 1.3; margin-bottom: 20px; color: white; }
+      .blog-excerpt-v3 { color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 30px; flex-grow: 1; font-size: 1.05rem; }
+      
+      .read-more-v3 { display: flex; align-items: center; gap: 10px; color: white; font-weight: 700; text-decoration: none; font-size: 0.9rem; transition: gap 0.3s ease; }
+      .read-more-v3 i { font-size: 0.7rem; color: var(--blog-accent); }
+      .read-more-v3:hover { color: var(--blog-accent); gap: 15px; }
+
+      /* SKELETONS V3 */
+      .skeleton-v3 { background: linear-gradient(90deg, rgba(255,255,255,0.05) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 75%); background-size: 200% 100%; animation: skeleton-loading 1.5s infinite; }
+      .skeleton-img-v3 { height: 280px; border-radius: 24px 24px 0 0; }
+      .skeleton-text-v3 { height: 12px; border-radius: 100px; margin-bottom: 12px; }
+      @keyframes skeleton-loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+      .pt-100 { padding-top: 100px; }
+      .pb-120 { padding-bottom: 120px; }
   </style>
+  </div>
 `;
 
 Blog.mount = async () => {
@@ -116,30 +131,33 @@ Blog.mount = async () => {
   const posts = await fetchNewsPosts();
   
   if (!posts || posts.length === 0) {
-    grid.innerHTML = '<p class="text-muted text-center" style="grid-column: 1/-1; padding: 40px;">No news articles available yet. Check back soon!</p>';
+    grid.innerHTML = '<div class="glass-card-v3" style="grid-column: 1/-1; padding: 60px; text-align: center;"><p class="hero-lead" style="margin: 0 auto;">Our journal is currently being prepared. Check back soon for the latest industry insights.</p></div>';
     return;
   }
   
   const html = posts.map(post => {
     const date = new Date(post.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-    const imgStyle = post.imageUrl ? `style="background-image: url('${post.imageUrl}'); height: 240px;"` : '';
+    const imgUrl = post.imageUrl || 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=800';
     
     return `
-      <div class="blog-card">
-        ${post.imageUrl ? `<div class="blog-card-image" ${imgStyle}></div>` : ''}
-        <div class="blog-date">${date}</div>
-        <h3>${post.title}</h3>
-        <p>${post.excerpt || 'Read more about this corporate update...'}</p>
-        <a href="#/blog/${post.slug}" class="primary-text font-700">Read Article <i class="fas fa-chevron-right"></i></a>
+      <div class="blog-card-v3 glass-card-v3 hover-lift">
+        <div class="blog-image-wrapper-v3">
+          <img src="${imgUrl}" alt="${post.title}" class="blog-img-v3">
+        </div>
+        <div class="blog-content-v3">
+          <div class="blog-date-v3">${date}</div>
+          <h3>${post.title}</h3>
+          <p class="blog-excerpt-v3">${post.excerpt || 'Discover the latest breakthroughs and corporate milestones from the Dentos Chamo Group...'}</p>
+          <a href="#/blog/${post.slug}" class="read-more-v3">Read Full Article <i class="fas fa-chevron-right"></i></a>
+        </div>
       </div>
     `;
   }).join('');
   
-  // Add a small fade-in effect to the new content
   grid.style.opacity = '0';
   grid.innerHTML = html;
   setTimeout(() => {
-    grid.style.transition = 'opacity 0.5s ease';
+    grid.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
     grid.style.opacity = '1';
   }, 50);
 };

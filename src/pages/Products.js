@@ -9,7 +9,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0001",
       "Category": "Endodontics",
@@ -47,7 +47,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0002",
       "Category": "Endodontics",
@@ -83,7 +83,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0003",
       "Category": "Endodontics",
@@ -118,7 +118,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0004",
       "Category": "Restorative",
@@ -157,7 +157,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0005",
       "Category": "Restorative",
@@ -196,7 +196,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0006",
       "Category": "Endodontics",
@@ -235,7 +235,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0007",
       "Category": "Endodontics",
@@ -273,7 +273,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0008",
       "Category": "Restorative",
@@ -311,7 +311,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0009",
       "Category": "Endodontics",
@@ -343,7 +343,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0010",
       "Category": "Endodontics",
@@ -381,7 +381,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0011",
       "Category": "Restorative",
@@ -419,7 +419,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0012",
       "Category": "Preventive",
@@ -457,7 +457,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0013",
       "Category": "Restorative",
@@ -495,7 +495,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0014",
       "Category": "Prosthodontics",
@@ -533,7 +533,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0015",
       "Category": "Restorative",
@@ -571,7 +571,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0016",
       "Category": "Endodontics",
@@ -609,7 +609,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0017",
       "Category": "Endodontics",
@@ -647,7 +647,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0018",
       "Category": "Endodontics",
@@ -685,7 +685,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0019",
       "Category": "Restorative",
@@ -719,7 +719,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0020",
       "Category": "Restorative",
@@ -756,7 +756,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0021",
       "Category": "Prosthodontics",
@@ -789,7 +789,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0022",
       "Category": "Restorative",
@@ -822,7 +822,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0023",
       "Category": "Restorative",
@@ -860,7 +860,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0024",
       "Category": "Restorative",
@@ -893,7 +893,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0025",
       "Category": "Prosthodontics",
@@ -931,7 +931,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0026",
       "Category": "Prosthodontics",
@@ -969,7 +969,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0027",
       "Category": "Prosthodontics",
@@ -1007,7 +1007,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0028",
       "Category": "Prosthodontics",
@@ -1045,7 +1045,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0029",
       "Category": "Restorative",
@@ -1082,7 +1082,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0030",
       "Category": "Prosthodontics",
@@ -1117,7 +1117,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0031",
       "Category": "Restorative",
@@ -1154,7 +1154,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0032",
       "Category": "Prosthodontics",
@@ -1192,7 +1192,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0033",
       "Category": "Restorative",
@@ -1230,7 +1230,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0034",
       "Category": "Endodontics",
@@ -1268,7 +1268,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0035",
       "Category": "Endodontics",
@@ -1306,7 +1306,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0036",
       "Category": "Endodontics",
@@ -1344,7 +1344,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0037",
       "Category": "Endodontics",
@@ -1382,7 +1382,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0038",
       "Category": "Endodontics",
@@ -1418,7 +1418,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0039",
       "Category": "Endodontics",
@@ -1456,7 +1456,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0040",
       "Category": "Endodontics",
@@ -1493,7 +1493,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0041",
       "Category": "Endodontics",
@@ -1531,7 +1531,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0042",
       "Category": "Endodontics",
@@ -1568,7 +1568,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0043",
       "Category": "Prosthodontics",
@@ -1604,7 +1604,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0044",
       "Category": "Endodontics",
@@ -1641,7 +1641,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0045",
       "Category": "Prosthodontics",
@@ -1677,7 +1677,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0046",
       "Category": "Restorative",
@@ -1715,7 +1715,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0047",
       "Category": "Preventive",
@@ -1749,7 +1749,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0048",
       "Category": "Restorative",
@@ -1787,7 +1787,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0049",
       "Category": "Preventive",
@@ -1825,7 +1825,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0050",
       "Category": "Preventive",
@@ -1863,7 +1863,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0051",
       "Category": "Orthodontics",
@@ -1901,7 +1901,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0052",
       "Category": "Orthodontics",
@@ -1939,7 +1939,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0053",
       "Category": "Orthodontics",
@@ -1977,7 +1977,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0054",
       "Category": "Endodontics",
@@ -2015,7 +2015,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0055",
       "Category": "Endodontics",
@@ -2053,7 +2053,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0056",
       "Category": "Endodontics",
@@ -2091,7 +2091,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0057",
       "Category": "Restorative",
@@ -2129,7 +2129,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0058",
       "Category": "Restorative",
@@ -2166,7 +2166,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0059",
       "Category": "Restorative",
@@ -2204,7 +2204,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0060",
       "Category": "Restorative",
@@ -2242,7 +2242,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0061",
       "Category": "Preventive",
@@ -2275,7 +2275,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0062",
       "Category": "Preventive",
@@ -2313,7 +2313,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0063",
       "Category": "Restorative",
@@ -2351,7 +2351,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0064",
       "Category": "Restorative",
@@ -2389,7 +2389,7 @@ export const products = [
     "segment": "medical",
     "image": "",
     "featured": true,
-    "catalogue_pdf": "/catalogues/Prevest-Denpro-Catalog-2026.pdf",
+    "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0065",
       "Category": "Restorative",

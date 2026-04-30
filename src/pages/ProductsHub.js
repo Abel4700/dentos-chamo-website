@@ -69,7 +69,7 @@ export const ProductsHub = (queryParams = {}) => {
       slug: 'sincere',
       desc: 'Precision instruments for orthodontic and general dentistry.',
       count: products.filter(p => p.manufacturer === 'sincere').length,
-      logo: '/assets/sincere-people-instruments.webp',
+      logo: '/assets/sincere-people-instruments.png',
       color: '#c0392b',
       bg: 'linear-gradient(135deg, rgba(192,57,43,0.05) 0%, rgba(192,57,43,0.1) 100%)',
       pdf: '/catalogues/Sincere-instruments_Catalogue.pdf'
