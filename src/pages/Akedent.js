@@ -166,7 +166,7 @@ export const Akedent = () => {
       </section>
 
       <!-- 🚀 GROUP INTEGRATION CTA -->
-      <section class="section akedent-cta">
+      <section class="section akedent-cta" style="background: linear-gradient(135deg, var(--dd-primary) 0%, #0e1570 100%); border-radius: 50px; margin: 0 20px 80px;">
         <div class="container text-center">
             <h2 class="text-white mb-30" style="font-size: 3rem;">A Unified <span class="primary-text">Distributive Ecosystem</span></h2>
             <p class="text-muted mb-60" style="font-size: 1.2rem; max-width: 800px; margin-left: auto; margin-right: auto;">AkeDent functions as a dedicated healthcare entity within the group, fully integrated into our centralized scalable platform.</p>

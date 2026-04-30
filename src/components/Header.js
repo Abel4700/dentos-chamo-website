@@ -2,7 +2,7 @@ export const Header = () => `
   <header id="main-header" class="glass">
     <div class="container nav-container">
       <a href="#/" class="logo">
-        <img src="/images/dentosechamo-logo.png" alt="Dentos Chamo Group Logo" class="brand-logo">
+        <img src="/assets/dentosechamo-logo.png" alt="Dentos Chamo Group Logo" class="brand-logo">
       </a>
       
       <nav class="nav-links">
@@ -217,6 +217,7 @@ export const Header = () => `
       }
       .dropdown.active .dropdown-content {
         display: block;
+        animation: none; /* Faster response on mobile */
       }
       .dropdown-content a {
         align-items: center;

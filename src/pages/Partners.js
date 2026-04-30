@@ -269,7 +269,7 @@ export const Partners = () => {
         .compliance-card { padding: 50px; display: flex; gap: 40px; align-items: center; }
         .comp-icon-box { width: 100px; height: 100px; border-radius: 30px; background: rgba(56, 189, 248, 0.05); color: var(--partners-accent); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; flex-shrink: 0; }
         .comp-icon-box.cyan { color: #0ea5e9; }
-        .comp-content .section-title-visionary { font-weight: 900; letter-spacing: -3px; line-height: 1; color: white; }
+        .comp-content .section-title-visionary { font-weight: 900; letter-spacing: -3px; line-height: 1; color: var(--text-main); }
         .hero-lead { font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 800px; line-height: 1.6; margin-top: 30px; }
         .comp-content h3 { font-size: 1.8rem; font-weight: 900; margin-bottom: 12px; }
         .comp-content p { color: #94a3b8; font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px; }

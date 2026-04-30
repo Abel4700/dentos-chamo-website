@@ -53,7 +53,7 @@ export const About = () => {
 
           <div class="founder-text-v3 fade-in">
             <div class="hero-badge-v3 no-margin">OUR GENESIS</div>
-            <h2 class="section-title-visionary" style="margin-bottom: 50px;">Roots Built on <span class="accent-text">Integrity</span></h2>
+            <h2 class="section-title-visionary" style="margin-bottom: 50px; color: var(--about-primary);">Roots Built on <span class="accent-text">Integrity</span></h2>
             <p class="text-muted-standard" style="font-size: 1.35rem; line-height: 1.9;">
               Dentose Chamo Trading PLC was established in 2017 G.C by <strong>Dr. Aklilu Berhanu</strong>, who obtained his D.D.S. degree in dental medicine from <strong>Atlas Health Science College</strong> and an MBA in International Business (MBA-IB) from <strong>Greenwich University</strong>. Driven by the mantra of <em>Quality, Trust, Delivery, and Warranty</em>, the company has systematically expanded from a focused medical import center into a robust regional powerhouse.
             </p>
@@ -73,7 +73,7 @@ export const About = () => {
       <div class="container">
         <div class="section-header-centered mb-100 fade-in">
           <div class="hero-badge-v3">CORPORATE OBJECTIVES</div>
-          <h2 class="section-title-visionary text-center">Our <span class="accent-text">Mission and Vision</span></h2>
+          <h2 class="section-title-visionary text-center" style="color: var(--about-primary);">Our <span class="accent-text">Mission and Vision</span></h2>
         </div>
 
         <div class="mission-bento-grid">
@@ -154,7 +154,7 @@ export const About = () => {
       <div class="container">
         <div class="section-header-centered mb-80">
            <div class="hero-badge-v3">OUR NETWORK</div>
-           <h2 class="section-title-visionary text-center">Key <span class="accent-text">Clients</span></h2>
+           <h2 class="section-title-visionary text-center" style="color: white;">Key <span class="accent-text">Clients</span></h2>
         </div>
         <div class="clients-grid-v3">
            <div class="client-card-v3 glass-card-v3 fade-in-up">
@@ -355,7 +355,7 @@ export const About = () => {
       .metric-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.7); font-weight: 700; margin-top: 10px; }
       .metric-divider { width: 1px; height: 60px; background: rgba(255,255,255,0.1); }
       
-      .section-title-visionary { font-size: clamp(2.5rem, 5.5vw, 4.2rem); font-weight: 900; letter-spacing: -3px; line-height: 1; }
+      .section-title-visionary { font-size: clamp(2.5rem, 5.5vw, 4.2rem); font-weight: 900; letter-spacing: -3px; line-height: 1; color: var(--about-primary); }
       .mt-120 { margin-top: 120px; }
       .mb-80 { margin-bottom: 80px; }
       .mb-100 { margin-bottom: 100px; }
@@ -371,9 +371,6 @@ export const About = () => {
       .quote-signature { display: flex; flex-direction: column; }
       .sig-name { font-weight: 800; font-size: 1.15rem; }
       .sig-title { font-size: 0.85rem; color: #94a3b8; letter-spacing: 1px; margin-top: 5px; }
-
-      .section-title-visionary { font-weight: 900; letter-spacing: -3px; line-height: 1; color: white; }
-      .hero-lead { font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 800px; line-height: 1.6; margin-top: 30px; }
 
       .vision-list-v3 { list-style: none; padding: 0; margin-top: 40px; }
       .vision-list-v3 li { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; font-size: 1.15rem; color: #94a3b8; }
@@ -412,25 +409,32 @@ export const About = () => {
       .team-grid-v3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
       .team-card-v3 { overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center; }
       .team-portrait-wrapper-v3 { width: 100%; height: 420px; overflow: hidden; position: relative; border-bottom: 1px solid var(--about-border); }
-      .img-portrait-v3 { width: 100%; height: 100%; object-fit: cover; transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
+      .img-portrait-v3 { width: 100%; height: 100%; object-fit: cover; transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); filter: grayscale(0) !important; }
       .team-card-v3:hover .img-portrait-v3 { transform: scale(1.08); }
       .team-content-v3 { padding: 40px 30px; }
       .team-title-v3 { font-size: 0.85rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
       .team-content-v3 h3 { font-size: 1.6rem; font-weight: 900; margin-bottom: 10px; }
 
-      /* VALUES GRID */
-      .values-grid-v3 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
-      .value-item { padding: 30px 20px; text-align: center; transition: all 0.4s ease; }
+      /* VALUES GRID & CLIENTS GRID - SLIDER ENHANCEMENT */
+      .values-grid-v3, .clients-grid-v3 { 
+        display: grid; 
+        grid-template-columns: repeat(5, 1fr); 
+        gap: 20px; 
+      }
+      .value-item, .client-card-v3 { 
+        flex-shrink: 0; 
+        min-width: 280px; 
+        transition: all 0.4s ease; 
+      }
+      .value-item { padding: 30px 20px; text-align: center; }
       .value-item i { font-size: 2rem; margin-bottom: 15px; }
       .value-item h4 { font-size: 1.1rem; margin-bottom: 10px; font-weight: 800; }
       .value-item p { font-size: 0.85rem; color: #94a3b8; line-height: 1.5; }
       .value-item:hover { border-color: var(--about-accent); transform: translateY(-5px); }
 
-      /* CLIENTS GRID */
-      .clients-grid-v3 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
-      .client-card-v3 { padding: 45px 20px; text-align: center; transition: all 0.4s ease; border-radius: 35px; border: 1px solid rgba(255,255,255,0.1); }
+      .client-card-v3 { padding: 45px 20px; text-align: center; border-radius: 35px; border: 1px solid rgba(15, 32, 166, 0.1); }
       .client-icon-glow { font-size: 3rem; color: var(--about-accent); margin-bottom: 25px; text-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
-      .client-card-v3 h4 { font-size: 1.05rem; font-weight: 800; color: white; line-height: 1.4; }
+      .client-card-v3 h4 { font-size: 1.05rem; font-weight: 800; color: var(--about-primary); line-height: 1.4; }
       .client-card-v3:hover { transform: translateY(-10px); border-color: var(--about-accent); background: rgba(56, 189, 248, 0.1); }
 
       /* TEAM EXPANSION */

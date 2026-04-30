@@ -106,7 +106,7 @@ export const OraDent = () => {
       </section>
 
       <!-- GROUP INTEGRATION CTA -->
-      <section class="section oradent-cta">
+      <section class="section oradent-cta" style="background: linear-gradient(135deg, var(--od-primary) 0%, #0e1570 100%); border-radius: 50px; margin: 0 20px 80px;">
         <div class="container text-center">
             <h2 class="text-white mb-30" style="font-size: 3rem;">A Unified <span class="accent-text">Aesthetic Ecosystem</span></h2>
             <p class="text-muted mb-60" style="font-size: 1.2rem; max-width: 800px; margin-left: auto; margin-right: auto;">Ora-Dent serves as the specialized aesthetic cosmetics unit of the Dentose Chamo Group, fully integrated into our regional distribution network.</p>

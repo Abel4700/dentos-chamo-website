@@ -255,7 +255,7 @@ export const Home = () => {
       .hero-badge-v3 { display: inline-block; padding: 10px 22px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 50px; color: var(--home-accent); font-weight: 800; font-size: 0.75rem; letter-spacing: 2.5px; margin-bottom: 30px; text-transform: uppercase; }
       .hero-badge-v3.no-margin { margin-bottom: 20px; }
       
-      .section-title-visionary { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; color: white; }
+      .section-title-visionary { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; color: var(--primary); }
       .hero-lead { font-size: clamp(1.1rem, 2vw, 1.4rem); color: rgba(255,255,255,0.8); max-width: 750px; margin-bottom: 45px; line-height: 1.6; }
       .hero-actions-v3 { display: flex; gap: 20px; }
       .hero-nav-dots-v3 { position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); display: flex; gap: 15px; z-index: 20; }
@@ -354,7 +354,7 @@ export const Home = () => {
         .bento-grid-master { grid-template-columns: 1fr; grid-auto-rows: auto; }
         .bento-v3-large, .bento-v3-wide { grid-column: span 1; grid-row: span 1; }
         .bento-v3-item { min-height: 300px; }
-        .section-title-visionary { font-weight: 900; letter-spacing: -3px; line-height: 1; color: white; }
+        .section-title-visionary { font-weight: 900; letter-spacing: -3px; line-height: 1; color: var(--text-main); }
         .hero-lead { font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 800px; line-height: 1.6; margin-top: 30px; }
         .hero-actions-v3 { flex-direction: column; width: 100%; max-width: 320px; margin: 0 auto; }
         .btn-visionary { width: 100%; text-align: center; }

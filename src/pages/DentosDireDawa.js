@@ -121,10 +121,11 @@ export const DentosDireDawa = () => {
     </section>
 
     <!-- IMMERSIVE SERVICES SECTION (3D FEATURE CARDS) -->
-    <section class="section services-immersive dark-theme-page">
+    <section class="section services-immersive" style="background: linear-gradient(135deg, var(--dd-primary) 0%, #0e1570 100%); position: relative; overflow: hidden;">
+      <div class="footer-geometric-texture" style="position: absolute; top:0; left:0; width:100%; height:100%; background: url('https://www.transparenttextures.com/patterns/cubes.png'); opacity: 0.05;"></div>
       <div class="container">
         <div class="section-header mb-100">
-           <h2 class="text-white">Our Specialized <span class="primary-text">Trade Services</span></h2>
+           <h2 class="text-white" style="position: relative; z-index: 10;">Our Specialized <span class="primary-text">Trade Services</span></h2>
         </div>
 
         <div class="services-modern-grid-v3">
@@ -252,7 +253,7 @@ export const DentosDireDawa = () => {
     </section>
 
     <!-- CONTACT CTA -->
-    <section class="section dd-cta">
+    <section class="section dd-cta" style="background: linear-gradient(135deg, var(--dd-primary) 0%, #0e1570 100%); border-radius: 50px; margin: 0 20px 80px;">
       <div class="container text-center" style="display: flex; flex-direction: column; align-items: center;">
         <h2 class="text-white mb-30" style="font-size: 3rem; text-align: center;">Enable Your <span class="primary-text">Global Trade Corridor</span></h2>
         <p class="text-muted mb-60" style="font-size: 1.2rem; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;">Operational in the Dire Dawa Free Trade Zone. Ready to streamline your imports, exports, and fulfillment.</p>
@@ -288,7 +289,7 @@ export const DentosDireDawa = () => {
     
     .dd-page {
       background-color: var(--dd-main-bg);
-      color: white;
+      color: var(--text-main);
       overflow-x: hidden;
     }
     
