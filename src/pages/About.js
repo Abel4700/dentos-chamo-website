@@ -247,37 +247,37 @@ export const About = () => {
                <p class="text-muted-standard text-center">Doctor of Dental Medicine (D.D.M) & MBA. Provides strategic leadership and direction, driving the Group’s growth and expansion across medical and commercial sectors.</p>
             </div>
           </div>
-          <!-- Leader 2: Kidest Berhanu -->
+          <!-- Leader 2: Tsion Berhanu -->
           <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.1s;">
-            <div class="team-portrait-wrapper-v3">
-               <img src="/assets/kidest_berhanu.png" alt="Kidest Berhanu" class="img-portrait-v3">
-            </div>
-            <div class="team-content-v3">
-               <h3>Kidest Berhanu</h3>
-               <p class="accent-text team-title-v3">Managing Director</p>
-               <p class="text-muted-standard text-center">Agro-Engineer & Civil Engineer. Oversees operational execution and infrastructure, ensuring efficient project delivery and strong logistical performance.</p>
-            </div>
-          </div>
-          <!-- Leader 3: Merhawi Berhanu -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.2s;">
-            <div class="team-portrait-wrapper-v3">
-               <img src="/assets/merhawi_berhanu.png" alt="Merhawi Berhanu" class="img-portrait-v3">
-            </div>
-            <div class="team-content-v3">
-               <h3>Merhawi Berhanu</h3>
-               <p class="accent-text team-title-v3">Export Manager</p>
-               <p class="text-muted-standard text-center">Construction Management. Leads export operations, driving international trade growth and managing efficient logistics and supply chain processes.</p>
-            </div>
-          </div>
-          <!-- Leader 4: Tsion Berhanu -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.3s;">
             <div class="team-portrait-wrapper-v3">
                <img src="/assets/tsion_berhanu.JPG" alt="Tsion Berhanu" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
                <h3>Tsion Berhanu</h3>
-               <p class="accent-text team-title-v3">Office Manager</p>
-               <p class="text-muted-standard text-center">BSc in Mechanical Engineering & MBA. Coordinates corporate administration and internal operations, ensuring efficiency and structured organizational workflows.</p>
+               <p class="accent-text team-title-v3">Managing Director</p>
+               <p class="text-muted-standard text-center">BSc in Mechanical Engineering & MBA. Leads corporate administration and strategic operations, ensuring efficiency and structured organizational excellence.</p>
+            </div>
+          </div>
+          <!-- Leader 3: Elleni Zergaw -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.2s;">
+            <div class="team-portrait-wrapper-v3">
+               <img src="/assets/elleni_zergaw.JPG" alt="Elleni Zergaw" class="img-portrait-v3">
+            </div>
+            <div class="team-content-v3">
+               <h3>Elleni Zergaw</h3>
+               <p class="accent-text team-title-v3">Finance Manager</p>
+               <p class="text-muted-standard text-center">BA in Accounting & Finance | MBA Candidate. Leads financial operations, ensuring accurate reporting, regulatory compliance, and alignment with organizational goals.</p>
+            </div>
+          </div>
+          <!-- Leader 4: Merhawi Berhanu -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.3s;">
+            <div class="team-portrait-wrapper-v3">
+               <img src="/assets/merhawi_berhanu.JPG" alt="Merhawi Berhanu" class="img-portrait-v3">
+            </div>
+            <div class="team-content-v3">
+               <h3>Merhawi Berhanu</h3>
+               <p class="accent-text team-title-v3">Export Manager</p>
+               <p class="text-muted-standard text-center">Construction Management. Leads export operations, driving international trade growth and managing efficient logistics and supply chain processes.</p>
             </div>
           </div>
           <!-- Leader 5: Yohannes Nega -->
@@ -291,19 +291,8 @@ export const About = () => {
                <p class="text-muted-standard text-center">LL.B | Licensed Federal Court Attorney. Provides legal counsel and regulatory oversight, with extensive experience in corporate law, compliance, and capital market advisory.</p>
             </div>
           </div>
-          <!-- Leader 6: Elleni Zergaw -->
+          <!-- Leader 6: Siham Ahmed -->
           <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.5s;">
-            <div class="team-portrait-wrapper-v3">
-               <img src="/assets/elleni_zergaw.JPG" alt="Elleni Zergaw" class="img-portrait-v3">
-            </div>
-            <div class="team-content-v3">
-               <h3>Elleni Zergaw</h3>
-               <p class="accent-text team-title-v3">Finance Manager</p>
-               <p class="text-muted-standard text-center">BA in Accounting & Finance | MBA Candidate. Leads financial operations, ensuring accurate reporting, regulatory compliance, and alignment with organizational goals.</p>
-            </div>
-          </div>
-          <!-- Leader 7: Siham Ahmed -->
-          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.6s;">
             <div class="team-portrait-wrapper-v3">
                <img src="/assets/siham_ahmed.JPG" alt="Siham Ahmed" class="img-portrait-v3">
             </div>
@@ -311,6 +300,17 @@ export const About = () => {
                <h3>Siham Ahmed</h3>
                <p class="accent-text team-title-v3">Sales & Promotion Specialist | Social Media Manager</p>
                <p class="text-muted-standard text-center">BSc in Clinical Pharmacy. Drives product promotion and digital engagement, combining clinical expertise with strategic marketing to expand market reach.</p>
+            </div>
+          </div>
+          <!-- Leader 7: Abigiya Abebaw -->
+          <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.6s;">
+            <div class="team-portrait-wrapper-v3">
+               <img src="/assets/abigiya_abebaw.jpg" alt="Abigiya'a Abebaw" class="img-portrait-v3">
+            </div>
+            <div class="team-content-v3">
+               <h3>Abigiya'a Abebaw</h3>
+               <p class="accent-text team-title-v3">Marketing Manager</p>
+               <p class="text-muted-standard text-center">Background in Anesthesia & Marketing. Leads marketing strategy and brand development, combining analytical precision with human-centered communication to drive engagement and meaningful customer connections.</p>
             </div>
           </div>
         </div>

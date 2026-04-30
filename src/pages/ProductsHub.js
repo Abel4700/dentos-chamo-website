@@ -75,16 +75,6 @@ export const ProductsHub = (queryParams = {}) => {
       pdf: '/catalogues/Sincere-instruments_Catalogue.pdf'
     },
     {
-      name: 'ERGO KIT',
-      slug: 'ergo-kit',
-      desc: 'Ergonomic dental toolkits and clinical organization systems.',
-      count: products.filter(p => p.manufacturer === 'ergo-kit').length,
-      icon: 'fa-toolbox',
-      color: '#16a085',
-      bg: 'linear-gradient(135deg, rgba(22,160,133,0.05) 0%, rgba(22,160,133,0.1) 100%)',
-      pdf: '#'
-    },
-    {
       name: 'Truedent',
       slug: 'truedent',
       desc: 'Essential dental consumables and export-quality supplies.',
@@ -365,7 +355,6 @@ export const ProductsHub = (queryParams = {}) => {
              <button class="mfr-pill" data-value="ramo">Ramo</button>
              <button class="mfr-pill" data-value="topzir">TopZir</button>
              <button class="mfr-pill" data-value="sincere">Sincere</button>
-             <button class="mfr-pill" data-value="ergo-kit">ERGO KIT</button>
              <button class="mfr-pill" data-value="truedent">Truedent</button>
              <button class="mfr-pill" data-value="pyrax">Pyrax</button>
            </div>
