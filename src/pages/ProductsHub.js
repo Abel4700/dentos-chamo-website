@@ -72,17 +72,7 @@ export const ProductsHub = (queryParams = {}) => {
       logo: '/assets/sincere-people-instruments.webp',
       color: '#c0392b',
       bg: 'linear-gradient(135deg, rgba(192,57,43,0.05) 0%, rgba(192,57,43,0.1) 100%)',
-      pdf: '#'
-    },
-    {
-      name: 'Accu-Med',
-      slug: 'accu-med',
-      desc: 'Expert surgical solutions and high-precision Maxillofacial instruments.',
-      count: products.filter(p => p.manufacturer === 'accu-med').length,
-      logo: '/assets/accu-med_logo.png',
-      color: '#0056b3',
-      bg: 'linear-gradient(135deg, rgba(0,86,179,0.05) 0%, rgba(0,86,179,0.1) 100%)',
-      pdf: '/catalogues/Accu_Med_Maxilo_Cataloguel.pdf'
+      pdf: '/catalogues/Sincere-instruments_Catalogue.pdf'
     },
     {
       name: 'ERGO KIT',
@@ -103,16 +93,6 @@ export const ProductsHub = (queryParams = {}) => {
       color: '#2980b9',
       bg: 'linear-gradient(135deg, rgba(41,128,185,0.05) 0%, rgba(41,128,185,0.1) 100%)',
       pdf: '/catalogues/True-Dent_Catalogue.pdf'
-    },
-    {
-      name: 'Oradox',
-      slug: 'oradox',
-      desc: 'Sophisticated oral care solutions and advanced clinical hygiene.',
-      count: products.filter(p => p.manufacturer === 'oradox').length,
-      icon: 'fa-tooth',
-      color: '#0d9488',
-      bg: 'linear-gradient(135deg, rgba(13,148,136,0.05) 0%, rgba(13,148,136,0.1) 100%)',
-      pdf: '/catalogues/Oradox_Catalogue.pdf'
     },
     {
       name: 'Pyrax',
@@ -385,10 +365,8 @@ export const ProductsHub = (queryParams = {}) => {
              <button class="mfr-pill" data-value="ramo">Ramo</button>
              <button class="mfr-pill" data-value="topzir">TopZir</button>
              <button class="mfr-pill" data-value="sincere">Sincere</button>
-             <button class="mfr-pill" data-value="accu-med">Accu-Med</button>
              <button class="mfr-pill" data-value="ergo-kit">ERGO KIT</button>
              <button class="mfr-pill" data-value="truedent">Truedent</button>
-             <button class="mfr-pill" data-value="oradox">Oradox</button>
              <button class="mfr-pill" data-value="pyrax">Pyrax</button>
            </div>
            
