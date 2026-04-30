@@ -1,0 +1,7 @@
+/catalogues/*
+  Content-Type: application/pdf
+  Content-Disposition: attachment
+  Cache-Control: public, max-age=31536000
+
+/assets/*
+  Cache-Control: public, max-age=31536000

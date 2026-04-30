@@ -107,7 +107,7 @@ export const ProductDetails = () => {
                  <span class="portal-subtitle">Electronic Instructions for Use</span>
                </div>
              </div>
-             <a href="${product.catalogue_pdf || `/catalogues/${product.company}_Catalogue.pdf`}" target="_blank" class="download-trigger">
+             <a href="${product.catalogue_pdf || `/catalogues/${product.company}_Catalogue.pdf`}" target="_blank" download class="download-trigger">
                <i class="fas fa-download"></i>
              </a>
           </div>

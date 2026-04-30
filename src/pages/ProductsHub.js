@@ -122,7 +122,7 @@ export const ProductsHub = (queryParams = {}) => {
           <div class="bento-footer">
             <span class="product-count"><strong>${mfr.count}</strong> PRODUCTS</span>
             ${mfr.pdf && mfr.pdf !== '#' ? `
-              <a href="${mfr.pdf}" target="_blank" class="pdf-action-btn" onclick="event.stopPropagation()">
+              <a href="${mfr.pdf}" target="_blank" download class="pdf-action-btn" onclick="event.stopPropagation()">
                 <i class="fas fa-file-pdf"></i> PDF
               </a>
             ` : `
