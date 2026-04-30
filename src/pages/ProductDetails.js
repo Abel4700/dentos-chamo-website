@@ -87,8 +87,13 @@ export const ProductDetails = () => {
 
   return `
     <div class="detail-page-wrapper">
+      <div class="container">
+        <a href="#/products" class="back-to-catalog fade-in">
+          <i class="fas fa-arrow-left"></i> Back to Products
+        </a>
+      </div>
       
-      <div class="container main-content-grid page-offset">
+      <div class="container main-content-grid">
         
         <!-- LEFT: VISUAL STAGE -->
         <aside class="side-visuals fade-in">
@@ -171,6 +176,24 @@ export const ProductDetails = () => {
     <style>
       .detail-page-wrapper { background: var(--bg-light); min-height: 100vh; padding: 150px 0 100px; }
       
+      .back-to-catalog {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: 700;
+        margin-bottom: 30px;
+        font-size: 0.9rem;
+        transition: all 0.3s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .back-to-catalog:hover {
+        color: ${theme.primary};
+        transform: translateX(-5px);
+      }
+
       .main-content-grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -194,13 +217,23 @@ export const ProductDetails = () => {
       .iso-badge.single { background: var(--primary); }
       .iso-badge.fragile { background: #f59e0b; }
 
-      .download-portal { background: white; border-radius: 20px; padding: 25px; display: flex; justify-content: space-between; align-items: center; margin-top: 20px; border: 1px solid var(--glass-border); }
+      .download-portal { 
+        background: white; 
+        border-radius: 20px; 
+        padding: 25px; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        margin-top: 20px; 
+        border: 2px solid ${theme.primary}30; /* Brighter, themed border */
+        box-shadow: 0 10px 20px -10px ${theme.primary}20;
+      }
       .portal-info { display: flex; align-items: center; gap: 15px; }
-      .pdf-icon { font-size: 1.8rem; color: var(--text-muted); opacity: 0.5; }
-      .portal-title { display: block; font-weight: 800; color: var(--text-main); font-size: 0.95rem; }
+      .pdf-icon { font-size: 1.8rem; color: ${theme.primary}; opacity: 1; } /* Bright icon */
+      .portal-title { display: block; font-weight: 800; color: ${theme.primary}; font-size: 0.95rem; } /* Brighter text */
       .portal-subtitle { display: block; font-size: 0.8rem; color: var(--text-muted); font-weight: 600; }
-      .download-trigger { color: var(--text-muted); font-size: 1.2rem; transition: color 0.3s; }
-      .download-trigger:hover { color: ${theme.primary}; }
+      .download-trigger { color: ${theme.primary}; font-size: 1.2rem; transition: transform 0.3s; } /* Active color */
+      .download-trigger:hover { transform: scale(1.2); }
 
       /* RIGHT COLUMN */
       .info-hub { display: flex; flex-direction: column; gap: 20px; }
