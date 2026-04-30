@@ -239,7 +239,7 @@ export const About = () => {
           <!-- Leader 1: Dr. Aklilu Berhanu -->
           <div class="team-card-v3 glass-card-v3 hover-lift fade-in">
             <div class="team-portrait-wrapper-v3">
-               <img src="/assets/dr_aklilu_berhanu.jpg" alt="Dr. Aklilu Berhanu" class="img-portrait-v3">
+               <img src="/assets/dr._aklilu_berhanu.jpeg" alt="Dr. Aklilu Berhanu" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
                <h3>Dr. Aklilu Berhanu</h3>
