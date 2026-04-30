@@ -45,12 +45,7 @@ export const Footer = () => `
     <div class="footer-bottom-v3">
       <div class="container">
         <div class="bottom-flex-v3">
-          <p>&copy; 2026 DENTOSE CHAMO. STRATEGIC MEDICAL HUB.</p>
-          <div class="footer-legal-v3">
-             <span>ISO 13485 CERTIFIED</span>
-             <span class="dot-separator"></span>
-             <span>FTZ COMPLIANT</span>
-          </div>
+          <p>&copy; 2026 DENTOSE CHAMO. STRATEGIC MEDICAL HUB. | Developed by <a href="https://cleandataservices.com" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 800;">Clean Data Services PLC</a></p>
         </div>
       </div>
     </div>
@@ -133,7 +128,8 @@ export const Footer = () => `
 
       .bottom-flex-v3 {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        text-align: center;
         align-items: center;
         color: #64748b;
         font-size: 0.8rem;
