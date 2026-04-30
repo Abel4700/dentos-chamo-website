@@ -1,4 +1,86 @@
-export const Contact = () => `
+export const Contact = () => {
+  setTimeout(() => {
+    const form = document.getElementById('contact-form');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const btn = form.querySelector('button');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+        btn.disabled = true;
+
+        const formData = {
+          firstName: form.querySelector('input[placeholder="John"]').value,
+          lastName: form.querySelector('input[placeholder="Doe"]').value,
+          email: form.querySelector('input[type="email"]').value,
+          department: form.querySelector('select').value,
+          message: form.querySelector('textarea').value
+        };
+
+        try {
+          const body = new FormData();
+          body.append('First Name', formData.firstName);
+          body.append('Last Name', formData.lastName);
+          body.append('Email', formData.email);
+          body.append('Department', formData.department);
+          body.append('Message', formData.message);
+          body.append('_subject', `New Inquiry from ${formData.firstName} ${formData.lastName}`);
+
+          // Using the legacy endpoint which is often more compatible with direct email targets
+          const response = await fetch('https://formspree.io/info@dentosechamo.com', {
+            method: 'POST',
+            body: body,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          const result = await response.json();
+
+          if (response.ok) {
+            // Success State UI
+            const formContainer = form.parentElement;
+            formContainer.innerHTML = `
+              <div class="success-message-v3 fade-in">
+                <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                <h2>Message Dispatched</h2>
+                <p>Thank you, ${formData.firstName}. Our ${formData.department} team has received your inquiry and will respond to ${formData.email} shortly.</p>
+                <button onclick="location.reload()" class="btn-visionary btn-outline-dark mt-30">Send Another Message</button>
+              </div>
+            `;
+          } else {
+            console.error('Formspree Error:', result);
+            throw new Error(result.error || 'Server response failed');
+          }
+        } catch (error) {
+          console.error('Submission Catch:', error);
+          btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Submission Failed';
+          btn.style.background = '#ef4444';
+          
+          // Fallback message for the user
+          const errorMsg = document.createElement('p');
+          errorMsg.style.color = '#ef4444';
+          errorMsg.style.fontSize = '0.8rem';
+          errorMsg.style.marginTop = '10px';
+          errorMsg.innerText = 'Service temporarily unavailable. Please try again or contact us directly via email.';
+          if (!form.querySelector('.error-hint')) {
+            errorMsg.className = 'error-hint';
+            form.appendChild(errorMsg);
+          }
+
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+            btn.style.background = '';
+            if (form.querySelector('.error-hint')) form.querySelector('.error-hint').remove();
+          }, 4000);
+        }
+      });
+    }
+  }, 100);
+
+  return `
   <div class="app-section contact-page">
     
     <!-- MODERNIZED HERO -->
@@ -42,7 +124,7 @@ export const Contact = () => `
                 <div class="c-icon"><i class="fas fa-envelope"></i></div>
                 <div class="c-text">
                   <strong>Digital Comm</strong>
-                  <a href="mailto:info@dentosechamo.com">dinfo@dentosechamo.com</a>
+                  <a href="mailto:info@dentosechamo.com">info@dentosechamo.com</a>
                   <a href="mailto:sales@dentosechamo.com">sales@dentosechamo.com</a>
                 </div>
               </div>
@@ -173,6 +255,27 @@ export const Contact = () => `
     .map-bento { padding: 0; min-height: 450px; overflow: hidden; position: relative; }
     .map-bento iframe { width: 100%; height: 100%; position: absolute; top:0; left:0; filter: grayscale(20%) contrast(1.1); transition: filter 0.5s ease; }
     .map-bento:hover iframe { filter: grayscale(0%) contrast(1); }
+    
+    /* SUCCESS STATE */
+    .success-message-v3 {
+      text-align: center;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    .success-icon {
+      font-size: 5rem;
+      color: #10b981;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 10px 20px rgba(16, 185, 129, 0.2));
+    }
+    .success-message-v3 h2 { font-size: 2.5rem; margin-bottom: 15px; letter-spacing: -1.5px; }
+    .success-message-v3 p { color: #64748b; font-size: 1.1rem; max-width: 400px; line-height: 1.6; }
+    .btn-outline-dark { background: transparent; border: 2px solid #0f172a; color: #0f172a; }
+    .btn-outline-dark:hover { background: #0f172a; color: white; }
 
     /* RESPONSIVE */
     @media (max-width: 1024px) {
@@ -194,4 +297,5 @@ export const Contact = () => `
     }
   </style>
 `;
+};
 

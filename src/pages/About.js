@@ -272,7 +272,7 @@ export const About = () => {
           <!-- Leader 4: Tsion Berhanu -->
           <div class="team-card-v3 glass-card-v3 hover-lift fade-in" style="animation-delay: 0.3s;">
             <div class="team-portrait-wrapper-v3">
-               <img src="/assets/tsion_berhanu.png" alt="Tsion Berhanu" class="img-portrait-v3">
+               <img src="/assets/tsion_berhanu.JPG" alt="Tsion Berhanu" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
                <h3>Tsion Berhanu</h3>
