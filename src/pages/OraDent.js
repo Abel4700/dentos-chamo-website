@@ -1,6 +1,6 @@
 export const OraDent = () => {
   return `
-    <div class="app-section oradent-root dark-theme-page">
+    <div class="app-section oradent-root light-theme-page">
       
       <!-- BACKGROUND ANIMATED ORBS -->
       <div class="bg-decoration">
@@ -24,7 +24,6 @@ export const OraDent = () => {
             </div>
           </div>
         </div>
-        <div class="oradent-hero-overlay"></div>
       </section>
 
       <!-- STRATEGIC FOCUS: BENTO MATRIX 2.0 -->
@@ -81,6 +80,7 @@ export const OraDent = () => {
       <section class="section" style="background: rgba(39, 62, 190, 0.03);">
         <div class="container">
           <h2 class="section-title-visionary">Core <span class="accent-text">Portfolio Hive</span></h2>
+          <div class="highlights-grid-v3">
             <div class="highlight-card glass-card-v3">
                <div class="highlight-icon"><i class="fas fa-tooth"></i></div>
                <h3>Advanced Toothpastes</h3>
@@ -119,14 +119,14 @@ export const OraDent = () => {
 
       <style>
         :root {
-          --od-primary: #273EBE;
-          --od-accent: #00FFEE;
-          --od-bg-dark: #0C0C0C;
-          --od-border: #242424;
-          --od-text-muted: #94a3b8;
+          --od-primary: #1520A6;
+          --od-accent: #40E0D0;
+          --od-bg-light: #ffffff;
+          --od-border: #e2e8f0;
+          --od-text-muted: #64748b;
         }
 
-        .dark-theme-page { background-color: var(--od-bg-dark); color: white; overflow-x: clip; }
+        .light-theme-page { background-color: var(--od-bg-light); color: var(--text-main); overflow-x: clip; }
         .accent-text { color: var(--od-accent); }
         .primary-text { color: var(--od-primary); }
 
@@ -141,19 +141,23 @@ export const OraDent = () => {
 
         /* GLASS CARD V3 (PREMIUM DARK) */
         .glass-card-v3 {
-          background: rgba(29, 29, 29, 0.7); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
-          border: 1px solid var(--od-border); border-radius: 30px; box-shadow: 0 25px 80px rgba(0,0,0,0.5);
+          background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
+          border: 1px solid var(--od-border); border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.05);
         }
 
         /* ORADENT HERO (CINEMATIC) */
-        .oradent-hero {
-          padding: 180px 20px 100px; position: relative; display: flex; flex-direction: column; justify-content: center; overflow: hidden;
-          background: linear-gradient(to right, rgba(12, 12, 12, 0.9), rgba(12, 12, 12, 0.4)), url('https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?auto=format&fit=crop&q=80&w=1920');
-          background-size: cover; background-position: center; border-bottom: 1px solid var(--od-border);
+        .oradent-hero { 
+          min-height: 85vh; 
+          display: flex; 
+          align-items: center; 
+          position: relative; 
+          background: linear-gradient(rgba(15, 32, 166, 0.9), rgba(15, 32, 166, 0.6)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1920');
+          background-size: cover; background-position: center; 
         }
+        .oradent-hero h1 { font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 900; line-height: 1; margin: 30px 0; color: white; }
+        .oradent-hero .hero-lead { color: rgba(255,255,255,0.85); font-size: 1.3rem; max-width: 700px; }
+        
         .oradent-hero-content { max-width: 900px; text-align: center; color: white; z-index: 10; padding: 0 20px; }
-        .oradent-hero-content h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; }
-        .hero-lead { font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--od-text-muted); max-width: 750px; margin: 0 auto 40px; line-height: 1.6; }
         .hero-badge-v3 { display: inline-block; padding: 8px 20px; background: rgba(0, 255, 238, 0.1); border: 1px solid rgba(0, 255, 238, 0.3); border-radius: 50px; color: var(--od-accent); font-weight: 800; font-size: 0.75rem; letter-spacing: 2.5px; margin-bottom: 30px; text-transform: uppercase; }
         .hero-actions-v3 { display: flex; gap: 20px; justify-content: center; }
         
@@ -179,12 +183,12 @@ export const OraDent = () => {
         .bento-v3-wide { grid-column: span 2; }
         
         .dark-bento { background: linear-gradient(135deg, #1A2A80 0%, var(--od-primary) 100%); color: white; border: none; }
-        .bento-v3-content { position: relative; z-index: 5; padding: 40px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%); width: 100%; box-sizing: border-box; }
+        .bento-v3-content { position: relative; z-index: 5; padding: 40px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(to top, rgba(255,255,255,0.7) 0%, transparent 100%); width: 100%; box-sizing: border-box; }
         .bento-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--od-accent); font-weight: 800; margin-bottom: 12px; }
         .bento-icon-glow { font-size: 3rem; color: var(--od-accent); margin-bottom: auto; transition: all 0.4s ease; text-shadow: 0 0 30px rgba(0, 255, 238, 0.5); display: flex; align-items: center; justify-content: flex-start; }
         .bento-v3-item h3 { font-size: 1.6rem; margin-bottom: 12px; font-weight: 800; }
         .bento-v3-large h3 { font-size: 2.8rem; }
-        .bento-v3-item p { color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 1rem; }
+        .bento-v3-item p { color: #475569; line-height: 1.6; font-size: 1rem; }
         .bento-bg { position: absolute; top:0; left:0; width:100%; height:100%; background-size: cover; background-position: center; opacity: 0.15; z-index: 1; transition: transform 0.8s ease; }
         .bento-v3-item:hover { transform: translateY(-12px); box-shadow: 0 40px 80px rgba(0,0,0,0.4); }
         .bento-v3-item:hover .bento-bg { transform: scale(1.08); opacity: 0.3; }
@@ -209,10 +213,28 @@ export const OraDent = () => {
            .oradent-bento-grid { grid-template-columns: repeat(2, 1fr); }
            .hero-actions-v3 { flex-direction: column; align-items: center; gap: 15px; }
         }
-        @media (max-width: 768px), (max-height: 600px) {
+        @media (max-width: 768px) {
            .oradent-hero { padding: 150px 20px 80px !important; align-items: flex-start !important; justify-content: flex-start !important; height: auto !important; min-height: auto !important; }
-           .oradent-bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
-           .bento-v3-item { min-height: 280px; }
+           
+           /* Strategic Focus - Vertical Alignment */
+           .oradent-bento-grid { 
+             display: flex; 
+             flex-direction: column;
+             gap: 20px; 
+           }
+           
+           /* Portfolio Hive - Mobile Grid */
+           .highlights-grid-v3 { 
+             display: grid;
+             grid-template-columns: 1fr;
+             gap: 20px;
+           }
+           
+           .bento-v3-item, .highlight-card { 
+             min-height: 280px;
+             width: 100%;
+             background: white;
+           }
            .bento-v3-large, .bento-v3-wide { grid-column: span 1; grid-row: span 1; }
            .section { padding: 70px 0; }
            .btn-visionary { padding: 12px 25px; font-size: 0.9rem; width: 100%; text-align: center; }

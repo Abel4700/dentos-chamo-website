@@ -1,6 +1,6 @@
 export const About = () => {
   return `
-  <div class="app-section about-root dark-theme-page">
+  <div class="app-section about-root light-theme-page">
     
     <!-- BACKGROUND ANIMATED DECORATION -->
     <div class="global-background-orbs">
@@ -12,8 +12,8 @@ export const About = () => {
     <section class="hero-editorial-v3">
       <div class="container hero-editorial-grid-v3">
         <div class="hero-editorial-content-v3 fade-in-up">
-          <h1 class="section-title-visionary" style="font-size: clamp(3.2rem, 8vw, 6.5rem);">A Legacy of <br/><span class="accent-text">Trust & Vision</span></h1>
-          <p class="hero-lead">
+          <h1 class="section-title-visionary" style="font-size: clamp(3.2rem, 8vw, 6.5rem); color: white;">A Legacy of <br/><span class="accent-text">Trust & Vision</span></h1>
+          <p class="hero-lead" style="color: rgba(255,255,255,0.9);">
             Bridging the gap between global healthcare innovation and sustainable East African agriculture for nearly a decade.
           </p>
           <div class="hero-metrics-v3">
@@ -150,7 +150,7 @@ export const About = () => {
     </section>
 
     <!-- 🤝 KEY CLIENTS SECTION -->
-    <section class="section clients-section-v3 mt-100">
+    <section class="section clients-section-v3 mt-100" style="background: linear-gradient(rgba(15, 32, 166, 0.95), rgba(5, 11, 20, 0.8)), url('https://www.transparenttextures.com/patterns/cubes.png');">
       <div class="container">
         <div class="section-header-centered mb-80">
            <div class="hero-badge-v3">OUR NETWORK</div>
@@ -321,14 +321,14 @@ export const About = () => {
 
   <style>
       :root {
-        --about-primary: #002F7F;
-        --about-navy: #001F7F;
-        --about-accent: #38bdf8;
-        --about-bg: #050b14;
-        --about-border: #242424;
+        --about-primary: #1520A6;
+        --about-navy: #0e1570;
+        --about-accent: #40E0D0;
+        --about-bg: #ffffff;
+        --about-border: #e2e8f0;
       }
 
-      .dark-theme-page { background: radial-gradient(circle at center, rgba(14, 38, 75, 0.4) 0%, var(--about-bg) 70%), url('https://www.transparenttextures.com/patterns/cubes.png'); color: white; width: 100%; position: relative; overflow-x: clip; }
+      .light-theme-page { background: radial-gradient(circle at center, rgba(64, 224, 208, 0.05) 0%, var(--about-bg) 70%), url('https://www.transparenttextures.com/patterns/cubes.png'); color: var(--text-main); width: 100%; position: relative; overflow-x: clip; }
       .accent-text { color: var(--about-accent); }
       
       /* GLOBAL BACKGROUND */
@@ -339,19 +339,23 @@ export const About = () => {
       @keyframes orbMove { from { transform: translate(0,0); } to { transform: translate(200px, 150px); } }
 
       /* HERO EDITORIAL V3 */
-      .hero-editorial-v3 { padding: 180px 20px 100px; position: relative; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; 
-        background: linear-gradient(to right, rgba(12,12,12,0.95), rgba(12,12,12,0.4)), url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=1920');
-        background-size: cover; background-position: center; border-bottom: 1px solid var(--about-border);
+      .hero-editorial-v3 { 
+        padding: 220px 0 120px; 
+        position: relative; 
+        background: linear-gradient(to right, rgba(15, 32, 166, 0.95), rgba(15, 32, 166, 0.4)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920');
+        background-size: cover; 
+        background-position: center;
+        border-bottom: 1px solid #e2e8f0;
       }
+      .hero-editorial-overlay { position: absolute; bottom:0; left:0; width:100%; height:150px; background: linear-gradient(to top, rgba(15, 32, 166, 0.1), transparent); }
       .hero-editorial-content-v3 { max-width: 1000px; z-index: 10; }
-      .hero-lead { font-size: clamp(1.2rem, 2.5vw, 1.6rem); color: rgba(255,255,255,0.7); max-width: 850px; margin-top: 30px; line-height: 1.7; }
       .hero-metrics-v3 { display: flex; align-items: center; gap: 60px; margin-top: 70px; }
       .metric-item-v3 { display: flex; flex-direction: column; }
-      .metric-number { font-size: 4.2rem; font-weight: 900; line-height: 1; }
-      .metric-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; font-weight: 700; margin-top: 10px; }
+      .metric-number { font-size: 4.2rem; font-weight: 900; line-height: 1; color: white; }
+      .metric-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.7); font-weight: 700; margin-top: 10px; }
       .metric-divider { width: 1px; height: 60px; background: rgba(255,255,255,0.1); }
       
-      .section-title-visionary { font-size: clamp(2.5rem, 5.5vw, 4.2rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; }
+      .section-title-visionary { font-size: clamp(2.5rem, 5.5vw, 4.2rem); font-weight: 900; letter-spacing: -3px; line-height: 1; }
       .mt-120 { margin-top: 120px; }
       .mb-80 { margin-bottom: 80px; }
       .mb-100 { margin-bottom: 100px; }
@@ -363,10 +367,13 @@ export const About = () => {
       .founder-glow { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%); top: -50px; right: -50px; z-index: 1; }
       .floating-quote-v3 { position: absolute; bottom: -20px; left: -120px; z-index: 10; width: 360px; padding: 40px; }
       .floating-quote-v3 i { font-size: 2.5rem; margin-bottom: 20px; }
-      .floating-quote-v3 p { font-style: italic; font-size: 1.15rem; line-height: 1.7; margin-bottom: 25px; color: rgba(255,255,255,0.8); }
+      .floating-quote-v3 p { font-style: italic; font-size: 1.15rem; line-height: 1.7; margin-bottom: 25px; color: #475569; }
       .quote-signature { display: flex; flex-direction: column; }
       .sig-name { font-weight: 800; font-size: 1.15rem; }
       .sig-title { font-size: 0.85rem; color: #94a3b8; letter-spacing: 1px; margin-top: 5px; }
+
+      .section-title-visionary { font-weight: 900; letter-spacing: -3px; line-height: 1; color: white; }
+      .hero-lead { font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 800px; line-height: 1.6; margin-top: 30px; }
 
       .vision-list-v3 { list-style: none; padding: 0; margin-top: 40px; }
       .vision-list-v3 li { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; font-size: 1.15rem; color: #94a3b8; }
@@ -374,14 +381,14 @@ export const About = () => {
 
       /* MISSION MATRIX V3 */
       .mission-bento-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
-      .glass-card-v3 { background: rgba(29, 29, 29, 0.7); backdrop-filter: blur(30px); border: 1px solid var(--about-border); border-radius: 40px; }
+      .glass-card-v3 { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(30px); border: 1px solid var(--about-border); border-radius: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
       .mission-v3-item { position: relative; overflow: hidden; display: flex; flex-direction: column; height: 480px; }
       .mission-v3-content { position: relative; z-index: 10; padding: 50px; height: 100%; display: flex; flex-direction: column; box-sizing: border-box; }
       .mission-tag { font-size: 0.8rem; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px; }
       .mission-v3-item h3 { font-size: 2.5rem; font-weight: 900; margin-bottom: 40px; letter-spacing: -1px; }
       .mission-block-v3 { margin-bottom: 30px; }
       .mission-block-v3 h5 { font-size: 0.75rem; letter-spacing: 2px; font-weight: 800; margin-bottom: 8px; }
-      .mission-block-v3 p { color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 1.05rem; margin: 0; }
+      .mission-block-v3 p { color: #64748b; line-height: 1.6; font-size: 1.05rem; margin: 0; }
       .mission-icon-v3 { font-size: 3rem; color: var(--about-accent); position: absolute; top: 50px; right: 50px; text-shadow: 0 0 20px rgba(56, 189, 248, 0.4); opacity: 0.6; }
       
       .group-medical { border-color: var(--about-primary); }
@@ -405,8 +412,8 @@ export const About = () => {
       .team-grid-v3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
       .team-card-v3 { overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center; }
       .team-portrait-wrapper-v3 { width: 100%; height: 420px; overflow: hidden; position: relative; border-bottom: 1px solid var(--about-border); }
-      .img-portrait-v3 { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
-      .team-card-v3:hover .img-portrait-v3 { filter: grayscale(0); transform: scale(1.08); }
+      .img-portrait-v3 { width: 100%; height: 100%; object-fit: cover; transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
+      .team-card-v3:hover .img-portrait-v3 { transform: scale(1.08); }
       .team-content-v3 { padding: 40px 30px; }
       .team-title-v3 { font-size: 0.85rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 15px; }
       .team-content-v3 h3 { font-size: 1.6rem; font-weight: 900; margin-bottom: 10px; }
@@ -421,10 +428,10 @@ export const About = () => {
 
       /* CLIENTS GRID */
       .clients-grid-v3 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
-      .client-card-v3 { padding: 45px 20px; text-align: center; transition: all 0.4s ease; border-radius: 35px; }
+      .client-card-v3 { padding: 45px 20px; text-align: center; transition: all 0.4s ease; border-radius: 35px; border: 1px solid rgba(255,255,255,0.1); }
       .client-icon-glow { font-size: 3rem; color: var(--about-accent); margin-bottom: 25px; text-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
-      .client-card-v3 h4 { font-size: 1.05rem; font-weight: 800; color: rgba(255,255,255,0.9); line-height: 1.4; }
-      .client-card-v3:hover { transform: translateY(-10px); border-color: var(--about-accent); background: rgba(56, 189, 248, 0.05); }
+      .client-card-v3 h4 { font-size: 1.05rem; font-weight: 800; color: white; line-height: 1.4; }
+      .client-card-v3:hover { transform: translateY(-10px); border-color: var(--about-accent); background: rgba(56, 189, 248, 0.1); }
 
       /* TEAM EXPANSION */
       .dept-roster-v3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
@@ -472,20 +479,21 @@ export const About = () => {
         .timeline-v3-dot-container { left: -37px; }
         .timeline-v3-content { padding: 30px; }
         .btn-visionary { width: 100%; justify-content: center; }
-        /* Mobile Horizontal Carousel for Grids */
+        /* Mobile Horizontal Slider for Values and Network */
         .values-grid-v3, .clients-grid-v3 {
-           display: flex;
-           overflow-x: auto;
+           display: flex !important;
+           overflow-x: auto !important;
            scroll-snap-type: x mandatory;
-           padding-bottom: 20px;
-           gap: 15px;
+           padding-bottom: 25px;
+           gap: 20px;
            scrollbar-width: none;
+           -ms-overflow-style: none;
         }
         .values-grid-v3::-webkit-scrollbar, .clients-grid-v3::-webkit-scrollbar { display: none; }
         .value-item, .client-card-v3 {
-           min-width: 260px;
-           scroll-snap-align: center;
+           min-width: 280px;
            flex: 0 0 auto;
+           scroll-snap-align: center;
         }
       }
     </style>

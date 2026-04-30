@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Corporate Brand Palette (New Schema) */
-  --primary: #1b1ec5;    /* Royal Blue */
-  --secondary: #00bcc5;  /* Cyan/Turquoise */
+  /* Corporate Brand Palette (Client Request) */
+  --primary: #1520A6;    /* Blue Azure */
+  --secondary: #40E0D0;  /* Turquoise */
   --white: #ffffff;
   --black: #0f172a;      /* Slate Black */
   
   /* Derived Colors */
-  --primary-light: #3949d2; /* Medium Blue */
-  --primary-dark: #1d0fa4;  /* Deep Blue */
+  --primary-light: #3b44cf; /* Lighter Azure */
+  --primary-dark: #0e1570;  /* Deeper Azure */
   --accent: var(--secondary);
-  --accent-light: #3fddcf;  /* Light Cyan */
+  --accent-light: #7ff2e7;  /* Light Turquoise */
   --text-main: #0f172a;
   --text-muted: #64748b;
   --bg-light: #f9f9f9;
@@ -98,6 +98,13 @@ button {
 }
 
 /* Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .container {
   max-width: var(--container-width);
   margin: 0 auto;

@@ -1,5 +1,5 @@
 export const Header = () => `
-  <header class="glass">
+  <header id="main-header" class="glass">
     <div class="container nav-container">
       <a href="#/" class="logo">
         <img src="/images/dentosechamo-logo.png" alt="Dentos Chamo Group Logo" class="brand-logo">
@@ -240,7 +240,8 @@ export const Header = () => `
         const navLinks = document.querySelector('.nav-links');
         navLinks.classList.toggle('active');
         menuBtn.classList.toggle('active');
-        return; // Exit
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        return; 
       }
 
       // --- DROPDOWN TOGGLE (HEADER CLICK) ---
@@ -273,20 +274,31 @@ export const Header = () => `
       }
     });
 
+    // Scroll handler for visibility
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
     function closeAllMenus() {
-      // Close Sidebar
       const navLinks = document.querySelector('.nav-links');
       if (navLinks) navLinks.classList.remove('active');
       const menuBtn = document.querySelector('.mobile-menu-btn');
       if (menuBtn) menuBtn.classList.remove('active');
-      
-      // Close Dropdown
       const dropdown = document.querySelector('.dropdown');
       if (dropdown) dropdown.classList.remove('active');
-      
-      // Cleanup Desktop Styles
-      const dropdownContent = document.querySelector('.dropdown-content');
-      if (dropdownContent) dropdownContent.style.display = '';
+      document.body.style.overflow = '';
     }
   </script>
+  <style>
+    header.scrolled {
+      background: white !important;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      height: 70px;
+    }
+  </style>
 `;

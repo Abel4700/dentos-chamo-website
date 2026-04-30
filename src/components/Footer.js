@@ -3,7 +3,7 @@ export const Footer = () => `
     <div class="footer-geometric-texture"></div>
     <div class="container footer-grid-v3">
       <div class="footer-brand-v3">
-        <h3 class="section-title-visionary" style="font-size: 1.8rem; margin-bottom: 20px;">DENTOSE <span class="accent-text">CHAMO</span></h3>
+        <h3 class="section-title-visionary" style="font-size: 1.8rem; margin-bottom: 20px; color: var(--text-main);">DENTOSE <span class="accent-text">CHAMO</span></h3>
         <p class="text-muted-standard" style="font-size: 1rem; margin-bottom: 30px;">Africa’s Strategic Gateway to Global Medical Technology. Bridging world-class innovation with continental accessibility.</p>
         <div class="social-links-v3">
           <a href="https://m.me/dentosechamo.tradingplc" target="_blank" class="social-orb"><i class="fab fa-facebook"></i></a>
@@ -57,12 +57,12 @@ export const Footer = () => `
 
     <style>
       .partners-footer-v3 {
-        background: #050b14;
-        color: white;
+        background: #f1f5f9;
+        color: var(--text-main);
         padding: 100px 0 40px;
         position: relative;
         overflow: hidden;
-        border-top: 1px solid rgba(56, 189, 248, 0.1);
+        border-top: 1px solid #e2e8f0;
       }
 
       .footer-geometric-texture {
@@ -90,8 +90,8 @@ export const Footer = () => `
       .social-orb {
         width: 45px;
         height: 45px;
-        background: rgba(255,255,255,0.03);
-        border: 1px solid rgba(255,255,255,0.1);
+        background: white;
+        border: 1px solid #e2e8f0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -99,28 +99,28 @@ export const Footer = () => `
         transition: all 0.4s ease;
       }
       .social-orb:hover {
-        background: rgba(27, 30, 197, 0.1);
+        background: rgba(21, 32, 166, 0.1);
         border-color: var(--primary);
         color: var(--primary);
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(27, 30, 197, 0.2);
+        box-shadow: 0 10px 20px rgba(21, 32, 166, 0.2);
       }
 
       .footer-links-v3 ul li { margin-bottom: 12px; }
       .footer-links-v3 a {
-        color: #94a3b8;
+        color: #64748b;
         transition: all 0.3s ease;
         font-size: 0.95rem;
       }
       .footer-links-v3 a:hover {
-        color: white;
+        color: var(--primary);
         padding-left: 8px;
       }
 
       .footer-contact-v3 p {
         display: flex;
         gap: 15px;
-        color: #94a3b8;
+        color: #64748b;
         margin-bottom: 20px;
         font-size: 0.95rem;
       }
@@ -128,7 +128,7 @@ export const Footer = () => `
       .footer-bottom-v3 {
         margin-top: 80px;
         padding-top: 30px;
-        border-top: 1px solid rgba(255,255,255,0.05);
+        border-top: 1px solid #e2e8f0;
       }
 
       .bottom-flex-v3 {
@@ -142,7 +142,7 @@ export const Footer = () => `
       }
 
       .footer-legal-v3 { display: flex; align-items: center; gap: 20px; }
-      .dot-separator { width: 4px; height: 4px; background: rgba(27, 30, 197, 0.3); border-radius: 50%; }
+      .dot-separator { width: 4px; height: 4px; background: rgba(64, 224, 208, 0.3); border-radius: 50%; }
 
       @media (max-width: 992px) {
         .footer-grid-v3 { grid-template-columns: 1fr 1fr; gap: 40px; }

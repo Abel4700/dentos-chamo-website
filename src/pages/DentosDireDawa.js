@@ -1,6 +1,6 @@
 export const DentosDireDawa = () => {
   return `
-  <div class="app-section diredawa-root dark-theme-page">
+  <div class="app-section diredawa-root light-theme-page">
     
     <!-- BACKGROUND ANIMATED ORBS -->
     <div class="bg-decoration">
@@ -268,18 +268,19 @@ export const DentosDireDawa = () => {
   <style>
     /* DIRECTIVE: BRAND COLORS */
     :root {
-      --dd-primary: #002F7F;
-      --dd-secondary: #001F7F;
-      --dd-bg-header: #000F48;
-      --dd-main-bg: #0C0C0C;
-      --dd-card-bg: #1D1D1D;
-      --dd-border: #242424;
-      --dd-text-muted: #94a3b8;
+      --dd-primary: #1520A6;
+      --dd-secondary: #0e1570;
+      --dd-bg-header: #f1f5f9;
+      --dd-main-bg: #ffffff;
+      --dd-card-bg: #ffffff;
+      --dd-border: #e2e8f0;
+      --dd-text-muted: #64748b;
+      --secondary: #40E0D0; /* Turquoise */
     }
 
     .diredawa-root {
       background-color: var(--dd-main-bg);
-      color: white;
+      color: var(--text-main);
       overflow-x: hidden; /* Prevent horizontal scroll */
       width: 100%;
       position: relative;
@@ -291,7 +292,7 @@ export const DentosDireDawa = () => {
       overflow-x: hidden;
     }
     
-    .bg-darker { background-color: #080808; }
+    .bg-darker { background-color: #f8fafc; }
 
     /* ANIMATED ORBS */
     .bg-decoration {
@@ -313,19 +314,19 @@ export const DentosDireDawa = () => {
 
     /* GLASS CARD V3 (PREMIUM DARK) */
     .glass-card-v3 {
-      background: rgba(29, 29, 29, 0.7);
+      background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(30px);
       -webkit-backdrop-filter: blur(30px);
       border: 1px solid var(--dd-border);
       border-radius: 30px;
-      box-shadow: 0 25px 80px rgba(0,0,0,0.5);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
     }
 
     /* DD HERO (CINEMATIC) */
     .dd-hero {
       padding: 180px 20px 100px; position: relative;
       display: flex; flex-direction: column; justify-content: center; overflow: hidden;
-      background: linear-gradient(to right, var(--dd-main-bg) 40%, transparent 100%),
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 40%, transparent 100%),
                   url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1600');
       background-size: cover; background-position: right center;
     }
@@ -358,7 +359,7 @@ export const DentosDireDawa = () => {
     .mission-vision-v3 { display: grid; gap: 30px; margin-top: 40px; }
     .mv-item { display: flex; gap: 20px; align-items: flex-start; }
     .mv-icon { width: 50px; height: 50px; background: rgba(0, 47, 127, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--dd-primary); border: 1px solid var(--dd-primary); }
-    .mv-item h4 { margin-bottom: 5px; color: white; }
+    .mv-item h4 { margin-bottom: 5px; color: var(--text-main); }
     .mv-item p { color: var(--dd-text-muted); font-size: 0.95rem; }
 
     .visual-card-v3 { padding: 25px; }
@@ -381,18 +382,18 @@ export const DentosDireDawa = () => {
     .bento-v3-item h3 { font-size: 1.8rem; margin-bottom: 15px; }
     .bento-v3-large h3 { font-size: 2.8rem; }
     .bento-icon-v3 { font-size: 2.5rem; margin-top: auto; margin-bottom: 20px; color: var(--dd-primary); }
-    .dark-bento { background: linear-gradient(135deg, var(--dd-primary), var(--dd-bg-header)); }
+    .dark-bento { background: linear-gradient(135deg, var(--dd-primary), #0e1570); color: white; }
 
     /* FEATURE CARDS V3 */
     .services-modern-grid-v3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
     .feature-card-v3 { padding: 50px 40px; position: relative; }
     .feature-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
     .feature-icon { font-size: 3rem; color: var(--dd-primary); }
-    .feature-num { font-size: 3rem; font-weight: 800; opacity: 0.15; color: white; -webkit-text-stroke: 1px white; color: transparent; }
+    .feature-num { font-size: 3rem; font-weight: 800; opacity: 0.15; color: var(--text-main); -webkit-text-stroke: 1px var(--text-main); color: transparent; }
     .feature-card-v3 h3 { margin-bottom: 20px; font-size: 1.5rem; }
     .feature-card-v3 p { color: var(--dd-text-muted); line-height: 1.7; margin-bottom: 30px; }
     .feature-list { list-style: none; padding: 0; border-top: 1px solid var(--dd-border); padding-top: 30px; }
-    .feature-list li { margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: center; gap: 10px; color: white; font-weight: 500; }
+    .feature-list li { margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: center; gap: 10px; color: var(--text-main); font-weight: 500; }
     .feature-list i { color: var(--secondary); font-size: 0.8rem; }
 
     /* FTZ IMMERSIVE GRID */

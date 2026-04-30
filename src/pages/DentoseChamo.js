@@ -103,32 +103,32 @@ export const DentoseChamo = () => `
   <style>
     /* 🌑 DARK THEME VARIABLES */
     .dentose-parent-hub {
-      background-color: #050b14;
-      color: #f8fafc;
+      background-color: #ffffff;
+      color: var(--text-main);
       min-height: 100vh;
       overflow-x: clip;
     }
-    .bg-dark-deep { background-color: #03070c; }
-    .accent-text { color: var(--secondary); text-shadow: 0 0 20px rgba(0, 188, 197, 0.3); }
+    .bg-dark-deep { background-color: #f8fafc; }
+    .accent-text { color: var(--secondary); }
 
     /* 🚀 V3 HERO (CINEMATIC DARK) */
     .hero-v3-dark {
       padding: 180px 20px 100px;
       position: relative;
-      background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.5)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920');
+      background: linear-gradient(rgba(15, 32, 166, 0.95), rgba(5, 11, 20, 0.7)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920');
       background-size: cover;
       background-position: center;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      border-bottom: 1px solid #e2e8f0;
     }
     .hero-badge-v3 {
-      display: inline-block; padding: 8px 24px; background: rgba(0, 188, 197, 0.1); border: 1px solid rgba(0, 188, 197, 0.2); border-radius: 50px; color: var(--secondary); font-weight: 800; font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 25px; box-shadow: 0 0 20px rgba(0, 188, 197, 0.1);
+      display: inline-block; padding: 8px 24px; background: rgba(64, 224, 208, 0.1); border: 1px solid rgba(64, 224, 208, 0.2); border-radius: 50px; color: var(--secondary); font-weight: 800; font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 25px; box-shadow: 0 0 20px rgba(64, 224, 208, 0.1);
     }
-    .hero-title-visionary { font-size: clamp(3rem, 6vw, 5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; color: #ffffff; }
-    .hero-lead { font-size: clamp(1.1rem, 2vw, 1.3rem); color: #94a3b8; max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; }
+    .hero-title-visionary { font-size: clamp(3rem, 6vw, 5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; color: white; }
+    .hero-lead { font-size: clamp(1.1rem, 2vw, 1.3rem); color: rgba(255,255,255,0.85); max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; }
     
     /* 🌐 ECOSYSTEM GRID */
     .strategic-spacing { padding: 100px 0; }
@@ -144,10 +144,10 @@ export const DentoseChamo = () => `
     }
     
     .dc-glass-card {
-      background: rgba(15, 23, 42, 0.4);
+      background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid #e2e8f0;
       border-radius: 24px;
       padding: 40px;
       position: relative;
@@ -158,15 +158,15 @@ export const DentoseChamo = () => `
       flex-direction: column;
     }
     
-    .eco-card:hover { transform: translateY(-10px); border-color: rgba(56, 189, 248, 0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+    .eco-card:hover { transform: translateY(-10px); border-color: var(--secondary); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
     .eco-glow { position: absolute; width: 150px; height: 150px; border-radius: 50%; filter: blur(60px); top: -50px; right: -50px; opacity: 0.4; transition: opacity 0.4s; }
     .eco-card:hover .eco-glow { opacity: 0.8; }
-    .eco-akedent { background: #3b82f6; }
-    .eco-oradent { background: #ec4899; }
-    .eco-diredawa { background: #eab308; }
+    .eco-akedent { background: #1520A6; }
+    .eco-oradent { background: #40E0D0; }
+    .eco-diredawa { background: #e2e8f0; }
     
-    .eco-icon { font-size: 2.5rem; margin-bottom: 25px; color: #ffffff; }
-    .eco-card h3 { font-size: 1.6rem; font-weight: 800; color: #ffffff; margin-bottom: 15px; }
+    .eco-icon { font-size: 2.5rem; margin-bottom: 25px; color: var(--primary); }
+    .eco-card h3 { font-size: 1.6rem; font-weight: 800; color: var(--text-main); margin-bottom: 15px; }
     .eco-card p { color: #94a3b8; line-height: 1.6; font-size: 1rem; flex-grow: 1; margin-bottom: 30px; }
     .eco-arrow { align-self: flex-end; width: 45px; height: 45px; border-radius: 50%; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: #ffffff; font-size: 1.2rem; transition: all 0.3s; }
     .eco-card:hover .eco-arrow { background: var(--secondary); color: #050b14; transform: scale(1.1); }
@@ -179,9 +179,9 @@ export const DentoseChamo = () => `
     }
     .division-card { align-items: center; text-align: center; padding: 60px 40px; }
     .div-icon-wrapper { width: 90px; height: 90px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; margin-bottom: 30px; }
-    .div-blue { background: rgba(0, 188, 197, 0.1); color: var(--secondary); box-shadow: 0 0 30px rgba(0, 188, 197, 0.2); }
+    .div-blue { background: rgba(64, 224, 208, 0.1); color: var(--secondary); box-shadow: 0 0 30px rgba(64, 224, 208, 0.2); }
     .div-green { background: rgba(34, 197, 94, 0.1); color: #22c55e; box-shadow: 0 0 30px rgba(34, 197, 94, 0.2); }
-    .division-card h3 { font-size: 2rem; color: #ffffff; margin-bottom: 20px; font-weight: 800; }
+    .division-card h3 { font-size: 2rem; color: var(--text-main); margin-bottom: 20px; font-weight: 800; }
     .division-card p { color: #94a3b8; font-size: 1.1rem; line-height: 1.7; margin-bottom: 0; }
 
     /* 📊 CATEGORY MATRIX */
@@ -194,11 +194,11 @@ export const DentoseChamo = () => `
       margin: 0 auto;
     }
     .matrix-pill {
-      background: rgba(15, 23, 42, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
       padding: 16px 32px;
       border-radius: 50px;
-      color: #e2e8f0;
+      color: var(--text-main);
       font-weight: 600;
       font-size: 1.05rem;
       text-decoration: none;
@@ -207,7 +207,7 @@ export const DentoseChamo = () => `
       align-items: center;
       gap: 10px;
     }
-    .matrix-pill:hover { background: rgba(56, 189, 248, 0.15); border-color: #38bdf8; color: #38bdf8; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    .matrix-pill:hover { background: rgba(64, 224, 208, 0.1); border-color: var(--secondary); color: var(--primary); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
     .pill-green:hover { background: rgba(34, 197, 94, 0.15); border-color: #22c55e; color: #22c55e; }
 
     /* BUTTONS */

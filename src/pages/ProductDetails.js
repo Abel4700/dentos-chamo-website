@@ -24,11 +24,11 @@ export const ProductDetails = () => {
 
   // 1. BRAND COLOR MAPPING
   const BRAND_COLORS = {
-    'accu-med': { primary: '#0056b3', secondary: '#004494', text: '#ffffff' },
-    'oradox': { primary: '#0d9488', secondary: '#0f766e', text: '#ffffff' },
-    'prevest': { primary: '#4b66df', secondary: '#3b54cf', text: '#ffffff' },
-    'topzir': { primary: '#26bccd', secondary: '#21a3b1', text: '#ffffff' },
-    'default': { primary: '#0ea5e9', secondary: '#0284c7', text: '#ffffff' }
+    'accu-med': { primary: '#1520A6', secondary: '#0e1570', text: '#ffffff' },
+    'oradox': { primary: '#40E0D0', secondary: '#2cb1a5', text: '#ffffff' },
+    'prevest': { primary: '#1520A6', secondary: '#0e1570', text: '#ffffff' },
+    'topzir': { primary: '#40E0D0', secondary: '#2cb1a5', text: '#ffffff' },
+    'default': { primary: '#1520A6', secondary: '#40E0D0', text: '#ffffff' }
   };
   const theme = BRAND_COLORS[product.manufacturer] || BRAND_COLORS.default;
 

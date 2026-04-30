@@ -14,7 +14,6 @@ export const ProductsHub = (queryParams = {}) => {
       color: '#4b66df',
       bg: 'linear-gradient(135deg, rgba(75,102,223,0.05) 0%, rgba(75,102,223,0.1) 100%)',
       pdf: '/catalogues/Prevest_Denpro_Catalogue.pdf',
-      invert: true
     },
     {
       name: 'IRES',
@@ -25,7 +24,6 @@ export const ProductsHub = (queryParams = {}) => {
       color: '#2c3e50',
       bg: 'linear-gradient(135deg, rgba(44,62,80,0.05) 0%, rgba(44,62,80,0.1) 100%)',
       pdf: '/catalogues/Ires_Catalogue.pdf',
-      invert: true
     },
     {
       name: 'PreciDent',
@@ -36,7 +34,6 @@ export const ProductsHub = (queryParams = {}) => {
       color: '#e67e22',
       bg: 'linear-gradient(135deg, rgba(230,126,34,0.05) 0%, rgba(230,126,34,0.1) 100%)',
       pdf: '/catalogues/Precident_Product Catalogue.pdf',
-      invert: true
     },
     {
       name: 'Durable',
@@ -47,7 +44,6 @@ export const ProductsHub = (queryParams = {}) => {
       color: '#27ae60',
       bg: 'linear-gradient(135deg, rgba(39,174,96,0.05) 0%, rgba(39,174,96,0.1) 100%)',
       pdf: '/catalogues/Durable_Product_Catalogue.pdf',
-      invert: true
     },
     {
       name: 'Ramo',
@@ -58,7 +54,6 @@ export const ProductsHub = (queryParams = {}) => {
       color: '#8e44ad',
       bg: 'linear-gradient(135deg, rgba(142,68,173,0.05) 0%, rgba(142,68,173,0.1) 100%)',
       pdf: '/catalogues/Ramo_Endodontic Catalogue.pdf',
-      invert: true
     },
     {
       name: 'TopZir',
@@ -69,7 +64,6 @@ export const ProductsHub = (queryParams = {}) => {
       color: '#26bccd',
       bg: 'linear-gradient(135deg, rgba(38,188,205,0.05) 0%, rgba(38,188,205,0.1) 100%)',
       pdf: '/catalogues/Topzir_Products_Catalogue_2026.pdf',
-      invert: true
     },
     {
       name: 'Sincere',
@@ -80,7 +74,6 @@ export const ProductsHub = (queryParams = {}) => {
       color: '#c0392b',
       bg: 'linear-gradient(135deg, rgba(192,57,43,0.05) 0%, rgba(192,57,43,0.1) 100%)',
       pdf: '/catalogues/Sincere-instruments_Catalogue.pdf',
-      invert: true
     },
     {
       name: 'Truedent',
@@ -91,7 +84,6 @@ export const ProductsHub = (queryParams = {}) => {
       color: '#2980b9',
       bg: 'linear-gradient(135deg, rgba(41,128,185,0.05) 0%, rgba(41,128,185,0.1) 100%)',
       pdf: '/catalogues/True-Dent_Catalogue.pdf',
-      invert: true
     },
     {
       name: 'Pyrax',
@@ -102,7 +94,6 @@ export const ProductsHub = (queryParams = {}) => {
       color: '#f39c12',
       bg: 'linear-gradient(135deg, rgba(243,156,18,0.05) 0%, rgba(243,156,18,0.1) 100%)',
       pdf: '/catalogues/Pyrax_Catalouge.pdf',
-      invert: true
     },
     {
       name: 'Oradox',
@@ -122,7 +113,7 @@ export const ProductsHub = (queryParams = {}) => {
         <div class="bento-bg" style="background: ${mfr.bg}"></div>
         <div class="bento-header-media">
           ${mfr.logo
-        ? `<img src="${mfr.logo}" alt="${mfr.name}" class="bento-logo ${mfr.invert ? 'logo-invert' : ''}" />`
+        ? `<img src="${mfr.logo}" alt="${mfr.name}" class="bento-logo" />`
         : `<div class="bento-icon" style="color: ${mfr.color}; background: ${mfr.color}15"><i class="fas ${mfr.icon}"></i></div>`
       }
         </div>
@@ -262,22 +253,22 @@ export const ProductsHub = (queryParams = {}) => {
     <style>
       .bg-soft { background: var(--bg-light); min-height: 100vh; }
       .glass-premium { 
-        background: rgba(17, 24, 39, 0.4); 
+        background: rgba(255, 255, 255, 0.8); 
         backdrop-filter: blur(20px); 
-        border: 1px solid rgba(255,255,255,0.08); 
+        border: 1px solid rgba(0,0,0,0.05); 
         border-radius: 24px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
       }
       
       /* VISIONARY DARK THEME SYSTEM */
-      .dark-theme-page { 
-        background: #030712; 
-        color: white; 
+      .light-theme-page { 
+        background: #ffffff; 
+        color: var(--text-main); 
         width: 100%; 
         position: relative; 
         overflow-x: clip;
       }
-      .accent-text { color: var(--primary); }
+      .accent-text { color: var(--secondary); }
 
       /* GLOBAL BACKGROUND ORBS */
       .global-background-orbs { position: absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; overflow: hidden; }
@@ -290,21 +281,21 @@ export const ProductsHub = (queryParams = {}) => {
       .hero-editorial-v3 { 
         padding: 220px 0 120px; 
         position: relative; 
-        background: linear-gradient(to right, rgba(3,7,18,0.95), rgba(3,7,18,0.4)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920');
+        background: linear-gradient(rgba(15, 32, 166, 0.95), rgba(5, 11, 20, 0.7)), url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1920');
         background-size: cover; 
         background-position: center;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
+        border-bottom: 1px solid #e2e8f0;
       }
-      .hero-editorial-overlay { position: absolute; bottom:0; left:0; width:100%; height:150px; background: linear-gradient(to top, #030712, transparent); }
+      .hero-editorial-overlay { position: absolute; bottom:0; left:0; width:100%; height:150px; background: linear-gradient(to top, rgba(15, 32, 166, 0.1), transparent); }
       
-      .hero-badge-v3 { display: inline-block; padding: 6px 14px; background: rgba(75, 102, 223, 0.1); border: 1px solid rgba(75, 102, 223, 0.2); color: var(--primary); border-radius: 100px; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; }
-      .section-title-visionary { font-weight: 900; letter-spacing: -3px; line-height: 1; }
-      .hero-lead { font-size: 1.4rem; color: rgba(255,255,255,0.7); max-width: 750px; margin-top: 30px; line-height: 1.7; }
+      .hero-badge-v3 { display: inline-block; padding: 6px 14px; background: rgba(64, 224, 208, 0.1); border: 1px solid rgba(64, 224, 208, 0.2); color: var(--secondary); border-radius: 100px; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; }
+      .section-title-visionary { font-weight: 900; letter-spacing: -3px; line-height: 1; color: white; }
+      .hero-lead { font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 800px; line-height: 1.6; margin-top: 30px; }
       
       .hero-metrics-v3 { display: flex; align-items: center; gap: 60px; margin-top: 60px; }
       .metric-item-v3 { display: flex; flex-direction: column; }
-      .metric-number { font-size: 3.5rem; font-weight: 900; line-height: 1; }
-      .metric-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; font-weight: 700; margin-top: 10px; }
+      .metric-number { font-size: 3.5rem; font-weight: 900; line-height: 1; color: white; }
+      .metric-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.7); font-weight: 700; margin-top: 10px; }
       .metric-divider { width: 1px; height: 50px; background: rgba(255,255,255,0.1); }
 
       .brand-bento-grid {
@@ -330,53 +321,52 @@ export const ProductsHub = (queryParams = {}) => {
       .brand-bento-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
       .bento-bg { position: absolute; top:0; left:0; width:100%; height:100%; z-index: 1; transition: opacity 0.3s; }
       .bento-header-media { height: 64px; display: flex; align-items: center; position: relative; z-index: 2; margin-bottom: 25px; }
-      .bento-logo { height: 100%; max-width: 160px; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.2)); }
-      .logo-invert { filter: brightness(0) invert(1) drop-shadow(0 4px 10px rgba(0,0,0,0.2)); }
+      .bento-logo { height: 100%; max-width: 160px; object-fit: contain; transition: all 0.3s ease; }
+      .brand-bento-card:hover .bento-logo { transform: scale(1.05); }
       .bento-icon { width: 64px; height: 64px; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; }
       .bento-body { position: relative; z-index: 2; flex-grow: 1; }
-      .bento-name { font-size: 1.6rem; font-weight: 800; color: white; margin-bottom: 8px; }
-      .bento-desc { font-size: 0.95rem; color: rgba(255,255,255,0.7); line-height: 1.5; margin-bottom: 25px; max-width: 90%; }
+      .bento-name { font-size: 1.6rem; font-weight: 800; color: var(--text-main); margin-bottom: 8px; }
+      .bento-desc { font-size: 0.95rem; color: #64748b; line-height: 1.5; margin-bottom: 25px; max-width: 90%; }
       .bento-footer { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
-      .product-count { font-size: 0.8rem; font-weight: 800; color: rgba(255,255,255,0.5); letter-spacing: 1px; }
-      .pdf-action-btn { padding: 8px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; font-size: 0.85rem; font-weight: 700; color: white; text-decoration: none; transition: all 0.3s; }
+      .product-count { font-size: 0.8rem; font-weight: 800; color: #94a3b8; letter-spacing: 1px; }
+      .pdf-action-btn { padding: 8px 16px; background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 10px; font-size: 0.85rem; font-weight: 700; color: var(--text-main); text-decoration: none; transition: all 0.3s; }
       .pdf-action-btn:hover { background: var(--primary); border-color: var(--primary); }
       .pdf-placeholder { font-size: 0.7rem; font-weight: 800; color: rgba(255,255,255,0.4); background: rgba(255, 255, 255, 0.05); padding: 6px 12px; border-radius: 6px; letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; }
 
       /* PRODUCT GRID */
-      .product-link-card { transition: all 0.3s; height: 100%; position: relative; overflow: hidden; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; }
-      .product-link-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+      .product-link-card { transition: all 0.3s; height: 100%; position: relative; overflow: hidden; background: white; border: 1px solid #e2e8f0; border-radius: 24px; }
+      .product-link-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
       
       .card-image-wrapper { height: 260px; padding: 30px; display: flex; align-items: center; justify-content: center; background: white; position: relative; }
       .contained-img { max-width: 100%; max-height: 100%; object-fit: contain; transition: transform 0.5s ease; }
       .product-link-card:hover .contained-img { transform: scale(1.05); }
       
-      .featured-ribbon { position: absolute; top: 15px; left: 15px; background: #fbbf24; color: #92400e; padding: 4px 12px; border-radius: 50px; font-size: 0.7rem; font-weight: 800; display: flex; align-items: center; gap: 5px; z-index: 10; }
+      .featured-ribbon { position: absolute; top: 15px; left: 15px; background: var(--secondary); color: var(--black); padding: 4px 12px; border-radius: 50px; font-size: 0.7rem; font-weight: 800; display: flex; align-items: center; gap: 5px; z-index: 10; }
       
       .card-info { padding: 30px; }
       .card-tags { display: flex; gap: 8px; margin-bottom: 15px; }
       .mfr-tag { font-size: 0.7rem; font-weight: 800; padding: 4px 10px; border-radius: 4px; }
       .cat-tag { font-size: 0.7rem; color: rgba(255,255,255,0.5); font-weight: 700; padding: 4px; }
-      .product-title { font-size: 1.25rem; font-weight: 800; color: white; margin-bottom: 12px; line-height: 1.3; }
+      .product-title { font-size: 1.25rem; font-weight: 800; color: var(--text-main); margin-bottom: 12px; line-height: 1.3; }
       
       .quick-highlights { display: flex; gap: 15px; margin-bottom: 25px; }
-      .quick-highlights span { font-size: 0.75rem; color: rgba(255,255,255,0.6); font-weight: 600; display: flex; align-items: center; gap: 5px; }
+      .quick-highlights span { font-size: 0.75rem; color: #64748b; font-weight: 600; display: flex; align-items: center; gap: 5px; }
       .quick-highlights i { color: var(--secondary); }
 
-      .card-action-bar { font-size: 0.9rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; border-top: 1px solid var(--glass-border); padding-top: 15px; }
+      .card-action-bar { font-size: 0.9rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; border-top: 1px solid #e2e8f0; padding-top: 15px; }
 
       /* FILTERS */
       .mfr-pill { 
         padding: 10px 25px; 
         border-radius: 50px; 
-        background: rgba(255,255,255,0.05); 
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255,255,255,0.1); 
-        color: rgba(255,255,255,0.7); 
+        background: #f8fafc; 
+        border: 1px solid #e2e8f0; 
+        color: #64748b; 
         font-weight: 700; 
         cursor: pointer; 
         transition: all 0.2s; 
       }
-      .mfr-pill.active { background: var(--primary); color: white; border-color: var(--primary); box-shadow: 0 10px 20px rgba(75, 102, 223, 0.3); }
+      .mfr-pill.active { background: var(--primary); color: white; border-color: var(--primary); box-shadow: 0 10px 20px rgba(21, 32, 166, 0.3); }
       .mfr-pill:hover:not(.active) { background: rgba(255,255,255,0.1); color: white; }
 
       /* MOBILE RESPONSIVENESS */
@@ -396,7 +386,7 @@ export const ProductsHub = (queryParams = {}) => {
       }
     </style>
 
-    <div class="app-section about-root dark-theme-page">
+    <div class="app-section about-root light-theme-page">
       
       <!-- BACKGROUND ANIMATED DECORATION -->
       <div class="global-background-orbs">
@@ -453,7 +443,7 @@ export const ProductsHub = (queryParams = {}) => {
            
            <div style="flex: 1; min-width: 320px; position: relative;">
              <i class="fas fa-search" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: var(--primary);"></i>
-             <input type="text" id="catalog-search" placeholder="Quick find in database..." style="width: 100%; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.03); color: white; padding: 14px 20px 14px 50px; border-radius: 12px; font-weight: 600; outline: none;">
+             <input type="text" id="catalog-search" placeholder="Quick find in database..." style="width: 100%; border: 1px solid #e2e8f0; background: #f8fafc; color: var(--text-main); padding: 14px 20px 14px 50px; border-radius: 12px; font-weight: 600; outline: none;">
            </div>
         </div>
       </div>

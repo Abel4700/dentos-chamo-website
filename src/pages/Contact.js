@@ -134,8 +134,8 @@ export const Contact = () => {
   <style>
     /* VARIABLES & THEME */
     :root {
-      --contact-primary: #002F7F;
-      --contact-accent: #00A3C4;
+      --contact-primary: #1520A6;
+      --contact-accent: #40E0D0;
     }
     
     .contact-page { background-color: #f8fafc; color: #0f172a; min-height: 100vh; overflow-x: hidden; }
@@ -206,8 +206,8 @@ export const Contact = () => {
 
     /* MAP BENTO */
     .map-bento { padding: 0; min-height: 450px; overflow: hidden; position: relative; }
-    .map-bento iframe { width: 100%; height: 100%; position: absolute; top:0; left:0; filter: grayscale(20%) contrast(1.1); transition: filter 0.5s ease; }
-    .map-bento:hover iframe { filter: grayscale(0%) contrast(1); }
+    .map-bento iframe { width: 100%; height: 100%; position: absolute; top:0; left:0; filter: contrast(1.1); transition: filter 0.5s ease; }
+    .map-bento:hover iframe { filter: contrast(1); }
     
     /* SUCCESS STATE */
     .success-message-v3 {

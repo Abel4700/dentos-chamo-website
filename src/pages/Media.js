@@ -54,7 +54,7 @@ export const Media = () => {
           position: absolute; top:0; left:0; width:100%; height:100%;
           background: url('/images/about1.png') center/cover no-repeat;
           opacity: 0.2;
-          filter: grayscale(100%) brightness(0.5);
+          filter: brightness(0.5);
         }
         .media-hero::after {
           content: ''; position: absolute; top:0; left:0; width:100%; height:100%;

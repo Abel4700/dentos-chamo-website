@@ -1,6 +1,6 @@
 export const Akedent = () => {
   return `
-    <div class="akedent-page dark-theme-page">
+    <div class="akedent-page light-theme-page">
       
       <!-- 💊 CINEMATIC PHARMA HERO -->
       <section class="akedent-hero">
@@ -180,37 +180,43 @@ export const Akedent = () => {
       <style>
         /* PAGE THEME & TOKENS */
         :root {
-          --dd-primary: #002F7F;
-          --dd-primary-dark: #000F48;
-          --dd-accent: #00A3C4; /* Medical Cyan */
-          --dd-bg-dark: #0C0C0C;
-          --dd-bg-header: #000F48;
-          --dd-border: #242424;
-          --dd-text-muted: #94A3B8;
-          --secondary: #FFDB3F;
+          --dd-primary: #1520A6;
+          --dd-primary-dark: #0e1570;
+          --dd-accent: #40E0D0; /* Turquoise */
+          --dd-bg-light: #ffffff;
+          --dd-bg-header: #f1f5f9;
+          --dd-border: #e2e8f0;
+          --dd-text-muted: #64748b;
+          --secondary: #1520A6;
         }
 
-        .akedent-page { background-color: var(--dd-bg-dark); color: white; min-height: 100vh; overflow-x: clip; }
+        .light-theme-page { 
+          background: linear-gradient(to bottom, #ffffff 0%, #f1f5f9 100%); 
+          color: var(--text-main); width: 100%; position: relative; overflow-x: clip; min-height: 100vh;
+        }
         .primary-text { color: var(--dd-accent); }
         .section { padding: 120px 0; position: relative; }
-        .bg-darker { background-color: #080808; }
+        .bg-darker { background-color: #f8fafc; }
 
         /* HERO SECTION */
-        .akedent-hero {
-          padding: 180px 20px 100px; position: relative; display: flex; flex-direction: column; justify-content: center; overflow: hidden;
-          background: linear-gradient(to right, rgba(12, 12, 12, 0.9), rgba(12, 12, 12, 0.4)), url('https://images.unsplash.com/photo-1579154235602-3c2cfa99e1bc?auto=format&fit=crop&q=80&w=1920');
+        .akedent-hero { 
+          min-height: 80vh; 
+          display: flex; 
+          align-items: center; 
+          position: relative; 
+          background: linear-gradient(rgba(15, 32, 166, 0.92), rgba(5, 11, 20, 0.7)), url('https://images.unsplash.com/photo-1579154235602-3c2cfa99e1bc?auto=format&fit=crop&q=80&w=1920');
           background-size: cover; background-position: center; border-bottom: 1px solid var(--dd-border);
         }
         .akedent-hero-content { max-width: 900px; text-align: center; color: white; z-index: 10; padding: 0 20px; }
-        .akedent-hero-content h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; }
-        .hero-lead { font-size: clamp(1.1rem, 2vw, 1.4rem); color: var(--dd-text-muted); max-width: 750px; margin: 0 auto 40px; line-height: 1.6; }
+        .akedent-hero-content h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; color: white; margin-bottom: 25px; line-height: 1.1; }
+        .hero-lead { font-size: 1.2rem; color: rgba(255,255,255,0.85); max-width: 750px; margin: 0 auto 40px; line-height: 1.6; }
         .hero-badge-v3 { display: inline-block; padding: 8px 20px; background: rgba(0, 163, 196, 0.15); border: 1px solid rgba(0, 163, 196, 0.3); border-radius: 50px; color: var(--dd-accent); font-weight: 800; font-size: 0.75rem; letter-spacing: 2.5px; margin-bottom: 30px; text-transform: uppercase; }
         .hero-actions-v3 { display: flex; gap: 20px; justify-content: center; }
 
         /* OVERVIEW & GLASS CARDS */
         .glass-card-v3 {
-          background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
-          border: 1px solid var(--dd-border); border-radius: 40px; box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+          background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
+          border: 1px solid var(--dd-border); border-radius: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
         .overview-grid { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 80px; padding: 80px; align-items: center; }
         .brand-subtitle { color: var(--secondary); font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; margin-bottom: 20px; }
@@ -228,13 +234,13 @@ export const Akedent = () => {
         .bento-v3-item { position: relative; border-radius: 30px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
         .bento-v3-large { grid-column: span 2; grid-row: span 2; }
         
-        .dark-bento { background: linear-gradient(135deg, var(--dd-primary-dark) 0%, var(--dd-primary) 100%); color: white; border: none; }
-        .bento-v3-content { position: relative; z-index: 5; padding: 40px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%); width: 100%; box-sizing: border-box; }
+        .dark-bento { background: linear-gradient(135deg, #0e1570 0%, var(--dd-primary) 100%); color: white; border: none; }
+        .bento-v3-content { position: relative; z-index: 5; padding: 40px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; background: linear-gradient(to top, rgba(255,255,255,0.7) 0%, transparent 100%); width: 100%; box-sizing: border-box; }
         .bento-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--dd-accent); font-weight: 800; margin-bottom: 12px; }
         .bento-icon-glow { font-size: 3rem; color: var(--dd-accent); margin-bottom: auto; transition: all 0.4s ease; text-shadow: 0 0 30px rgba(0, 163, 196, 0.5); display: flex; align-items: center; justify-content: flex-start; }
         .bento-v3-item h3 { font-size: 1.6rem; margin-bottom: 12px; font-weight: 800; }
         .bento-v3-large h3 { font-size: 2.8rem; }
-        .bento-v3-item p { color: rgba(255,255,255,0.8); line-height: 1.6; font-size: 1rem; }
+        .bento-v3-item p { color: #475569; line-height: 1.6; font-size: 1rem; }
         .bento-bg { position: absolute; top:0; left:0; width:100%; height:100%; background-size: cover; background-position: center; opacity: 0.15; z-index: 1; transition: transform 0.8s ease; }
         .bento-v3-item:hover { transform: translateY(-12px); box-shadow: 0 40px 80px rgba(0,0,0,0.4); }
         .bento-v3-item:hover .bento-bg { transform: scale(1.08); opacity: 0.3; }
@@ -278,10 +284,19 @@ export const Akedent = () => {
            .compliance-badge-v3 { border-left: none; border-top: 1px solid var(--dd-border); padding-top: 60px; }
            .hero-actions-v3 { flex-direction: column; align-items: center; gap: 15px; }
         }
-        @media (max-width: 768px), (max-height: 600px) {
+        @media (max-width: 768px) {
            .akedent-hero { padding: 150px 20px 80px !important; align-items: flex-start !important; justify-content: flex-start !important; height: auto !important; min-height: auto !important; }
-           .akedent-bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
-           .bento-v3-item { min-height: 280px; }
+           .akedent-bento-grid, .value-matrix { 
+             display: flex; 
+             flex-direction: column;
+             gap: 20px; 
+           }
+           .akedent-bento-grid::-webkit-scrollbar, .value-matrix::-webkit-scrollbar { display: none; }
+           .bento-v3-item, .matrix-item { 
+             width: 100%;
+             background: white;
+             min-height: 280px;
+           }
            .bento-v3-large { grid-column: span 1; grid-row: span 1; }
            .section { padding: 70px 0; }
            .btn-visionary { padding: 12px 25px; font-size: 0.9rem; width: 100%; text-align: center; }

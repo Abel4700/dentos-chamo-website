@@ -2,7 +2,7 @@ import { fetchPostBySlug } from '../lib/sanity.js';
 import { toHTML } from '@portabletext/to-html';
 
 export const BlogPost = () => `
-  <div class="app-section dark-theme-page">
+  <div class="app-section light-theme-page">
     
     <!-- BACKGROUND ANIMATED ORBS -->
     <div class="global-background-orbs">
@@ -26,15 +26,16 @@ export const BlogPost = () => `
 
   <style>
       :root {
-        --post-primary: #002F7F;
-        --post-accent: #38bdf8;
-        --post-bg: #030712;
-        --post-border: rgba(255, 255, 255, 0.1);
+        --post-primary: #1520A6;
+        --post-accent: #40E0D0;
+        --post-bg: #ffffff;
+        --post-border: #e2e8f0;
       }
 
-      .dark-theme-page { 
-        background: radial-gradient(circle at center, rgba(14, 38, 75, 0.3) 0%, var(--post-bg) 100%);
-        color: white; width: 100%; position: relative; overflow-x: clip; min-height: 100vh;
+      .light-theme-page { 
+        background: linear-gradient(to bottom, #ffffff 0%, #f1f5f9 100%); 
+        color: var(--text-main); width: 100%; position: relative; overflow-x: clip; min-height: 100vh;
+        padding-top: 100px;
       }
       .accent-text { color: var(--post-accent); }
       
@@ -47,16 +48,16 @@ export const BlogPost = () => `
 
       /* POST HERO V3 */
       .post-hero-v3 { height: 650px; background-size: cover; background-position: center; position: relative; }
-      .post-hero-v3::before { content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to bottom, rgba(3,7,18,0.2), rgba(3,7,18,0.8)); }
+      .post-hero-v3::before { content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(rgba(15, 32, 166, 0.9), rgba(5, 11, 20, 0.7)); }
       .post-hero-v3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 350px; background: linear-gradient(to top, var(--post-bg), transparent); }
 
       /* ENHANCED GLASS CARD */
       .glass-card-v3-post { 
-        background: rgba(17, 24, 39, 0.6); 
+        background: rgba(255, 255, 255, 0.85); 
         backdrop-filter: blur(25px); 
         border: 1px solid var(--post-border); 
         border-radius: 40px; 
-        box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+        box-shadow: 0 20px 60px rgba(0,0,0,0.05);
         position: relative;
         overflow: hidden;
       }
@@ -77,8 +78,7 @@ export const BlogPost = () => `
       .post-title-v3 { 
         font-size: clamp(2.8rem, 6vw, 4.5rem); 
         font-weight: 900; letter-spacing: -2.5px; line-height: 1.05; 
-        margin-bottom: 45px; color: white;
-        text-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        margin-bottom: 45px; color: var(--text-main);
       }
       .post-meta-v3 { 
         font-size: 0.85rem; color: var(--post-accent); font-weight: 800; 
@@ -87,16 +87,16 @@ export const BlogPost = () => `
       }
       .post-meta-v3::before { content: ''; width: 40px; height: 1px; background: var(--post-accent); opacity: 0.4; }
 
-      .post-body-v3 { color: rgba(255,255,255,0.85); line-height: 1.85; font-size: 1.25rem; }
-      .post-body-v3 h2 { font-size: 2.4rem; font-weight: 800; margin: 70px 0 35px; color: white; letter-spacing: -1px; }
-      .post-body-v3 h3 { font-size: 1.9rem; font-weight: 800; margin: 45px 0 25px; color: white; }
+      .post-body-v3 { color: #334155; line-height: 1.85; font-size: 1.25rem; }
+      .post-body-v3 h2 { font-size: 2.4rem; font-weight: 800; margin: 70px 0 35px; color: var(--text-main); letter-spacing: -1px; }
+      .post-body-v3 h3 { font-size: 1.9rem; font-weight: 800; margin: 45px 0 25px; color: var(--text-main); }
       .post-body-v3 p { margin-bottom: 35px; }
       .post-body-v3 ul, .post-body-v3 ol { margin-bottom: 35px; padding-left: 30px; }
       .post-body-v3 li { margin-bottom: 18px; }
       .post-body-v3 blockquote { 
         border-left: 5px solid var(--post-accent); padding: 35px 45px; 
-        background: rgba(56, 189, 248, 0.03); border-radius: 4px 24px 24px 4px; 
-        margin: 50px 0; font-style: italic; font-size: 1.5rem; color: white;
+        background: #f8fafc; border-radius: 4px 24px 24px 4px; 
+        margin: 50px 0; font-style: italic; font-size: 1.5rem; color: #1e293b;
         line-height: 1.6;
       }
 
@@ -107,11 +107,11 @@ export const BlogPost = () => `
       }
       .share-title-v3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 3px; color: #64748b; font-weight: 800; margin-bottom: 30px; }
       .share-links-v3 { display: flex; gap: 40px; }
-      .share-links-v3 a { font-size: 1.6rem; color: rgba(255,255,255,0.5); transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+      .share-links-v3 a { font-size: 1.6rem; color: #94a3b8; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
       .share-links-v3 a:hover { transform: translateY(-8px) scale(1.3); color: var(--post-accent); }
 
       /* SKELETONS V3 */
-      .skeleton-v3 { background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%); background-size: 200% 100%; animation: skeleton-loading 1.5s infinite; }
+      .skeleton-v3 { background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%); background-size: 200% 100%; animation: skeleton-loading 1.5s infinite; }
       @keyframes skeleton-loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
 
       @media (max-width: 768px) {
@@ -164,7 +164,7 @@ BlogPost.mount = async (params) => {
   const bodyHtml = post.body ? toHTML(post.body) : '<p>The content for this journal entry is currently being finalized.</p>';
 
   container.innerHTML = `
-    <section class="post-hero-v3" style="background-image: url('${post.imageUrl || 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=1920'}')"></section>
+    <section class="post-hero-v3" style="background-image: url('${post.imageUrl || 'https://images.unsplash.com/photo-1579154235602-3c2cfa99e1bc?auto=format&fit=crop&q=80&w=1920'}')"></section>
     
     <div class="container" style="max-width: 950px; margin-top: -200px; position: relative; z-index: 20; padding-bottom: 120px;">
       <article class="glass-card-v3-post" style="padding: 80px 90px;">

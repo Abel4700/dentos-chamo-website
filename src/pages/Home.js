@@ -30,7 +30,7 @@ export const Home = () => {
   }, 100);
 
   return `
-  <div class="app-section home-root dark-theme-page">
+  <div class="app-section home-root light-theme-page">
     
     <!-- BACKGROUND ANIMATED DECORATION -->
     <div class="global-background-orbs">
@@ -43,12 +43,12 @@ export const Home = () => {
       <div class="hero-slider-v3">
         
         <!-- SLIDE 1: THE STRATEGIC GATEWAY -->
-        <div class="hero-slide active" style="background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(240, 244, 248, 0.85)), url('/images/hero_medical_hub.png')">
+        <div class="hero-slide active" style="background-image: linear-gradient(rgba(15, 32, 166, 0.85), rgba(15, 32, 166, 0.7)), url('/images/hero_medical_hub.png')">
           <div class="container hero-container-v3">
             <div class="oradent-hero-content fade-in-up">
               <div class="hero-badge-v3">AFRICAN LOGISTICAL HUB</div>
-              <h1 class="section-title-visionary">Africa’s Strategic <span class="accent-text">Gateway</span> to Global Medical Tech</h1>
-              <p class="hero-lead">Leveraging the Dentose Dire Dawa Free Trade Zone to bridge world-class medical innovation with the African continent.</p>
+              <h1 class="section-title-visionary" style="color: white;">Africa’s Strategic <span class="accent-text">Gateway</span> to Global Medical Tech</h1>
+              <p class="hero-lead" style="color: rgba(255,255,255,0.9);">Leveraging the Dentose Dire Dawa Free Trade Zone to bridge world-class medical innovation with the African continent.</p>
               <div class="hero-actions-v3">
                  <a href="#/products?segment=medical" class="btn btn-primary btn-visionary">Explore Medical Solutions</a>
                  <a href="#/partners" class="btn btn-outline btn-visionary">Our Global Partners</a>
@@ -58,12 +58,12 @@ export const Home = () => {
         </div>
 
         <!-- SLIDE 2: DISTRIBUTION HUB -->
-        <div class="hero-slide" style="background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(240, 244, 248, 0.85)), url('/images/hero_africa_logistics.png')">
+        <div class="hero-slide" style="background-image: linear-gradient(rgba(15, 32, 166, 0.85), rgba(15, 32, 166, 0.7)), url('/images/hero_logistics_hub.png')">
            <div class="container hero-container-v3">
             <div class="oradent-hero-content">
               <div class="hero-badge-v3">CONTINENTAL FULFILLMENT</div>
-              <h1 class="section-title-visionary">Seamless Distribution <span class="accent-text">Across Africa</span></h1>
-              <p class="hero-lead">Merging global medical tech with world-class shipping and logistics in Dire Dawa to ensure healthcare accessibility for all.</p>
+              <h1 class="section-title-visionary" style="color: white;">Seamless Distribution <span class="accent-text">Across Africa</span></h1>
+              <p class="hero-lead" style="color: rgba(255,255,255,0.9);">Merging global medical tech with world-class shipping and logistics in Dire Dawa to ensure healthcare accessibility for all.</p>
               <div class="hero-actions-v3">
                  <a href="#/about" class="btn btn-primary btn-visionary">The Free Trade Zone Hub</a>
               </div>
@@ -225,20 +225,20 @@ export const Home = () => {
 
     <style>
       :root {
-        --home-primary: #002F7F;
-        --home-navy: #001F7F;
-        --home-accent: #38bdf8;
-        --home-bg: #050b14;
-        --home-border: #242424;
+        --home-primary: #1520A6;
+        --home-navy: #0e1570;
+        --home-accent: #40E0D0;
+        --home-bg: #ffffff;
+        --home-border: #e2e8f0;
       }
 
-      .dark-theme-page { background: radial-gradient(circle at center, rgba(14, 38, 75, 0.4) 0%, var(--home-bg) 70%), url('https://www.transparenttextures.com/patterns/cubes.png'); color: white; width: 100%; position: relative; overflow-x: clip; }
+      .light-theme-page { background: radial-gradient(circle at center, rgba(64, 224, 208, 0.05) 0%, var(--home-bg) 70%), url('https://www.transparenttextures.com/patterns/cubes.png'); color: var(--text-main); width: 100%; position: relative; overflow-x: clip; }
       .accent-text { color: var(--home-accent); }
       .primary-text { color: var(--home-primary); }
 
       /* GLOBAL DECORATION */
       .global-background-orbs { position: fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; }
-      .glass-orb { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.12; animation: orbMove 25s infinite alternate ease-in-out; }
+      .glass-orb { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.08; animation: orbMove 25s infinite alternate ease-in-out; }
       .orb-primary { width: 600px; height: 600px; background: var(--home-primary); top: -200px; right: -100px; }
       .orb-accent { width: 400px; height: 400px; background: var(--home-accent); bottom: 100px; left: -100px; animation-delay: -5s; }
       @keyframes orbMove { from { transform: translate(0,0); } to { transform: translate(150px, 150px); } }
@@ -255,12 +255,19 @@ export const Home = () => {
       .hero-badge-v3 { display: inline-block; padding: 10px 22px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 50px; color: var(--home-accent); font-weight: 800; font-size: 0.75rem; letter-spacing: 2.5px; margin-bottom: 30px; text-transform: uppercase; }
       .hero-badge-v3.no-margin { margin-bottom: 20px; }
       
-      .section-title-visionary { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; }
-      .hero-lead { font-size: clamp(1.1rem, 2vw, 1.4rem); color: rgba(255,255,255,0.7); max-width: 750px; margin-bottom: 45px; line-height: 1.6; }
+      .section-title-visionary { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; color: white; }
+      .hero-lead { font-size: clamp(1.1rem, 2vw, 1.4rem); color: rgba(255,255,255,0.8); max-width: 750px; margin-bottom: 45px; line-height: 1.6; }
       .hero-actions-v3 { display: flex; gap: 20px; }
       .hero-nav-dots-v3 { position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); display: flex; gap: 15px; z-index: 20; }
       .hero-dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2); cursor: pointer; transition: 0.4s; }
       .hero-dot.active { width: 35px; border-radius: 10px; background: var(--home-accent); box-shadow: 0 0 15px var(--home-accent); }
+
+      /* HERO EDITORIAL OVERRIDES */
+      .hero-editorial-v3 { padding: 180px 20px 100px; position: relative; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; 
+        background: linear-gradient(to right, rgba(15, 32, 166, 0.95), rgba(15, 32, 166, 0.4)), url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=1920');
+        background-size: cover; background-position: center; border-bottom: 1px solid var(--about-border);
+      }
+      .hero-editorial-overlay { position: absolute; bottom:0; left:0; width:100%; height:150px; background: linear-gradient(to top, rgba(15, 32, 166, 0.1), transparent); }
 
       /* CLINICAL WHITE OVERRIDES */
       .clinical-white-theme { color: #0f172a; }
@@ -284,9 +291,9 @@ export const Home = () => {
 
       /* ABOUT CINEMATIC */
       .about-grid-v3 { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-      .text-muted-standard { font-size: 1.25rem; color: #94a3b8; line-height: 1.8; margin-bottom: 40px; }
+      .text-muted-standard { font-size: 1.25rem; color: #64748b; line-height: 1.8; margin-bottom: 40px; }
       .about-visuals-v3 { position: relative; height: 550px; display: flex; align-items: center; justify-content: center; }
-      .about-main-img-container { width: 100%; height: 500px; border-radius: 40px; overflow: hidden; border: 1px solid var(--home-border); box-shadow: 0 40px 100px rgba(0,0,0,0.6); }
+      .about-main-img-container { width: 100%; height: 500px; border-radius: 40px; overflow: hidden; border: 1px solid var(--home-border); box-shadow: 0 20px 60px rgba(0,0,0,0.05); }
       .img-visionary { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
       .about-main-img-container:hover .img-visionary { transform: scale(1.05); }
       .glass-orb-glow { position: absolute; width: 400px; height: 400px; background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, transparent 70%); top: -50px; right: -50px; z-index: 1; }
@@ -296,8 +303,8 @@ export const Home = () => {
 
       /* BENTO MASTER GRID */
       .bento-grid-master { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 340px; gap: 30px; position: relative; z-index: 5; }
-      .glass-card-v3 { background: rgba(29, 29, 29, 0.7); backdrop-filter: blur(30px); border: 1px solid var(--home-border); border-radius: 35px; transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
-      .bento-v3-item { position: relative; overflow: hidden; text-decoration:none; color:white; }
+      .glass-card-v3 { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(30px); border: 1px solid var(--home-border); border-radius: 35px; transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+      .bento-v3-item { position: relative; overflow: hidden; text-decoration:none; color: var(--text-main); border: 1px solid var(--home-border); border-radius: 30px; background: white; }
       .bento-v3-large { grid-column: span 2; grid-row: span 2; }
       .bento-v3-wide { grid-column: span 2; }
       
@@ -305,26 +312,25 @@ export const Home = () => {
       .dark-bento-card { background: linear-gradient(135deg, #000F48 0%, #001F7F 100%); border: none; }
       .group-oradent-card { border-color: #273EBE; }
       .group-oradent-card:hover { border-color: var(--home-accent); background: rgba(56, 189, 248, 0.05); }
-      .group-akedent-card { border-color: var(--home-navy); }
+      .group-akedent-card { border-color: #273EBE; }
       
       .bento-v3-content { position: relative; z-index: 10; padding: 30px; height: 100%; display: flex; flex-direction: column; justify-content: flex-start; box-sizing: border-box; }
       .bento-v3-large .bento-v3-content { padding: 45px; }
       .bento-bg { position: absolute; top:0; left:0; width:100%; height:100%; background-size:cover; background-position:center; opacity: 0.15; z-index:1; transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
       .bento-v3-item:hover .bento-bg { transform: scale(1.1); opacity: 0.3; }
-      .bento-v3-item:hover { transform: translateY(-15px); box-shadow: 0 40px 100px rgba(0,0,0,0.5); }
+      .bento-v3-item:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
       
       .bento-icon-glow { font-size: 3.2rem; color: var(--home-accent); margin-top: auto; text-shadow: 0 0 25px rgba(56, 189, 248, 0.5); }
-      .bento-v3-item h3 { font-size: 1.65rem; font-weight: 800; margin-bottom: 12px; line-height: 1.2; }
-      .bento-v3-large h3 { font-size: 3.2rem; margin-bottom: 20px; }
-      .bento-v3-item p { color: #94a3b8; line-height: 1.6; font-size: 1.05rem; }
-      .group-parent p, .dark-bento-card p { color: rgba(255,255,255,0.7); }
+      .group-parent p, .dark-bento-card p { color: rgba(255,255,255,0.9); }
+      .bento-v3-item h3 { color: var(--text-main); }
+      .group-parent h3, .dark-bento-card h3 { color: white; }
 
       /* PILLARS CINEMATIC */
       .pillars-grid-v3 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
       .pillar-card-v3 { padding: 50px 30px; text-align: center; position: relative; }
       .pillar-icon-v3 { font-size: 3.5rem; color: var(--home-accent); margin-bottom: 30px; text-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
-      .pillar-card-v3 h3 { font-size: 1.6rem; font-weight: 800; margin-bottom: 15px; }
-      .pillar-card-v3 p { color: #94a3b8; font-size: 1rem; line-height: 1.5; }
+      .pillar-card-v3 h3 { font-size: 1.6rem; font-weight: 800; margin-bottom: 15px; color: var(--text-main); }
+      .pillar-card-v3 p { color: #64748b; font-size: 1rem; line-height: 1.5; }
       .pillar-glow { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 10%, rgba(56, 189, 248, 0.05) 0%, transparent 70%); opacity: 0; transition: opacity 0.5s ease; }
       .pillar-card-v3:hover .pillar-glow { opacity: 1; }
 
@@ -348,7 +354,8 @@ export const Home = () => {
         .bento-grid-master { grid-template-columns: 1fr; grid-auto-rows: auto; }
         .bento-v3-large, .bento-v3-wide { grid-column: span 1; grid-row: span 1; }
         .bento-v3-item { min-height: 300px; }
-        .section-title-visionary { font-size: 2.5rem; text-align: center; }
+        .section-title-visionary { font-weight: 900; letter-spacing: -3px; line-height: 1; color: white; }
+        .hero-lead { font-size: 1.2rem; color: rgba(255,255,255,0.8); max-width: 800px; line-height: 1.6; margin-top: 30px; }
         .hero-actions-v3 { flex-direction: column; width: 100%; max-width: 320px; margin: 0 auto; }
         .btn-visionary { width: 100%; text-align: center; }
         .trust-flex-v2 { flex-direction: column; align-items: flex-start; padding-left: 20px; gap: 20px; }
