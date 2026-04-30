@@ -26,8 +26,8 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   
   /* Brand Patterns */
-  --pattern-1: url('./assets/oradent_pattern_1.png');
-  --pattern-2: url('./assets/oradent_pattern_2.png');
+  --pattern-1: url('/assets/oradent_pattern_1.png');
+  --pattern-2: url('/assets/oradent_pattern_2.png');
 }
 
 .bg-pattern-light {
