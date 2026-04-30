@@ -12,7 +12,7 @@ export const ProductsHub = (queryParams = {}) => {
       logo: '/assets/prevest_logo.webp',
       color: '#4b66df',
       bg: 'linear-gradient(135deg, rgba(75,102,223,0.05) 0%, rgba(75,102,223,0.1) 100%)',
-      pdf: '/catalogues/Prevest-Denpro-Catalog-2026.pdf'
+      pdf: '/catalogues/Prevest_Denpro_Catalogue.pdf'
     },
     {
       name: 'IRES',
