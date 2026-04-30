@@ -115,9 +115,16 @@ export const BlogPost = () => `
       @keyframes skeleton-loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
 
       @media (max-width: 768px) {
-        .glass-card-v3-post { padding: 45px 30px; border-radius: 32px; }
-        .post-hero-v3 { height: 450px; }
-        .post-title-v3 { font-size: 2.2rem; letter-spacing: -1.5px; }
+        .glass-card-v3-post { padding: 40px 25px; border-radius: 24px; }
+        .post-hero-v3 { height: 400px; }
+        .container { margin-top: -120px !important; }
+        .post-title-v3 { font-size: 2rem; letter-spacing: -1px; margin-bottom: 30px; }
+        .post-meta-v3 { font-size: 0.75rem; letter-spacing: 2px; }
+        .post-body-v3 { font-size: 1.1rem; }
+        .post-body-v3 h2 { font-size: 1.8rem; margin: 40px 0 20px; }
+        .post-body-v3 h3 { font-size: 1.5rem; }
+        .post-body-v3 blockquote { padding: 25px; font-size: 1.2rem; margin: 30px 0; }
+        .share-links-v3 { gap: 25px; }
       }
   </style>
   </div>
