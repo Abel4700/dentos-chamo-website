@@ -308,7 +308,7 @@ export const About = () => {
                <img src="/assets/abigiya_abebaw.jpg" alt="Abigiya'a Abebaw" class="img-portrait-v3">
             </div>
             <div class="team-content-v3">
-               <h3>Abigiya'a Abebaw</h3>
+               <h3>Abigiya Abebaw</h3>
                <p class="accent-text team-title-v3">Marketing Manager</p>
                <p class="text-muted-standard text-center">Background in Anesthesia & Marketing. Leads marketing strategy and brand development, combining analytical precision with human-centered communication to drive engagement and meaningful customer connections.</p>
             </div>
