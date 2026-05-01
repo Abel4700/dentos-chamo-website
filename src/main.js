@@ -1,4 +1,7 @@
 import './style.css';
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
 import { initRouter } from './router.js';
 import { Header } from './components/Header.js';
 import { Footer } from './components/Footer.js';
@@ -6,6 +9,7 @@ import { initChatbot } from './components/Chatbot.js';
 import { Slider } from './components/Slider.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  window.scrollTo(0, 0);
   // Render static components
   document.getElementById('header').innerHTML = Header();
   document.getElementById('footer').innerHTML = Footer();
@@ -20,8 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target.closest('.mobile-menu-btn')) {
       document.querySelector('.nav-links').classList.toggle('active');
     }
-    if (e.target.closest('.nav-links a')) {
-      document.querySelector('.nav-links').classList.remove('active');
+    if (e.target.closest('.nav-links a') || e.target.closest('.footer-links-v3 a')) {
+      if (document.querySelector('.nav-links')) {
+        document.querySelector('.nav-links').classList.remove('active');
+      }
+      window.scrollTo(0, 0);
     }
     
     // Product Filtering Logic
@@ -68,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Handle URL segment parameter and initialization of dynamic components on route change
   window.addEventListener('hashchange', () => {
+    window.scrollTo(0, 0);
     setTimeout(() => {
       renderDynamicComponents();
       const urlParams = new URLSearchParams(window.location.hash.split('?')[1]);
