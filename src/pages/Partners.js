@@ -128,14 +128,6 @@ export const Partners = () => {
                       <p>Swiss precision engineering for medical implants. Provides advanced implantology and regenerative solutions.</p>
                    </div>
                 </a>
-                <a href="https://www.topzir.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
-                   <div class="p-logo-wrap"><img src="/assets/tozier_logo.svg" alt="TopZir" class="p-logo"></div>
-                   <div class="p-info">
-                      <h4>TopZir Crown Chain</h4>
-                      <p>Elite aesthetic restoration solutions. Providing highly durable zirconia blocks for modern medical laboratories.</p>
-                   </div>
-                </a>
-
                 <a href="https://www.precident.in/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3" style="grid-column: 3;">
                    <div class="p-logo-wrap"><img src="/assets/precident-logo-01.webp" alt="PreciDent" class="p-logo"></div>
                    <div class="p-info">
@@ -144,6 +136,9 @@ export const Partners = () => {
                       <span class="p-flag">🇮🇳 INDIA</span>
                    </div>
                 </a>
+              
+
+                
 
              </div>
           </div>
@@ -157,15 +152,15 @@ export const Partners = () => {
              </div>
              
              <div class="partners-bento">
-                <a href="https://accumedinstrument.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3 bento-wide">
-                   <div class="p-logo-wrap"><img src="/assets/accu-med_logo.png" alt="Accu-Med" class="p-logo"></div>
+             <a href="http://www.durablehs.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
+                   <div class="p-logo-wrap"><img src="/assets/durable-hospital-supplies-logo.webp" alt="Durable HS" class="p-logo"></div>
                    <div class="p-info">
-                      <h4>Accu-Med Instrument Co.</h4>
-                      <p>Pakistan's premier surgical and clinical instrument manufacturer. They provide meticulously crafted instruments for major global hospitals.</p>
+                      <h4>Durable Hospital Supplies</h4>
+                      <p>Standard-setting clinical fulfillment solutions. Dedicated to outfitting modern healthcare facilities with robust equipment.</p>
                       <span class="p-flag">🇵🇰 PAKISTAN</span>
                    </div>
                 </a>
-                <a href="https://www.ramomedical.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
+                 <a href="https://www.ramomedical.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
                    <div class="p-logo-wrap"><img src="/assets/ramo_medical_logo.webp" alt="Suzhou RAMO" class="p-logo"></div>
                    <div class="p-info">
                       <h4>Suzhou Ramo Medical Instrument Co., Ltd.</h4>
@@ -173,12 +168,11 @@ export const Partners = () => {
                       <span class="p-flag">🇨🇳 CHINA</span>
                    </div>
                 </a>
-                <a href="http://www.durablehs.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
-                   <div class="p-logo-wrap"><img src="/assets/durable-hospital-supplies-logo.webp" alt="Durable HS" class="p-logo"></div>
+                  <a href="https://www.topzir.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
+                   <div class="p-logo-wrap"><img src="/assets/tozier_logo.svg" alt="TopZir" class="p-logo"></div>
                    <div class="p-info">
-                      <h4>Durable Hospital Supplies</h4>
-                      <p>Standard-setting clinical fulfillment solutions. Dedicated to outfitting modern healthcare facilities with robust equipment.</p>
-                      <span class="p-flag">🇵🇰 PAKISTAN</span>
+                      <h4>TopZir Crown Chain</h4>
+                      <p>Elite aesthetic restoration solutions. Providing highly durable zirconia blocks for modern medical laboratories.</p>
                    </div>
                 </a>
                 <a href="https://sincereinstruments.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3">
@@ -188,6 +182,17 @@ export const Partners = () => {
                       <p>A leading producer of highly reliable medical and surgical instruments, ensuring top-tier performance for healthcare professionals.</p>
                    </div>
                 </a>
+                <a href="https://accumedinstrument.com/" target="_blank" rel="noopener noreferrer" class="partner-item glass-card-v3 bento-wide">
+                   <div class="p-logo-wrap"><img src="/assets/accu-med_logo.png" alt="Accu-Med" class="p-logo"></div>
+                   <div class="p-info">
+                      <h4>Accu-Med Instrument Co.</h4>
+                      <p>Pakistan's premier surgical and clinical instrument manufacturer. They provide meticulously crafted instruments for major global hospitals.</p>
+                      <span class="p-flag">🇵🇰 PAKISTAN</span>
+                   </div>
+                </a>
+               
+                
+                
              </div>
           </div>
 
