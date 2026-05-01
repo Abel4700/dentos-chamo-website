@@ -43,7 +43,7 @@ export const Home = () => {
       <div class="hero-slider-v3">
         
         <!-- SLIDE 1: THE STRATEGIC GATEWAY -->
-        <div class="hero-slide active" style="background-image: linear-gradient(rgba(15, 32, 166, 0.85), rgba(15, 32, 166, 0.7)), url('/images/hero_medical_hub.png')">
+        <div class="hero-slide active" style="background-image: linear-gradient(to right, rgba(15, 32, 166, 0.7), rgba(15, 32, 166, 0.2)), url('/images/hero_medical_hub.png')">
           <div class="container hero-container-v3">
             <div class="oradent-hero-content fade-in-up">
               <div class="hero-badge-v3">AFRICAN LOGISTICAL HUB</div>
@@ -58,7 +58,7 @@ export const Home = () => {
         </div>
 
         <!-- SLIDE 2: DISTRIBUTION HUB -->
-        <div class="hero-slide" style="background-image: linear-gradient(rgba(15, 32, 166, 0.85), rgba(15, 32, 166, 0.7)), url('/images/hero_logistics_hub.png')">
+        <div class="hero-slide" style="background-image: linear-gradient(to right, rgba(15, 32, 166, 0.7), rgba(15, 32, 166, 0.2)), url('/images/hero_africa_logistics.png')">
            <div class="container hero-container-v3">
             <div class="oradent-hero-content">
               <div class="hero-badge-v3">CONTINENTAL FULFILLMENT</div>

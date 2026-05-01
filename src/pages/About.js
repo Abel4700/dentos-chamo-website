@@ -342,7 +342,7 @@ export const About = () => {
       .hero-editorial-v3 { 
         padding: 220px 0 120px; 
         position: relative; 
-        background: linear-gradient(to right, rgba(15, 32, 166, 0.95), rgba(15, 32, 166, 0.4)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920');
+        background-image: linear-gradient(to right, rgba(15, 32, 166, 0.4), rgba(15, 32, 166, 0.1)), url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1920');
         background-size: cover; 
         background-position: center;
         border-bottom: 1px solid #e2e8f0;

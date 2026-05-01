@@ -115,7 +115,7 @@ export const DentoseChamo = () => `
     .hero-v3-dark {
       padding: 180px 20px 100px;
       position: relative;
-      background: linear-gradient(rgba(15, 32, 166, 0.95), rgba(5, 11, 20, 0.7)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920');
+      background-image: linear-gradient(rgba(15, 32, 166, 0.4), rgba(5, 11, 20, 0.2)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920');
       background-size: cover;
       background-position: center;
       display: flex;

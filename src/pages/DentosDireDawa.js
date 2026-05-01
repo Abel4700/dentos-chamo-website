@@ -327,19 +327,20 @@ export const DentosDireDawa = () => {
     .dd-hero {
       padding: 180px 20px 100px; position: relative;
       display: flex; flex-direction: column; justify-content: center; overflow: hidden;
-      background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 40%, transparent 100%),
+      background: linear-gradient(to right, rgba(5, 11, 20, 0.95) 30%, rgba(15, 32, 166, 0.4) 80%, transparent 100%),
                   url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1600');
       background-size: cover; background-position: right center;
+      color: white;
     }
     .dd-hero-container { z-index: 10; }
     .dd-hero-content { max-width: 750px; }
     .hero-tag-v3 {
-      display: inline-block; padding: 6px 18px; background: var(--dd-primary);
+      display: inline-block; padding: 6px 18px; background: var(--secondary);
       border-radius: 50px; font-weight: 800; font-size: 0.75rem; text-transform: uppercase;
-      letter-spacing: 2px; margin-bottom: 25px;
+      letter-spacing: 2px; margin-bottom: 25px; color: var(--dd-secondary);
     }
-    .dd-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 800; }
-    .hero-lead { font-size: 1.25rem; color: var(--dd-text-muted); line-height: 1.6; margin-bottom: 40px; }
+    .dd-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 800; color: white; }
+    .hero-lead { font-size: 1.25rem; color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 40px; }
     
     .hero-actions-v3 { display: flex; align-items: center; gap: 30px; }
     .btn-premium {
