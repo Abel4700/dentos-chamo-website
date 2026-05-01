@@ -115,9 +115,8 @@ export const DentoseChamo = () => `
     .hero-v3-dark {
       padding: 180px 20px 100px;
       position: relative;
-      background-image: linear-gradient(rgba(15, 32, 166, 0.4), rgba(5, 11, 20, 0.2)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920');
-      background-size: cover;
-      background-position: center;
+      background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(135deg, #f8fafc, #e2e8f0);
+      background-size: auto, cover;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -125,10 +124,10 @@ export const DentoseChamo = () => `
       border-bottom: 1px solid #e2e8f0;
     }
     .hero-badge-v3 {
-      display: inline-block; padding: 8px 24px; background: rgba(64, 224, 208, 0.1); border: 1px solid rgba(64, 224, 208, 0.2); border-radius: 50px; color: var(--secondary); font-weight: 800; font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 25px; box-shadow: 0 0 20px rgba(64, 224, 208, 0.1);
+      display: inline-block; padding: 8px 24px; background: rgba(15, 32, 166, 0.05); border: 1px solid rgba(15, 32, 166, 0.1); border-radius: 50px; color: var(--primary); font-weight: 800; font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 25px;
     }
-    .hero-title-visionary { font-size: clamp(3rem, 6vw, 5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; color: white; }
-    .hero-lead { font-size: clamp(1.1rem, 2vw, 1.3rem); color: rgba(255,255,255,0.85); max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; }
+    .hero-title-visionary { font-size: clamp(3rem, 6vw, 5rem); font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 25px; color: #0f172a; }
+    .hero-lead { font-size: clamp(1.1rem, 2vw, 1.3rem); color: #64748b; max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; }
     
     /* 🌐 ECOSYSTEM GRID */
     .strategic-spacing { padding: 100px 0; }
