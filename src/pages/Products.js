@@ -7,7 +7,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/apacal_art.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -45,7 +45,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/calplus.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -81,7 +81,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/caligel.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -116,7 +116,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/fusion_flo.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -155,7 +155,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/fusion_universal.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -194,7 +194,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/formacresol.jpg",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -233,7 +233,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/camaphenol.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -271,7 +271,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/eugenol.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
