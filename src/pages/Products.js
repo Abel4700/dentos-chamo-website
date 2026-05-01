@@ -194,7 +194,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "/images/products/prevest/formacresol.jpg",
+    "image": "/images/products/prevest/formacresol.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -309,7 +309,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/carvene.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -341,7 +341,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/hyposol.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -379,7 +379,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/fusion_core.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -417,7 +417,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/pf-seal.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
