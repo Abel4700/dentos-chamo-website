@@ -26770,7 +26770,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "oradox",
     "segment": "medical",
-    "image": "/images/products/oradox/oradox-oral-serum-orange.JPG",
+    "image": "/images/products/oradox/oradox_perio_care_oral_rinse_orange_flavour.webp",
     "featured": false,
     "catalogue_pdf": "/catalogues/Oradox_Catalogue.pdf",
     "specifications": {
@@ -26789,7 +26789,7 @@ export const products = [
       "Storage Conditions": "Store below 30°C, keep tightly closed, away from direct sunlight",
       "Price Type": "Contact for latest price",
       "Availability": "On request",
-      "Product Images": "oradox-oral-serum-orange.JPG",
+      "Product Images": "oradox_perio_care_oral_rinse_orange_flavour.webp",
       "Manufacturer Name": "Prevest DenPro",
       "Featured Product": "No",
       "Display Order": "1"
@@ -26803,7 +26803,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "oradox",
     "segment": "medical",
-    "image": "/images/products/oradox/oradox-reveal-plaque-tablets.JPG",
+    "image": "/images/products/oradox/oradox_ortho_aligner_cleansing_tabs.webp",
     "featured": false,
     "catalogue_pdf": "/catalogues/Oradox_Catalogue.pdf",
     "specifications": {
@@ -26826,12 +26826,51 @@ export const products = [
       "Storage Conditions": "Store in a cool, dry place, keep container tightly closed",
       "Price Type": "Contact for latest price",
       "Availability": "On request",
-      "Product Images": "oradox-reveal-plaque-tablets.JPG",
+      "Product Images": "oradox_ortho_aligner_cleansing_tabs.webp",
       "Manufacturer Name": "Prevest DenPro",
       "Featured Product": "No",
       "Display Order": "2"
     }
   },
+
+  {
+    "id": "ORA-003",
+    "commercial_name": "Oradox Oral Serum Fresh Flavor Mint, Orange, Lime, Strawberry",
+    "shortDesc": "Concentrated oral care serum for enhanced gum and oral hygiene.",
+    "category": "Oral Care",
+    "company": "dentose",
+    "manufacturer": "oradox",
+    "segment": "medical",
+    "image": "/images/products/oradox/oradox_oral_serum_refresh.webp",
+    "featured": false,
+    "catalogue_pdf": "/catalogues/Oradox_Catalogue.pdf",
+    "specifications": {
+      "Product ID": "ORA-003",
+      "Category": "Oral Care",
+      "Subcategory": "Mouthwash / Oral Rinse (therapeutic Dental Rinse)",
+      "Product Name": "Oradox Oral Serum Fresh Flavor Mint, Orange, Lime, Strawberry",
+      "Brand": "Oradox",
+      "Generic Name": "Oradox Oral Serum",
+      "Country of Origin": "India",
+      "Short Description": "EConcentrated oral care serum for enhanced gum and oral hygiene.",
+      "Full Description": "A potent oral serum formulated to support gum health, reduce bacteria, and provide long-lasting freshness. Ideal as an adjunct to daily oral hygiene routines.",
+      "Intended Use": "Gum care and oral hygiene support.",
+      "Key Features": "Concentrated Formula, Antibacterial Action, Fresh Flavor",
+      "Benefits": "Supports healthy gums.",
+      "Specifications": "Liquid serum; 30 ml / 50 ml bottle; dropper or pump dispenser; concentrated formula.",
+      "Material Composition": "Antibacterial agents, humectants, flavoring agents, aqueous base.",
+      "Sterile / Non-Sterile": "Non Sterile",
+      "Shelf Life": "24–36 months",
+      "Storage Conditions": " Store below 30°C, protect from heat and light.",
+      "Price Type": "Contact for latest price",
+      "Availability": "On request",
+      "Product Images": "oradox_oral_serum_refresh.webp",
+      "Manufacturer Name": "Prevest DenPro",
+      "Featured Product": "No",
+      "Display Order": "2"
+    }
+  },
+
   {
     "id": "ORA-004",
     "commercial_name": "Oradox Enamel Care Oral Swish Fresh Lime Flavour",
@@ -26840,7 +26879,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "oradox",
     "segment": "medical",
-    "image": "/images/products/oradox/oradox-oral-serum-fresh-lime.JPG",
+    "image": "/images/products/oradox/oradox_oral_enamel_care_swish.webp",
     "featured": false,
     "catalogue_pdf": "/catalogues/Oradox_Catalogue.pdf",
     "specifications": {
@@ -26863,7 +26902,7 @@ export const products = [
       "Storage Conditions": "Store below 30°C, protect from heat and light",
       "Price Type": "Contact for latest price",
       "Availability": "On request",
-      "Product Images": "oradox-oral-serum-fresh-lime.JPG",
+      "Product Images": "oradox-oral-serum-fresh-lime.webp",
       "Manufacturer Name": "Prevest DenPro",
       "Featured Product": "No",
       "Display Order": "4"
@@ -26914,7 +26953,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "oradox",
     "segment": "medical",
-    "image": "/images/products/oradox/oradox-oral-serum-fresh-lime.JPG",
+    "image": "/images/products/oradox/oradox-oral-serum-fresh-lime.webp",
     "featured": false,
     "catalogue_pdf": "/catalogues/Oradox_Catalogue.pdf",
     "specifications": {
@@ -26951,7 +26990,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "oradox",
     "segment": "medical",
-    "image": "/images/products/oradox/oradox-effervescent-mouthwash-tabs.JPG",
+    "image": "/images/products/oradox/oradox_ortho_denture_cleaning_tab.webp",
     "featured": false,
     "catalogue_pdf": "/catalogues/Oradox_Catalogue.pdf",
     "specifications": {
