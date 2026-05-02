@@ -367,7 +367,7 @@ export const ProductsHub = (queryParams = {}) => {
         transition: all 0.2s; 
       }
       .mfr-pill.active { background: var(--primary); color: white; border-color: var(--primary); box-shadow: 0 10px 20px rgba(21, 32, 166, 0.3); }
-      .mfr-pill:hover:not(.active) { background: rgba(255,255,255,0.1); color: white; }
+      .mfr-pill:hover:not(.active) { background: var(--primary); color: white; opacity: 0.8; }
 
       /* MOBILE RESPONSIVENESS */
       @media (max-width: 768px) {
