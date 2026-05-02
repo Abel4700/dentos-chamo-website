@@ -8377,7 +8377,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "durable",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/durable/root_elevators_apical.jpg",
     "featured": false,
     "catalogue_pdf": "/catalogues/Durable_Product_Catalogue.pdf",
     "specifications": {
@@ -8408,7 +8408,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "durable",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/durable/cryer_root_elevator.png",
     "featured": false,
     "catalogue_pdf": "/catalogues/Durable_Product_Catalogue.pdf",
     "specifications": {
@@ -25542,7 +25542,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "truedent",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/true-dent/mouth_mirror.png",
     "featured": false,
     "catalogue_pdf": "/catalogues/True-Dent_Catalogue.pdf",
     "specifications": {
@@ -26841,7 +26841,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "oradox",
     "segment": "medical",
-    "image": "/images/products/oradox/oradox_oral_serum_refresh.webp",
+    "image": "/images/products/oradox/oradox_oral_serum_refresh_mint_orange_stra_lime.webp",
     "featured": false,
     "catalogue_pdf": "/catalogues/Oradox_Catalogue.pdf",
     "specifications": {
@@ -27203,7 +27203,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "oradox",
     "segment": "medical",
-    "image": "/images/products/oradox/oradox-gingicare-hyaluronic-acid.JPG",
+    "image": "/images/products/oradox/oradox-gingicare-hyaluronic-acid.png",
     "featured": false,
     "catalogue_pdf": "/catalogues/Oradox_Catalogue.pdf",
     "specifications": {
