@@ -177,7 +177,7 @@ button {
   }
 }
 
-.fade-in {
+.fade-in, .fade-in-up {
   animation: fadeInUp 0.8s ease forwards;
 }
 

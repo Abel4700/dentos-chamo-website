@@ -53,7 +53,7 @@ export const Header = () => `
       top: 0;
       left: 0;
       width: 100%;
-      z-index: 1000;
+      z-index: 1;
       height: 80px;
       display: flex;
       align-items: center;

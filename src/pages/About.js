@@ -386,7 +386,7 @@ export const About = () => {
       .mission-block-v3 { margin-bottom: 30px; }
       .mission-block-v3 h5 { font-size: 0.75rem; letter-spacing: 2px; font-weight: 800; margin-bottom: 8px; }
       .mission-block-v3 p { color: #64748b; line-height: 1.6; font-size: 1.05rem; margin: 0; }
-      .mission-icon-v3 { font-size: 3rem; color: var(--about-accent); position: absolute; top: 50px; right: 50px; text-shadow: 0 0 20px rgba(56, 189, 248, 0.4); opacity: 0.6; }
+      .mission-icon-v3 { font-size: 2.2rem; color: var(--about-accent); position: absolute; top: 40px; right: 40px; text-shadow: 0 0 20px rgba(56, 189, 248, 0.4); opacity: 0.8; pointer-events: none; }
       
       .group-medical { border-color: var(--about-primary); }
       .group-organic { border-color: var(--about-navy); }
@@ -418,12 +418,11 @@ export const About = () => {
       /* VALUES GRID & CLIENTS GRID - SLIDER ENHANCEMENT */
       .values-grid-v3, .clients-grid-v3 { 
         display: grid; 
-        grid-template-columns: repeat(5, 1fr); 
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
         gap: 20px; 
       }
       .value-item, .client-card-v3 { 
         flex-shrink: 0; 
-        min-width: 280px; 
         transition: all 0.4s ease; 
       }
       .value-item { padding: 30px 20px; text-align: center; }
@@ -432,10 +431,25 @@ export const About = () => {
       .value-item p { font-size: 0.85rem; color: #94a3b8; line-height: 1.5; }
       .value-item:hover { border-color: var(--about-accent); transform: translateY(-5px); }
 
-      .client-card-v3 { padding: 45px 20px; text-align: center; border-radius: 35px; border: 1px solid rgba(15, 32, 166, 0.1); }
-      .client-icon-glow { font-size: 3rem; color: var(--about-accent); margin-bottom: 25px; text-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
-      .client-card-v3 h4 { font-size: 1.05rem; font-weight: 800; color: var(--about-primary); line-height: 1.4; }
-      .client-card-v3:hover { transform: translateY(-10px); border-color: var(--about-accent); background: rgba(56, 189, 248, 0.1); }
+      .client-card-v3 { 
+        padding: 45px 20px; 
+        text-align: center; 
+        border-radius: 35px; 
+        border: 1px solid rgba(255, 255, 255, 0.15); 
+        background: rgba(255, 255, 255, 0.08) !important;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+      .client-icon-glow { font-size: 3rem; color: var(--about-accent); margin-bottom: 25px; text-shadow: 0 0 20px rgba(64, 224, 208, 0.4); }
+      .client-card-v3 h4 { font-size: 1.05rem; font-weight: 800; color: #ffffff; line-height: 1.4; transition: all 0.3s; }
+      .client-card-v3:hover { 
+        transform: translateY(-12px); 
+        border-color: var(--about-accent); 
+        background: rgba(64, 224, 208, 0.15) !important;
+        box-shadow: 0 20px 40px rgba(64, 224, 208, 0.2);
+      }
+      .client-card-v3:hover h4 { color: var(--about-accent); }
 
       /* TEAM EXPANSION */
       .dept-roster-v3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
