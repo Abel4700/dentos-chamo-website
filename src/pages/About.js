@@ -277,7 +277,7 @@ export const About = () => {
             <div class="team-content-v3">
                <h3>Merhawi Berhanu</h3>
                <p class="accent-text team-title-v3">Export Manager</p>
-               <p class="text-muted-standard text-center">Construction Management. Leads export operations, driving international trade growth and managing efficient logistics and supply chain processes.</p>
+               <p class="text-muted-standard text-center">BSC in Construction Management. Leads export operations, driving international trade growth and managing efficient logistics and supply chain processes.</p>
             </div>
           </div>
           <!-- Leader 5: Yohannes Nega -->
