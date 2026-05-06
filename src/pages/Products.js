@@ -1380,7 +1380,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/endosmart-kit.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1416,7 +1416,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/mta-plus.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1454,7 +1454,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/cerafill-rcs.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1491,7 +1491,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/dolo.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1529,7 +1529,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/edta.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1566,7 +1566,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/zinc-oxide.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1602,7 +1602,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/pulp-x.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1639,7 +1639,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/alfina.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1675,7 +1675,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/bio-enamel.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1713,7 +1713,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "images/products/prevest/nano-coat.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1741,13 +1741,13 @@ export const products = [
   },
   {
     "id": "DTC-0048",
-    "commercial_name": "Copal F",
+    "commercial_name": "Copal-F",
     "shortDesc": ": Fluoride-containing cavity",
     "category": "Restorative",
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "images/products/prevest/copal-f.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1758,7 +1758,7 @@ export const products = [
       "Brand": "Prevest DenPro",
       "Generic Name": "Cavity Varnish",
       "Country of Origin": "India",
-      "Short Description": ": Fluoride-containing cavity",
+      "Short Description": "Copal Cavity Varnish with Fluoride",
       "Full Description": "A protective varnish used as a cavity liner to seal dentinal tubules and reduce sensitivity, with added fluoride release.",
       "Intended Use": "Cavity protection and liner",
       "Key Features": "Fluoride release Seals dentinal tubules Easy application",
@@ -1785,7 +1785,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "images/products/prevest/isolate.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1823,7 +1823,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "images/products/prevest/flourodip.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1861,7 +1861,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "images/products/prevest/hiflex-rr.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1899,7 +1899,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "images/products/prevest/hiflex-h.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1937,7 +1937,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "images/products/prevest/hiflex-base-plate.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1975,7 +1975,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "images/products/prevest/actino-gel.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -2013,7 +2013,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "images/products/prevest/actino-liquid.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -2083,20 +2083,20 @@ export const products = [
   },
   {
     "id": "DTC-0057",
-    "commercial_name": "Cera Etch",
+    "commercial_name": "Cera Etch Gel",
     "shortDesc": "Ceramic etching gel",
     "category": "Restorative",
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/cera-etch.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0057",
       "Category": "Restorative",
       "Subcategory": "Restorative Materials",
-      "Product Name": "Cera Etch",
+      "Product Name": "Cera Etch Gel",
       "Brand": "Prevest DenPro",
       "Generic Name": "Dental Restorative Material",
       "Country of Origin": "India",
@@ -2164,7 +2164,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/ultra-dry.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -2202,7 +2202,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/eposolv.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -2240,7 +2240,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/platina-hi-gloss.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -2273,7 +2273,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/spectra-min.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -2311,7 +2311,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/gingiva_shield.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -2349,7 +2349,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/reveal.png",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -2381,20 +2381,20 @@ export const products = [
   },
   {
     "id": "DTC-0065",
-    "commercial_name": "Ace",
+    "commercial_name": "A.C.E Kit",
     "shortDesc": "EDTA root canal lubricant",
     "category": "Restorative",
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/ace-kit.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0065",
       "Category": "Restorative",
       "Subcategory": "Restorative Materials",
-      "Product Name": "Ace",
+      "Product Name": "A.C.E Kit",
       "Brand": "Prevest DenPro",
       "Generic Name": "Dental Restorative Material",
       "Country of Origin": "India",
