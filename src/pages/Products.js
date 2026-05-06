@@ -455,7 +455,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/fusion-ultra-dc.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -493,7 +493,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/fusion_self_lute.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -531,7 +531,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/magma-nt-master-kit.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -569,7 +569,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/chlor-x-gel.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -607,7 +607,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/cal_lc.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -639,20 +639,20 @@ export const products = [
   },
   {
     "id": "DTC-0018",
-    "commercial_name": "Calcium Hydroxide Powde",
+    "commercial_name": "Calcium Hydroxide Powder",
     "shortDesc": ": Pulp capping material.",
     "category": "Endodontics",
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/calcium_hydroxide_powder.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
       "Product ID": "DTC-0018",
       "Category": "Endodontics",
       "Subcategory": "Endodontic Products",
-      "Product Name": "Calcium Hydroxide Powde",
+      "Product Name": "Calcium Hydroxide Powder",
       "Brand": "Prevest DenPro",
       "Generic Name": "Intracanal Medicament",
       "Country of Origin": "India",
@@ -683,7 +683,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/silane_x.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -717,7 +717,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/fusion-crysta-adhesive.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -754,7 +754,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/zitemp.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -787,7 +787,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/micron-bioactive.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -820,7 +820,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/micron-superior.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -832,7 +832,7 @@ export const products = [
       "Generic Name": "Dental Composite",
       "Country of Origin": "India",
       "Short Description": "Micron Superior by Prevest DenPro, listed under Restorative.",
-      "Full Description": ": A reliable dental cement used for temporary restorations and base applications. Provides good sealing and soothing effect on pulp.",
+      "Full Description": "A reliable dental cement used for temporary restorations and base applications. Provides good sealing and soothing effect on pulp.",
       "Intended Use": "Temporary filling, base/line",
       "Key Features": "Easy mixing Good sealing ability Sedative effect",
       "Benefits": "Protects pulp Cost-effective",
@@ -858,7 +858,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/micron-superior-capsules.jpg",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -891,7 +891,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/micron-luting.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -929,7 +929,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/poly-zinc.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -967,7 +967,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/zinc-f.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1005,7 +1005,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/zinconol.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1043,7 +1043,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/orafil-g-min.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1080,7 +1080,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/oratemp-ne-min.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1115,7 +1115,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/orafil-plus.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1152,7 +1152,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/oratemp-c&b.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1190,7 +1190,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/orafil-lc.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1228,7 +1228,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/zical.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1239,7 +1239,7 @@ export const products = [
       "Brand": "Prevest DenPro",
       "Generic Name": "Calcium Hydroxide Paste",
       "Country of Origin": "India",
-      "Short Description": "Calcium hydroxide paste",
+      "Short Description": "Calcium Hydroxide Paste",
       "Full Description": "Full Description: Used for pulp capping and cavity lining.",
       "Intended Use": "Intended Use: Pulp protection",
       "Key Features": "Key Features: High pH Radiopaque",
@@ -1266,7 +1266,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/endoseal.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -1342,7 +1342,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/nanoseal-s.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
@@ -2051,7 +2051,7 @@ export const products = [
     "company": "dentose",
     "manufacturer": "prevest",
     "segment": "medical",
-    "image": "",
+    "image": "/images/products/prevest/microgel-sf.webp",
     "featured": true,
     "catalogue_pdf": "/catalogues/Prevest_Denpro_Catalogue.pdf",
     "specifications": {
