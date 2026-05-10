@@ -1,48 +1,48 @@
 import { createClient } from '@sanity/client';
+import imageUrlBuilder from '@sanity/image-url';
 
 export const sanityClient = createClient({
-  projectId: 'ousbvhh0',
+  projectId: 'ousbvhh0', // Dentos-Chamo-Studio Project ID
   dataset: 'production',
-  useCdn: true, 
-  apiVersion: '2024-04-26', 
+  useCdn: true, // `false` if you want to ensure fresh data
+  apiVersion: '2024-05-01', // Use current date
 });
 
-export async function fetchNewsPosts() {
-  // Fetch posts and expand the mainImage reference to get the actual URL
+// Helper function to generate image URLs
+const builder = imageUrlBuilder(sanityClient);
+
+export const urlFor = (source) => {
+  return builder.image(source);
+};
+
+export const fetchNewsPosts = async () => {
   const query = `*[_type == "post"] | order(publishedAt desc) {
-    _id,
     title,
     "slug": slug.current,
-    publishedAt,
     "imageUrl": mainImage.asset->url,
+    publishedAt,
     excerpt
   }`;
-  
   try {
-    const posts = await sanityClient.fetch(query);
-    return posts;
+    return await sanityClient.fetch(query);
   } catch (error) {
-    console.error("Error fetching Sanity posts:", error);
+    console.error("Error fetching news posts:", error);
     return [];
   }
-}
+};
 
-export async function fetchPostBySlug(slug) {
+export const fetchPostBySlug = async (slug) => {
   const query = `*[_type == "post" && slug.current == $slug][0] {
-    _id,
     title,
-    "slug": slug.current,
-    publishedAt,
     "imageUrl": mainImage.asset->url,
-    excerpt,
-    body
+    publishedAt,
+    body,
+    "authorName": author->name
   }`;
-  
   try {
-    const post = await sanityClient.fetch(query, { slug });
-    return post;
+    return await sanityClient.fetch(query, { slug });
   } catch (error) {
-    console.error("Error fetching Sanity post:", error);
+    console.error("Error fetching post by slug:", error);
     return null;
   }
-}
+};

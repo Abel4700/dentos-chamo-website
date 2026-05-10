@@ -1,17 +1,17 @@
 /**
- * SEO Manager for Dentos Chamo
+ * SEO Manager for Dentose Chamo Trading PLC.
  * Handles dynamic head updates for SPA navigation
  */
 
 export const updateSEO = ({ title, description, image, type = 'website', canonical }) => {
   // 1. Update Document Title
-  const baseTitle = "Dentos Chamo Group";
+  const baseTitle = "Dentose Chamo Trading PLC.";
   document.title = title ? `${title} | ${baseTitle}` : `${baseTitle} | Premium Medical Solutions`;
 
   // 2. Update Meta Description
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) {
-    metaDesc.setAttribute('content', description || "Dentos Chamo Group - Leading provider of premium medical solutions and specialized agricultural products in East Africa.");
+    metaDesc.setAttribute('content', description || "Dentose Chamo Trading PLC. - Leading provider of premium medical solutions and specialized agricultural products in East Africa.");
   }
 
   // 3. Open Graph Tags

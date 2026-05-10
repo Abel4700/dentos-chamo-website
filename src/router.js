@@ -39,7 +39,7 @@ const routeSEO = {
   '#/about': { title: 'About Us', description: 'A legacy of medical excellence and strategic healthcare distribution.' },
   '#/products': { title: 'Medical Portfolio', description: 'Comprehensive catalog of premium medical, clinical, and surgical supplies.' },
   '#/partners': { title: 'Our Partners', description: 'Collaborating with global leaders in medical manufacturing.' },
-  '#/blog': { title: 'Healthcare News', description: 'Insights and updates from the Dentos Chamo Group.' },
+  '#/blog': { title: 'Healthcare News', description: 'Insights and updates from the Dentose Chamo Trading PLC..' },
   '#/contact': { title: 'Contact Support', description: 'Get in touch with our medical distribution and procurement experts.' }
 };
 
