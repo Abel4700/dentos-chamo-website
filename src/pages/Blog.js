@@ -13,7 +13,7 @@ export const Blog = () => `
     <section class="hero-editorial-v3">
       <div class="hero-editorial-content-v3 fade-in">
         <div class="hero-badge-v3">INSIGHTS & UPDATES</div>
-        <h1 class="section-title-visionary" style="color: white;">Dentos Chamo <span class="accent-text">Journal</span></h1>
+        <h1 class="section-title-visionary" style="color: white;">Dentose Chamo Trading PLC. <span class="accent-text">Journal</span></h1>
         <p class="hero-lead" style="color: rgba(255,255,255,0.9);">Exploring the convergence of medical technology, clinical excellence, and the future of healthcare across the horn of Africa.</p>
         
         <div class="hero-metrics-v3">
@@ -170,7 +170,7 @@ Blog.mount = async () => {
         <div class="blog-content-v3">
           <div class="blog-date-v3">${date}</div>
           <h3>${post.title}</h3>
-          <p class="blog-excerpt-v3">${post.excerpt || 'Discover the latest breakthroughs and corporate milestones from the Dentos Chamo Group...'}</p>
+          <p class="blog-excerpt-v3">${post.excerpt || 'Discover the latest breakthroughs and corporate milestones from the Dentose Chamo Trading PLC....'}</p>
           <a href="#/blog/${post.slug}" class="read-more-v3">Read Full Article <i class="fas fa-chevron-right"></i></a>
         </div>
       </div>

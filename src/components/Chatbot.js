@@ -12,7 +12,7 @@ export const initChatbot = () => {
         <button id="close-chatbot">&times;</button>
       </div>
       <div id="chatbot-messages">
-        <div class="message bot-message">ሰላም! (Hello!) Welcome to Dentos Chamo. How can I assist you today?</div>
+        <div class="message bot-message">ሰላም! (Hello!) Welcome to Dentose Chamo Trading PLC. How can I assist you today?</div>
       </div>
       <div id="chatbot-options" class="chat-scroll-area">
         <button class="chat-opt" data-next="q1">What products do you sell?</button>

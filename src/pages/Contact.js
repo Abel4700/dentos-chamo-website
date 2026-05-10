@@ -106,7 +106,7 @@ export const Contact = () => {
                 <label>Department / Inquiry</label>
                 <select class="modern-select">
                    <option>General Corporate Inquiry</option>
-                   <option>Dentos Chamo Medical Supply</option>
+                   <option>Dentose Chamo Trading PLC. Medical Supply</option>
                    <option>AkeDent Pharmaceuticals</option>
                    <option>Ora-Dent Cosmetics</option>
                    <option>Dire Dawa Logistics Hub</option>

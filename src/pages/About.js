@@ -198,7 +198,7 @@ export const About = () => {
             <div class="timeline-v3-content glass-card-v3 hover-lift">
               <div class="timeline-v3-date accent-text">Foundation</div>
               <h3>Strategic Establishment</h3>
-              <p>Dentos Chamo begins as an exclusive importer of highly specialized medical materials for regional healthcare providers.</p>
+              <p>Dentose Chamo Trading PLC. begins as an exclusive importer of highly specialized medical materials for regional healthcare providers.</p>
             </div>
           </div>
           <div class="timeline-v3-item fade-in" style="animation-delay: 0.1s;">

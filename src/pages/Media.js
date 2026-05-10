@@ -8,7 +8,7 @@ export const Media = () => {
         <div class="container text-center relative-z">
           <div class="hero-label">NEWSROOM & RELEASES</div>
           <h1 class="fluid-title">Media & <span class="text-primary">Press</span></h1>
-          <p class="hero-subtitle">Official announcements, industry insights, and media coverage for Dentos Chamo.</p>
+          <p class="hero-subtitle">Official announcements, industry insights, and media coverage for Dentose Chamo Trading PLC..</p>
         </div>
       </section>
 
@@ -19,7 +19,7 @@ export const Media = () => {
             
             <div class="media-card glass-premium fade-in-up">
               <div class="media-tag">Press Release</div>
-              <h3 class="media-title">Dentos Chamo Announces New Regional Headquarters</h3>
+              <h3 class="media-title">Dentose Chamo Trading PLC. Announces New Regional Headquarters</h3>
               <p class="media-excerpt">Expanding our footprint to better serve our growing client base with centralized logistics and clinical support.</p>
               <div class="media-footer">
                 <span class="media-date"><i class="far fa-calendar-alt"></i> Feb 15, 2026</span>
@@ -30,7 +30,7 @@ export const Media = () => {
             <div class="media-card glass-premium fade-in-up" style="animation-delay: 0.1s;">
               <div class="media-tag">Market Insight</div>
               <h3 class="media-title">Featured in Medical Technology Magazine</h3>
-              <p class="media-excerpt">"Dentos Chamo is redefining dental corporate identity," says editor in the latest quarterly edition.</p>
+              <p class="media-excerpt">"Dentose Chamo Trading PLC. is redefining dental corporate identity," says editor in the latest quarterly edition.</p>
               <div class="media-footer">
                 <span class="media-date"><i class="far fa-calendar-alt"></i> Jan 10, 2026</span>
                 <a href="#" class="read-more">Read Article →</a>

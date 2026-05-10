@@ -2,7 +2,7 @@ export const Header = () => `
   <header id="main-header" class="glass">
     <div class="container nav-container">
       <a href="#/" class="logo">
-        <img src="/assets/dentosechamo-logo.png" alt="Dentos Chamo Group Logo" class="brand-logo">
+        <img src="/assets/dentosechamo-logo.png" alt="Dentose Chamo Trading PLC. Logo" class="brand-logo">
       </a>
       
       <nav class="nav-links">

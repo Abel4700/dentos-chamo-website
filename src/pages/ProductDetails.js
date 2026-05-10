@@ -1,315 +1,295 @@
-import { products } from './Products.js';
 import { updateSEO, injectProductSchema, createSlug } from '../lib/seo.js';
+import { sanityClient } from '../lib/sanity.js';
 
 export const ProductDetails = () => {
-  const hash = window.location.hash;
-  const nameMatch = hash.match(/\?name=([^&]*)/);
-  const productNameSlug = nameMatch ? nameMatch[1] : null;
-
-  const product = products.find(p => createSlug(p.commercial_name) === productNameSlug);
-
-  if (!product) {
-    return `
-      <div class="app-section bg-light page-offset">
-        <section class="section">
-          <div class="container text-center" style="padding: 100px 0;">
-            <div class="empty-icon"><i class="fas fa-search-minus"></i></div>
-            <h2 style="color: #0f172a; margin-top: 20px;">Product Not Found</h2>
-            <p style="color: #64748b; margin-top: 10px; font-size: 1.1rem;">Technical specifications for this item are currently offline. <br><br><a href="#/products" class="btn btn-primary">Return to Catalog</a></p>
-          </div>
-        </section>
-      </div>
-    `;
-  }
-
-  // 1. BRAND COLOR MAPPING
-  const BRAND_COLORS = {
-    'accu-med': { primary: '#1520A6', secondary: '#0e1570', text: '#ffffff' },
-    'oradox': { primary: '#40E0D0', secondary: '#2cb1a5', text: '#ffffff' },
-    'prevest': { primary: '#1520A6', secondary: '#0e1570', text: '#ffffff' },
-    'topzir': { primary: '#40E0D0', secondary: '#2cb1a5', text: '#ffffff' },
-    'default': { primary: '#1520A6', secondary: '#40E0D0', text: '#ffffff' }
-  };
-  const theme = BRAND_COLORS[product.manufacturer] || BRAND_COLORS.default;
-
-  // 2. DATA SEGREGATION LOGIC
-  const specs = product.specifications || {};
-  const highlights = [];
-  const techSpecs = [];
-  const regulatory = [];
-
-  // Categorize specifications for the Tabbed View
-  const EXCLUDED_KEYWORDS = ['display order', 'featured product', 'related products', 'brand', 'manufacturer name', 'image', 'catalogue', 'datasheet', 'generic name'];
-
-  Object.entries(specs).forEach(([key, val]) => {
-    if (!val || String(val).trim() === '') return;
-
-    const k = key.toLowerCase();
-
-    // Skip if key contains excluded keywords or ends with Excel markers (asterisks)
-    if (EXCLUDED_KEYWORDS.some(kw => k.includes(kw)) || key.includes('*')) {
-      return;
-    }
-
-    if (k.includes('feature') || k.includes('salient') || k.includes('highlight') || k.includes('benefit')) {
-      highlights.push({ key, val });
-    } else if (k.includes('cert') || k.includes('iso') || k.includes('shelf') || k.includes('storage') || k.includes('sterile')) {
-      regulatory.push({ key, val });
-    } else {
-      techSpecs.push({ key, val });
-    }
-  });
-
-  // Fallback if highlights are empty: Use first 3 interesting specs
-  if (highlights.length === 0 && techSpecs.length > 0) {
-    highlights.push(...techSpecs.slice(0, 3));
-  }
-
-  // 3. TAB CONTROLLER JS
-  setTimeout(() => {
-    const tabs = document.querySelectorAll('.detail-tab');
-    const sections = document.querySelectorAll('.tab-content-panel');
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        const target = tab.dataset.target;
-
-        // Update UI
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-
-        sections.forEach(s => {
-          if (s.id === target) s.style.display = 'block';
-          else s.style.display = 'none';
-        });
-      });
-    });
-  }, 100);
-
   return `
-    <div class="detail-page-wrapper">
-      <div class="container">
-        <a href="#/products" class="back-to-catalog fade-in">
-          <i class="fas fa-arrow-left"></i> Back to Products
-        </a>
-      </div>
-      
-      <div class="container main-content-grid">
-        
-        <!-- LEFT: VISUAL STAGE -->
-        <aside class="side-visuals fade-in">
-          <div class="presentation-stage glass-premium shadow-sm">
-            ${product.image
-      ? `<img src="${product.image}" alt="${product.commercial_name}" class="contained-img">`
-      : `<div class="missing-img-box"><i class="fas fa-image"></i><span>Visual Pending</span></div>`
-    }
-          </div>
-          
-          <div class="download-portal glass-premium shadow-sm">
-             <div class="portal-info">
-               <i class="fas fa-file-pdf pdf-icon"></i>
-               <div>
-                 <span class="portal-title">Download eIFU Document</span>
-                 <span class="portal-subtitle">Electronic Instructions for Use</span>
-               </div>
-             </div>
-             <a href="${product.catalogue_pdf || `/catalogues/${product.company}_Catalogue.pdf`}" target="_blank" download class="download-trigger">
-               <i class="fas fa-download"></i>
-             </a>
-          </div>
-        </aside>
-
-        <!-- RIGHT: PRODUCT DATASHEET -->
-        <main class="info-hub fade-in">
-          
-          <div class="header-metadata">
-            <div class="mfr-chip" style="background: ${theme.primary}15; color: ${theme.primary};">${product.manufacturer.toUpperCase()} IMPORT</div>
-          </div>
-
-          <h1 class="main-commercial-title">${product.commercial_name}</h1>
-          
-          <!-- CLEAN UNDERLINE TABS (RESTORED) -->
-          <nav class="detail-tabs-nav fade-in-up">
-            <button class="detail-tab active" data-target="tech-specs">Technical Specs</button>
-            <button class="detail-tab" data-target="regulatory">Regulatory</button>
-            <button class="detail-tab" data-target="ordering">Support</button>
-          </nav>
-
-          <div class="tab-content glass-premium shadow-sm fade-in-up">
-            <div id="tech-specs" class="tab-content-panel">
-               <div class="bento-grid-specs">
-                 ${techSpecs.length > 0 ? techSpecs.map(s => `
-                   <div class="bento-spec-item">
-                     <span class="bento-label">${s.key}</span>
-                     <span class="bento-val">${s.val}</span>
-                   </div>
-                 `).join('') : '<p class="empty-msg">Detailed specs available upon request.</p>'}
-               </div>
-            </div>
-
-            <div id="regulatory" class="tab-content-panel" style="display: none;">
-               <div class="regulatory-list">
-                 ${regulatory.length > 0 ? regulatory.map(r => `
-                   <div class="reg-row">
-                     <span class="reg-label">${r.key}</span>
-                     <span class="reg-val">${r.val}</span>
-                   </div>
-                 `).join('') : '<p class="empty-msg">Regulatory documentation pending review.</p>'}
-               </div>
-            </div>
-
-            <div id="ordering" class="tab-content-panel" style="display: none;">
-               <div class="ordering-support">
-                 <h4>Request a Quotation</h4>
-                 <p>Contact our procurement team for institutional pricing and distribution details.</p>
-                 <div class="order-cta-group">
-                   <button class="primary-btn-quote" style="background: ${theme.primary};"><i class="fas fa-envelope"></i> Send Inquiry</button>
-                   <a href="https://wa.me/251911..." target="_blank" class="whatsapp-btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp Support</a>
-                 </div>
-               </div>
-            </div>
-          </div>
-
-        </main>
+    <div id="details-container" class="app-section bg-light page-offset" style="min-height: 100vh; display: flex; align-items: center; justify-content: center;">
+      <div style="text-align: center;">
+        <i class="fas fa-circle-notch fa-spin" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
+        <h2 style="color: var(--text-main);">Loading Product Details...</h2>
       </div>
     </div>
-
-    <style>
-      .detail-page-wrapper { background: var(--bg-light); min-height: 100vh; padding: 150px 0 100px; }
-      
-      .back-to-catalog {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        color: var(--text-muted);
-        text-decoration: none;
-        font-weight: 700;
-        margin-bottom: 30px;
-        font-size: 0.9rem;
-        transition: all 0.3s;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-      .back-to-catalog:hover {
-        color: ${theme.primary};
-        transform: translateX(-5px);
-      }
-
-      .main-content-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 30px;
-        align-items: start;
-      }
-      @media(min-width: 994px) { .main-content-grid { grid-template-columns: 1fr 1.6fr; gap: 40px; } }
-
-      /* LEFT COLUMN */
-      .presentation-stage {
-        background: white; border-radius: 20px; padding: 40px;
-        height: 500px; display: flex; align-items: center; justify-content: center;
-        position: relative; overflow: hidden;
-        border: 1px solid var(--glass-border);
-      }
-      .contained-img { max-width: 100%; max-height: 100%; object-fit: contain; }
-      
-      .iso-overlay-badges { position: absolute; top: 20px; right: 20px; display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
-      .iso-badge { font-size: 0.65rem; font-weight: 800; padding: 6px 12px; border-radius: 6px; color: white; letter-spacing: 0.5px; }
-      .iso-badge.sterile { background: #10b981; }
-      .iso-badge.single { background: var(--primary); }
-      .iso-badge.fragile { background: #f59e0b; }
-
-      .download-portal { 
-        background: white; 
-        border-radius: 20px; 
-        padding: 25px; 
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center; 
-        margin-top: 20px; 
-        border: 2px solid ${theme.primary}30; /* Brighter, themed border */
-        box-shadow: 0 10px 20px -10px ${theme.primary}20;
-      }
-      .portal-info { display: flex; align-items: center; gap: 15px; }
-      .pdf-icon { font-size: 1.8rem; color: ${theme.primary}; opacity: 1; } /* Bright icon */
-      .portal-title { display: block; font-weight: 800; color: ${theme.primary}; font-size: 0.95rem; } /* Brighter text */
-      .portal-subtitle { display: block; font-size: 0.8rem; color: var(--text-muted); font-weight: 600; }
-      .download-trigger { color: ${theme.primary}; font-size: 1.2rem; transition: transform 0.3s; } /* Active color */
-      .download-trigger:hover { transform: scale(1.2); }
-
-      /* RIGHT COLUMN */
-      .info-hub { display: flex; flex-direction: column; gap: 20px; }
-      .header-metadata { display: flex; justify-content: space-between; align-items: center; }
-      .mfr-chip { font-weight: 800; font-size: 0.7rem; padding: 6px 16px; border-radius: 50px; }
-      .hs-chip { background: var(--bg-light); color: var(--text-muted); font-family: 'Courier New', Courier, monospace; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; border: 1px solid var(--glass-border); }
-
-      .main-commercial-title { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; color: var(--text-main); margin: 0; letter-spacing: -1.5px; }
-      
-      .ref-cat-row { padding: 5px 0; display: flex; align-items: center; gap: 15px; color: var(--text-muted); font-size: 0.95rem; }
-      .ref-cat-row strong { color: var(--text-main); }
-      .divider { color: var(--glass-border); }
-
-      .udi-barcode-box { background: #fff; border: 1px solid var(--glass-border); border-radius: 12px; padding: 15px 25px; display: flex; justify-content: space-between; align-items: center; margin: 5px 0; }
-      .udi-label { font-size: 0.7rem; font-weight: 800; color: var(--text-muted); letter-spacing: 1px; }
-      .udi-value { font-family: 'Courier New', Courier, monospace; font-size: 1rem; font-weight: 700; color: var(--text-main); letter-spacing: 2px; }
-
-      /* TABS */
-      .detail-tabs-nav { display: flex; border-bottom: 2px solid var(--bg-light); margin-top: 10px; }
-      .detail-tab {
-        padding: 15px 20px; border: none; background: transparent; font-weight: 800;
-        color: var(--text-muted); cursor: pointer; position: relative; bottom: -2px;
-        transition: all 0.2s; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;
-      }
-      .detail-tab.active { color: ${theme.primary}; border-bottom: 2px solid ${theme.primary}; }
-      
-      .tab-content { background: white; padding: 30px; border-radius: 0 0 20px 20px; min-height: 250px; border: 1px solid var(--glass-border); border-top: none; }
-      
-      .bento-grid-specs { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
-      .bento-spec-item { display: flex; flex-direction: column; gap: 5px; }
-      .bento-label { font-size: 0.7rem; font-weight: 800; color: var(--text-muted); opacity: 0.6; text-transform: uppercase; letter-spacing: 1px; }
-      .bento-val { font-size: 0.95rem; color: var(--text-main); font-weight: 600; }
-
-      .regulatory-list { display: flex; flex-direction: column; gap: 15px; }
-      .reg-row { display: flex; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px dotted var(--glass-border); }
-      .reg-label { color: var(--text-muted); font-size: 0.9rem; font-weight: 600; }
-      .reg-val { font-weight: 700; color: var(--text-main); font-size: 0.9rem; text-align: right; }
-
-      .primary-btn-quote { color: white; padding: 15px 25px; border-radius: 12px; font-weight: 800; border: none; font-size: 0.9rem; cursor: pointer; transition: var(--transition); }
-      .primary-btn-quote:hover { transform: translateY(-2px); filter: brightness(1.1); }
-      .whatsapp-btn-outline { border: 2px solid var(--glass-border); padding: 13px 25px; border-radius: 12px; font-weight: 800; color: var(--text-muted); font-size: 0.9rem; text-decoration: none; display: inline-block; transition: var(--transition); }
-      .whatsapp-btn-outline:hover { border-color: var(--secondary); color: var(--secondary); }
-
-      .footer-card { background: white; border-radius: 20px; padding: 25px; border: 1px solid var(--glass-border); margin-top: 20px; }
-      .card-title { font-size: 0.9rem; font-weight: 800; color: var(--text-muted); display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
-      .card-title i { color: ${theme.primary}; }
-
-      .mfr-name { font-size: 1rem; font-weight: 800; color: var(--text-main); line-height: 1.3; margin-bottom: 5px; }
-      .mfr-location { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 15px; display: block; font-weight: 600; }
-      .origin-tag { display: inline-flex; align-items: center; gap: 8px; background: var(--bg-light); padding: 6px 12px; border-radius: 60px; font-weight: 800; color: var(--text-muted); font-size: 0.8rem; border: 1px solid var(--glass-border); }
-
-      /* MOBILE */
-      @media (max-width: 768px) {
-        .detail-page-wrapper { padding: 100px 0; }
-        .presentation-stage { height: 320px; padding: 20px; }
-        .main-commercial-title { font-size: 2rem; }
-        .detail-tab { padding: 15px; font-size: 0.8rem; }
-      }
-    </style>
   `;
 };
 
-ProductDetails.mount = () => {
+ProductDetails.mount = async () => {
+  const container = document.getElementById('details-container');
+  if (!container) return;
+
   const hash = window.location.hash;
   const nameMatch = hash.match(/\?name=([^&]*)/);
   const productNameSlug = nameMatch ? nameMatch[1] : null;
-  const product = products.find(p => createSlug(p.commercial_name) === productNameSlug);
 
-  if (product) {
-    updateSEO({
-      title: product.commercial_name,
-      description: product.shortDesc || `Professional medical solution: ${product.commercial_name}.`,
-      image: product.image
+  try {
+    const allProducts = await sanityClient.fetch(`*[_type == "product" && isActive == true && manufacturer->isActive == true] { _id, productName, productId }`);
+    const matchingProduct = allProducts.find(p => 
+      createSlug(p.productName || '') === productNameSlug || 
+      p.productId === productNameSlug
+    );
+
+    if (!matchingProduct) {
+      container.innerHTML = `<div class="container text-center" style="padding: 150px 0;"><h2>Product Not Found</h2><p><a href="#/products" class="btn btn-primary">Return to Catalog</a></p></div>`;
+      return;
+    }
+
+    const query = `*[_id == $id][0] {
+      productName,
+      brand,
+      "mfrSlug": manufacturer->slug.current,
+      "category": category->title,
+      subcategory,
+      shortDescription,
+      fullDescription,
+      intendedUse,
+      keyFeatures,
+      benefits,
+      availability,
+      priceType,
+      packSize,
+      materialComposition,
+      sterileStatus,
+      shelfLife,
+      storageConditions,
+      manufacturerName,
+      countryOfOrigin,
+      certification,
+      regulatoryInfo,
+      "image": mainImage.asset->url,
+      "datasheet": datasheetPdf.asset->url,
+      "manual": instructionManual.asset->url,
+      specificationGroups,
+      "related": relatedProducts[]->{ productName, "image": mainImage.asset->url }
+    }`;
+
+    const product = await sanityClient.fetch(query, { id: matchingProduct._id });
+    if (!product) throw new Error('Data unavailable');
+
+    updateSEO({ title: product.productName, description: product.shortDescription, image: product.image });
+
+    const theme = (product.mfrSlug === 'oradox' || product.mfrSlug === 'topzir') 
+      ? { primary: '#40E0D0', secondary: '#2cb1a5' }
+      : { primary: '#1520A6', secondary: '#0e1570' };
+
+    // Section Content Checks
+    const hasOverview = !!(product.fullDescription || product.intendedUse || product.keyFeatures || product.benefits);
+    const hasSpecs = !!(product.packSize || product.materialComposition || product.sterileStatus || product.shelfLife || product.storageConditions || (product.specificationGroups && product.specificationGroups.length > 0));
+    const hasCompliance = !!(product.manufacturerName || product.countryOfOrigin || product.certification || product.regulatoryInfo);
+    const hasSupport = !!(product.datasheet || product.manual);
+
+    const tabs = [
+      { id: 'overview', label: 'Overview', active: hasOverview },
+      { id: 'specs', label: 'Technical Specifications', active: !hasOverview && hasSpecs },
+      { id: 'compliance', label: 'Regulatory & Compliance', active: !hasOverview && !hasSpecs && hasCompliance },
+      { id: 'support', label: 'Downloads / Support', active: !hasOverview && !hasSpecs && !hasCompliance && hasSupport }
+    ].filter(t => {
+      if (t.id === 'overview') return hasOverview;
+      if (t.id === 'specs') return hasSpecs;
+      if (t.id === 'compliance') return hasCompliance;
+      if (t.id === 'support') return hasSupport;
+      return false;
     });
-    injectProductSchema(product);
+
+    // Set first available tab as active
+    if (tabs.length > 0) tabs[0].active = true;
+
+    container.outerHTML = `
+      <style>
+        .detail-view { background: #f8fafc; padding: 180px 0 100px; min-height: 100vh; }
+        .hero-section { display: grid; grid-template-columns: 1fr; gap: 50px; margin-bottom: 60px; align-items: start; }
+        @media(min-width: 994px) { .hero-section { grid-template-columns: 1fr 1.2fr; } }
+        
+        .img-stage { background: white; border-radius: 32px; padding: 50px; height: 500px; display: flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+        .img-stage img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        
+        .hero-info { display: flex; flex-direction: column; gap: 25px; }
+        .brand-label { font-weight: 800; font-size: 0.8rem; color: ${theme.primary}; text-transform: uppercase; letter-spacing: 2px; }
+        .title-main { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; line-height: 1; letter-spacing: -3px; color: #0f172a; margin: 0; }
+        .cat-row { display: flex; gap: 15px; align-items: center; color: #64748b; font-weight: 700; font-size: 1rem; }
+        .availability { display: flex; align-items: center; gap: 10px; font-weight: 800; color: #10b981; }
+        
+        .tabs-strip { display: flex; border-bottom: 2px solid #e2e8f0; margin-top: 40px; gap: 10px; overflow-x: auto; }
+        .tab-trigger { padding: 18px 25px; border: none; background: none; font-weight: 800; color: #94a3b8; cursor: pointer; border-bottom: 4px solid transparent; transition: 0.3s; white-space: nowrap; font-size: 0.9rem; }
+        .tab-trigger.active { color: ${theme.primary}; border-color: ${theme.primary}; }
+        
+        .panel { display: none; padding: 50px 0; animation: slideUp 0.4s ease; }
+        .panel.active { display: block; }
+        
+        .info-card { background: white; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0; }
+        .info-label { display: block; color: #94a3b8; font-weight: 800; font-size: 0.75rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        .info-val { font-size: 1rem; color: #1e293b; font-weight: 600; line-height: 1.6; margin: 0; }
+        
+        .spec-row { padding: 18px 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+        .spec-lbl { color: #64748b; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; }
+        .spec-v { color: #0f172a; font-weight: 700; text-align: right; }
+        
+        .dl-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .dl-item { display: flex; align-items: center; gap: 20px; background: white; padding: 25px; border-radius: 20px; border: 1px solid #e2e8f0; text-decoration: none; transition: 0.3s; }
+        .dl-item:hover { transform: translateY(-5px); border-color: ${theme.primary}; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        .dl-item i { font-size: 2rem; color: ${theme.primary}; }
+        
+        @keyframes slideUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+      </style>
+
+      <div class="detail-view">
+        <div class="container">
+          <a href="#/products" style="text-decoration:none; color:#64748b; font-weight:800; display:inline-flex; align-items:center; gap:10px; margin-bottom:50px;">
+            <i class="fas fa-arrow-left"></i> RETURN TO CATALOG
+          </a>
+
+          <div class="hero-section">
+            <div class="img-stage">
+              ${product.image ? `<img src="${product.image}" alt="${product.productName}">` : '<div style="color:#cbd5e1; font-weight:800; text-align:center;"><i class="fas fa-image" style="font-size:3rem; margin-bottom:10px;"></i><br>VISUAL PENDING</div>'}
+            </div>
+            
+            <div class="hero-info">
+              <span class="brand-label">${(product.brand || product.mfrSlug || 'Brand').toUpperCase()}</span>
+              <h1 class="title-main">${product.productName}</h1>
+              
+              <div class="cat-row">
+                <span>${product.category}</span>
+                ${product.subcategory ? `<span style="opacity:0.3;">/</span><span>${product.subcategory}</span>` : ''}
+              </div>
+              
+              ${product.shortDescription ? `<p style="font-size: 1.2rem; color: #475569; line-height: 1.6; margin: 0;">${product.shortDescription}</p>` : ''}
+              
+              <div class="availability">
+                <i class="fas fa-check-circle"></i> ${product.availability || 'Available on Request'}
+              </div>
+
+              <div style="margin-top: 10px; display: flex; gap: 20px;">
+                <a href="#/contact" class="btn" style="background:${theme.primary}; color:white; text-decoration:none; border:none; padding:12px 25px; border-radius:12px; font-weight:800; font-size:0.9rem; letter-spacing:0.5px; transition:0.3s; display:inline-block;">SUBMIT INQUIRY</a>
+              </div>
+            </div>
+          </div>
+
+          ${tabs.length > 0 ? `
+            <nav class="tabs-strip">
+              ${tabs.map(t => `<button class="tab-trigger ${t.active ? 'active' : ''}" data-target="${t.id}">${t.label.toUpperCase()}</button>`).join('')}
+            </nav>
+
+            <div class="tabs-content">
+              <!-- OVERVIEW -->
+              ${hasOverview ? `
+                <div id="overview" class="panel ${tabs.find(t => t.id === 'overview')?.active ? 'active' : ''}">
+                  ${product.fullDescription ? `<p style="font-size: 1.25rem; color: #1e293b; line-height: 1.8; margin-bottom: 50px;">${product.fullDescription}</p>` : ''}
+                  
+                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    ${product.intendedUse ? `<div class="info-card"><span class="info-label">Intended Use</span><p class="info-val">${product.intendedUse}</p></div>` : ''}
+                    ${product.keyFeatures ? `<div class="info-card"><span class="info-label">Key Features</span><p class="info-val">${product.keyFeatures}</p></div>` : ''}
+                    ${product.benefits ? `<div class="info-card"><span class="info-label">Benefits</span><p class="info-val">${product.benefits}</p></div>` : ''}
+                  </div>
+                </div>
+              ` : ''}
+
+              <!-- SPECS -->
+              ${hasSpecs ? `
+                <div id="specs" class="panel ${tabs.find(t => t.id === 'specs')?.active ? 'active' : ''}">
+                  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 80px;">
+                    <div>
+                      <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 30px; color: #0f172a;">Core Specifications</h3>
+                      ${[
+                        { label: 'Pack Size', v: product.packSize },
+                        { label: 'Material Composition', v: product.materialComposition },
+                        { label: 'Sterile Status', v: product.sterileStatus },
+                        { label: 'Shelf Life', v: product.shelfLife },
+                        { label: 'Storage Conditions', v: product.storageConditions }
+                      ].filter(f => f.v).map(f => `
+                        <div class="spec-row">
+                          <span class="spec-lbl">${f.label}</span>
+                          <span class="spec-v">${f.v}</span>
+                        </div>
+                      `).join('')}
+                    </div>
+
+                    ${product.specificationGroups ? product.specificationGroups.map(g => `
+                      <div>
+                        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 30px; color: #0f172a;">${g.sectionTitle}</h3>
+                        ${g.items ? g.items.map(i => `
+                          <div class="spec-row">
+                            <span class="spec-lbl">${i.label}</span>
+                            <span class="spec-v">${i.value}</span>
+                          </div>
+                        `).join('') : ''}
+                      </div>
+                    `).join('') : ''}
+                  </div>
+                </div>
+              ` : ''}
+
+              <!-- COMPLIANCE -->
+              ${hasCompliance ? `
+                <div id="compliance" class="panel ${tabs.find(t => t.id === 'compliance')?.active ? 'active' : ''}">
+                  <div style="max-width: 800px;">
+                    ${[
+                      { label: 'Manufacturer', v: product.manufacturerName },
+                      { label: 'Country of Origin', v: product.countryOfOrigin },
+                      { label: 'Certification', v: product.certification },
+                      { label: 'Regulatory Info', v: product.regulatoryInfo }
+                    ].filter(f => f.v).map(f => `
+                      <div class="spec-row">
+                        <span class="spec-lbl">${f.label}</span>
+                        <span class="spec-v">${f.v}</span>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+              ` : ''}
+
+              <!-- SUPPORT -->
+              ${hasSupport ? `
+                <div id="support" class="panel ${tabs.find(t => t.id === 'support')?.active ? 'active' : ''}">
+                  <div class="dl-box">
+                    ${product.datasheet ? `
+                      <a href="${product.datasheet}" target="_blank" class="dl-item">
+                        <i class="fas fa-file-medical"></i>
+                        <div><strong style="display:block; font-size:1.1rem;">Technical Datasheet</strong><span style="font-size:0.85rem; color:#64748b;">Download PDF Specification</span></div>
+                      </a>
+                    ` : ''}
+                    ${product.manual ? `
+                      <a href="${product.manual}" target="_blank" class="dl-item">
+                        <i class="fas fa-book-open"></i>
+                        <div><strong style="display:block; font-size:1.1rem;">Instruction Manual</strong><span style="font-size:0.85rem; color:#64748b;">Electronic Instructions for Use</span></div>
+                      </a>
+                    ` : ''}
+                  </div>
+                </div>
+              ` : ''}
+            </div>
+          ` : ''}
+
+          <!-- RELATED -->
+          ${product.related && product.related.length > 0 ? `
+            <div style="margin-top: 100px;">
+              <h2 style="font-size: 1.8rem; font-weight: 900; margin-bottom: 40px; letter-spacing: -1px;">Related Products</h2>
+              <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 30px;">
+                ${product.related.map(r => `
+                  <a href="#/product-details?name=${createSlug(r.productName)}" style="text-decoration:none; color:inherit;">
+                    <div class="info-card" style="padding: 20px; transition:0.3s; cursor:pointer;" onmouseover="this.style.borderColor='${theme.primary}'" onmouseout="this.style.borderColor='#e2e8f0'">
+                      <div style="height:180px; display:flex; align-items:center; justify-content:center; margin-bottom:15px;">
+                        ${r.image ? `<img src="${r.image}" style="max-width:100%; max-height:100%; object-fit:contain;">` : '<i class="fas fa-image" style="font-size:2rem; color:#e2e8f0;"></i>'}
+                      </div>
+                      <h4 style="margin:0; font-size:1rem; font-weight:800;">${r.productName}</h4>
+                    </div>
+                  </a>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+        </div>
+      </div>
+    `;
+
+    // TAB LOGIC
+    const btns = document.querySelectorAll('.tab-trigger');
+    const pnl = document.querySelectorAll('.panel');
+    btns.forEach(b => b.addEventListener('click', () => {
+      btns.forEach(x => x.classList.remove('active'));
+      pnl.forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+      document.getElementById(b.dataset.target).classList.add('active');
+    }));
+
+  } catch (e) {
+    container.innerHTML = `<div class="container text-center" style="padding:150px 0;"><h2>Error: ${e.message}</h2><p><a href="#/products" class="btn btn-primary">Back to Catalog</a></p></div>`;
   }
 };
-
