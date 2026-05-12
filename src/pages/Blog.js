@@ -99,13 +99,13 @@ export const Blog = () => `
       .metric-divider { width: 1px; height: 50px; background: #e2e8f0; }
 
       /* BLOG GRID V3 */
-      .blog-grid-v3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 40px; position: relative; z-index: 10; }
+      .blog-grid-v3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); gap: 40px; position: relative; z-index: 10; }
 
       .glass-card-v3 { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 1px solid var(--blog-border); border-radius: 24px; padding: 0; overflow: hidden; transition: var(--transition); box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
       .hover-lift:hover { transform: translateY(-10px); border-color: var(--blog-accent); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
 
       .blog-card-v3 { display: flex; flex-direction: column; height: 100%; }
-      .blog-image-wrapper-v3 { position: relative; height: 280px; overflow: hidden; }
+      .blog-image-wrapper-v3 { position: relative; height: 320px; overflow: hidden; }
       .blog-img-v3 { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
       .blog-card-v3:hover .blog-img-v3 { transform: scale(1.1); }
       
@@ -120,7 +120,7 @@ export const Blog = () => `
 
       /* SKELETONS V3 */
       .skeleton-v3 { background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%); background-size: 200% 100%; animation: skeleton-loading 1.5s infinite; }
-      .skeleton-img-v3 { height: 280px; border-radius: 24px 24px 0 0; }
+      .skeleton-img-v3 { height: 320px; border-radius: 24px 24px 0 0; }
       .skeleton-text-v3 { height: 12px; border-radius: 100px; margin-bottom: 12px; }
       @keyframes skeleton-loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
 
