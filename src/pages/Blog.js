@@ -163,7 +163,7 @@ Blog.mount = async () => {
     const imgUrl = post.imageUrl || 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&q=80&w=800';
     
     return `
-      <div class="blog-card-v3 glass-card-v3 hover-lift">
+      <a href="#/blog/${post.slug}" class="blog-card-v3 glass-card-v3 hover-lift" style="text-decoration: none; color: inherit; display: flex; flex-direction: column;">
         <div class="blog-image-wrapper-v3">
           <img src="${imgUrl}" alt="${post.title}" class="blog-img-v3">
         </div>
@@ -171,9 +171,9 @@ Blog.mount = async () => {
           <div class="blog-date-v3">${date}</div>
           <h3>${post.title}</h3>
           <p class="blog-excerpt-v3">${post.excerpt || 'Discover the latest breakthroughs and corporate milestones from the Dentose Chamo Trading PLC....'}</p>
-          <a href="#/blog/${post.slug}" class="read-more-v3">Read Full Article <i class="fas fa-chevron-right"></i></a>
+          <div class="read-more-v3">Read Full Article <i class="fas fa-chevron-right"></i></div>
         </div>
-      </div>
+      </a>
     `;
   }).join('');
   
