@@ -1,4 +1,4 @@
-import { fetchPostBySlug } from '../lib/sanity.js';
+import { fetchPostBySlug, urlFor } from '../lib/sanity.js';
 import { toHTML } from '@portabletext/to-html';
 
 export const BlogPost = () => `
@@ -48,7 +48,7 @@ export const BlogPost = () => `
 
       /* POST HERO V3 */
       .post-hero-v3 { height: 650px; background-size: cover; background-position: center; position: relative; }
-      .post-hero-v3::before { content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(rgba(15, 32, 166, 0.9), rgba(5, 11, 20, 0.7)); }
+      .post-hero-v3::before { content: ''; position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(rgba(15, 32, 166, 0.5), rgba(5, 11, 20, 0.3)); }
       .post-hero-v3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 350px; background: linear-gradient(to top, var(--post-bg), transparent); }
 
       /* ENHANCED GLASS CARD */
@@ -99,6 +99,13 @@ export const BlogPost = () => `
         background: #f8fafc; border-radius: 4px 24px 24px 4px; 
         margin: 50px 0; font-style: italic; font-size: 1.5rem; color: #1e293b;
         line-height: 1.6;
+      }
+
+      .post-inline-image { margin: 60px 0; width: 100%; border-radius: 24px; overflow: hidden; }
+      .post-inline-image img { width: 100%; height: auto; display: block; border-radius: 24px; }
+      .post-inline-image figcaption { 
+        margin-top: 15px; text-align: center; font-size: 0.95rem; color: #64748b; 
+        font-style: italic; font-weight: 500;
       }
 
       .post-footer-v3 { 
@@ -162,7 +169,22 @@ BlogPost.mount = async (params) => {
     }
   }
 
-  const bodyHtml = post.body ? toHTML(post.body) : '<p>The content for this journal entry is currently being finalized.</p>';
+  const bodyHtml = post.body ? toHTML(post.body, {
+    components: {
+      types: {
+        image: ({value}) => {
+          if (!value?.asset) return '';
+          const url = urlFor(value).width(1200).auto('format').url();
+          return `
+            <figure class="post-inline-image">
+              <img src="${url}" alt="${value.alt || ''}" loading="lazy">
+              ${value.caption ? `<figcaption>${value.caption}</figcaption>` : ''}
+            </figure>
+          `;
+        }
+      }
+    }
+  }) : '<p>The content for this journal entry is currently being finalized.</p>';
 
   const shareUrl = encodeURIComponent(window.location.href);
   const shareTitle = encodeURIComponent(post.title);
