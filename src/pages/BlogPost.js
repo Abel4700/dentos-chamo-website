@@ -60,6 +60,7 @@ export const BlogPost = () => `
         box-shadow: 0 20px 60px rgba(0,0,0,0.05);
         position: relative;
         overflow: hidden;
+        padding: 80px 90px;
       }
       .glass-card-v3-post::before {
         content: ''; position: absolute; top:0; left:0; width:100%; height:2px;
@@ -115,7 +116,7 @@ export const BlogPost = () => `
       @keyframes skeleton-loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
 
       @media (max-width: 768px) {
-        .glass-card-v3-post { padding: 40px 25px; border-radius: 24px; }
+        .glass-card-v3-post { padding: 40px 20px; border-radius: 24px; }
         .post-hero-v3 { height: 400px; }
         .container { margin-top: -120px !important; }
         .post-title-v3 { font-size: 2rem; letter-spacing: -1px; margin-bottom: 30px; }
@@ -163,11 +164,14 @@ BlogPost.mount = async (params) => {
 
   const bodyHtml = post.body ? toHTML(post.body) : '<p>The content for this journal entry is currently being finalized.</p>';
 
+  const shareUrl = encodeURIComponent(window.location.href);
+  const shareTitle = encodeURIComponent(post.title);
+
   container.innerHTML = `
     <section class="post-hero-v3" style="background-image: url('${post.imageUrl || 'https://images.unsplash.com/photo-1579154235602-3c2cfa99e1bc?auto=format&fit=crop&q=80&w=1920'}')"></section>
     
     <div class="container" style="max-width: 950px; margin-top: -200px; position: relative; z-index: 20; padding-bottom: 120px;">
-      <article class="glass-card-v3-post" style="padding: 80px 90px;">
+      <article class="glass-card-v3-post">
         <a href="#/blog" class="back-link-v3"><i class="fas fa-arrow-left"></i> Back to Journal</a>
         
         <div class="post-meta-v3">${date}</div>
@@ -180,10 +184,10 @@ BlogPost.mount = async (params) => {
         <footer class="post-footer-v3">
           <div class="share-title-v3">Share this Update</div>
           <div class="share-links-v3">
-            <a href="#" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=${shareUrl}" target="_blank" rel="noopener" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareTitle}" target="_blank" rel="noopener" title="Share on Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}" target="_blank" rel="noopener" title="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://api.whatsapp.com/send?text=${shareTitle}%20${shareUrl}" target="_blank" rel="noopener" title="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
         </footer>
       </article>
