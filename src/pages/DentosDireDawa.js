@@ -32,21 +32,23 @@ export const DentosDireDawa = () => {
       <div class="container about-v3-grid">
         <div class="about-v3-main glass-card-v3 fade-in">
           <h2>Pioneering <span class="primary-text">Trade Enablement</span></h2>
-          <p>Dentose Dire Dawa Logistics PLC operates at the heart of Ethiopia's most strategically positioned economic hub. We don't just move cargo; we manage the flow of international commerce through the most advanced <strong>One-Stop Service Center</strong> on the continent.</p>
-          
+          <p>The Diredawa Free Trade Zone is a modern trade and industrial hub established to facilitate international trade, manufacturing, logistics, and investment. Strategically located on Ethiopia's main trade corridor, the Free Trade Zone offers businesses a competitive environment with efficient access to regional and global markets.</p>
+          <p>Operated by Dentose Logistics, the Free Trade Zone provides integrated logistics and business solutions designed to simplify trade operations and improve supply chain efficiency. Our services include import and export facilitation, re-export operations, warehousing, customs coordination, cargo handling, and investor support, enabling businesses to operate smoothly while reducing costs and delivery times.</p>
+          <p>With modern infrastructure, streamlined procedures, and a one-stop service center, we support manufacturers, traders, logistics providers, and international investors throughout every stage of their operations. Our mission is to create an investment-friendly environment that promotes industrial growth, regional trade, and long-term economic development, making the Diredawa Free Trade Zone a leading gateway for business in East Africa.</p>
+
           <div class="mission-vision-v3">
             <div class="mv-item">
               <div class="mv-icon"><i class="fas fa-bullseye"></i></div>
               <div>
                 <h4>Our Mission</h4>
-                <p>Supporting economic growth through reliable, duty-free trade facilitation.</p>
+                <p>To provide efficient, cost-effective, and reliable free trade and logistics solutions that support international trade, industrial growth, and investment through the Diredawa Free Trade Zone.</p>
               </div>
             </div>
             <div class="mv-item">
               <div class="mv-icon"><i class="fas fa-rocket"></i></div>
               <div>
                 <h4>Our Vision</h4>
-                <p>Becoming Africa's leading gateway for seamless global trade innovation.</p>
+                <p>To become East Africa's leading free trade and industrial gateway by providing innovative, reliable, and sustainable trade solutions that drive investment, industrial growth, regional integration, and global business connectivity.</p>
               </div>
             </div>
           </div>
@@ -59,7 +61,7 @@ export const DentosDireDawa = () => {
                 <span>Dire Dawa Operational Hub</span>
               </div>
               <div class="visual-img-mask">
-                 <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=600" alt="Warehouse Operation">
+                 <img src="/images/diredawa/diredawa-warehouse-racking.jpg" alt="Warehouse Operation">
               </div>
               <div class="visual-footer">
                 <strong>Licensed & Secured Space</strong>
@@ -70,51 +72,68 @@ export const DentosDireDawa = () => {
       </div>
     </section>
 
-    <!-- WHAT WE OFFER (BENTO GRID V3) -->
+    <!-- WHAT WE OFFER (OPERATIONAL ADVANTAGES) -->
     <section class="section offerings-v3">
       <div class="container">
         <div class="section-header mb-100">
            <h2>Operational <span class="primary-text">Advantages</span></h2>
         </div>
 
-        <div class="bento-grid-v3">
-          <!-- Reduced Costs -->
-          <div class="bento-v3-item bento-v3-large glass-card-v3 hover-lift group-cost">
-            <div class="bento-bg" style="background-image: url('https://images.unsplash.com/photo-1579451861283-a2239070aaa9?auto=format&fit=crop&q=80&w=800');"></div>
-            <div class="bento-v3-content">
-              <div class="bento-tag">Commercial Strategy</div>
-              <h3>0% Duty Operations</h3>
-              <p>Significantly reduced import, export, and re-export costs through our specialized status within the Free Trade Zone corridor.</p>
-              <div class="bento-icon-v3"><i class="fas fa-hand-holding-usd"></i></div>
-            </div>
+        <div class="advantages-grid-v3">
+          <!-- Advantage 1 -->
+          <div class="advantage-card-v3 glass-card-v3 hover-lift">
+            <div class="advantage-num">01</div>
+            <div class="advantage-icon"><i class="fas fa-hand-holding-usd"></i></div>
+            <h3>Duty-Free Trade & Tax Benefits</h3>
+            <p>Operate within the Free Trade Zone with duty-free import, export, and re-export privileges, helping businesses reduce tariffs and overall trading costs.</p>
           </div>
 
-          <!-- Faster Transit -->
-          <div class="bento-v3-item glass-card-v3 hover-lift group-speed">
-             <div class="bento-v3-content">
-              <div class="bento-icon-v3"><i class="fas fa-shipping-fast text-primary"></i></div>
-              <h3>Rapid Transit</h3>
-              <p>Direct proximity to Dry Port & Rail Access.</p>
-            </div>
+          <!-- Advantage 2 -->
+          <div class="advantage-card-v3 glass-card-v3 hover-lift">
+            <div class="advantage-num">02</div>
+            <div class="advantage-icon"><i class="fas fa-university"></i></div>
+            <h3>Simplified Banking Process</h3>
+            <p>Eligible international transactions can be completed under Free Trade Zone regulations with simplified banking procedures, reducing the need for lengthy foreign currency approvals and making international payments more efficient.</p>
           </div>
 
-          <!-- Access to Markets -->
-          <div class="bento-v3-item glass-card-v3 hover-lift group-market dark-bento">
-             <div class="bento-v3-content">
-              <div class="bento-icon-v3 glow-medical"><i class="fas fa-globe-africa text-white"></i></div>
-              <h3>Global Access</h3>
-              <p>Gateway to 1.3 Billion Market Size potential.</p>
-            </div>
+          <!-- Advantage 3 -->
+          <div class="advantage-card-v3 glass-card-v3 hover-lift">
+            <div class="advantage-num">03</div>
+            <div class="advantage-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <h3>Strategic Trade Location</h3>
+            <p>Located on Ethiopia's main trade corridor with direct access to Djibouti Port, the Free Trade Zone shortens transit times, improves regional connectivity, and supports faster movement of goods.</p>
           </div>
 
-          <!-- Scalable Solutions -->
-          <div class="bento-v3-item bento-v3-wide glass-card-v3 hover-lift group-scale">
-            <div class="bento-bg" style="background-image: url('https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=80&w=800');"></div>
-            <div class="bento-v3-content">
-              <div class="bento-tag">Business Support</div>
-              <h3>Scalable Infrastructure</h3>
-              <p>From precision medical equipment storage to bulk industrial machinery fulfillment center operations.</p>
-            </div>
+          <!-- Advantage 4 -->
+          <div class="advantage-card-v3 glass-card-v3 hover-lift">
+            <div class="advantage-num">04</div>
+            <div class="advantage-icon"><i class="fas fa-passport"></i></div>
+            <h3>Faster Customs Clearance</h3>
+            <p>Benefit from streamlined customs procedures and one-stop services that reduce paperwork, speed up cargo clearance, and minimize administrative delays.</p>
+          </div>
+
+          <!-- Advantage 5 -->
+          <div class="advantage-card-v3 glass-card-v3 hover-lift">
+            <div class="advantage-num">05</div>
+            <div class="advantage-icon"><i class="fas fa-coins"></i></div>
+            <h3>Lower Logistics & Operating Costs</h3>
+            <p>Efficient transportation, warehousing, and integrated logistics services help businesses reduce operating expenses while improving supply chain performance.</p>
+          </div>
+
+          <!-- Advantage 6 -->
+          <div class="advantage-card-v3 glass-card-v3 hover-lift">
+            <div class="advantage-num">06</div>
+            <div class="advantage-icon"><i class="fas fa-exchange-alt"></i></div>
+            <h3>Re-Export & Regional Distribution Hub</h3>
+            <p>The Free Trade Zone serves as an ideal hub for re-export, regional distribution, and value-added logistics, enabling businesses to efficiently reach markets across Ethiopia, East Africa, and beyond.</p>
+          </div>
+
+          <!-- Advantage 7 -->
+          <div class="advantage-card-v3 glass-card-v3 hover-lift">
+            <div class="advantage-num">07</div>
+            <div class="advantage-icon"><i class="fas fa-warehouse"></i></div>
+            <h3>Integrated Logistics, Storage & Warehousing Solutions</h3>
+            <p>Utilize modern storage facilities, warehousing solutions, inventory management, and logistics services designed to reduce operational costs and improve supply chain efficiency.</p>
           </div>
         </div>
       </div>
@@ -208,6 +227,35 @@ export const DentosDireDawa = () => {
             </div>
          </div>
        </div>
+    </section>
+
+    <!-- FACILITY GALLERY -->
+    <section class="section dd-gallery bg-darker">
+      <div class="container">
+        <div class="section-header mb-100 text-center">
+           <h2>Inside the <span class="primary-text">Free Trade Zone</span></h2>
+        </div>
+        <div class="gallery-grid-v3">
+          <div class="gallery-item-v3 glass-card-v3 hover-lift">
+            <div class="gallery-img-mask">
+              <img src="/images/diredawa/diredawa-cargo-handling.jpg" alt="Container Handling Operations">
+            </div>
+            <div class="gallery-caption">Container & Cargo Handling</div>
+          </div>
+          <div class="gallery-item-v3 glass-card-v3 hover-lift">
+            <div class="gallery-img-mask">
+              <img src="/images/diredawa/diredawa-entrance-sign.jpg" alt="Dire Dawa Free Trade Zone Entrance">
+            </div>
+            <div class="gallery-caption">Free Trade Zone Entrance</div>
+          </div>
+          <div class="gallery-item-v3 glass-card-v3 hover-lift">
+            <div class="gallery-img-mask">
+              <img src="/images/diredawa/diredawa-ftz-bridge.jpg" alt="Free Trade Zone Gateway">
+            </div>
+            <div class="gallery-caption">Free Trade Zone Gateway</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- LEADERSHIP (PREMIUM CARDS) -->
@@ -328,7 +376,7 @@ export const DentosDireDawa = () => {
       padding: 180px 20px 100px; position: relative;
       display: flex; flex-direction: column; justify-content: center; overflow: hidden;
       background: linear-gradient(to right, rgba(5, 11, 20, 0.95) 30%, rgba(15, 32, 166, 0.4) 80%, transparent 100%),
-                  url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1600');
+                  url('/images/diredawa/diredawa-warehouse-units.jpg');
       background-size: cover; background-position: right center;
       color: white;
     }
@@ -358,11 +406,13 @@ export const DentosDireDawa = () => {
     .brand-subtitle { color: var(--secondary); font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; margin-bottom: 15px; }
     .about-v3-main h2 { font-size: clamp(2.5rem, 4vw, 3.8rem); margin-bottom: 35px; letter-spacing: -1px; }
     .section-header h2 { font-size: clamp(2.5rem, 4vw, 4rem); margin-bottom: 20px; letter-spacing: -1.5px; }
+    .about-v3-main p { margin-bottom: 20px; line-height: 1.75; }
+    .about-v3-main p:last-of-type { margin-bottom: 0; }
     .mission-vision-v3 { display: grid; gap: 30px; margin-top: 40px; }
     .mv-item { display: flex; gap: 20px; align-items: flex-start; }
-    .mv-icon { width: 50px; height: 50px; background: rgba(0, 47, 127, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--dd-primary); border: 1px solid var(--dd-primary); }
-    .mv-item h4 { margin-bottom: 5px; color: var(--text-main); }
-    .mv-item p { color: var(--dd-text-muted); font-size: 0.95rem; }
+    .mv-icon { flex-shrink: 0; width: 54px; height: 54px; background: linear-gradient(135deg, var(--dd-primary), var(--dd-secondary)); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: white; box-shadow: 0 8px 20px rgba(21, 32, 166, 0.3); }
+    .mv-item h4 { margin-bottom: 8px; color: var(--text-main); }
+    .mv-item p { color: var(--dd-text-muted); font-size: 0.95rem; margin-bottom: 0; }
 
     .visual-card-v3 { padding: 25px; }
     .visual-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; font-weight: 700; color: var(--dd-text-muted); font-size: 0.8rem; text-transform: uppercase; }
@@ -372,19 +422,13 @@ export const DentosDireDawa = () => {
     .visual-footer strong { display: block; margin-bottom: 5px; }
     .visual-footer p { font-size: 0.85rem; color: var(--dd-text-muted); }
 
-    /* BENTO GRID V3 */
-    .bento-grid-v3 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; grid-auto-rows: 280px; }
-    .bento-v3-item { position: relative; overflow: hidden; display: flex; flex-direction: column; }
-    .bento-v3-large { grid-column: span 2; grid-row: span 2; }
-    .bento-v3-wide { grid-column: span 2; }
-    .bento-bg { position: absolute; top:0; left:0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0.2; transition: 0.6s; z-index: 1; }
-    .bento-v3-item:hover .bento-bg { opacity: 0.4; transform: scale(1.05); }
-    .bento-v3-content { position: relative; z-index: 5; padding: 40px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; }
-    .bento-tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--secondary); margin-bottom: 10px; font-weight: 800; }
-    .bento-v3-item h3 { font-size: 1.8rem; margin-bottom: 15px; }
-    .bento-v3-large h3 { font-size: 2.8rem; }
-    .bento-icon-v3 { font-size: 2.5rem; margin-top: auto; margin-bottom: 20px; color: var(--dd-primary); }
-    .dark-bento { background: linear-gradient(135deg, var(--dd-primary), #0e1570); color: white; }
+    /* ADVANTAGES GRID V3 */
+    .advantages-grid-v3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .advantage-card-v3 { position: relative; padding: 45px 35px; }
+    .advantage-num { position: absolute; top: 25px; right: 30px; font-size: 2.2rem; font-weight: 800; opacity: 0.12; -webkit-text-stroke: 1px var(--text-main); color: transparent; }
+    .advantage-icon { font-size: 2.2rem; margin-bottom: 25px; color: var(--dd-primary); }
+    .advantage-card-v3 h3 { font-size: 1.3rem; margin-bottom: 15px; line-height: 1.3; }
+    .advantage-card-v3 p { color: var(--dd-text-muted); font-size: 0.95rem; line-height: 1.7; }
 
     /* FEATURE CARDS V3 */
     .services-modern-grid-v3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
@@ -419,6 +463,14 @@ export const DentosDireDawa = () => {
 
     .section-title-large { font-size: clamp(2.5rem, 4vw, 3.8rem); margin-bottom: 30px; letter-spacing: -1.5px; font-weight: 800; }
 
+    /* FACILITY GALLERY */
+    .gallery-grid-v3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .gallery-item-v3 { padding: 15px; }
+    .gallery-img-mask { height: 240px; border-radius: 20px; overflow: hidden; }
+    .gallery-img-mask img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
+    .gallery-item-v3:hover .gallery-img-mask img { transform: scale(1.08); }
+    .gallery-caption { padding: 18px 10px 8px; text-align: center; font-weight: 700; color: var(--text-main); }
+
     /* DD CTA */
     .dd-cta { padding: 160px 0; background: linear-gradient(to bottom, transparent, var(--dd-bg-header)); }
     .cta-btns-centered { display: flex; justify-content: center; gap: 30px; align-items: center; }
@@ -427,7 +479,8 @@ export const DentosDireDawa = () => {
 
     @media (max-width: 1100px) {
       .about-v3-grid, .ftz-immersive-grid, .services-modern-grid-v3, .team-modern-v3 { grid-template-columns: 1fr; gap: 40px; }
-      .bento-grid-v3 { grid-template-columns: repeat(2, 1fr); }
+      .advantages-grid-v3 { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid-v3 { grid-template-columns: repeat(2, 1fr); }
       .about-v3-main { padding: 30px; }
       .dd-hero { background-position: right center; text-align: center; justify-content: center; }
       .hero-actions-v3 { justify-content: center; flex-direction: column; }
@@ -436,9 +489,8 @@ export const DentosDireDawa = () => {
     }
     @media (max-width: 768px), (max-height: 600px) {
       .dd-hero { padding: 150px 20px 80px !important; align-items: flex-start !important; justify-content: flex-start !important; height: auto !important; min-height: auto !important; }
-      .bento-grid-v3 { grid-template-columns: 1fr; grid-auto-rows: auto; }
-      .bento-v3-large, .bento-v3-wide { grid-column: span 1; grid-row: span 1; }
-      .bento-v3-content { padding: 30px; min-height: 250px; }
+      .advantages-grid-v3 { grid-template-columns: 1fr; }
+      .gallery-grid-v3 { grid-template-columns: 1fr; }
       .section { padding: 80px 0; }
       .section-header h2 { font-size: 2.2rem; }
       .ftz-highlights { flex-direction: column; gap: 30px; }
