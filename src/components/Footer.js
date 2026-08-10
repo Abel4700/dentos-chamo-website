@@ -7,6 +7,7 @@ export const Footer = () => `
         <p class="text-muted-standard" style="font-size: 1rem; margin-bottom: 30px;">Africa’s Strategic Gateway to Global Medical Technology. Bridging world-class innovation with continental accessibility.</p>
         <div class="social-links-v3">
           <a href="https://m.me/dentosechamo.tradingplc" target="_blank" class="social-orb"><i class="fab fa-facebook"></i></a>
+          <a href="https://wa.me/251913700718" target="_blank" class="social-orb"><i class="fab fa-whatsapp"></i></a>
           <a href="https://t.me/Dentosechamo" target="_blank" class="social-orb"><i class="fab fa-telegram"></i></a>
           <a href="https://instagram.com/dentose_chamo" target="_blank" class="social-orb"><i class="fab fa-instagram"></i></a>
           <a href="https://tiktok.com/@dentosedentalmaterial" target="_blank" class="social-orb"><i class="fab fa-tiktok"></i></a>
