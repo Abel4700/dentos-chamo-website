@@ -55,8 +55,8 @@ export const About = () => {
             <div class="hero-badge-v3 no-margin">OUR GENESIS</div>
             <h2 class="section-title-visionary" style="margin-bottom: 50px; color: var(--about-primary);">Roots Built on <span class="accent-text">Integrity</span></h2>
             <p class="text-muted-standard" style="font-size: 1.35rem; line-height: 1.9;">
-              Dentose Chamo Trading PLC was established in 2017 G.C by <strong>Dr. Aklilu Berhanu</strong>, who obtained his D.D.S. degree in dental medicine from <strong>Atlas Health Science College</strong> and an MBA in International Business (MBA-IB) from <strong>Greenwich University</strong>. Driven by the mantra of <em>Quality, Trust, Delivery, and Warranty</em>, the company has systematically expanded from a focused medical import center into a robust regional powerhouse.
-            </p>
+              Dentose Chamo Trading PLC was established in 2017 G.C. by <strong> Dr. Aklilu Berhanu, </strong> who obtained his D.D.S. degree in Dental Medicine from Atlas Health Science College and an MBA in International Business (MBA-IB) from Greenwich University. Guided by the core values of Quality, Trust, Delivery, and Warranty, the company has grown from a focused medical importer into a strong regional medical logistics and distribution company.
+            </p> <p>
             
             <ul class="vision-list-v3">
               <li><div class="v3-bullet"><i class="fas fa-check-circle accent-text"></i></div> Specialized healthcare supply excellence.</li>
