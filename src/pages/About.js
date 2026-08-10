@@ -14,7 +14,7 @@ export const About = () => {
         <div class="hero-editorial-content-v3 fade-in-up">
           <h1 class="section-title-visionary" style="font-size: clamp(3.2rem, 8vw, 6.5rem); color: white;">A Legacy of <br/><span class="accent-text">Trust & Vision</span></h1>
           <p class="hero-lead" style="color: rgba(255,255,255,0.9);">
-           A Bridging the gap between global healthcare innovation and sustainable East African agriculture for nearly a decade.
+           Bridging the gap between global healthcare innovation and sustainable East African agriculture for nearly a decade.
           </p>
           <div class="hero-metrics-v3">
             <div class="metric-item-v3">
