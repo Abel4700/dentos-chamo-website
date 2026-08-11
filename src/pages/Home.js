@@ -228,7 +228,7 @@ export const Home = () => {
         --home-primary: #1520A6;
         --home-navy: #0e1570;
         --home-accent: #40E0D0;
-        --home-bg: #ffffff;
+        --home-bg: #f0f9ff; 
         --home-border: #e2e8f0;
       }
 
