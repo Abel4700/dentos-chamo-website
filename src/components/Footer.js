@@ -4,7 +4,7 @@ export const Footer = () => `
     <div class="container footer-grid-v3">
       <div class="footer-brand-v3">
         <h3 class="section-title-visionary" style="font-size: 1.8rem; margin-bottom: 20px; color: #1520A6;">DENTOSE <span class="accent-text">CHAMO</span></h3>
-        <p class="text-muted-standard" style="font-size: 1rem; margin-bottom: 30px;">Africa’ss Strategic Gateway to Global Medical Technology. Bridging world-class innovation with continental accessibility.</p>
+        <p class="text-muted-standard" style="font-size: 1rem; margin-bottom: 30px;">Africa’s Strategic Gateway to Global Medical Technology. Bridging world-class innovation with continental accessibility.</p>
         <div class="social-links-v3">
           <a href="https://m.me/dentosechamo.tradingplc" target="_blank" class="social-orb"><i class="fab fa-facebook"></i></a>
           <a href="https://wa.me/251913700718" target="_blank" class="social-orb"><i class="fab fa-whatsapp"></i></a>
