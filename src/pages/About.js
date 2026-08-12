@@ -220,7 +220,7 @@ export const About = () => {
             <div class="timeline-v3-content glass-card-v3 hover-lift">
               <div class="timeline-v3-date accent-text">Integrated FTZ</div>
               <h3>ISO & Logistics Mastery</h3>
-              <p>Full integration of ISO 13485 standards and the launching of operations within the Dentos Dire Dawa Free Trade Zone hub.</p>
+              <p>Full integration of ISO 13485 standards and the launching of operations within the Dentose Dire Dawa Free Trade Zone hub.</p>
             </div>
           </div>
         </div>

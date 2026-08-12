@@ -44,7 +44,7 @@ export const DentoseChamo = () => `
            <a href="#/companies/dentos-dire-dawa" class="eco-card dc-glass-card fade-in-up" style="animation-delay: 0.2s;">
               <div class="eco-glow eco-diredawa"></div>
               <div class="eco-icon"><i class="fas fa-shipping-fast"></i></div>
-              <h3>Dentos Dire Dawa</h3>
+              <h3>Dentose Dire Dawa</h3>
               <p>The primary global logistics and supply chain hub bridging international manufacturers to local markets.</p>
               <div class="eco-arrow">&rarr;</div>
            </a>

@@ -51,7 +51,7 @@ export const Partners = () => {
                  <div class="map-dot hub-china" data-label="China: Scaled Production"></div>
                  <div class="map-dot hub-usa" data-label="USA: R&D Centers"></div>
                  <div class="map-dot hub-pakistan" data-label="Pakistan: Surgical Hub"></div>
-                 <div class="map-dot hub-ethiopia primary-hub" data-label="Ethiopia: Dentos Dire Dawa FTZ"></div>
+                 <div class="map-dot hub-ethiopia primary-hub" data-label="Ethiopia: Dentose Dire Dawa FTZ"></div>
                  
                  <!-- Animated Flow Lines -->
                  <svg class="connection-lines" viewBox="0 0 100 100" preserveAspectRatio="none">
